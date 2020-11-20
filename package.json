@@ -1,11 +1,26 @@
 {
   "name": "vue3-vite",
   "version": "0.0.0",
+  "author": "admin",
+  "description": "the first app",
+  "keywords": [
+    "node.js",
+    "javascript"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "dev": "vue-cli-service serve --open",
+    "dev-vite": "vite --open",
+    "build": "vue-cli-service build",
+    "build-vite": "vite build",
+    "test:unit": "vue-cli-service test:unit",
+    "test:e2e": "vue-cli-service test:e2e",
+    "lint": "vue-cli-service lint",
+    "format": "prettier --write 'src/**/*.js' 'src/**/*.vue'",
+    "precommit": "lint-staged"
   },
   "dependencies": {
+    "@babel/runtime": "^7.12.5",
+    "axios": "^0.21.0",
     "vue": "^3.0.2"
   },
   "devDependencies": {
@@ -28,5 +43,20 @@
     "node-sass": "^4.12.0",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chao921125/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chao921125/",
+    "email": "1004169649@qq.com"
+  },
+  "contributors": [
+    {
+      "name": "admin",
+      "email": "1004169649@qq.com"
+    }
+  ]
 }
