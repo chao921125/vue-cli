@@ -8,9 +8,12 @@
     "javascript"
   ],
   "scripts": {
+    "start": "npm run dev",
     "dev": "vue-cli-service serve --open",
+    "dev:prod": "vue-cli-service serve --mode production --open",
     "dev-vite": "vite --open",
     "build": "vue-cli-service build",
+    "build:prod": "vue-cli-service production build",
     "build-vite": "vite build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
