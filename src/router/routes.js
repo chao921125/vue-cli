@@ -1,4 +1,3 @@
-import register from "./modules/register";
 import user from "./modules/user";
 
 const meta = { auth: true };
@@ -12,9 +11,11 @@ const frameIn = [
     redirect: { name: "home" },
   },
   {
-    path: "/home",
-    name: "home",
-    redirect: { name: "index" },
+    path: "/index",
+    redirect: { name: "home" },
+  },
+  {
+    path: "/",
     meta: {
       auth: true,
     },
@@ -47,11 +48,6 @@ const frameIn = [
     ],
   },
   user,
-  {
-    path: "/service",
-    name: "service",
-    component: () => import("@/views/About"),
-  },
 ];
 
 /**
@@ -62,12 +58,7 @@ const frameOut = [
   {
     path: "/login",
     name: "login",
-    component: () => import("@/views/About"),
-  },
-  {
-    path: "/authLogin",
-    name: "authLogin",
-    component: () => import("@/views/About"),
+    component: () => import("@/views/Login.vue"),
   },
   {
     path: "/logout",
@@ -75,24 +66,27 @@ const frameOut = [
     redirect: { name: "login" },
     meta,
   },
-  register,
 ];
 
 /**
  * 错误页面
  */
 const errorPage = [
-  // 404
   {
     path: "/error",
     name: "error",
-    component: () => import("@/views/About"),
+    component: () => import("@/views/500.vue"),
     meta,
   },
   {
-    path: "*",
+    path: "/:pathMatch(.*)*",
     name: "404",
-    component: () => import("@/views/About"),
+    component: () => import("@/views/404.vue"),
+  },
+  {
+    path: "/:pathMatch(.*)",
+    name: "404",
+    component: () => import("@/views/404.vue"),
   },
 ];
 

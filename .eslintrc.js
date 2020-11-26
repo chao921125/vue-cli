@@ -10,12 +10,16 @@ module.exports = {
     rules: {
       'prettier/prettier': 'error',
       'generator-star-spacing': 'off',
-      "no-console": process.env.NODE_ENV === "production" ? "error" : "info",
-      "no-debugger": process.env.NODE_ENV === "production" ? "error" : "info"
+      "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+      "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
+      'space-before-function-paren': 0,
+      'no-irregular-whitespace': 0,
+      "vue/no-multiple-template-root": 0
     },
     parserOptions: {
       parser: "babel-eslint",
-      sourceType: 'module'
+      sourceType: 'module',
+      ecmaVersion: 6
     },
     overrides: [
       {

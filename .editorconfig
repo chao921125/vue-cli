@@ -21,7 +21,7 @@ indent_size = 2
 
 [*.{html,vue}]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 # 以下匹配，类同
 # [Makefile]

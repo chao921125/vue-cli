@@ -24,11 +24,19 @@
     "@babel/runtime": "^7.12.5",
     "axios": "^0.21.0",
     "core-js": "^3.8.0",
+    "dayjs": "^1.9.6",
+    "file-saver": "^2.0.5",
+    "js-cookie": "^2.2.1",
+    "lowdb": "^1.0.0",
     "nprogress": "^0.2.0",
+    "qs": "^6.9.4",
     "register-service-worker": "^1.7.1",
+    "ua-parser-js": "^0.7.22",
     "vue": "^3.0.3",
     "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0"
+    "vuedraggable": "^2.24.3",
+    "vuex": "^4.0.0-0",
+    "xlsx": "^0.16.9"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.9",
