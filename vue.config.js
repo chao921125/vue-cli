@@ -1,13 +1,16 @@
+const path = require("path");
 // 拼接路径
-const resolve = (dir) => require("path").join(__dirname, dir);
+const resolve = (dir) => path.join(__dirname, dir);
 // 增加环境变量
 process.env.VUE_APP_VERSION = require("./package.json").version;
 // process.env.VUE_APP_BUILD_TIME = require("dayjs")().format(
 //   "yyyy-MM-dd HH:mm:ss"
 // );
 
+const ENV_PRODUCTION = "production";
+
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "/" : "/",
+  publicPath: process.env.NODE_ENV === ENV_PRODUCTION ? "/" : "/",
   // 输出文件目录
   outputDir: "dist", // Default
   // 静态资源目录 (js, css, img, fonts)(相对于 outputDir)
@@ -18,27 +21,27 @@ module.exports = {
   // filenameHashing: true,
   // pages: {
   //   index: {
-  // page 的入口
-  // entry: 'src/index/main.js',
-  // 模板来源
-  // template: 'public/index.html',
-  // 在 dist/index.html 的输出
-  // filename: 'index.html',
-  // 当使用 title 选项时，
-  // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
-  // title: 'Index Page',
-  // 在这个页面中包含的块，默认情况下会包含
-  // 提取出来的通用 chunk 和 vendor chunk。
-  // chunks: ['chunk-vendors', 'chunk-common', 'index']
+  //      page 的入口
+  //      entry: 'src/index/main.js',
+  //      模板来源
+  //      template: 'public/index.html',
+  //      在 dist/index.html 的输出
+  //      filename: 'index.html',
+  //      当使用 title 选项时，
+  //      template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
+  //      title: 'Index Page',
+  //      在这个页面中包含的块，默认情况下会包含
+  //      提取出来的通用 chunk 和 vendor chunk。
+  //      chunks: ['chunk-vendors', 'chunk-common', 'index']
+  //    },
+  //    当使用只有入口的字符串格式时，
+  //    模板会被推导为 `public/subpage.html`
+  //    并且如果找不到的话，就回退到 `public/index.html`。
+  //    输出文件名会被推导为 `subpage.html`。
+  //    subpage: 'src/subpage/main.js'
   // },
-  // 当使用只有入口的字符串格式时，
-  // 模板会被推导为 `public/subpage.html`
-  // 并且如果找不到的话，就回退到 `public/index.html`。
-  // 输出文件名会被推导为 `subpage.html`。
-  // subpage: 'src/subpage/main.js'
-  // },
-  // 在保存的时候检查 process.env.NODE_ENV !== 'production'
-  lintOnSave: process.env.NODE_ENV !== "production", // Default
+  // 在保存的时候检查 process.env.NODE_ENV !== 'production' Type: boolean | 'warning' | 'default' | 'error'
+  lintOnSave: process.env.NODE_ENV !== ENV_PRODUCTION, // Default
   // 使用带有浏览器内编译器的完整构建版本
   // 查阅 https://cn.vuejs.org/v2/guide/installation.html#运行时-编译器-vs-只包含运行时
   // compiler: false,
@@ -52,40 +55,45 @@ module.exports = {
   // https://vue-loader.vuejs.org/en/options.html
   // vueLoader: {},
   // 生产环境是否生成 sourceMap 文件
-  productionSourceMap: process.env.NODE_ENV !== "production",
+  productionSourceMap: process.env.NODE_ENV !== ENV_PRODUCTION,
   // 设置生成的 HTML 中 <link rel="stylesheet"> 和 <script> 标签的 crossorigin 属性
   // 需要注意的是该选项仅影响由 html-webpack-plugin 在构建时注入的标签 - 直接写在模版 (public/index.html) 中的标签不受影响
   // crossorigin: "",
   // 如果你构建后的文件是部署在 CDN 上的，启用该选项可以提供额外的安全性
   integrity: true,
-  // PWA 插件相关配置
-  // see https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa
-  // pwa: {},
   // css相关配置
   css: {
-    // 去掉文件名中的 .module
-    // modules: true,
+    // 只有 *.module.[ext] 结尾的文件才会被视作 CSS Modules 模块
+    requireModuleExtension: true,
     // 是否使用css分离插件 ExtractTextPlugin
     extract: true,
     // 开启 CSS source maps?
-    sourceMap: process.env.NODE_ENV !== "production",
+    sourceMap: false,
     // css预设器配置项
     loaderOptions: {
-      // 设置 scss 公用变量文件
+      // 设置 scss 公用变量文件 css-loader postcss-loader sass-loader less-loader stylus-loader
       sass: {
-        prependData: `@import "~@/assets/style/public.scss";`,
+        prependData: `@import "~@/assets/styles/public.scss";`,
       },
     },
     // 启用 CSS modules for all css / pre-processor files.
     // modules: true
   },
+  // PWA 插件相关配置
+  // see https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa
+  // pwa: {},
   // use thread-loader for babel & TS in production build
   // enabled by default if the machine has more than 1 cores
-  // 构建时开启多进程处理babel编译
+  // 构建时开启多进程处理babel编译 仅作用于生产构建
   parallel: require("os").cpus().length > 1,
+  // webpack配置
+  // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
+  // https://webpack.js.org/configuration/dev-server/
   devServer: {
-    publicPath: process.env.NODE_ENV === "production" ? "/" : "/",
-    open: process.platform === "darwin",
+    publicPath: process.env.NODE_ENV === ENV_PRODUCTION ? "/" : "/",
+    open: {
+      app: ["Google Chrome", "--incognito", "--other-flag"]
+    },
     host: "127.0.0.1",
     port: 8888,
     https: false,
@@ -97,8 +105,9 @@ module.exports = {
         pathRewrite: {
           "^/api": "", // remove base path
         },
-        ws: false,
-        changeOrigin: true,
+        ws: false, // 是否代理websockets
+        changeOrigin: true, // 接口跨域
+        secure: false, // 是否验证ssl
       },
       // '/other': {
       //   target: '<other_url>'
@@ -109,17 +118,6 @@ module.exports = {
       errors: true,
     },
   },
-  // webpack配置
-  // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
-  chainWebpack: (config) => {
-    config.plugins.delete("prefetch").delete("preload");
-    // 解决 cli3 热更新失效 https://github.com/vuejs/vue-cli/issues/1559
-    config.resolve.symlinks(true);
-    // 重新设置 alias .set('@', resolve('src'))
-    config.resolve.alias.set("@api", resolve("src/api"));
-    // node
-    config.node.set("__dirname", true).set("__filename", true);
-  },
   configureWebpack: {
     resolve: {
       extensions: [".js", ".json", ".vue", "css", "scss", "less"],
@@ -128,6 +126,18 @@ module.exports = {
     externals: {
       // 'v-charts': 'VeIndex'
     },
+  },
+  chainWebpack: (config) => {
+    config.plugins.delete("prefetch").delete("preload");
+    // 解决 cli3 热更新失效 https://github.com/vuejs/vue-cli/issues/1559
+    config.resolve.symlinks(true);
+    // 重新设置 alias .set('@', resolve('src'))
+    config.resolve.alias.set("@api", resolve("src/api"))
+      .set("@assets", resolve("src/assets"))
+      .set("@libs", resolve("src/libs"))
+      .set("@plugins", resolve("src/plugins"));
+    // node
+    config.node.set("__dirname", true).set("__filename", true);
   },
   // 第三方插件配置
   pluginOptions: {

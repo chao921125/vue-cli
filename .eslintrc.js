@@ -10,8 +10,8 @@ module.exports = {
     rules: {
       'prettier/prettier': 'error',
       'generator-star-spacing': 'off',
-      "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
-      "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off"
+      "no-console": process.env.NODE_ENV === "production" ? "error" : "info",
+      "no-debugger": process.env.NODE_ENV === "production" ? "error" : "info"
     },
     parserOptions: {
       parser: "babel-eslint",
