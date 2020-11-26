@@ -1,0 +1,12 @@
+/node_modules
+/dist
+/src/libs/
+/src/global/fonts
+
+
+/docs
+/.vscode
+node_modules
+.eslintrc.js
+package.json
+package-lock.json
