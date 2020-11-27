@@ -29,6 +29,7 @@
     "file-saver": "^2.0.5",
     "js-cookie": "^2.2.1",
     "lib-flexible": "^0.3.2",
+    "lodash": "^4.17.20",
     "lowdb": "^1.0.0",
     "nprogress": "^0.2.0",
     "qs": "^6.9.4",
