@@ -22,6 +22,11 @@ chai
 样式 -D
 sass sass-loader node-sass
 
+ui
+vant@next
+ant-design-vue
+
+
 适配移动端
 lib-flexible // 按照比例缩放展示，基于不同设备（Android、iOS、brow）的px值
 postcss-pxtorem // 将px转rem -D

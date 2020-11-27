@@ -1,5 +1,5 @@
 <template>
-  <div>Home1</div>
+  <div class="title">Home1</div>
   <div class="test-box"></div>
   <router-link to="/demo">Demo</router-link>
   <router-view />
@@ -12,6 +12,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.title {
+  font-size: 16px;
+}
 .test-box {
   background-color: aqua;
   width: 200px;
