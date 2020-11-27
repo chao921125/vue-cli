@@ -1,5 +1,6 @@
 <template>
   <div>Home1</div>
+  <div class="test-box"></div>
   <router-link to="/demo">Demo</router-link>
   <router-view />
 </template>
@@ -10,4 +11,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.test-box {
+  background-color: aqua;
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+}
+</style>

@@ -72,8 +72,11 @@ module.exports = {
     // css预设器配置项
     loaderOptions: {
       // 设置 scss 公用变量文件 css-loader postcss-loader sass-loader less-loader stylus-loader
+      // sass-loader v8-，这个选项名是 "data"
+      // sass-loader v8 中，这个选项名是 "prependData"
+      // sass-loader v10+，这个选项名是 "additionalData"
       sass: {
-        prependData: `@import "~@/assets/styles/public.scss";`,
+        additionalData: `@import "~@/assets/styles/public.scss";`,
       },
     },
     // 启用 CSS modules for all css / pre-processor files.
