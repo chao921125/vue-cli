@@ -13,13 +13,13 @@ vue
 vue-router
 vuex
 
-eslint
+eslint -D
 eslint-plugin-prettier
 
 节点和浏览器的BDD / TDD断言库
 chai
 
-样式
+样式 -D
 sass sass-loader node-sass
 
 适配移动端
@@ -47,3 +47,9 @@ xlsx
 本地数据存储
 lodash
 lowdb
+
+代码提交信息校验 -D
+husky
+commitizen
+cz-conventional-changelog
+cz-customizable
