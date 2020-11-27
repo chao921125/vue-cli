@@ -87,74 +87,18 @@ scripts: {
   "./node_modules/tipso/src/tipso.css"
 ]
 ```
-{
-  "name": "vue-fixed-router",
-  "version": "0.1.0",
-  "private": true,
-  "description": "description",
-  "author": "author",
-  "scripts": {
-    "dev": "vue-cli-service serve --open",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint",
-    "format": "prettier --write 'src/**/*.js' 'src/**/*.vue'",
-    "precommit": "lint-staged"
+
+### git 提交信息校验配置
+"husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
   },
-  "dependencies": {
-    "@babel/runtime": "^7.10.2",
-    "axios": "^0.19.2",
-    "dayjs": "^1.8.28",
-    "core-js": "^3.6.5",
-    "echarts": "^4.8.0",
-    "element-ui": "^2.13.2",
-    "file-saver": "^2.0.2",
-    "js-cookie": "^2.2.1",
-    "lowdb": "^1.0.0",
-    "nprogress": "^0.2.0",
-    "qs": "^6.9.4",
-    "register-service-worker": "^1.7.1",
-    "screenfull": "^5.0.2",
-    "ua-parser-js": "^0.7.21",
-    "vue": "^2.6.11",
-    "vue-class-component": "^7.2.3",
-    "vue-property-decorator": "^8.5.0",
-    "vue-router": "^3.3.4",
-    "vuedraggable": "^2.23.2",
-    "vuex": "^3.4.0",
-    "xlsx": "^0.16.2"
+  "gitHooks": {
+    "commit-msg": "commitlint -e -V "
   },
-  "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.10.1",
-    "@vue/cli-plugin-babel": "^4.4.4",
-    "@vue/cli-plugin-e2e-cypress": "^4.4.4",
-    "@vue/cli-plugin-eslint": "^4.4.4",
-    "@vue/cli-plugin-pwa": "^4.4.4",
-    "@vue/cli-plugin-router": "^4.4.4",
-    "@vue/cli-plugin-unit-jest": "^4.4.4",
-    "@vue/cli-plugin-unit-mocha": "^4.4.4",
-    "@vue/cli-plugin-vuex": "^4.4.4",
-    "@vue/cli-service": "^4.4.4",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "@vue/test-utils": "1.0.3",
-    "babel-eslint": "^10.1.0",
-    "chai": "^4.2.0",
-    "css-loader": "^3.6.0",
-    "eslint": "^7.2.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-vue": "^6.2.2",
-    "file-loader": "^6.0.0",
-    "node-sass": "^4.14.1",
-    "postcss-loader": "^3.0.0",
-    "prettier": "^2.0.5",
-    "prettier-eslint": "^11.0.0",
-    "prettier-eslint-cli": "^5.0.0",
-    "sass-loader": "^8.0.2",
-    "sass-resources-loader": "^2.0.3",
-    "style-loader": "^1.2.1",
-    "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.6.11"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
   }
-}
