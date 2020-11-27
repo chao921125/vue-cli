@@ -1,5 +1,4 @@
-const package = require('./package.json');
-const version = package.version.split(".");
+const version = require('./package.json').version;
 module.exports = {
   types: [
     // 新功能
