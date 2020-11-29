@@ -3,7 +3,8 @@ module.exports = {
     env: {
       node: true,
       browser: true,
-      es6: true
+      es6: true,
+      es2021: true
     },
     extends: ["plugin:vue/essential", "plugin:prettier/recommended", "eslint:recommended", "@vue/prettier"],
     plugins: ['vue', 'prettier'],
@@ -14,7 +15,7 @@ module.exports = {
       "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
       'space-before-function-paren': 0,
       'no-irregular-whitespace': 0,
-      "vue/no-multiple-template-root": 0
+      "vue/no-multiple-template-root": 0,
     },
     parserOptions: {
       parser: "babel-eslint",

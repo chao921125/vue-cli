@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import { get, toString } from "lodash";
-import util from "@/plugins/utils/util";
+import util from "@plugins/utils/util";
 
 export default {
   namespaced: true,

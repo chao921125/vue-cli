@@ -41,7 +41,7 @@ module.exports = {
   //    subpage: 'src/subpage/main.js'
   // },
   // 在保存的时候检查 process.env.NODE_ENV !== 'production' Type: boolean | 'warning' | 'default' | 'error'
-  lintOnSave: process.env.NODE_ENV !== ENV_PRODUCTION, // Default
+  lintOnSave: false, // process.env.NODE_ENV !== ENV_PRODUCTION, // Default
   // 使用带有浏览器内编译器的完整构建版本
   // 查阅 https://cn.vuejs.org/v2/guide/installation.html#运行时-编译器-vs-只包含运行时
   // compiler: false,
@@ -71,12 +71,17 @@ module.exports = {
     sourceMap: false,
     // css预设器配置项
     loaderOptions: {
+      less: {
+        lessOptions: {
+          additionalData: `@import "~@assets/styles/fixed/ant.less";`,
+        },
+      },
       // 设置 scss 公用变量文件 css-loader postcss-loader sass-loader less-loader stylus-loader
       // sass-loader v8-，这个选项名是 "data"
       // sass-loader v8 中，这个选项名是 "prependData"
       // sass-loader v10+，这个选项名是 "additionalData"
       sass: {
-        additionalData: `@import "~@/assets/styles/public.scss";`,
+        additionalData: `@import "~@assets/styles/public.scss";`,
       },
     },
     // 启用 CSS modules for all css / pre-processor files.

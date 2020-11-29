@@ -5,7 +5,7 @@
 
 <script>
 import { nextTick } from "vue";
-import constants from "@/libs/constants";
+import constants from "@libs/constants";
 
 export default {
   name: "Demo",

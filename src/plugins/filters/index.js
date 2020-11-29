@@ -11,7 +11,7 @@ import {
   dealNumBack,
   dealNumFrontOne,
   getGoalNameByKey,
-} from "@/libs/format";
+} from "@libs/format";
 
 const index = {
   formatMoney,

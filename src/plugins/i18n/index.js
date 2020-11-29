@@ -22,7 +22,7 @@ function loadLocaleMessages() {
   return messages;
 }
 
-const i18n = new VueI18n({
+export default new VueI18n({
   locale: storeI18n || process.env.VUE_APP_LOCAL,
   fallbackLocale: storeI18n || process.env.VUE_APP_LOCAL,
   messages: loadLocaleMessages(),
@@ -36,5 +36,3 @@ const i18n = new VueI18n({
     console.log(vm);
   },
 });
-
-app.use(i18n);

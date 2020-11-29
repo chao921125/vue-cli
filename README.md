@@ -23,8 +23,9 @@ chai
 sass sass-loader node-sass
 
 ui
-vant@next
-ant-design-vue
+vant@next // 移动
+ant-design-vue // PC
+element-plus // PC 备选
 
 http请求
 axios

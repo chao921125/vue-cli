@@ -1,4 +1,4 @@
-import request from "@/plugins/axios";
+import request from "@plugins/axios";
 import baseURL from "./index";
 
 export function GetPhoneCheck(data) {
