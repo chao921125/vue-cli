@@ -1,11 +1,14 @@
 @import '~@assets/styles/unit/color.scss';
 
 // 工具类名统一前缀
-$prefix: v3;
+$prefix: com;
 
 // 禁止用户选中 鼠标变为手形
 %unable-select {
   user-select: none;
+  cursor: pointer;
+}
+%select {
   cursor: pointer;
 }
 
@@ -20,6 +23,10 @@ $prefix: v3;
 }
 
 // flex 垂直水平居中 两端对齐
+%flex-base {
+  display: flex;
+  display: -webkit-flex;
+}
 %flex-center-row {
   display: flex;
   justify-content: center;
