@@ -95,7 +95,7 @@ module.exports = {
   devServer: {
     publicPath: process.env.NODE_ENV === ENV_PRODUCTION ? "/" : "/",
     open: {
-      app: ["Google Chrome", "--incognito", "--other-flag"]
+      app: ["Google Chrome", "--incognito", "--other-flag"],
     },
     host: "127.0.0.1",
     port: 8888,
@@ -135,7 +135,8 @@ module.exports = {
     // 解决 cli3 热更新失效 https://github.com/vuejs/vue-cli/issues/1559
     config.resolve.symlinks(true);
     // 重新设置 alias .set('@', resolve('src'))
-    config.resolve.alias.set("@api", resolve("src/api"))
+    config.resolve.alias
+      .set("@api", resolve("src/api"))
       .set("@assets", resolve("src/assets"))
       .set("@libs", resolve("src/libs"))
       .set("@plugins", resolve("src/plugins"));

@@ -12,7 +12,7 @@ const util = {
  * @description 更新标题
  * @param titleText
  */
-util.title = function (titleText) {
+util.title = (titleText) => {
   const processTitle = process.env.VUE_APP_TITLE || "";
   window.document.title = `${processTitle}${titleText ? ` | ${titleText}` : ""}`;
 };
@@ -21,8 +21,8 @@ util.title = function (titleText) {
  * @description 打开新页面
  * @param {String} url 地址
  */
-util.open = function (url) {
-  var a = document.createElement("a");
+util.open = (url) => {
+  let a = document.createElement("a");
   a.setAttribute("href", url);
   a.setAttribute("target", "_blank");
   a.setAttribute("id", "link");
@@ -32,7 +32,7 @@ util.open = function (url) {
 };
 
 // 处理token
-util.dealToken = function (str) {
+util.dealToken = (str) => {
   if (str.indexOf("=") > -1) {
     let arr = str.split(";");
     for (let item of arr) {
@@ -45,7 +45,7 @@ util.dealToken = function (str) {
 };
 
 // 清除表单信息
-util.clearFrom = function (obj) {
+util.clearFrom = (obj) => {
   if (obj !== undefined && obj != null && obj !== "") {
     for (let key in obj) {
       obj[key] = "";

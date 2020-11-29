@@ -7,4 +7,22 @@ export default {
     dmpURI: "//dmp.taobao.com/",
     fileUrl: "/zuanjiang/adboard/transfile",
   },
+  tradeType: {
+    ALL: {
+      value: "9",
+      description: "全部",
+    },
+    TRIAL: {
+      value: "3",
+      description: "试用",
+    },
+    RECHARGE: {
+      value: "0",
+      description: "充值",
+    },
+    CONSUME: {
+      value: "1",
+      description: "消费",
+    },
+  },
 };
