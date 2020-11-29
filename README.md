@@ -1,4 +1,4 @@
-# vue3-static
+# vue3-cli
 
 ## Project Features
 
