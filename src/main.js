@@ -12,7 +12,9 @@ app.config.productionTip = false;
 
 // UI
 import Antd from "ant-design-vue";
-import "ant-design-vue/dist/antd.css";
+// 如果想要覆盖掉组件的样式，那么需要自定义一个less（必须），同时不能在此处顺序引入，只能在自定义文件中引入
+// import "ant-design-vue/dist/antd.less";
+import "@assets/styles/fixed/ant.less";
 app.use(Antd);
 // UI Element
 // import ElementUI from "element-ui";

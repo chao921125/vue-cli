@@ -15,6 +15,7 @@
 // pathToRegexpOptions?: Object // 编译正则的选项
 // }
 import user from "./modules/user";
+import demos from "./modules/demos";
 
 const meta = { auth: true };
 
@@ -27,8 +28,14 @@ const frameIn = [
     redirect: { name: "home" },
   },
   {
-    path: "/index",
-    redirect: { name: "home" },
+    path: "/home",
+    name: "home",
+    redirect: { name: "index" },
+    component: () => import("@/views/Home"),
+    meta: {
+      auth: true,
+    },
+    children: [...user, ...demos],
   },
   {
     path: "/",
@@ -63,7 +70,6 @@ const frameIn = [
       },
     ],
   },
-  user,
 ];
 
 /**
@@ -74,7 +80,7 @@ const frameOut = [
   {
     path: "/login",
     name: "login",
-    component: () => import("@/views/Login.vue"),
+    component: () => import("@/views/Login"),
   },
   {
     path: "/logout",
@@ -91,18 +97,18 @@ const errorPage = [
   {
     path: "/error",
     name: "error",
-    component: () => import("@/views/500.vue"),
+    component: () => import("@/views/500"),
     meta,
   },
   {
     path: "/:pathMatch(.*)*",
     name: "404",
-    component: () => import("@/views/404.vue"),
+    component: () => import("@/views/404"),
   },
   {
     path: "/:pathMatch(.*)",
     name: "404",
-    component: () => import("@/views/404.vue"),
+    component: () => import("@/views/404"),
   },
 ];
 

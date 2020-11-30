@@ -19,8 +19,9 @@ eslint-plugin-prettier
 节点和浏览器的BDD / TDD断言库
 chai
 
-样式组件 -D
+样式组件 -D // 注意重写组件样式的引用
 sass sass-loader node-sass
+less less-loader style-resources-loader
 
 ui
 vant@next // 移动
