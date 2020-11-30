@@ -73,7 +73,13 @@ module.exports = {
     loaderOptions: {
       less: {
         lessOptions: {
-          additionalData: `@import "~@assets/styles/fixed/ant.less";`,
+          modifyVars: {
+            // 直接覆盖变量
+            'text-color': '#111',
+            'border-color': '#eee',
+            // 或者可以通过 less 文件覆盖（文件路径为绝对路径）
+            hack: `true; @import "~@assets/styles/fixed/ant.less";`,
+          },
         },
       },
       // 设置 scss 公用变量文件 css-loader postcss-loader sass-loader less-loader stylus-loader
