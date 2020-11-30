@@ -152,6 +152,7 @@ module.exports = {
     config.resolve.alias
       .set("@api", resolve("src/api"))
       .set("@assets", resolve("src/assets"))
+      .set("@components", resolve("src/components"))
       .set("@libs", resolve("src/libs"))
       .set("@plugins", resolve("src/plugins"));
     // node

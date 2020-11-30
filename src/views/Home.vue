@@ -10,12 +10,7 @@
       @breakpoint="onBreakpoint"
     >
       <div class="logo" />
-      <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
-        <a-menu-item v-for="item in 20" :key="item">
-          <user-outlined />
-          <span>nav {{ item }}</span>
-        </a-menu-item>
-      </a-menu>
+      <Menu :collapsed="collapsed"></Menu>
     </a-layout-sider>
     <a-layout class="layout-main">
       <a-layout-header class="layout-header">
@@ -34,11 +29,12 @@
 <script>
 // import storageLocal from "@libs/storageLocal";
 // import storageSession from "@libs/storageSession";
-import { UserOutlined, MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons-vue";
+import Menu from "@components/menus/Menu";
+import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons-vue";
 export default {
   name: "Home",
   components: {
-    UserOutlined,
+    Menu,
     MenuUnfoldOutlined,
     MenuFoldOutlined,
   },
@@ -46,7 +42,6 @@ export default {
     return {
       imgSrc: [require("@assets/logo.png"), require("@assets/logo.png")],
       isCollapse: false,
-      selectedKeys: ["1"],
       collapsed: false,
     };
   },

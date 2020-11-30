@@ -81,12 +81,12 @@ app.config.warnHandler = (msg, vm, trace) => {
 };
 
 // 自定义组件
-app.component("button-counter", {
-  data: () => ({
-    count: 0,
-  }),
-  template: '<button @click="count++">Clicked {{ count }} times.</button>',
-});
+// app.component("button-counter", {
+//   data: () => ({
+//     count: 0,
+//   }),
+//   template: '<button @click="count++">Clicked {{ count }} times.</button>',
+// });
 
 // 锚点
 app.directive("anchor", {
