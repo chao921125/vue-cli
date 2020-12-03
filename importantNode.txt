@@ -297,3 +297,5 @@ setup(){
 
 
 TODO:eslint 支持v3的配置解决方案 https://babeljs.io/blog/2020/07/13/the-state-of-babel-eslint
+
+vue3 中：根元素 直接迭代 100个 报错问题。

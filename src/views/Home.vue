@@ -5,28 +5,22 @@
       :trigger="null"
       collapsible
       breakpoint="lg"
+      class="layout-sider"
       @collapse="onCollapse"
       @breakpoint="onBreakpoint"
-      :style="{ overflow: 'auto', height: 'calc(100vh-64px)', minHeight: '600px' }"
     >
       <div class="logo" />
-      <a-menu theme="dark" mode="inline" v-model:selectedKeys="selectedKeys">
-        <a-menu-item v-for="item in 20" :key="item">
-          <user-outlined />
-          <span>nav {{ item }}</span>
-        </a-menu-item>
-      </a-menu>
+      <Menu :collapsed="collapsed"></Menu>
     </a-layout-sider>
-    <a-layout>
-      <a-layout-header style="background: #fff; padding: 0" :style="{ position: 'fixed', zIndex: 1, width: '100%' }">
+    <a-layout class="layout-main">
+      <a-layout-header class="layout-header">
         <menu-unfold-outlined v-if="collapsed" class="trigger" @click="() => (collapsed = !collapsed)" />
         <menu-fold-outlined v-else class="trigger" @click="() => (collapsed = !collapsed)" />
       </a-layout-header>
-      <a-layout-content
-        :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '600px', marginTop: '84px' }"
-      >
-        {{ testVal }}
-        <router-view />
+      <a-layout-content class="layout-content">
+        <div class="content">
+          <router-view />
+        </div>
       </a-layout-content>
     </a-layout>
   </a-layout>
@@ -35,30 +29,21 @@
 <script>
 // import storageLocal from "@libs/storageLocal";
 // import storageSession from "@libs/storageSession";
-import {
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-} from "@ant-design/icons-vue";
+import Menu from "@components/menus/Menu";
+import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons-vue";
 export default {
   name: "Home",
+  components: {
+    Menu,
+    MenuUnfoldOutlined,
+    MenuFoldOutlined,
+  },
   data() {
     return {
       imgSrc: [require("@assets/logo.png"), require("@assets/logo.png")],
       isCollapse: false,
-      selectedKeys: ["1"],
       collapsed: false,
-      testVal: this.$constants.commonCons.dmpURI,
     };
-  },
-  components: {
-    UserOutlined,
-    VideoCameraOutlined,
-    UploadOutlined,
-    MenuUnfoldOutlined,
-    MenuFoldOutlined,
   },
   methods: {
     toggleCollapse() {
@@ -77,21 +62,48 @@ export default {
 <style scoped lang="scss">
 .components-layout {
   height: 100vh;
-  min-height: 700px;
-  .trigger {
-    font-size: 18px;
-    line-height: 64px;
-    padding: 0 24px;
-    cursor: pointer;
-    transition: color 0.3s;
+  overflow: hidden;
+  .layout-sider {
+    overflow: auto;
+    height: 100vh;
+    .logo {
+      height: 32px;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 16px;
+    }
   }
-  .trigger:hover {
-    color: #1890ff;
-  }
-  .logo {
-    height: 32px;
-    background: rgba(255, 255, 255, 0.2);
-    margin: 16px;
+  .layout-main {
+    overflow: hidden;
+    height: 100vh;
+    .layout-header {
+      background: #fff;
+      position: fixed;
+      z-index: 999;
+      width: 100%;
+      padding: 0;
+      .trigger {
+        font-size: 18px;
+        line-height: 64px;
+        padding: 0 24px;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+      .trigger:hover {
+        color: #1890ff;
+      }
+    }
+    .layout-content {
+      width: 100%;
+      height: calc(100vh - 160px);
+      margin: 80px 0 20px;
+      overflow: auto;
+      .content {
+        background: #fff;
+        width: auto;
+        margin: 0 16px;
+        padding: 20px;
+      }
+    }
   }
 }
 </style>

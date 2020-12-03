@@ -41,7 +41,7 @@ module.exports = {
   //    subpage: 'src/subpage/main.js'
   // },
   // 在保存的时候检查 process.env.NODE_ENV !== 'production' Type: boolean | 'warning' | 'default' | 'error'
-  lintOnSave: false, // process.env.NODE_ENV !== ENV_PRODUCTION, // Default
+  lintOnSave: process.env.NODE_ENV !== ENV_PRODUCTION, // Default
   // 使用带有浏览器内编译器的完整构建版本
   // 查阅 https://cn.vuejs.org/v2/guide/installation.html#运行时-编译器-vs-只包含运行时
   // compiler: false,
@@ -72,15 +72,16 @@ module.exports = {
     // css预设器配置项
     loaderOptions: {
       less: {
+        // 6.0.0 以上才有此配置，不建议这这里添加样式，同时也不支持引入样式
         lessOptions: {
+          javascriptEnabled: true,
           modifyVars: {
             // 直接覆盖变量
-            'text-color': '#111',
-            'border-color': '#eee',
-            // 或者可以通过 less 文件覆盖（文件路径为绝对路径）
-            hack: `true; @import "~@assets/styles/fixed/ant.less";`,
+            // "text-color": "#f5222d",
+            // 'border-color': '#eee',
           },
         },
+        // additionalData: `@import "~@assets/styles/fixed/ant.less";`,
       },
       // 设置 scss 公用变量文件 css-loader postcss-loader sass-loader less-loader stylus-loader
       // sass-loader v8-，这个选项名是 "data"
@@ -108,6 +109,8 @@ module.exports = {
     open: {
       app: ["Google Chrome", "--incognito", "--other-flag"],
     },
+    compress: true,
+    disableHostCheck: true, //webpack4.0 开启热更新
     host: "127.0.0.1",
     port: 8888,
     https: false,
@@ -149,13 +152,29 @@ module.exports = {
     config.resolve.alias
       .set("@api", resolve("src/api"))
       .set("@assets", resolve("src/assets"))
+      .set("@components", resolve("src/components"))
       .set("@libs", resolve("src/libs"))
       .set("@plugins", resolve("src/plugins"));
     // node
     config.node.set("__dirname", true).set("__filename", true);
+    // const types = ["vue-modules", "vue", "normal-modules", "normal"];
+    // types.forEach((type) => addStyleResource(config.module.rule("less").oneOf(type)));
   },
   // 第三方插件配置
   pluginOptions: {
-    // ...
+    // "style-resources-loader": {
+    //   preProcessor: "less",
+    //   patterns: [path.resolve(__dirname, "~@assets/styles/fixed/ant.less")],
+    // },
   },
 };
+
+// function addStyleResource(rule) {
+//   rule
+//     .use("style-resource")
+//     .loader("style-resources-loader")
+//     .options({
+//       // 需要引入的公共文件
+//       patterns: [path.resolve(__dirname, "./src/assets/styles/fixed/ant.less")],
+//     });
+// }
