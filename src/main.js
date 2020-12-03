@@ -40,8 +40,10 @@ app.config.globalProperties.$echarts = echarts;
 // 全局变量配置
 import constants from "@libs/constants";
 import enums from "@libs/enums";
+import filters from "@plugins/filters";
 app.config.globalProperties.$constants = constants;
 app.config.globalProperties.$enums = enums;
+app.config.globalProperties.$filters = filters;
 
 // 移动端像素转rem
 import "lib-flexible";
