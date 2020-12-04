@@ -36,6 +36,7 @@ js-cookie
 
 加密解密
 crypto-js
+md5
 
 ua签名
 ua-parser-js
