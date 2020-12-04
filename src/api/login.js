@@ -1,16 +1,16 @@
 import request from "@plugins/axios";
-import baseURL from "./index";
+import urls from "./index";
 
 export function Login(data) {
   return request({
-    url: baseURL + "/user/login",
+    url: urls.loginUrl,
     method: "post",
     data,
   });
 }
 export function Logout(data) {
   return request({
-    url: baseURL + "/logout",
+    url: urls.loginUrl,
     method: "post",
     data,
   });
