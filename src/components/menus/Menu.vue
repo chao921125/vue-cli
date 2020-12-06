@@ -1,7 +1,7 @@
 <template>
   <a-menu
-    :selected-keys="activeMenu"
-    :open-keys="activeMenu"
+    v-model:selected-keys="selectedKeys"
+    v-model:open-keys="openKeys"
     mode="inline"
     theme="dark"
     :inline-collapsed="collapsed"
@@ -38,18 +38,25 @@ export default {
   },
   data() {
     return {
-      activeMenu: [],
+      selectedKeys: [],
+      openKeys: [],
       routerList: [],
     };
   },
   mounted() {
-    this.activeMenu = [];
+    this.selectedKeys = [];
+    this.openKeys = [];
     this.routerList = storage.getSessionItem("menuList");
-    let active = this.$route.path.replace("/", "").split("/")[0].toString();
-    this.activeMenu.push(active);
+    let routers = this.$route.path.replace("/", "").split("/");
+    let selected = routers[routers.length - 1].toString();
+    let open = routers[0].toString();
+    this.selectedKeys.push(selected);
+    this.openKeys.push(open);
   },
   methods: {
     selectMenu(menu) {
+      console.log("selectedKeys", this.selectedKeys);
+      console.log("openKeys", this.openKeys);
       if (!menu.keyPath) {
         return false;
       }
