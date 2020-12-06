@@ -24,6 +24,9 @@ export default {
     hide(state) {
       state.show = false;
     },
+    value(state, value) {
+      state.value = value;
+    },
   },
   // 对数据的异步更改
   actions: {
@@ -42,6 +45,9 @@ export default {
     },
     hideCommit(context) {
       context.commit("hide");
+    },
+    valueCommit(context) {
+      context.commit("value");
     },
   },
   // 应用层级的状态应该集中到单个 store 对象中。

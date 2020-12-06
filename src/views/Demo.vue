@@ -19,6 +19,7 @@ export default {
       // 一些和DOM有关的东西
     });
   },
+  methods: {},
 };
 </script>
 

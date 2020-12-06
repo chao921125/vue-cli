@@ -13,19 +13,19 @@
         </a-menu-item>
       </template>
       <template v-else>
-        <sub-menu-recursion :key="item.key" :menu-info="item" />
+        <sub-menu :key="item.key" :menu-info="item" />
       </template>
     </template>
   </a-sub-menu>
 </template>
 
 <script>
-import SubMenuRecursion from "./SubMenuRecursion";
+import SubMenu from "./SubMenu";
 
 export default {
-  name: "SubMenu",
+  name: "SubMenuRecursion",
   components: {
-    SubMenuRecursion,
+    SubMenu,
   },
   props: {
     menuInfo: {

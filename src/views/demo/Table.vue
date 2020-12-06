@@ -30,8 +30,6 @@
 </template>
 
 <script>
-import { SmileOutlined, DownOutlined } from "@ant-design/icons-vue";
-
 const columns = [
   {
     dataIndex: "name",
@@ -87,10 +85,6 @@ const data = [
 
 export default {
   name: "Table",
-  components: {
-    SmileOutlined,
-    DownOutlined,
-  },
   data() {
     return {
       data,

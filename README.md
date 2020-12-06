@@ -67,5 +67,10 @@ postcss-pxtorem // 将px转rem -D
 移动端调试
 vconsole
 
-### TODO 
+## TODO
 封装axios，前端自定义报文返回，error根据业务需求返回结果，含状态码。
+echarts 更新5.0之后封装使用。
+改变icon，改为动态加载模式。
+
+## Question
+不知道为啥，SubMenu不能自身调用？哪位大佬知道可以给个解释。

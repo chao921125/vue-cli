@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import routes from "./routes";
+import store from "../store";
+import util from "@plugins/utils/util";
 
 // 进度条
 import NProgress from "nprogress";
@@ -27,7 +29,7 @@ router.beforeEach((to, from, next) => {
   // 进度条
   NProgress.start();
   if (to.matched.length === 0) {
-    // 匹配路由是否存在
+    // 匹配路由是否存在，不存在的路由统一跳转404页面
     next({
       name: "404",
     });
@@ -37,6 +39,9 @@ router.beforeEach((to, from, next) => {
       // 验证当前路由所有的匹配中是否需要有登录验证的
       // 这里暂时将cookie里是否存有token作为验证是否登录的条件
       // 请根据自身业务需要修改 发送请求校验session是否到期
+      // 组装动态路由的时候一定是按照菜单的格式，然后此处将菜单的数据格式转化为路由数据格式
+      console.log(store);
+      store.getters[``];
       // const token = util.cookies.get("token");
       // if (token && token !== "undefined") {
       //   next();
@@ -65,9 +70,8 @@ router.beforeEach((to, from, next) => {
 router.afterEach((to) => {
   // 进度条
   NProgress.done();
-  console.log(to.meta.title);
   // 更改标题
-  // util.title(to.meta.title);
+  util.title(to.meta.title);
 });
 
 export default router;

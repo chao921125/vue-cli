@@ -14,8 +14,11 @@
     </a-layout-sider>
     <a-layout class="layout-main">
       <a-layout-header class="layout-header">
-        <menu-unfold-outlined v-if="collapsed" class="trigger" @click="() => (collapsed = !collapsed)" />
-        <menu-fold-outlined v-else class="trigger" @click="() => (collapsed = !collapsed)" />
+        <span>
+          <menu-unfold-outlined v-show="collapsed" class="trigger" @click="() => (collapsed = !collapsed)" />
+          <menu-fold-outlined v-show="!collapsed" class="trigger" @click="() => (collapsed = !collapsed)" />
+        </span>
+        <a-button type="primary" @click="logout"> logout </a-button>
       </a-layout-header>
       <a-layout-content class="layout-content">
         <div class="content">
@@ -30,30 +33,29 @@
 // import storageLocal from "@libs/storageLocal";
 // import storageSession from "@libs/storageSession";
 import Menu from "@components/menus/Menu";
-import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons-vue";
 export default {
   name: "Home",
   components: {
     Menu,
-    MenuUnfoldOutlined,
-    MenuFoldOutlined,
   },
   data() {
     return {
       imgSrc: [require("@assets/logo.png"), require("@assets/logo.png")],
-      isCollapse: false,
       collapsed: false,
     };
   },
   methods: {
     toggleCollapse() {
-      this.isCollapse = !this.isCollapse;
+      this.collapsed = !this.collapsed;
     },
     onCollapse(collapsed, type) {
       console.log(collapsed, type);
     },
     onBreakpoint(broken) {
       console.log(broken);
+    },
+    logout() {
+      this.$router.push({ path: "/login" });
     },
   },
 };

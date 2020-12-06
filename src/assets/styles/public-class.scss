@@ -1,12 +1,15 @@
+// 所有颜色
+@import '~@assets/styles/unit/color.scss';
+// 自定义的样式
 @import '~@assets/styles/public.scss';
-// 图标库
-@import '~@assets/styles/icon/glyphicon.scss';
 // 补丁 base
 @import '~@assets/styles/fixed/base.scss';
 // 补丁 n-progress
 @import '~@assets/styles/fixed/n-progress.scss';
 // 动画
 @import '~@assets/styles/animate/vue-transition.scss';
+// 图标库
+@import '~@assets/styles/icon/glyphicon.scss';
 // 补丁 element
 //@import '~@assets/styles/fixed/element.scss';
 

@@ -70,6 +70,7 @@ export default {
     }
     let size = 0;
     for (let item in window.localStorage) {
+      // eslint-disable-next-line no-prototype-builtins
       if (window.localStorage.hasOwnProperty(item)) {
         size += window.localStorage.getItem(item).length;
       }

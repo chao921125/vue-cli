@@ -29,7 +29,6 @@ const frameIn = [
   },
   {
     path: "/home",
-    name: "home",
     redirect: { name: "index" },
     component: () => import("@/views/Home"),
     meta: {

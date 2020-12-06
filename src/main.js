@@ -16,6 +16,11 @@ import Antd from "ant-design-vue";
 // import "ant-design-vue/dist/antd.less";
 import "@assets/styles/fixed/ant.less";
 app.use(Antd);
+import * as Icons from "@ant-design/icons-vue";
+for (const i in Icons) {
+  app.component(i, Icons[i]);
+}
+
 // UI Element
 // import ElementUI from "element-ui";
 // import "element-ui/lib/theme-chalk/index1.css";
@@ -34,8 +39,8 @@ import "@assets/styles/public-class.scss";
 // 三方插件
 import "vuedraggable"; // 拖拽
 // 三方插件：数据图
-import echarts from "echarts"; // 数据图
-app.config.globalProperties.$echarts = echarts;
+// import echarts from "echarts"; // 数据图
+// app.config.globalProperties.$echarts = echarts;
 
 // 全局变量配置
 import constants from "@libs/constants";
@@ -69,18 +74,18 @@ app.config.errorHandler = (err, vm, info) => {
     console.log(err);
   }
 };
-app.config.warnHandler = (msg, vm, trace) => {
-  // 显示在控制台
-  if (process.env.NODE_ENV === "development") {
-    // `trace` 是组件的继承关系追踪
-    util.log.warning(">>>>>> 警告信息 >>>>>>");
-    console.log(msg);
-    util.log.warning(">>>>>> Vue 实例 >>>>>>");
-    console.log(vm);
-    util.log.warning(">>>>>> Info >>>>>>");
-    console.log(trace);
-  }
-};
+// app.config.warnHandler = (msg, vm, trace) => {
+//   // 显示在控制台
+//   if (process.env.NODE_ENV === "development") {
+//     // `trace` 是组件的继承关系追踪
+//     util.log.warning(">>>>>> 警告信息 >>>>>>");
+//     console.log(msg);
+//     util.log.warning(">>>>>> Vue 实例 >>>>>>");
+//     console.log(vm);
+//     util.log.warning(">>>>>> Info >>>>>>");
+//     console.log(trace);
+//   }
+// };
 
 // 自定义组件
 // app.component("button-counter", {
