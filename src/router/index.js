@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import routes from "./routes";
 import store from "../store";
 import util from "@plugins/utils/util";
+import storage from "@libs/storage";
 
 // 进度条
 import NProgress from "nprogress";
@@ -35,6 +36,8 @@ router.beforeEach((to, from, next) => {
     });
     NProgress.done();
   } else {
+    console.log(storage.getSessionItem("routerList"));
+    router.addRoute(storage.getSessionItem("routerList"));
     if (to.matched.some((r) => r.meta.auth)) {
       // 验证当前路由所有的匹配中是否需要有登录验证的
       // 这里暂时将cookie里是否存有token作为验证是否登录的条件
@@ -42,6 +45,7 @@ router.beforeEach((to, from, next) => {
       // 组装动态路由的时候一定是按照菜单的格式，然后此处将菜单的数据格式转化为路由数据格式
       console.log(store);
       store.getters[``];
+      // trigger a redirection
       // const token = util.cookies.get("token");
       // if (token && token !== "undefined") {
       //   next();
