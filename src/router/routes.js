@@ -14,8 +14,8 @@
 //   caseSensitive?: boolean, // 匹配规则是否大小写敏感？(默认值：false)
 // pathToRegexpOptions?: Object // 编译正则的选项
 // }
-// import user from "./modules/user";
-// import demos from "./modules/demos";
+import user from "./modules/user";
+import demos from "./modules/demos";
 
 const meta = { auth: true };
 
@@ -28,16 +28,16 @@ const frameIn = [
     name: "",
     redirect: { name: "home" },
   },
-  // {
-  //   path: "/home",
-  //   name: "home",
-  //   redirect: { name: "index" },
-  //   component: () => import("@/views/Home"),
-  //   meta: {
-  //     auth: true,
-  //   },
-  //   children: [...user, ...demos],
-  // },
+  {
+    path: "/home",
+    name: "home",
+    redirect: { name: "index" },
+    component: () => import("@/views/Home"),
+    meta: {
+      auth: true,
+    },
+    children: [...user, ...demos],
+  },
   {
     path: "/",
     meta: {

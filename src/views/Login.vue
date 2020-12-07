@@ -55,7 +55,18 @@ export default {
       let routerList = [];
       routerList = this.req2Router(routerList, demoMenuList);
       storage.setSessionItem("menuList", demoMenuList);
-      storage.setSessionItem("routerList", routerList);
+      let dynamic = {
+        path: "/home",
+        name: "home",
+        redirect: { name: "index" },
+        component: () => import("@/views/Home"),
+        meta: {
+          auth: true,
+        },
+        children: [...routerList],
+      }
+      console.log(dynamic);
+      storage.setSessionItem("routerList", dynamic);
       this.$router.push({ path: "/home" });
     },
     req2Router(routerList, dms) {

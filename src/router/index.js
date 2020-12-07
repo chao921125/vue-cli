@@ -37,7 +37,15 @@ router.beforeEach((to, from, next) => {
     NProgress.done();
   } else {
     console.log(storage.getSessionItem("routerList"));
-    router.addRoute(storage.getSessionItem("routerList"));
+    let routerAdd = {
+      path: "/500",
+      name: "500",
+      component: () => import("@/views/500"),
+      meta: {
+        auth: true,
+      },
+    }
+    router.addRoute(routerAdd);
     if (to.matched.some((r) => r.meta.auth)) {
       // 验证当前路由所有的匹配中是否需要有登录验证的
       // 这里暂时将cookie里是否存有token作为验证是否登录的条件
@@ -69,6 +77,7 @@ router.beforeEach((to, from, next) => {
       NProgress.done();
     }
   }
+
 });
 
 router.afterEach((to) => {
