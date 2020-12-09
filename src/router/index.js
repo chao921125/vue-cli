@@ -69,8 +69,6 @@ router.beforeEach((to, from, next) => {
         });
         NProgress.done();
       }
-      next();
-      NProgress.done();
     } else {
       // 不需要身份校验 直接通过，根据业务需要可自行更改
       next();
