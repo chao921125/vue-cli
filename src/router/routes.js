@@ -25,7 +25,6 @@ const meta = { auth: true };
 const frameIn = [
   {
     path: "/",
-    name: "",
     redirect: { name: "home" },
   },
   {
@@ -39,7 +38,7 @@ const frameIn = [
     children: [...user, ...demos],
   },
   {
-    path: "/",
+    path: "",
     meta: {
       auth: true,
     },
