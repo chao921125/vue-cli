@@ -159,6 +159,22 @@ module.exports = {
     config.node.set("__dirname", true).set("__filename", true);
     // const types = ["vue-modules", "vue", "normal-modules", "normal"];
     // types.forEach((type) => addStyleResource(config.module.rule("less").oneOf(type)));
+    // set svg-sprite-loader
+    config.module
+      .rule("svg")
+      .exclude.add(resolve("src/assets/icons"))
+      .end()
+    config.module
+      .rule("icons")
+      .test(/\.svg$/)
+      .include.add(resolve("src/assets/icons"))
+      .end()
+      .use("svg-sprite-loader")
+      .loader("svg-sprite-loader")
+      .options({
+        symbolId: "icon-[name]"
+      })
+      .end()
   },
   // 第三方插件配置
   pluginOptions: {
