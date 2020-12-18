@@ -18,13 +18,13 @@ export default {
   // 对数据的同步更改
   mutations: {
     // fn(state, [params]) // 参数作为赋值使用
-    show(state) {
+    setShow(state) {
       state.show = true;
     },
-    hide(state) {
+    setHide(state) {
       state.show = false;
     },
-    value(state, value) {
+    setValue(state, value) {
       state.value = value;
     },
   },
@@ -40,14 +40,14 @@ export default {
     //  getters,    // 等同于 `store.getters`
     //  rootGetters // 等同于 `store.getters`，只存在于模块中
     // }
-    showCommit(context) {
-      context.commit("show");
+    commitShow(context) {
+      context.commit("setShow");
     },
-    hideCommit(context) {
-      context.commit("hide");
+    commitHide(context) {
+      context.commit("setHide");
     },
-    valueCommit(context) {
-      context.commit("value");
+    commitValue(context, value) {
+      context.commit("setValue", value);
     },
   },
   // 应用层级的状态应该集中到单个 store 对象中。

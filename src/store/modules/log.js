@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import { get, toString } from "lodash";
-import util from "@plugins/utils/util";
+import util from "@/plugins/util";
 
 export default {
   namespaced: true,
@@ -55,7 +55,7 @@ export default {
             // 当前地址
             url: get(window, "location.href", ""),
             // 当前时间
-            time: dayjs().format("YYYY-M-D HH:mm:ss"),
+            time: dayjs().format("YYYY-MM-DD HH:mm:ss"),
           },
           {
             type,

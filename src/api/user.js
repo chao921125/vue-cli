@@ -1,51 +1,37 @@
-import request from "@plugins/axios";
-import urls from "./index";
+/*
+ * 用户相关
+ * */
 
-export function GetPhoneCheck(data) {
-  return request({
-    url: urls.loginUrl + "/constant/getPhoneCheck",
+import axios from "@/plugins/axios";
+import baseURL from "./index";
+
+export function getPhoneCode(data) {
+  return axios({
+    url: baseURL.getPhoneCode,
+    method: "GET",
+    data,
+  });
+}
+
+export function login(data) {
+  return axios({
+    url: baseURL.login,
     method: "post",
     data,
   });
 }
-export function Login(data) {
-  return request({
-    url: urls.loginUrl + "/user/login",
+
+export function logout(data) {
+  return axios({
+    url: baseURL.logout,
     method: "post",
     data,
   });
 }
-export function AuthLogin(data) {
-  return request({
-    url: urls.loginUrl + "/user/authLogin",
-    method: "post",
-    data,
-  });
-}
-export function Logout(data) {
-  return request({
-    url: urls.loginUrl + "/logout",
-    method: "get",
-    data,
-  });
-}
-export function Session(data) {
-  return request({
-    url: urls.loginUrl + "/user/session",
-    method: "get",
-    data,
-  });
-}
-export function Check(data) {
-  return request({
-    url: urls.loginUrl + "/user/service/check",
-    method: "get",
-    data,
-  });
-}
-export function AccountLogin(data) {
-  return request({
-    url: urls.loginUrl + "/login",
+
+export function getUserInfo(data) {
+  return axios({
+    url: baseURL.getUserInfo,
     method: "post",
     data,
   });

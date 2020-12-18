@@ -1,12 +1,15 @@
+/*
+全局定义变量
+*/
+
+@import '~@/assets/style/common/color.scss';
+
 // 工具类名统一前缀
-$prefix: com;
+$prefix: cc;
 
 // 禁止用户选中 鼠标变为手形
 %unable-select {
   user-select: none;
-  cursor: pointer;
-}
-%select {
   cursor: pointer;
 }
 
@@ -26,27 +29,22 @@ $prefix: com;
   display: -webkit-flex;
 }
 %flex-center-row {
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
 %flex-center-col {
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 %flex-space-between {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
 }
 
 // 将元素模拟成卡片外观
 %card {
-  border: 1px solid #e9eaec;
+  border: 1px solid $color-border-white;
   background: #fff;
   border-radius: 4px;
   font-size: 14px;

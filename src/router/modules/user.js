@@ -13,7 +13,7 @@ export default [
   {
     path: "/demo",
     name: "demo",
-    component: () => import("@/views/Demo"),
+    component: () => import("@/views/demo/Demo"),
     meta: {
       title: "demo",
       icon: "demo",

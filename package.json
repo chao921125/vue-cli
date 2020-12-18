@@ -32,13 +32,16 @@
     "lib-flexible": "^0.3.2",
     "lodash": "^4.17.20",
     "lowdb": "^1.0.0",
+    "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
     "qs": "^6.9.4",
     "register-service-worker": "^1.7.1",
+    "screenfull": "^5.0.2",
     "ua-parser-js": "^0.7.22",
     "vue": "^3.0.3",
     "vue-i18n": "^8.22.2",
     "vue-router": "^4.0.0-0",
+    "vue-treeselect": "^1.0.7",
     "vuedraggable": "^2.24.3",
     "vuex": "^4.0.0-0",
     "xlsx": "^0.16.9"
@@ -66,7 +69,11 @@
     "postcss-pxtorem": "^5.1.1",
     "prettier": "^2.2.1",
     "sass-loader": "^10.1.0",
-    "style-resources-loader": "^1.4.1"
+    "style-resources-loader": "^1.4.1",
+    "svg-sprite-loader": "^5.2.1",
+    "text-loader": "^0.0.1",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.12"
   },
   "repository": {
     "type": "git",

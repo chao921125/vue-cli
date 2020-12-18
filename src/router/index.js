@@ -26,62 +26,74 @@ const router = createRouter({
  * 2、判断路由是否需要权限
  * 3、判断路由tooken是否过期
  */
-router.beforeEach((to, from, next) => {
+const ROUTER_LOGIN = "login";
+// 可以随着后期动态添加
+const WHITELIST = ["login", "register", "404", "error"];
+// const ROUTER_REGISTER = "register";
+router.beforeEach(async (to, from, next) => {
+  // await store.dispatch('system/config')
   // 进度条
   NProgress.start();
   // 验证当前路由所有的匹配中是否需要有登录验证的
   // 这里暂时将cookie里是否存有token作为验证是否登录的条件
   // 请根据自身业务需要修改 发送请求校验session是否到期
-  // 组装动态路由的时候一定是按照菜单的格式，然后此处将菜单的数据格式转化为路由数据格式
-  console.log(store);
-  store.getters[``];
-  // trigger a redirection
   const token = util.cookies.get("token");
-  if (token && token !== "undefined") {
-    console.log(storage.getSessionItem("routerList"));
-    let routerAdd = {
-      path: "/500",
-      name: "500",
-      component: () => import("@/views/500"),
-      meta: {
-        auth: true,
-      },
-    }
-    router.addRoute(routerAdd);
-    if (to.matched.length === 0) {
-      // 匹配路由是否存在，不存在的路由统一跳转404页面
-      next({
-        name: "404",
-      });
-      NProgress.done();
-    } else {
-      if (to.matched.some((r) => r.meta.auth)) {
-        next();
-        NProgress.done();
-      } else {
-        // 不需要身份校验 直接通过，根据业务需要可自行更改
-        next();
-        NProgress.done();
-      }
-    }
-  } else {
-    // 没有登录的时候跳转到登录界面
-    // 携带上登陆成功之后需要跳转的页面完整路径
+  // 白名单的无需经过任何判断直接next
+  if (WHITELIST.includes(to.path.replaceAll("/", ""))) {
+    next();
+    NProgress.done();
+  } else if (!token || token === "undefined") {
+    // 如果不存在token，那么此时需要跳转登录页面
     next({
-      name: "login",
+      name: ROUTER_LOGIN,
       query: {
         redirect: to.fullPath,
       },
     });
     NProgress.done();
+  } else {
+    if (store.getters["store/user/getMenus"].length > 0) {
+      // 动态路由处理
+      if (to.matched.length === 0) {
+        // 匹配路由是否存在
+        next({
+          name: "404",
+        });
+        NProgress.done();
+      } else {
+        next();
+        NProgress.done();
+        // if (to.matched.some((r) => r.meta.auth)) {
+        //   next();
+        //   NProgress.done();
+        // } else {
+        //   // 不需要身份校验 直接通过
+        // }
+      }
+    } else {
+      store
+        .dispatch("store/user/getUserInfo")
+        .then((resp) => {
+          router.addRoutes(resp);
+          resp.forEach((route) => {
+            router.options.routes.push(route);
+          });
+          next({ ...to, replace: true });
+          // next();
+          // NProgress.done();
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   }
 });
 
 router.afterEach((to) => {
-  // 进度条
-  NProgress.done();
   // 更改标题
   util.title(to.meta.title);
+  // 进度条
+  NProgress.done();
 });
 
 export default router;

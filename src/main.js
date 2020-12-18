@@ -34,7 +34,7 @@ for (const i in Icons) {
 // app.use(i18n);
 
 // 重写样式
-import "@assets/styles/public-class.scss";
+import "@assets/styles/global-class.scss";
 
 // 三方插件
 import "vuedraggable"; // 拖拽
@@ -114,5 +114,9 @@ app.directive("anchor", {
 //
 // createMyApp(Foo).mount('#foo')
 // createMyApp(Bar).mount('#bar')
+
+if (process.env.VUE_APP_MOCK) {
+  require("@/mock");
+}
 
 app.use(router).use(store).mount("#app");

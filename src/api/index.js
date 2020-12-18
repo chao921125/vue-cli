@@ -1,5 +1,9 @@
-const baseURL = "/api";
-const urls = {
-    loginUrl: "/app-user/login",
+const baseURI = "/";
+const userURI = baseURI + "/user";
+const baseURL = {
+  login: baseURI + "/login",
+  logout: baseURI + "/logout",
+  getPhoneCode: baseURI + "/getPhoneCode",
+  getUserInfo: userURI + "/getUserInfo",
 };
-export default urls;
+export default baseURL;
