@@ -2,11 +2,12 @@ import { createRouter, createWebHistory } from "vue-router";
 import routes from "./routes";
 import store from "../store";
 import util from "@plugins/utils/util";
-import storage from "@libs/storage";
 
 // 进度条
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
+// import Loading from "vue-loading-overlay";
+// import "vue-loading-overlay/dist/vue-loading.css";
 
 // 解决路由异常，此问题不会导致出错但是控制台会有异常信息 TODO 预留不确定是否还有此类问题
 // const routerPush = VueRouter.prototype.push;
