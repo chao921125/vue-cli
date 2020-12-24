@@ -150,6 +150,7 @@ module.exports = {
     config.resolve.symlinks(true);
     // 重新设置 alias .set('@', resolve('src'))
     config.resolve.alias
+      .set("@", resolve("src"))
       .set("@api", resolve("src/api"))
       .set("@assets", resolve("src/assets"))
       .set("@components", resolve("src/components"))

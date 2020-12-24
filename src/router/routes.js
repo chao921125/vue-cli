@@ -3,7 +3,49 @@
 /**
  * 无需权限访问、或重定向路由定义
  */
-export default [
+/**
+ * 主框架内，包含侧栏、导航
+ * @type {*[]}
+ */
+const frameInSide = [];
+
+/**
+ * 主框架内，包含导航
+ * @type {*[]}
+ */
+const frameNoSide = [
+  // 404
+  {
+    path: "/error",
+    name: "error",
+    component: () => import("@/views/error/Error"),
+    meta: {
+      hidden: true,
+      icon: "",
+      noCache: false,
+      title: "error",
+      auth: true,
+    },
+  },
+  {
+    path: "/404",
+    name: "404",
+    component: () => import("@/views/error/404"),
+    meta: {
+      hidden: true,
+      icon: "",
+      noCache: false,
+      title: "404",
+      auth: false,
+    },
+  },
+];
+
+/**
+ * 主框架外
+ * @type {*[]}
+ */
+const frameOut = [
   // 登录
   {
     path: "/login",
@@ -37,29 +79,6 @@ export default [
       auth: true,
     },
   },
-  // 404
-  {
-    path: "/error",
-    name: "error",
-    component: () => import("@/views/error/Error"),
-    meta: {
-      hidden: true,
-      icon: "",
-      noCache: false,
-      title: "error",
-      auth: true,
-    },
-  },
-  {
-    path: "/404",
-    name: "404",
-    component: () => import("@/views/error/404"),
-    meta: {
-      hidden: true,
-      icon: "",
-      noCache: false,
-      title: "404",
-      auth: false,
-    },
-  },
 ];
+
+export default [...frameInSide, ...frameNoSide, ...frameOut];

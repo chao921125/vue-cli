@@ -1,23 +1,39 @@
-const meta = { auth: true };
 export default [
   {
-    path: "/table",
-    name: "table",
-    component: () => import("@/views/demo/Table"),
+    path: "/home",
+    name: "home",
+    component: () => import("@/views/Home"),
     meta: {
-      title: "table",
-      icon: "table",
-      ...meta,
+      hidden: false,
+      icon: "",
+      noCache: false,
+      title: "首页",
+      auth: true,
     },
   },
   {
-    path: "/table/table-details",
-    name: "table-details",
-    component: () => import("@/views/demo/Table-details"),
+    path: "/test",
+    name: "test",
     meta: {
-      title: "详情",
-      icon: "table",
-      ...meta,
+      hidden: false,
+      icon: "",
+      noCache: false,
+      title: "测试",
+      auth: true,
     },
+    children: [
+      {
+        path: "/test/test",
+        name: "test",
+        component: () => import("@/views/test/TestView"),
+        meta: {
+          hidden: false,
+          icon: "",
+          noCache: false,
+          title: "测试",
+          auth: true,
+        },
+      },
+    ],
   },
 ];

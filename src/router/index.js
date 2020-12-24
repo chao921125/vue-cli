@@ -1,23 +1,25 @@
 import { createRouter, createWebHistory } from "vue-router";
 import routes from "./routes";
 import store from "../store";
-import util from "@plugins/utils/util";
-import storage from "@libs/storage";
+import util from "@plugins/utils";
 
 // 进度条
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 
-// 解决路由异常，此问题不会导致出错但是控制台会有异常信息 TODO 预留不确定是否还有此类问题
-// const routerPush = VueRouter.prototype.push;
-// VueRouter.prototype.push = function push(location) {
-//   return routerPush.call(this, location).catch((error) => error);
-// };
-
 const router = createRouter({
+  scrollBehavior(/* to, from, savedPosition */) {
+    return { top: 0 }
+  },
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
+
+// 解决路由异常，此问题不会导致出错但是控制台会有异常信息 TODO 预留不确定是否还有此类问题
+// const routerPush = router.prototype.push;
+// router.prototype.push = function push(location) {
+//   return routerPush.call(this, location).catch((error) => error);
+// };
 
 /**
  * 路由拦截
@@ -30,7 +32,7 @@ const ROUTER_LOGIN = "login";
 // 可以随着后期动态添加
 const WHITELIST = ["login", "register", "404", "error"];
 // const ROUTER_REGISTER = "register";
-router.beforeEach(async (to, from, next) => {
+router.beforeEach((this, to, from, next) => {
   // await store.dispatch('system/config')
   // 进度条
   NProgress.start();
@@ -71,16 +73,17 @@ router.beforeEach(async (to, from, next) => {
         // }
       }
     } else {
+      console.log(store);
       store
         .dispatch("store/user/getUserInfo")
         .then((resp) => {
-          router.addRoutes(resp);
+          router.addRoute(resp);
           resp.forEach((route) => {
             router.options.routes.push(route);
           });
-          next({ ...to, replace: true });
+          next();
           // next();
-          // NProgress.done();
+          NProgress.done();
         })
         .catch((error) => {
           console.log(error);

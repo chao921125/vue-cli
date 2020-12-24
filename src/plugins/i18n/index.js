@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import VueI18n from "vue-i18n";
 import store from "@/store";
-import util from "@plugins/utils/util";
+import util from "@plugins/utils";
 
 const app = createApp({});
 

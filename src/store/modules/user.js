@@ -1,5 +1,5 @@
-import util from "@/plugins/util";
-import { login, logout, getUserInfo } from "@/api/user";
+import util from "@plugins/utils";
+import { login, logout, getUserInfo } from "@api/user";
 
 export default {
   namespaced: true,
@@ -9,10 +9,10 @@ export default {
     uuid: util.cookies.get("uuid"),
     name: "",
     avatar: require("@/assets/logo.png"),
-    roles: [],
-    permissions: [],
-    menus: [],
-    routes: [],
+    roles: [], // 角色
+    permissions: [], // 权限
+    menus: [], // 菜单
+    routes: [], // 路由
   },
   getters: {
     getMenus: (state) => {
@@ -109,23 +109,22 @@ export default {
 
 // 模拟返回数据，后端要处理掉按钮级别的数据，前端不做处理，对应的数据一定要存储int或者char
 // let returnDemo = {
-//   id: 1, // 当前id
-//   parentId: 0, // 父菜单id 0 代表顶级菜单
-//   orderNum: 1, // 显示顺序 array.sort((a,b) => {return a.id - b.id});
-//   type: 0, // 菜单类型 0 目录，1菜单，2按钮
-//   name: "", // 菜单名称
+//   id: 1, // 当前id -----后端筛选
+//   parentId: 0, // 父菜单id 0 代表顶级菜单 -----后端筛选
+//   orderNum: 1, // 显示顺序 array.sort((a,b) => {return a.id - b.id}); -----后端筛选
+//   type: 0, // 菜单类型 0 目录，1菜单，2按钮 -----后端筛选
+//   name: "", // 菜单名称——路由使用
 //   title: "", // 页面标题
-//   path: "", // 路由地址
-//   component: "", // 组件路径
-//   redirect: "", // 组件路径
+//   path: "", // 请求地址
+//   component: "", // 组件路径——路由使用
+//   redirect: "", // 组件路径——路由使用
 //   icon: "", // 菜单图标 判断包含的内容是否包含组件以及自定义标签，否则只支持svg格式 icon.length-4 === (icon.indexOf(".svg") || icon.indexOf(".SVG"));
 //   isLink: 0, // 是否为外链 默认0，1代表外链，外链时路由地址即为绝对路径
-//   isCache: 0, // 是否缓存 默认0，1 keep-alive 缓存数据
-//   isVisible: 0, // 是否展示隐藏 默认0，1 隐藏当前
 //   isDisable: 1, // 是否可点击 默认1，0不可点 !isDisable
-//   isSideMenu: 1, // 是否展示侧边栏 默认1，0不展示
-//   status: 1, // 菜单状态 默认1，0停用
+//   status: 1, // 菜单状态 默认1，0停用（后端标记使用） -----后端筛选
 //   perms: "*", // 权限标识 admin:system:*
+//   isCache: 0, // 是否缓存 默认0，1 keep-alive 缓存数据——路由使用
+//   isSideMenu: 1, // 是否展示侧边栏 默认1，0不展示——路由使用
 // };
 
 // 组装动态路由
@@ -207,7 +206,7 @@ const setItemRouter = (routerList, dataList, baseUrl) => {
         icon: "",
         title: data.title,
         auth: true,
-        isDisable: !data.isDisable,
+        isSideMenu: !!data.isSideMenu,
         isCache: !data.isCache,
       },
       children: [],

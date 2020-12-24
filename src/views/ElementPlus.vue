@@ -23,7 +23,7 @@
         <i :class="isCollapse ? 'el-icon-s-unfold' : 'el-icon-s-fold'" @click="toggleCollapse"></i>
       </div>
       <div :class="isCollapse ? 'com-text-right info-collapse' : 'com-text-right info'">
-        <router-link to="/demo">Demo</router-link>
+        <router-link to="/test">Test</router-link>
       </div>
     </el-header>
   </el-container>

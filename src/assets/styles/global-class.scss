@@ -2,12 +2,12 @@
 全局定义class
 */
 
-@import '~@/assets/style/public.scss';
-@import '~@/assets/style/icon/glyphicon.scss';
-@import '~@/assets/style/reset/base.scss';
-@import '~@/assets/style/reset/element.scss';
-@import '~@/assets/style/reset/n-progress.scss';
-@import '~@/assets/style/reset/vue-transition.scss';
+@import '~@/assets/styles/public.scss';
+@import '~@/assets/styles/icon/glyphicon.scss';
+@import '~@assets/styles/animate/n-progress.scss';
+@import '~@/assets/styles/animate/vue-transition.scss';
+@import '~@/assets/styles/reset/base.scss';
+@import '~@/assets/styles/reset/element.scss';
 
 // 在这里写公用的class
 // 注意 这个文件里只写class

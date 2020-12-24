@@ -8,7 +8,7 @@ const cookies = {};
  * @param {String} value cookie value
  * @param cookieSetting
  */
-cookies.set = (name = "default", value = "", cookieSetting = {}) => {
+cookies.set = function (name = "default", value = "", cookieSetting = {}) {
   let currentCookieSetting = {
     expires: 1,
   };
@@ -20,14 +20,14 @@ cookies.set = (name = "default", value = "", cookieSetting = {}) => {
  * @description 拿到 cookie 值
  * @param {String} name cookie name
  */
-cookies.get = (name = "default") => {
+cookies.get = function (name = "default") {
   return Cookies.get(`${name}-${process.env.VUE_APP_VERSION}`);
 };
 
 /**
  * @description 拿到 cookie 全部的值
  */
-cookies.getAll = () => {
+cookies.getAll = function () {
   return Cookies.get();
 };
 
@@ -35,14 +35,14 @@ cookies.getAll = () => {
  * @description 删除 cookie
  * @param {String} name cookie name
  */
-cookies.remove = (name = "default") => {
+cookies.remove = function (name = "default") {
   return Cookies.remove(`${name}-${process.env.VUE_APP_VERSION}`);
 };
 
 /**
  * @description 删除全部 cookie
  */
-cookies.removeAll = () => {
+cookies.removeAll = function () {
   let cookies = Cookies.get();
   let cookieArr = cookies.split(";");
   let cookieLen = cookies.length;

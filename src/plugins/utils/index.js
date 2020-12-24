@@ -12,7 +12,7 @@ const util = {
  * @description 更新标题
  * @param titleText
  */
-util.title = (titleText) => {
+util.title = function (titleText) {
   const processTitle = process.env.VUE_APP_TITLE || "";
   window.document.title = `${processTitle}${titleText ? ` | ${titleText}` : ""}`;
 };
@@ -21,36 +21,14 @@ util.title = (titleText) => {
  * @description 打开新页面
  * @param {String} url 地址
  */
-util.open = (url) => {
+util.open = function (url) {
   let a = document.createElement("a");
   a.setAttribute("href", url);
   a.setAttribute("target", "_blank");
-  a.setAttribute("id", "link");
+  a.setAttribute("id", "open_window_blank");
   document.body.appendChild(a);
   a.click();
-  document.body.removeChild(document.getElementById("query-id"));
-};
-
-// 处理token
-util.dealToken = (str) => {
-  if (str.indexOf("=") > -1) {
-    let arr = str.split(";");
-    for (let item of arr) {
-      if (item.indexOf("token_") > -1) {
-        return item.split("=")[1];
-      }
-    }
-  }
-  return "";
-};
-
-// 清除表单信息
-util.clearFrom = (obj) => {
-  if (obj !== undefined && obj != null && obj !== "") {
-    for (let key in obj) {
-      obj[key] = "";
-    }
-  }
+  document.body.removeChild(document.getElementById("open_window_blank"));
 };
 
 export default util;

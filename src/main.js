@@ -5,61 +5,10 @@ import router from "./router";
 import store from "./store";
 
 // 引用工具类
-import util from "@plugins/utils/util";
-
+import util from "@/plugins/utils";
+// vue配置
 const app = createApp(App);
 app.config.productionTip = false;
-
-// UI
-import Antd from "ant-design-vue";
-// 如果想要覆盖掉组件的样式，那么需要自定义一个less（必须），同时不能在此处顺序引入，只能在自定义文件中引入
-// import "ant-design-vue/dist/antd.less";
-import "@assets/styles/fixed/ant.less";
-app.use(Antd);
-import * as Icons from "@ant-design/icons-vue";
-for (const i in Icons) {
-  app.component(i, Icons[i]);
-}
-
-// UI Element
-// import ElementUI from "element-ui";
-// import "element-ui/lib/theme-chalk/index1.css";
-// const options = {
-//   size: "medium",
-//   zIndex: 3000,
-// };
-// app.use(ElementUI, options);
-
-// import i18n from "@plugins/i18n"; // TODO 3.0版本如何配置国际化
-// app.use(i18n);
-
-// 重写样式
-import "@assets/styles/global-class.scss";
-
-// 三方插件
-import "vuedraggable"; // 拖拽
-// 三方插件：数据图
-// import echarts from "echarts"; // 数据图
-// app.config.globalProperties.$echarts = echarts;
-
-// 全局变量配置
-import constants from "@libs/constants";
-import enums from "@libs/enums";
-import filters from "@plugins/filters";
-app.config.globalProperties.$constants = constants;
-app.config.globalProperties.$enums = enums;
-app.config.globalProperties.$filters = filters;
-
-// 移动端像素转rem
-import "lib-flexible";
-
-// 全局挂载 所有全局配置转移至@plugins/global中配置
-// app.config.globalProperties.$Api = Api;
-// app.use(Api);
-
-// 自定义元素
-app.config.isCustomElement = (tag) => tag.startsWith("ion-");
-
 // 处理日志信息
 app.config.errorHandler = (err, vm, info) => {
   // 处理错误
@@ -86,6 +35,61 @@ app.config.errorHandler = (err, vm, info) => {
 //     console.log(trace);
 //   }
 // };
+
+
+// UI start
+// 如果想要覆盖掉组件的样式，那么需要自定义一个less（必须），同时不能在此处顺序引入，只能在自定义文件中引入
+import Antd from "ant-design-vue";
+// import "ant-design-vue/dist/antd.less";
+import "@/assets/styles/reset/ant.less";
+app.use(Antd);
+
+// icon
+import * as Icons from "@ant-design/icons-vue";
+for (const i in Icons) {
+  app.component(i, Icons[i]);
+}
+
+// UI 备用 Element
+// import ElementUI from "element-ui";
+// import "element-ui/lib/theme-chalk/index1.css";
+// const options = {
+//   size: "medium",
+//   zIndex: 3000,
+// };
+// app.use(ElementUI, options);
+
+// 全局样式定义
+import "@/assets/styles/global-class.scss";
+// UI end
+
+// i18n国际化
+// import i18n from "@plugins/i18n"; // TODO 3.0版本如何配置国际化
+// app.use(i18n);
+
+// 三方插件 start
+import "vuedraggable"; // 拖拽
+// 三方插件：数据图
+// import echarts from "echarts"; // TODO echarts 5.0在vue3中配置
+// app.config.globalProperties.$echarts = echarts;
+// 三方插件 end
+
+// 全局变量配置 start
+// app.config.globalProperties.$Api = Api;
+// app.use(Api);
+import constants from "@libs/constants";
+import filters from "@plugins/filters";
+app.config.globalProperties.$constants = constants;
+app.config.globalProperties.$filters = filters;
+// 全局变量配置 end
+
+// 移动端相关解决 start
+// 像素转rem
+import "lib-flexible";
+// 移动端相关解决 end
+
+// 自定义元素
+app.config.isCustomElement = (tag) => tag.startsWith("ion-");
 
 // 自定义组件
 // app.component("button-counter", {

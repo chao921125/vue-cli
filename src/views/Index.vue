@@ -32,7 +32,7 @@
 <script>
 // import storageLocal from "@libs/storageLocal";
 // import storageSession from "@libs/storageSession";
-import Menu from "@components/menus/Menu";
+import Menu from "./components/menus/Menu";
 export default {
   name: "Home",
   components: {
