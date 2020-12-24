@@ -57,6 +57,8 @@ export default {
   },
   mounted() {
     console.log(this.menuList);
+    console.log(this.selectedKeys);
+    console.log(this.openKeys);
   },
   methods: {
     selectMenu(index) {

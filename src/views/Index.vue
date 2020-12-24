@@ -22,7 +22,9 @@
       </a-layout-header>
       <a-layout-content class="layout-content">
         <div class="content">
-          <router-view />
+          <keep-alive>
+            <transition><router-view /></transition>
+          </keep-alive>
         </div>
       </a-layout-content>
     </a-layout>
@@ -43,6 +45,9 @@ export default {
       imgSrc: [require("@assets/logo.png"), require("@assets/logo.png")],
       collapsed: false,
     };
+  },
+  mounted() {
+    console.log(this.$store.getters["store/user/getMenus"]);
   },
   methods: {
     toggleCollapse() {

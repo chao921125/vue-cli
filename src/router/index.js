@@ -32,7 +32,7 @@ const ROUTER_LOGIN = "login";
 // 可以随着后期动态添加
 const WHITELIST = ["login", "register", "404", "error"];
 // const ROUTER_REGISTER = "register";
-router.beforeEach((this, to, from, next) => {
+router.beforeEach((to, from, next) => {
   // await store.dispatch('system/config')
   // 进度条
   NProgress.start();
@@ -73,7 +73,6 @@ router.beforeEach((this, to, from, next) => {
         // }
       }
     } else {
-      console.log(store);
       store
         .dispatch("store/user/getUserInfo")
         .then((resp) => {
