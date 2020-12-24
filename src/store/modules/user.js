@@ -148,6 +148,7 @@ const setRouter = (dataList) => {
         {
           path: "refresh",
           name: "refresh",
+          hidden: true,
           component: {
             beforeRouteEnter(to, from, next) {
               next((vm) => vm.$router.replace(from.fullPath));
@@ -159,6 +160,7 @@ const setRouter = (dataList) => {
         {
           path: "redirect/:route*",
           name: "redirect",
+          hidden: true,
           component: {
             beforeRouteEnter(to, from, next) {
               next((vm) => vm.$router.replace(JSON.parse(from.params.route)));
@@ -179,20 +181,32 @@ const setRouter = (dataList) => {
     },
     children: [],
   };
-  let lastRouter = {
-    path: "*",
-    name: "*",
-    component: loadView("error/404"),
-    meta: {
-      icon: "",
-      title: "404",
-      auth: false,
-      isDisable: true,
-      isCache: false,
+  let lastRouter = [
+    {
+      path: "/:pathMatch(.*)*",
+      component: loadView("error/404"),
+      meta: {
+        icon: "",
+        title: "404",
+        auth: false,
+        isDisable: true,
+        isCache: false,
+      },
     },
-  };
+    {
+      path: "/:pathMatch(.*)",
+      component: loadView("error/404"),
+      meta: {
+        icon: "",
+        title: "404",
+        auth: false,
+        isDisable: true,
+        isCache: false,
+      },
+    }
+  ];
   setItemRouter(addRouters.children, dataList, "");
-  return [...rootRouter, addRouters, lastRouter];
+  return [...rootRouter, addRouters, ...lastRouter];
 };
 const setItemRouter = (routerList, dataList, baseUrl) => {
   for (let data of dataList) {

@@ -76,12 +76,12 @@ router.beforeEach((to, from, next) => {
       store
         .dispatch("store/user/getUserInfo")
         .then((resp) => {
-          router.addRoute(resp);
           resp.forEach((route) => {
+            router.addRoute(route);
             router.options.routes.push(route);
           });
-          next();
-          // next();
+          console.log(router.getRoutes());
+          next({ ...to, replace: true });
           NProgress.done();
         })
         .catch((error) => {
