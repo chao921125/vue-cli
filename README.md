@@ -43,6 +43,8 @@ ua-parser-js
 
 进度条
 nprogress
+vue-simple-spinner
+vue-loading-overlay
 
 数据表格
 xlsx
