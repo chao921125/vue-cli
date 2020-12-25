@@ -61,6 +61,8 @@ for (const i in Icons) {
 
 // 全局样式定义
 import "@/assets/styles/global-class.scss";
+
+// 过渡动画
 // UI end
 
 // i18n国际化

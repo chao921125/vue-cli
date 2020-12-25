@@ -21,10 +21,13 @@
         <a-button type="primary" @click="logout"> logout </a-button>
       </a-layout-header>
       <a-layout-content class="layout-content">
+        <transition></transition>
         <div class="content">
-          <keep-alive>
-            <transition><router-view /></transition>
-          </keep-alive>
+          <router-view v-slot="{ Component }">
+            <keep-alive>
+              <component :is="Component"/>
+            </keep-alive>
+          </router-view>
         </div>
       </a-layout-content>
     </a-layout>

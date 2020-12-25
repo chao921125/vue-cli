@@ -80,7 +80,6 @@ router.beforeEach((to, from, next) => {
             router.addRoute(route);
             router.options.routes.push(route);
           });
-          console.log(router.getRoutes());
           next({ ...to, replace: true });
           NProgress.done();
         })

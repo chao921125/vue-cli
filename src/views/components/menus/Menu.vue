@@ -9,13 +9,13 @@
   >
     <template v-for="item in menuList" :key="item.key">
       <template v-if="!item.children">
-        <a-menu-item :key="item.key" :title="item.title" :disabled="item.disabled">
+        <a-menu-item :key="item.path" :title="item.name" :disabled="item.disabled">
           <PieChartOutlined />
           <span>{{ item.title }}</span>
         </a-menu-item>
       </template>
       <template v-else>
-        <sub-menu :key="item.key" :menu-info="item" />
+        <sub-menu :key="item.path" :menu-info="item" />
       </template>
     </template>
   </a-menu>
@@ -47,12 +47,12 @@ export default {
     selectedKeys() {
       let routers = this.$route.path.replace("/", "").split("/");
       let selected = routers[routers.length - 1].toString();
-      return [...selected];
+      return [selected];
     },
     openKeys() {
       let routers = this.$route.path.replace("/", "").split("/");
       let open = routers[0].toString();
-      return [...open];
+      return [open];
     },
   },
   mounted() {

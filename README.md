@@ -46,6 +46,9 @@ nprogress
 vue-simple-spinner
 vue-loading-overlay
 
+过去动画
+vue-page-transition
+
 数据表格
 xlsx
 

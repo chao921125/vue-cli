@@ -113,11 +113,11 @@ export default {
 //   parentId: 0, // 父菜单id 0 代表顶级菜单 -----后端筛选
 //   orderNum: 1, // 显示顺序 array.sort((a,b) => {return a.id - b.id}); -----后端筛选
 //   type: 0, // 菜单类型 0 目录，1菜单，2按钮 -----后端筛选
-//   name: "", // 菜单名称——路由使用
-//   title: "", // 页面标题
+//   name: "", // 菜单名称
+//   title: "", // 页面标题 —— 路由使用
 //   path: "", // 请求地址
-//   component: "", // 组件路径——路由使用
-//   redirect: "", // 组件路径——路由使用
+//   component: "", // 组件路径 —— 路由使用
+//   redirect: "", // 组件路径 —— 路由使用
 //   icon: "", // 菜单图标 判断包含的内容是否包含组件以及自定义标签，否则只支持svg格式 icon.length-4 === (icon.indexOf(".svg") || icon.indexOf(".SVG"));
 //   isLink: 0, // 是否为外链 默认0，1代表外链，外链时路由地址即为绝对路径
 //   isDisable: 1, // 是否可点击 默认1，0不可点 !isDisable
