@@ -1,19 +1,19 @@
 <template>
-  <a-sub-menu :key="menuInfo.key" v-bind="$attrs">
+  <a-sub-menu :key="menuInfo.path" v-bind="$attrs">
     <template #title>
       <span>
         <MailOutlined /><span>{{ menuInfo.title }}</span>
       </span>
     </template>
-    <template v-for="item in menuInfo.children" :key="item.key">
+    <template v-for="item in menuInfo.children" :key="item.path">
       <template v-if="!item.children">
-        <a-menu-item :key="item.key" :title="item.title" :disabled="item.disabled">
+        <a-menu-item :key="resolvePath(item.path)" :title="item.name" :disabled="item.isDisable">
           <PieChartOutlined />
-          <span>{{ item.title }}</span>
+          <span>{{ item.name }}</span>
         </a-menu-item>
       </template>
       <template v-else>
-        <sub-menu :key="item.key" :menu-info="item" />
+        <sub-menu :menu-info="item" />
       </template>
     </template>
   </a-sub-menu>
@@ -31,6 +31,11 @@ export default {
     menuInfo: {
       type: Object,
       default: () => ({}),
+    },
+  },
+  methods: {
+    resolvePath(path) {
+      return this.menuInfo.path + "/" + path;
     },
   },
 };

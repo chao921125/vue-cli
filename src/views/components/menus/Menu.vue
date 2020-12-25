@@ -1,21 +1,21 @@
 <template>
   <a-menu
-    v-model:selected-keys="selectedKeys"
-    v-model:open-keys="openKeys"
+    v-model:default-selected-keys="selectedKeys"
+    v-model:default-open-keys="openKeys"
     mode="inline"
     theme="dark"
     :inline-collapsed="collapsed"
     @click="selectMenu"
   >
-    <template v-for="item in menuList" :key="item.key">
+    <template v-for="item in menuList" :key="item.id">
       <template v-if="!item.children">
-        <a-menu-item :key="item.path" :title="item.name" :disabled="item.disabled">
+        <a-menu-item :key="item.path" :title="item.name" :disabled="item.isDisable">
           <PieChartOutlined />
-          <span>{{ item.title }}</span>
+          <span>{{ item.name }}</span>
         </a-menu-item>
       </template>
       <template v-else>
-        <sub-menu :key="item.path" :menu-info="item" />
+        <sub-menu :menu-info="item" />
       </template>
     </template>
   </a-menu>
@@ -62,7 +62,7 @@ export default {
   },
   methods: {
     selectMenu(index) {
-      this.$router.push({ path: "/" + index });
+      this.$router.push({ path: "/" + index.key });
     },
   },
 };
