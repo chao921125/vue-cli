@@ -114,7 +114,6 @@ app.directive("anchor", {
 // const createMyApp = options => {
 //   const app = createApp(options)
 //   app.directive('focus' /* ... */)
-//
 //   return app
 // }
 //
