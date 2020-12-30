@@ -75,6 +75,9 @@ js-cookie
 加密解密
 crypto-js
 md5
+bcryptjs
+jsencrypt
+jsrsasign
 
 ua签名
 ua-parser-js
