@@ -38,6 +38,8 @@
 // import storageLocal from "@libs/storageLocal";
 // import storageSession from "@libs/storageSession";
 import Menu from "./components/menus/Menu";
+import util from "@plugins/utils";
+
 export default {
   name: "Home",
   components: {
@@ -63,6 +65,7 @@ export default {
       console.log(broken);
     },
     logout() {
+      util.cookies.removeAll();
       this.$router.push({ path: "/login" });
     },
   },

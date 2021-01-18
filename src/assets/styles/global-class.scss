@@ -22,6 +22,14 @@
 .flex-base {
   @extend %flex-base;
 }
+.flex-row {
+  @extend %flex-base;
+  @extend %flex-row;
+}
+.flex-col {
+  @extend %flex-base;
+  @extend %flex-col;
+}
 .flex-center-row {
   @extend %flex-base;
   @extend %flex-center-row;
@@ -36,32 +44,34 @@
 }
 
 // 100%
-.#{$prefix}-box {
-  width: 100%;
-  height: 100%;
+.#{$prefix}-box-fill {
+  @extend %wh-fill;
 }
-.#{$prefix}-width {
-  width: 100%;
+.#{$prefix}-width-fill {
+  @extend %width-fill;
 }
-.#{$prefix}-height {
-  height: 100%;
+.#{$prefix}-height-fill {
+  @extend %height-fill;
 }
-.#{$prefix}-width-v {
-  width: 100vw;
+.#{$prefix}-box-full {
+  @extend %wh-full;
 }
-.#{$prefix}-height-v {
-  height: 100vh;
+.#{$prefix}-width-full {
+  @extend %width-full;
+}
+.#{$prefix}-height-full {
+  @extend %height-full;
 }
 
 // 文字相关
 .#{$prefix}-text-center {
-  text-align: center;
+  @extend %text-center;
 }
 .#{$prefix}-text-left {
-  text-align: left;
+  @extend %text-left;
 }
 .#{$prefix}-text-right {
-  text-align: right;
+  @extend %text-right;
 }
 
 // 变成小手
@@ -117,3 +127,14 @@ $i: 50;
 //  .#{$prefix}-pb-#{$index} { padding-bottom: #{$index}px !important; }
 //  .#{$prefix}-pl-#{$index} { padding-left: #{$index}px !important; }
 //}
+
+.fixed-top-center {
+  @extend %text-center;
+  position: fixed;
+  top: 0;
+}
+.fixed-bottom {
+  @extend %text-center;
+  position: fixed;
+  bottom: 0;
+}

@@ -119,6 +119,5 @@ echarts 更新5.0之后封装使用。
 改变icon，改为动态加载模式。
 
 ## Question
-不知道为啥，SubMenu不能自身调用？哪位大佬知道可以给个解释。
 
 less 不能升级4.0.0，同时less仅仅作为组件使用，自身还是写scss or sass

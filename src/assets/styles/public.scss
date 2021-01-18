@@ -23,10 +23,47 @@ $prefix: cc;
   left: 0;
 }
 
+// 文字居中
+%text-center {
+  text-align: center;
+}
+%text-left {
+  text-align: left;
+}
+%text-right {
+  text-align: right;
+}
+%wh-full {
+  width: 100vw;
+  height: 100vh;
+}
+%width-full {
+  width: 100vw;
+}
+%height-full {
+  height: 100vh;
+}
+%wh-fill {
+  width: 100%;
+  height: 100%;
+}
+%width-fill {
+  width: 100%;
+}
+%height-fill {
+  height: 100%;
+}
+
 // flex 垂直水平居中 两端对齐
 %flex-base {
   display: flex;
   display: -webkit-flex;
+}
+%flex-row {
+  justify-content: center;
+}
+%flex-col {
+  align-items: center;
 }
 %flex-center-row {
   justify-content: center;

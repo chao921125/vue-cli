@@ -1,6 +1,17 @@
 <template>
-  <div>Login</div>
-  <a-button @click="submitForm">login</a-button>
+  <a-row class="cc-box-fill cc-box-full login-bg">
+    <a-col :span="24" class="cc-text-center">
+      desc logo demo
+    </a-col>
+    <a-col :span="24" class="flex-center-row cc-text-center">
+      <div class="login-box">
+      </div>
+      <a-button @click="submitForm">login</a-button>
+    </a-col>
+    <a-col :span="24" class="fixed-bottom flex-center-row cc-width-fill">
+      desc icp info
+    </a-col>
+  </a-row>
 </template>
 
 <script>
@@ -23,4 +34,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.login-bg {
+  background: url(../assets/images/login/login-bg.jpeg) no-repeat;
+}
+.login-box {
+  width: 200px;
+}
+</style>

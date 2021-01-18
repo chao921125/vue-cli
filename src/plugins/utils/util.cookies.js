@@ -44,10 +44,8 @@ cookies.remove = function (name = "default") {
  */
 cookies.removeAll = function () {
   let cookies = Cookies.get();
-  let cookieArr = cookies.split(";");
-  let cookieLen = cookies.length;
-  for (let i = 0; i < cookieLen; i++) {
-    Cookies.remove(cookieArr[i].split("=")[0]);
+  for (let ck in cookies) {
+    Cookies.remove(ck);
   }
 };
 
