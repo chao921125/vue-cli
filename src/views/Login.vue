@@ -1,12 +1,21 @@
 <template>
   <a-row class="cc-box-fill cc-box-full login-bg">
     <a-col :span="24" class="cc-text-center">
-      desc logo demo
-    </a-col>
-    <a-col :span="24" class="flex-center-row cc-text-center">
+      <a-col :span="24" class="cc-text-center">
+        desc logo demo
+      </a-col>
       <div class="login-box">
+        <p>login</p>
+        <a-form>
+          <a-form-item required has-feedback label="" name="pass">
+            <a-input v-model:value="ruleForm.pass" type="password" autocomplete="off" />
+          </a-form-item>
+          <a-form-item has-feedback label="" name="checkPass">
+            <a-input v-model:value="ruleForm.checkPass" type="password" autocomplete="off" />
+          </a-form-item>
+        </a-form>
+        <a-button @click="submitForm">login</a-button>
       </div>
-      <a-button @click="submitForm">login</a-button>
     </a-col>
     <a-col :span="24" class="fixed-bottom flex-center-row cc-width-fill">
       desc icp info
@@ -37,8 +46,13 @@ export default {
 <style scoped lang="scss">
 .login-bg {
   background: url(../assets/images/login/login-bg.jpeg) no-repeat;
+  background-size:100% 100%;
 }
 .login-box {
   width: 200px;
+  height: 500px;
+  position: relative;
+  right: 100px;
+  top: 100px;
 }
 </style>
