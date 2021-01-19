@@ -10,8 +10,8 @@
   ],
   "scripts": {
     "start": "npm run dev",
-    "dev": "vue-cli-service serve && webpack-dev-server --open",
-    "dev:prod": "vue-cli-service serve --mode production --open",
+    "dev": "vue-cli-service serve && webpack-dev-server --open -d",
+    "dev:prod": "vue-cli-service serve --mode production --open -d",
     "build": "vue-cli-service build",
     "build:prod": "vue-cli-service production build",
     "test:unit": "vue-cli-service test:unit",
