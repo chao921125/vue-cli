@@ -1,26 +1,26 @@
 [更新日志](./Version.md)
 
 # vue3-cli
-├── package.json 包管理
-├── public
-│   ├── favicon.ico
-│   ├── img
-│   ├── index.html
-│   └── robots.txt
-├── src
-│   ├── App.vue
-│   ├── api 接口定义
-│   ├── assets 静态资源
-│   ├── components 组件
-│   ├── libs 工具库
-│   ├── main.js 启动入口
-│   ├── mock 数据mock
-│   ├── plugins 组件工具
-│   ├── registerServiceWorker.js
-│   ├── router 路由
-│   ├── store vuex
-│   └── views 页面
-└── vue.config.js 启动配置
+- ├── package.json 包管理
+- ├── public
+- │   ├── favicon.ico
+- │   ├── img
+- │   ├── index.html
+- │   └── robots.txt
+- ├── src
+- │   ├── App.vue
+- │   ├── api 接口定义
+- │   ├── assets 静态资源
+- │   ├── components 组件
+- │   ├── libs 工具库
+- │   ├── main.js 启动入口
+- │   ├── mock 数据mock
+- │   ├── plugins 组件工具
+- │   ├── registerServiceWorker.js
+- │   ├── router 路由
+- │   ├── store vuex
+- │   └── views 页面
+- └── vue.config.js 启动配置
 
 ## Project Features
 1、国际化：vue-i18n/ant-design
