@@ -1,45 +1,28 @@
+[更新日志](./Version.md)
+
 # vue3-cli
 ├── package.json 包管理
-
 ├── public
-
 │   ├── favicon.ico
-
 │   ├── img
-
 │   ├── index.html
-
 │   └── robots.txt
-
 ├── src
-
 │   ├── App.vue
-
 │   ├── api 接口定义
-
 │   ├── assets 静态资源
-
 │   ├── components 组件
-
 │   ├── libs 工具库
-
 │   ├── main.js 启动入口
-
 │   ├── mock 数据mock
-
 │   ├── plugins 组件工具
-
 │   ├── registerServiceWorker.js
-
 │   ├── router 路由
-
 │   ├── store vuex
-
 │   └── views 页面
-
 └── vue.config.js 启动配置
-## Project Features
 
+## Project Features
 1、国际化：vue-i18n/ant-design
 2、路由架构
 3、各种demo的使用
@@ -63,7 +46,7 @@ less less-loader style-resources-loader
 
 ui
 vant@next // 移动
-ant-design-vue // PC
+ant-design-vue // PC API实现看着不香，转element了
 element-plus // PC 备选
 
 http请求
@@ -87,7 +70,7 @@ nprogress
 vue-simple-spinner
 vue-loading-overlay
 
-过去动画
+过渡动画
 vue-page-transition
 
 数据表格

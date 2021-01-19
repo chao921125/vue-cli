@@ -6,14 +6,6 @@
       </a-col>
       <div class="login-box">
         <p>login</p>
-        <a-form>
-          <a-form-item required has-feedback label="" name="pass">
-            <a-input v-model:value="ruleForm.pass" type="password" autocomplete="off" />
-          </a-form-item>
-          <a-form-item has-feedback label="" name="checkPass">
-            <a-input v-model:value="ruleForm.checkPass" type="password" autocomplete="off" />
-          </a-form-item>
-        </a-form>
         <a-button @click="submitForm">login</a-button>
       </div>
     </a-col>
@@ -52,7 +44,5 @@ export default {
   width: 200px;
   height: 500px;
   position: relative;
-  right: 100px;
-  top: 100px;
 }
 </style>

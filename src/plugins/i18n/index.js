@@ -1,11 +1,6 @@
-import { createApp } from "vue";
-import VueI18n from "vue-i18n";
+import { createI18n } from 'vue-i18n'
 import store from "@/store";
 import util from "@plugins/utils";
-
-const app = createApp({});
-
-app.use(VueI18n);
 
 const storeI18n = store.getters["i18n"];
 
@@ -19,10 +14,11 @@ function loadLocaleMessages() {
       messages[locale] = locales(key);
     }
   });
+  console.log(messages);
   return messages;
 }
 
-export default new VueI18n({
+const i18n = createI18n({
   locale: storeI18n || process.env.VUE_APP_LOCAL,
   fallbackLocale: storeI18n || process.env.VUE_APP_LOCAL,
   messages: loadLocaleMessages(),
@@ -35,4 +31,6 @@ export default new VueI18n({
     util.log.danger(">>>>>> Vue 实例 >>>>>>");
     console.log(vm);
   },
-});
+})
+
+export default i18n;

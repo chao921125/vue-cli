@@ -66,8 +66,8 @@ import "@/assets/styles/global-class.scss";
 // UI end
 
 // i18n国际化
-// import i18n from "@plugins/i18n"; // TODO 3.0版本如何配置国际化
-// app.use(i18n);
+import i18n from "@plugins/i18n"; 
+app.use(i18n);
 
 // 三方插件 start
 import "vuedraggable"; // 拖拽
