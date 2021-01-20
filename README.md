@@ -46,9 +46,9 @@ sass sass-loader node-sass
 less less-loader style-resources-loader
 
 ## UI
-vant@next // 移动
+element-plus // PC 官方
 ant-design-vue // PC API实现看着不香，转element了
-element-plus // PC 备选
+vant@next // 移动
 
 ## http请求
 axios
@@ -104,4 +104,3 @@ echarts 更新5.0之后封装使用。
 改变icon，改为动态加载模式。
 
 # Question
-less 不能升级4.0.0，同时less仅仅作为组件使用，自身还是写scss or sass
