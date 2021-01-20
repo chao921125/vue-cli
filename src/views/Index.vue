@@ -1,23 +1,21 @@
 <template>
-  <el-container class="components-layout">
-    <el-header class="header-box">
+  <el-container class="components-layout cc-box-full">
+    <el-header class="header-box cc-width-fill">
       <Header @isCollapse="toggleCollapse"></Header>
     </el-header>
-    <el-container class="content-box">
-      <el-aside :class="isCollapse ? 'layout-aside aside-collapse transition-width-1s' : 'layout-aside aside-no-collapse transition-width-1s'">
+    <el-container class="content-box cc-width-fill">
+      <el-aside  width="auto" class="aside-box">
         <Menu :is-collapse="isCollapse"></Menu>
       </el-aside>
-      <el-container>
-        <el-main class="main-box">
-          <router-view v-slot="{ Component }">
-            <keep-alive v-if="$route.meta.isCache">
-              <component :is="Component"/>
-            </keep-alive>
-            <component :is="Component" v-else/>
-          </router-view>
-        </el-main>
+      <el-main class="main-box">
+        <router-view v-slot="{ Component }">
+          <keep-alive v-if="$route.meta.isCache">
+            <component :is="Component"/>
+          </keep-alive>
+          <component :is="Component" v-else/>
+        </router-view>
+      </el-main>
 <!--        <el-footer class="footer-box">Footer</el-footer>-->
-      </el-container>
     </el-container>
   </el-container>
 </template>
@@ -29,14 +27,13 @@ import Header from "./components/header/Header";
 import Menu from "./components/menus/Menu";
 
 export default {
-  name: "Home",
+  name: "Index",
   components: {
     Menu,
     Header,
   },
   data() {
     return {
-      imgSrc: [require("@assets/logo.png"), require("@assets/logo.png")],
       isCollapse: false,
     };
   },
@@ -50,36 +47,22 @@ export default {
 
 <style scoped lang="scss">
 .components-layout {
-  height: 100vh;
-  min-height: 768px;
-  overflow: hidden;
   .header-box {
-    background-color: #fff;
     height: 60px;
-    line-height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
   }
   .content-box {
-    min-height: calc(768px - 60px);
-  }
-  .layout-aside {
     height: calc(100vh - 60px);
-    min-height: calc(768px - 60px);
-  }
-  .aside-no-collapse {
-    width: 200px !important;
-  }
-  .aside-collapse {
-    width: 65px !important;
-  }
-  .main-box {
-    height: 100%;
-    min-height: calc(768px - 60px);
-    //background-color: #C0C4CC;
-  }
-  .footer-box {
-    height: 30px !important;
-    line-height: 30px !important;;
-    background-color: #d9d9d9;
+    margin-top: 60px;
+    .aside-box {
+    }
+    .main-box {
+      margin: 10px;
+      background-color: #fff;
+    }
   }
 }
 </style>

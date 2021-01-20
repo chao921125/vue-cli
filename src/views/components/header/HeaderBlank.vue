@@ -25,7 +25,7 @@ export default {
   emits: ['isCollapse'],
   data() {
     return {
-      imgSrc: [require("@/assets/logo.png"), require("@/assets/logo.png")],
+      imgSrc: [require("@assets/images/header/kehu.svg"), require("@assets/images/header/shebao.svg")],
       isCollapse: false,
     };
   },

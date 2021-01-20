@@ -56,5 +56,9 @@ export default {
 <style scoped lang="scss">
 .menu-box {
   height: calc(100vh - 60px);
+  &:not(.el-menu--collapse) {
+    width: 200px;
+    min-height: calc(768px - 60px);
+  }
 }
 </style>

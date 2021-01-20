@@ -1,11 +1,9 @@
 <template>
   <div class="header flex-base">
-    <transition name="fade-transverse" class="flex-center-row">
-      <div :class="isCollapse ? 'logo logo-collapse transition-width-1s' : 'logo logo-no-collapse transition-width-1s'">
-        <object v-show="!isCollapse" :data="imgSrc[0]" class="img-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
-        <object v-show="isCollapse" :data="imgSrc[1]" class="img-no-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
-      </div>
-    </transition>
+    <div :class="isCollapse ? 'flex-center-row cc-pointer transition-width-1s logo logo-collapse' : 'flex-center-row transition-width-1s cc-pointer logo logo-no-collapse'">
+      <object v-show="!isCollapse" :data="imgSrc[0]" class="img-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
+      <object v-show="isCollapse" :data="imgSrc[1]" class="img-no-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
+    </div>
     <div class="flex-space-between cc-width-fill">
       <div class="cc-pointer flex-center-row cc-ml-5">
         <i :class="isCollapse ? 'el-icon-s-unfold' : 'el-icon-s-fold'" @click="toggleCollapse"></i>
@@ -25,7 +23,7 @@ export default {
   emits: ['isCollapse'],
   data() {
     return {
-      imgSrc: [require("@/assets/logo.png"), require("@/assets/logo.png")],
+      imgSrc: [require("@assets/images/header/kehu.svg"), require("@assets/images/header/shebao.svg")],
       isCollapse: false,
     };
   },

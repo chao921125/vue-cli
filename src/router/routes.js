@@ -14,7 +14,6 @@ const frameInSide = [];
  * @type {*[]}
  */
 const frameNoSide = [
-  // 404
   {
     path: "/error",
     name: "error",
@@ -24,6 +23,18 @@ const frameNoSide = [
       icon: "",
       noCache: false,
       title: "error",
+      auth: true,
+    },
+  },
+  {
+    path: "/500",
+    name: "500",
+    component: () => import("@/views/error/500"),
+    meta: {
+      hidden: true,
+      icon: "",
+      noCache: false,
+      title: "500",
       auth: true,
     },
   },
