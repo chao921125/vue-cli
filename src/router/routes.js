@@ -15,40 +15,50 @@ const frameInSide = [];
  */
 const frameNoSide = [
   {
-    path: "/error",
-    name: "error",
-    component: () => import("@/views/error/Error"),
+    path: "/index-blank",
+    name: "index-blank",
+    component: () => import("@/views/IndexBlank"),
     meta: {
-      hidden: true,
-      icon: "",
-      noCache: false,
-      title: "error",
       auth: true,
     },
-  },
-  {
-    path: "/500",
-    name: "500",
-    component: () => import("@/views/error/500"),
-    meta: {
-      hidden: true,
-      icon: "",
-      noCache: false,
-      title: "500",
-      auth: true,
-    },
-  },
-  {
-    path: "/404",
-    name: "404",
-    component: () => import("@/views/error/404"),
-    meta: {
-      hidden: true,
-      icon: "",
-      noCache: false,
-      title: "404",
-      auth: false,
-    },
+    children: [
+      {
+        path: "/error",
+        name: "error",
+        component: () => import("@/views/error/Error"),
+        meta: {
+          hidden: true,
+          icon: "",
+          noCache: false,
+          title: "error",
+          auth: true,
+        },
+      },
+      {
+        path: "/500",
+        name: "500",
+        component: () => import("@/views/error/500"),
+        meta: {
+          hidden: true,
+          icon: "",
+          noCache: false,
+          title: "500",
+          auth: true,
+        },
+      },
+      {
+        path: "/404",
+        name: "404",
+        component: () => import("@/views/error/404"),
+        meta: {
+          hidden: true,
+          icon: "",
+          noCache: false,
+          title: "404",
+          auth: false,
+        },
+      },
+    ],
   },
 ];
 

@@ -1,6 +1,10 @@
 <template>
-  <div>Index</div>
-  <div v-for="item in 10" :key="item">{{ $filters.testFilter(item) }}</div>
+  <div>
+    <router-link to="/404" class="cc-mr-20">404</router-link>
+    <router-link to="/500" class="cc-mr-20">500</router-link>
+    <router-link to="/error">error</router-link>
+  </div>
+  <div>过滤器方法测试：<span v-for="item in 10" :key="item">{{ $filters.testFilter(item) }}</span></div>
 </template>
 
 <script>
