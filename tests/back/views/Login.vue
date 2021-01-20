@@ -1,15 +1,18 @@
 <template>
-  <el-row class="cc-box-fill cc-box-full login-bg">
-    <el-col :span="24" class="cc-text-center">
+  <a-row class="cc-box-fill cc-box-full login-bg">
+    <a-col :span="24" class="cc-text-center">
+      <a-col :span="24" class="cc-text-center">
+        desc logo demo
+      </a-col>
       <div class="login-box">
         <p>login</p>
-        <el-button @click="submitForm">login</el-button>
+        <a-button @click="submitForm">login</a-button>
       </div>
-    </el-col>
-    <el-col :span="24" class="fixed-bottom flex-center-row cc-width-fill">
+    </a-col>
+    <a-col :span="24" class="fixed-bottom flex-center-row cc-width-fill">
       desc icp info
-    </el-col>
-  </el-row>
+    </a-col>
+  </a-row>
 </template>
 
 <script>
@@ -38,7 +41,8 @@ export default {
   background-size:100% 100%;
 }
 .login-box {
-  height: 200px;
+  width: 200px;
+  height: 500px;
   position: relative;
 }
 </style>

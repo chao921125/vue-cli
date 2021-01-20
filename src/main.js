@@ -39,16 +39,20 @@ app.config.errorHandler = (err, vm, info) => {
 
 // UI start
 // 如果想要覆盖掉组件的样式，那么需要自定义一个less（必须），同时不能在此处顺序引入，只能在自定义文件中引入
-import Antd from "ant-design-vue";
-// import "ant-design-vue/dist/antd.less";
-import "@/assets/styles/reset/ant.less";
-app.use(Antd);
+// import Antd from "ant-design-vue";
+// import "@/assets/styles/reset/ant.less";
+// app.use(Antd);
+// Antd icon
+// import * as Icons from "@ant-design/icons-vue";
+// for (const i in Icons) {
+//   app.component(i, Icons[i]);
+// }
 
-// icon
-import * as Icons from "@ant-design/icons-vue";
-for (const i in Icons) {
-  app.component(i, Icons[i]);
-}
+import ElementPlus from "element-plus";
+import "@/assets/styles/reset/element.scss";
+app.use(ElementPlus, { size: 'small', zIndex: 3000 });
+// app.use(ElementPlus);
+
 
 // UI 备用 Element
 // import ElementUI from "element-ui";
@@ -66,7 +70,7 @@ import "@/assets/styles/global-class.scss";
 // UI end
 
 // i18n国际化
-import i18n from "@plugins/i18n"; 
+import i18n from "@plugins/i18n";
 app.use(i18n);
 
 // 三方插件 start
@@ -87,7 +91,7 @@ app.config.globalProperties.$filters = filters;
 
 // 移动端相关解决 start
 // 像素转rem
-import "lib-flexible";
+// import "lib-flexible";
 // 移动端相关解决 end
 
 // 自定义元素

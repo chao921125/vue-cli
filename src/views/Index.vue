@@ -1,72 +1,48 @@
 <template>
-  <a-layout class="components-layout">
-    <a-layout-sider
-      v-model:collapsed="collapsed"
-      :trigger="null"
-      collapsible
-      breakpoint="lg"
-      class="layout-sider"
-      @collapse="onCollapse"
-      @breakpoint="onBreakpoint"
-    >
-      <div class="logo" />
-      <Menu :collapsed="collapsed"></Menu>
-    </a-layout-sider>
-    <a-layout class="layout-main">
-      <a-layout-header class="layout-header">
-        <span>
-          <menu-unfold-outlined v-show="collapsed" class="trigger" @click="() => (collapsed = !collapsed)" />
-          <menu-fold-outlined v-show="!collapsed" class="trigger" @click="() => (collapsed = !collapsed)" />
-        </span>
-        <a-button type="primary" @click="logout"> logout </a-button>
-      </a-layout-header>
-      <a-layout-content class="layout-content">
-        <transition></transition>
-        <div class="content">
+  <el-container class="components-layout">
+    <el-header class="header-box">
+      <Header @isCollapse="toggleCollapse"></Header>
+    </el-header>
+    <el-container class="content-box">
+      <el-aside :class="isCollapse ? 'layout-aside aside-collapse transition-width-1s' : 'layout-aside aside-no-collapse transition-width-1s'">
+        <Menu :is-collapse="isCollapse"></Menu>
+      </el-aside>
+      <el-container>
+        <el-main class="main-box">
           <router-view v-slot="{ Component }">
-            <keep-alive>
+            <keep-alive v-if="$route.meta.isCache">
               <component :is="Component"/>
             </keep-alive>
+            <component :is="Component" v-else/>
           </router-view>
-        </div>
-      </a-layout-content>
-    </a-layout>
-  </a-layout>
+        </el-main>
+<!--        <el-footer class="footer-box">Footer</el-footer>-->
+      </el-container>
+    </el-container>
+  </el-container>
 </template>
 
 <script>
 // import storageLocal from "@libs/storageLocal";
 // import storageSession from "@libs/storageSession";
+import Header from "./components/header/Header";
 import Menu from "./components/menus/Menu";
-import util from "@plugins/utils";
 
 export default {
   name: "Home",
   components: {
     Menu,
+    Header,
   },
   data() {
     return {
       imgSrc: [require("@assets/logo.png"), require("@assets/logo.png")],
-      collapsed: false,
+      isCollapse: false,
     };
   },
-  mounted() {
-    console.log(this.$store.getters["store/user/getMenus"]);
-  },
   methods: {
-    toggleCollapse() {
-      this.collapsed = !this.collapsed;
-    },
-    onCollapse(collapsed, type) {
-      console.log(collapsed, type);
-    },
-    onBreakpoint(broken) {
-      console.log(broken);
-    },
-    logout() {
-      util.cookies.removeAll();
-      this.$router.push({ path: "/login" });
+    toggleCollapse(value) {
+      this.isCollapse = value;
     },
   },
 };
@@ -75,48 +51,35 @@ export default {
 <style scoped lang="scss">
 .components-layout {
   height: 100vh;
+  min-height: 768px;
   overflow: hidden;
-  .layout-sider {
-    overflow: auto;
-    height: 100vh;
-    .logo {
-      height: 32px;
-      background: rgba(255, 255, 255, 0.2);
-      margin: 16px;
-    }
+  .header-box {
+    background-color: #fff;
+    height: 60px;
+    line-height: 60px;
   }
-  .layout-main {
-    overflow: hidden;
-    height: 100vh;
-    .layout-header {
-      background: #fff;
-      position: fixed;
-      z-index: 999;
-      width: 100%;
-      padding: 0;
-      .trigger {
-        font-size: 18px;
-        line-height: 64px;
-        padding: 0 24px;
-        cursor: pointer;
-        transition: color 0.3s;
-      }
-      .trigger:hover {
-        color: #1890ff;
-      }
-    }
-    .layout-content {
-      width: 100%;
-      height: calc(100vh - 160px);
-      margin: 80px 0 20px;
-      overflow: auto;
-      .content {
-        background: #fff;
-        width: auto;
-        margin: 0 16px;
-        padding: 20px;
-      }
-    }
+  .content-box {
+    min-height: calc(768px - 60px);
+  }
+  .layout-aside {
+    height: calc(100vh - 60px);
+    min-height: calc(768px - 60px);
+  }
+  .aside-no-collapse {
+    width: 200px !important;
+  }
+  .aside-collapse {
+    width: 65px !important;
+  }
+  .main-box {
+    height: 100%;
+    min-height: calc(768px - 60px);
+    //background-color: #C0C4CC;
+  }
+  .footer-box {
+    height: 30px !important;
+    line-height: 30px !important;;
+    background-color: #d9d9d9;
   }
 }
 </style>

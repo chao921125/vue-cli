@@ -6,8 +6,6 @@
 @import '~@/assets/styles/icon/glyphicon.scss';
 @import '~@assets/styles/animate/n-progress.scss';
 @import '~@/assets/styles/animate/vue-transition.scss';
-@import '~@/assets/styles/reset/base.scss';
-@import '~@/assets/styles/reset/element.scss';
 
 // 在这里写公用的class
 // 注意 这个文件里只写class
@@ -137,4 +135,11 @@ $i: 50;
   @extend %text-center;
   position: fixed;
   bottom: 0;
+}
+
+.transition-width-1s {
+  transition: width 1s;
+  -moz-transition: width 1s;	/* Firefox 4 */
+  -webkit-transition: width 1s;	/* Safari 和 Chrome */
+  -o-transition: width 1s;	/* Opera */
 }

@@ -1,24 +1,22 @@
 <template>
-  <a-menu
-    v-model:default-selected-keys="selectedKeys"
-    v-model:default-open-keys="openKeys"
-    mode="inline"
-    theme="dark"
-    :inline-collapsed="collapsed"
-    @click="selectMenu"
-  >
-    <template v-for="item in menuList" :key="item.id">
-      <template v-if="!item.children">
-        <a-menu-item :key="item.path" :title="item.name" :disabled="item.isDisable">
-          <PieChartOutlined />
-          <span>{{ item.name }}</span>
-        </a-menu-item>
+  <el-scrollbar>
+    <el-menu
+      class="menu-box"
+      :default-active="selectedKeys"
+      :collapse="isCollapse"
+      :unique-opened="true"
+      popper-append-to-body
+      @select="selectMenu">
+      <template v-for="item in menuList">
+        <el-menu-item v-if="!item.children || item.children.length === 0" :key="item.id" :index="item.path" :disabled="!!item.isDisable">
+          <!-- 此处图标可以自定义 -->
+          <i :class="item.icon"></i>
+          <span>{{ item.title }}</span>
+        </el-menu-item>
+        <SubMenu v-else :key="item.id" :sub-menu-list="item"></SubMenu>
       </template>
-      <template v-else>
-        <sub-menu :menu-info="item" />
-      </template>
-    </template>
-  </a-menu>
+    </el-menu>
+  </el-scrollbar>
 </template>
 
 <script>
@@ -30,14 +28,10 @@ export default {
     SubMenu,
   },
   props: {
-    collapsed: {
+    isCollapse: {
       type: Boolean,
       default: false,
     },
-  },
-  data() {
-    return {
-    };
   },
   // 通过store获取菜单信息，且事实监控
   computed: {
@@ -45,27 +39,22 @@ export default {
       return this.$store.getters["store/user/getMenus"];
     },
     selectedKeys() {
-      let routers = this.$route.path.replace("/", "").split("/");
-      let selected = routers[routers.length - 1].toString();
-      return [selected];
-    },
-    openKeys() {
-      let routers = this.$route.path.replace("/", "").split("/");
-      let open = routers[0].toString();
-      return [open];
+      return this.$route.path.replace("/", "");
     },
   },
   mounted() {
     console.log(this.menuList);
-    console.log(this.selectedKeys);
-    console.log(this.openKeys);
   },
   methods: {
     selectMenu(index) {
-      this.$router.push({ path: "/" + index.key });
+      this.$router.push({ path: "/" + index });
     },
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.menu-box {
+  height: calc(100vh - 60px);
+}
+</style>

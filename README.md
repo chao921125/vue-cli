@@ -11,7 +11,7 @@
 - │   ├── App.vue
 - │   ├── api 接口定义
 - │   ├── assets 静态资源
-- │   ├── components 组件
+- │   ├── components 公共组件
 - │   ├── libs 工具库
 - │   ├── main.js 启动入口
 - │   ├── mock 数据mock
