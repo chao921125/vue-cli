@@ -2,24 +2,24 @@ export default {
   namespaced: true,
   // 对数据的全局存储
   state: {
-    language: "",
+    i18n: "",
   },
   // 获取声明的属性值，实时监听动态变化，对数据进行计算
   getters: {
-    getLanguage: (state) => {
-      return state.language;
+    getI18n: (state) => {
+      return state.i18n;
     },
   },
   // 对数据的同步更改
   mutations: {
-    language(state, value) {
-      state.language = value;
+    i18n(state, value) {
+      state.i18n = value;
     },
   },
   // 对数据的异步更改
   actions: {
-    languageCommit(context) {
-      context.commit("language");
+    i18nCommit(context) {
+      context.commit("i18n");
     },
   },
 };

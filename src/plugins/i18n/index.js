@@ -2,7 +2,7 @@ import { createI18n } from 'vue-i18n'
 import store from "@/store";
 import util from "@plugins/utils";
 
-const storeI18n = store.getters["i18n"];
+const storeI18n = store.getters["store/i18n/getI18n"];
 
 function loadLocaleMessages() {
   const locales = require.context("./", true, /[A-Za-z0-9-_,\s]+\.json$/i);
