@@ -29,6 +29,7 @@
     "dayjs": "^1.10.3",
     "element-plus": "^1.0.1-beta.27",
     "file-saver": "^2.0.5",
+    "html2canvas": "^1.0.0-rc.7",
     "js-cookie": "^2.2.1",
     "lodash": "^4.17.20",
     "lowdb": "^1.0.0",
