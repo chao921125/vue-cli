@@ -81,6 +81,14 @@ xlsx
 lodash
 lowdb
 
+## 二维码
+qrcode
+qrcodejs2
+vue-qr
+
+## html2canvas，页面截图
+html2canvas
+
 ## 国际化
 vue-i18n
 
