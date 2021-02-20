@@ -5,14 +5,14 @@
     </el-row>
     <el-row>
         <el-col :span="24">
-            <el-image ref="imgUrl" id="imgUrl" :src="imgUrl" crossorigin="anonymous"></el-image>
+            <el-image id="imgUrl" ref="imgUrl" :src="imgUrl" crossorigin="anonymous"></el-image>
         </el-col>
     </el-row>
 </template>
 
 <script>
 export default {
-    name: "",
+    name: "H2c",
     data() {
         return {
             imgUrl: "https://app-funpoints-1259661131.cos.ap-hongkong.myqcloud.com/manage/produce/1605598779773.jpg"

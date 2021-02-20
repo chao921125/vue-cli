@@ -68,7 +68,7 @@
     "mockjs": "^1.1.0",
     "node-sass": "^5.0.0",
     "prettier": "^2.2.1",
-    "sass-loader": "^11.0.1",
+    "sass-loader": "10.1.1",
     "style-resources-loader": "^1.4.1",
     "svg-sprite-loader": "^5.2.1",
     "text-loader": "^0.0.1",
