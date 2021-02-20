@@ -1,5 +1,7 @@
 [更新日志](./Version.md)
 
+yarn install
+
 # vue3-cli
 - ├── package.json 包管理
 - ├── public
