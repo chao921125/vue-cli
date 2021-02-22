@@ -135,15 +135,14 @@ module.exports = {
       errors: true,
     },
   },
-  configureWebpack: (config) => {
-    config.resolve = {
+  configureWebpack: {
+    resolve: {
       extensions: [".js", ".json", ".vue", "css", "scss", "less"],
-    };
+    },
     // 忽略打包文件
-    config.externals = {
+    externals: {
       // 'v-charts': 'VeIndex'
-    };
-    config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true;
+    },
   },
   chainWebpack: (config) => {
     config.plugins.delete("prefetch").delete("preload");
@@ -177,6 +176,10 @@ module.exports = {
         symbolId: "icon-[name]"
       })
       .end()
+    config.optimization.minimizer('terser').tap((args) => {
+      args[0].terserOptions.compress.drop_console = true
+      return args
+    })
   },
   // 第三方插件配置
   pluginOptions: {

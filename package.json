@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "start": "npm run dev",
+    "serve": "vue-cli-service serve",
     "dev": "vue-cli-service serve && webpack-dev-server --inline --progress --open",
     "dev:prod": "vue-cli-service serve --mode production --inline --progress --open",
     "build": "vue-cli-service build",
@@ -31,7 +32,7 @@
     "file-saver": "^2.0.5",
     "html2canvas": "^1.0.0-rc.7",
     "js-cookie": "^2.2.1",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "lowdb": "^1.0.0",
     "nprogress": "^0.2.0",
     "qs": "^6.9.6",
@@ -48,6 +49,7 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.11",
+    "@vue/cli-plugin-e2e-cypress": "~4.5.11",
     "@vue/cli-plugin-eslint": "~4.5.11",
     "@vue/cli-plugin-pwa": "~4.5.11",
     "@vue/cli-plugin-router": "~4.5.11",
