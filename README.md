@@ -31,7 +31,7 @@ yarn install
 
 3.各种demo的使用
 
-# 使用组件（基于js）
+# 推荐及使用组件（基于js）
 ## 核心库
 core-js
 
@@ -61,6 +61,19 @@ ant-design-vue // PC API实现看着不香，转element了
 
 vant@next // 移动
 
+## 进度条
+nprogress
+
+vue-simple-spinner
+
+vue-loading-overlay
+
+## 过渡动画
+vue-page-transition
+
+## 拖拽
+vuedraggable
+
 ## http请求
 axios
 
@@ -81,16 +94,6 @@ jsrsasign
 ## ua签名
 ua-parser-js
 
-## 进度条
-nprogress
-
-vue-simple-spinner
-
-vue-loading-overlay
-
-## 过渡动画
-vue-page-transition
-
 ## 数据表格
 xlsx
 
@@ -108,6 +111,11 @@ vue-qr
 
 ## html2canvas，页面截图
 html2canvas
+
+## 日期格式化
+moment
+
+date-fns
 
 ## 国际化
 vue-i18n
