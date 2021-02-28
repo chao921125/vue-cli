@@ -74,6 +74,12 @@ vue-page-transition
 ## 拖拽
 vuedraggable
 
+## 数据表格
+xlsx
+
+## html2canvas，页面截图
+html2canvas
+
 ## http请求
 axios
 
@@ -94,9 +100,6 @@ jsrsasign
 ## ua签名
 ua-parser-js
 
-## 数据表格
-xlsx
-
 ## 本地数据存储
 lodash
 
@@ -108,9 +111,6 @@ qrcode
 qrcodejs2
 
 vue-qr
-
-## html2canvas，页面截图
-html2canvas
 
 ## 日期格式化
 moment
