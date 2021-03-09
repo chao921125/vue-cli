@@ -12,6 +12,7 @@
 import Storage from "@/libs/storage";
 export default {
   name: "I18n",
+  inject: ['reload'],
   data() {
     return {
       i18n: true
@@ -25,6 +26,7 @@ export default {
       const language = this.i18n ? this.$constants.i18n.ZHCN : this.$constants.i18n.ENUS;
       Storage.setSessionItem("i18n", language);
       this.$store.dispatch("store/i18n/setI18n", language);
+      this.reload();
     }
   }
 };
