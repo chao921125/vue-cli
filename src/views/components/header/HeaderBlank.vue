@@ -18,14 +18,14 @@
 </template>
 
 <script>
-import util from "@plugins/utils";
+import util from "@/plugins/utils";
 
 export default {
   name: "HeaderBlank",
   emits: ['isCollapse'],
   data() {
     return {
-      imgSrc: [require("@assets/images/header/kehu.svg"), require("@assets/images/header/shebao.svg")],
+      imgSrc: [require("@/assets/images/header/kehu.svg"), require("@/assets/images/header/shebao.svg")],
       isCollapse: false,
     };
   },

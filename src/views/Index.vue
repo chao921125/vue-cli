@@ -21,8 +21,8 @@
 </template>
 
 <script>
-// import storageLocal from "@libs/storageLocal";
-// import storageSession from "@libs/storageSession";
+// import storageLocal from "@/libs/storageLocal";
+// import storageSession from "@/libs/storageSession";
 import Header from "./components/header/Header";
 import Menu from "./components/menus/Menu";
 
