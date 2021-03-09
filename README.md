@@ -1,6 +1,6 @@
-[更新日志](./Version.md)
+[更新日志 2021-03-10](./Version.md)
 
-yarn install
+建议使用 yarn install
 
 # vue3-cli
 - ├── package.json 包管理
