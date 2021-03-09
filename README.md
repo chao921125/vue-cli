@@ -154,4 +154,5 @@ echarts 更新5.0之后封装使用。
 改变icon，改为动态加载模式。
 
 # Question
-sass-loader 由于和webpack版本不兼容，请降级到10版本
+sass-loader 10.1.1请勿升级
+less-loader 7.3.0请勿升级
