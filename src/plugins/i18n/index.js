@@ -14,7 +14,7 @@ function loadLocaleMessages() {
       messages[locale] = locales(key);
     }
   });
-  console.log(messages);
+  console.log("storeI18n", messages);
   return messages;
 }
 
