@@ -35,10 +35,10 @@
 </template>
 
 <script>
-// import storageLocal from "@libs/storageLocal";
-// import storageSession from "@libs/storageSession";
+// import storageLocal from "@/libs/storageLocal";
+// import storageSession from "@/libs/storageSession";
 import Menu from "./components/menus/Menu";
-import util from "@plugins/utils";
+import util from "@/plugins/utils";
 
 export default {
   name: "Home",
@@ -47,7 +47,7 @@ export default {
   },
   data() {
     return {
-      imgSrc: [require("@assets/logo.png"), require("@assets/logo.png")],
+      imgSrc: [require("@/assets/logo.png"), require("@/assets/logo.png")],
       collapsed: false,
     };
   },

@@ -2,7 +2,7 @@ import axios from "axios";
 // import { Message } from 'element-ui'
 import router from "@/router";
 import store from "@/store";
-import util from "@plugins/utils";
+import util from "@/plugins/utils";
 
 axios.defaults.retry = 3; // 重发次数
 axios.defaults.retryDelay = 1000; // 重发间隔

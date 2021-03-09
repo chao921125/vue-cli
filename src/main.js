@@ -70,7 +70,7 @@ import "@/assets/styles/global-class.scss";
 // UI end
 
 // i18n国际化
-import i18n from "@plugins/i18n";
+import i18n from "@/plugins/i18n";
 app.use(i18n);
 
 // 三方插件 start
@@ -83,8 +83,8 @@ import "vuedraggable"; // 拖拽
 // 全局变量配置 start
 // app.config.globalProperties.$Api = Api;
 // app.use(Api);
-import constants from "@libs/constants";
-import filters from "@plugins/filters";
+import constants from "@/libs/constants";
+import filters from "@/plugins/filters";
 app.config.globalProperties.$constants = constants;
 app.config.globalProperties.$filters = filters;
 // 全局变量配置 end

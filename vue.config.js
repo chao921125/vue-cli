@@ -81,14 +81,14 @@ module.exports = {
             // 'border-color': '#eee',
           },
         },
-        // additionalData: `@import "~@assets/styles/fixed/ant.less";`,
+        // additionalData: `@import "~@/assets/styles/fixed/ant.less";`,
       },
       // 设置 scss 公用变量文件 css-loader postcss-loader sass-loader less-loader stylus-loader
       // sass-loader v8-，这个选项名是 "data"
       // sass-loader v8 中，这个选项名是 "prependData"
       // sass-loader v10+，这个选项名是 "additionalData"
       sass: {
-        additionalData: `@import "~@assets/styles/public.scss";`,
+        additionalData: `@import "~@/assets/styles/public.scss";`,
       },
     },
     // 启用 CSS modules for all css / pre-processor files.
@@ -151,11 +151,11 @@ module.exports = {
     // 重新设置 alias .set('@', resolve('src'))
     config.resolve.alias
       .set("@", resolve("src"))
-      .set("@api", resolve("src/api"))
-      .set("@assets", resolve("src/assets"))
-      .set("@components", resolve("src/components"))
-      .set("@libs", resolve("src/libs"))
-      .set("@plugins", resolve("src/plugins"));
+      // .set("@api", resolve("src/api"))
+      // .set("@assets", resolve("src/assets"))
+      // .set("@components", resolve("src/components"))
+      // .set("@libs", resolve("src/libs"))
+      // .set("@plugins", resolve("src/plugins"));
     // node
     config.node.set("__dirname", true).set("__filename", true);
     // const types = ["vue-modules", "vue", "normal-modules", "normal"];
@@ -185,7 +185,7 @@ module.exports = {
   pluginOptions: {
     // "style-resources-loader": {
     //   preProcessor: "less",
-    //   patterns: [path.resolve(__dirname, "~@assets/styles/fixed/ant.less")],
+    //   patterns: [path.resolve(__dirname, "~@/assets/styles/fixed/ant.less")],
     // },
   },
 };

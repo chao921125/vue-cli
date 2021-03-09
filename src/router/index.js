@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import routes from "./routes";
 import store from "../store";
-import util from "@plugins/utils";
+import util from "@/plugins/utils";
 
 // 进度条
 import NProgress from "nprogress";

@@ -68,6 +68,23 @@ Mock.mock(baseURL.getUserInfo, "post", () => {
           status: 1,
           perms: "admin:system:*",
         },
+        {
+          id: 22,
+          orderNum: 2,
+          type: 1,
+          name: "加密解密",
+          title: "加密解密",
+          path: "encrypt",
+          component: "demo/encrypt/CryptoJs",
+          redirect: "",
+          icon: "el-icon-location",
+          isLink: 0,
+          isCache: 0,
+          isDisable: 0,
+          isSideMenu: 1,
+          status: 1,
+          perms: "admin:system:*",
+        },
       ]
     },
     {

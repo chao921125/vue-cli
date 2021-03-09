@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Storage from "@libs/storage";
+import Storage from "@/libs/storage";
 export default {
   name: "I18n",
   data() {

@@ -1,5 +1,5 @@
-import util from "@plugins/utils";
-import { login, logout, getUserInfo } from "@api/user";
+import util from "@/plugins/utils";
+import { login, logout, getUserInfo } from "@/api/user";
 
 export default {
   namespaced: true,

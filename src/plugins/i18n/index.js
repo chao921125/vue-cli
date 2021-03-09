@@ -1,6 +1,6 @@
 import { createI18n } from 'vue-i18n'
 import store from "@/store";
-import util from "@plugins/utils";
+import util from "@/plugins/utils";
 
 const storeI18n = store.getters["store/i18n/getI18n"];
 
@@ -18,7 +18,7 @@ function loadLocaleMessages() {
   return messages;
 }
 
-const i18n = createI18n({
+export default createI18n({
   locale: storeI18n || process.env.VUE_APP_LOCAL,
   fallbackLocale: storeI18n || process.env.VUE_APP_LOCAL,
   messages: loadLocaleMessages(),
@@ -32,5 +32,3 @@ const i18n = createI18n({
     console.log(vm);
   },
 })
-
-export default i18n;
