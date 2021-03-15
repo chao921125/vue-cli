@@ -1,4 +1,4 @@
-[更新日志 2021-03-10](./Version.md)
+[更新日志 2021-03-10](VERSION.md)
 
 建议使用 yarn install
 
