@@ -135,7 +135,7 @@ amfe-flexible // 不再推荐 lib-flexible 按照比例缩放展示，基于不�
 
 postcss postcss-loader // 将px转rem -D
 
-postcss-pxtorem
+postcss-pxtorem 5.1.1请勿升级
 
 postcss-plugin-px2rem
 

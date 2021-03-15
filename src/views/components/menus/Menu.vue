@@ -1,5 +1,15 @@
 <template>
-  <el-scrollbar>
+  <el-menu
+    class="menu-header-box"
+    :collapse="isCollapse">
+    <el-menu-item key="/" index="/" class="flex-center-row header-box">
+      <div :class="isCollapse ? 'flex-center-row cc-pointer logo logo-collapse' : 'flex-center-row cc-pointer logo logo-no-collapse'">
+        <object v-show="!isCollapse" :data="imgSrc[0]" class="img-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
+        <object v-show="isCollapse" :data="imgSrc[1]" class="img-no-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
+      </div>
+    </el-menu-item>
+  </el-menu>
+  <el-scrollbar class="scroll-menu">
     <el-menu
       class="menu-box"
       :default-active="selectedKeys"
@@ -33,6 +43,11 @@ export default {
       default: false,
     },
   },
+  data() {
+    return {
+      imgSrc: [require("@/assets/images/header/kehu.svg"), require("@/assets/images/header/shebao.svg")],
+    };
+  },
   // 通过store获取菜单信息，且事实监控
   computed: {
     menuList() {
@@ -54,11 +69,46 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.menu-header-box {
+  height: 60px;
+  background-color: $color-bg-white;
+  &:not(.el-menu--collapse) {
+    height: 60px;
+    background-color: $color-bg-white;
+  }
+  .header-box {
+    background-color: $color-bg-white;
+    height: 60px;
+    padding: 0 !important;
+    position: fixed;
+    z-index: 9999;
+  }
+  .logo {
+    height: 60px;
+    background-color: $color-bg-white;
+  }
+  .logo-collapse {
+    width: 65px !important;
+  }
+  .logo-no-collapse {
+    width: 201px !important;
+  }
+  .img-collapse {
+    width: 200px;
+    height: 50px;
+  }
+  .img-no-collapse {
+    width: 64px;
+    height: 50px;
+  }
+}
+.scroll-menu {
+  height: calc(100% - 60px);
+}
 .menu-box {
   height: calc(100vh - 60px);
   &:not(.el-menu--collapse) {
     width: 200px;
-    min-height: calc(768px - 60px);
   }
 }
 </style>

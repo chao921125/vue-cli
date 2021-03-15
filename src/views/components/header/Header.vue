@@ -1,9 +1,5 @@
 <template>
-  <div class="header flex-base">
-    <div :class="isCollapse ? 'flex-center-row cc-pointer transition-width-1s logo logo-collapse' : 'flex-center-row transition-width-1s cc-pointer logo logo-no-collapse'">
-      <object v-show="!isCollapse" :data="imgSrc[0]" class="img-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
-      <object v-show="isCollapse" :data="imgSrc[1]" class="img-no-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
-    </div>
+  <div :class="isCollapse ? 'header-box flex-base header-collapse' : 'header-box flex-base header-no-collapse'">
     <div class="flex-space-between cc-width-fill">
       <div class="cc-pointer flex-center-row cc-ml-5">
         <i :class="isCollapse ? 'el-icon-s-unfold' : 'el-icon-s-fold'" @click="toggleCollapse"></i>
@@ -13,6 +9,7 @@
       </div>
     </div>
   </div>
+  <div class="header-box-space"></div>
 </template>
 
 <script>
@@ -41,26 +38,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header {
-  width: 100%;
+.header-box {
   height: 60px;
   background-color: #fff;
-  .logo {
-    background-color: #fff;
-  }
-  .logo-collapse {
-    width: 65px !important;
-  }
-  .logo-no-collapse {
-    width: 200px !important;
-  }
-  .img-collapse {
-    width: 200px;
-    height: 50px;
-  }
-  .img-no-collapse {
-    width: 50px;
-    height: 50px;
-  }
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+}
+.header-collapse {
+  width: calc(100% - 65px);
+}
+.header-no-collapse {
+  width: calc(100% - 201px);
+}
+.header-box-space {
+  height: 60px;
 }
 </style>

@@ -42,6 +42,9 @@
 }
 
 // 100%
+.#{$prefix}-width-auto {
+  width: auto;
+}
 .#{$prefix}-box-fill {
   @extend %wh-fill;
 }
