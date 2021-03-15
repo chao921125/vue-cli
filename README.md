@@ -133,9 +133,7 @@ cz-customizable
 ## 适配移动端
 amfe-flexible // 按照比例缩放展示，基于不同设备（Android、iOS、brow）的px值
 
-postcss // 将px转rem -D
-
-postcss-loader
+postcss postcss-loader // 将px转rem -D
 
 postcss-pxtorem
 
