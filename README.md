@@ -117,6 +117,11 @@ moment
 
 date-fns
 
+## 富文本编辑器
+wangeditor
+
+tiptap
+
 ## 国际化
 vue-i18n
 
