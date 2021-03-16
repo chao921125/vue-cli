@@ -1,3 +1,6 @@
 {
-  "testName": "test"
+  "testName": "test",
+  "hello": "hello: '{msg} world'",
+  "helloDom": "hello: '%{msg} world'",
+  "linked": "@testName"
 }
