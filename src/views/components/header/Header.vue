@@ -39,10 +39,10 @@ export default {
 
 <style lang="scss" scoped>
 .header-box {
-  height: 60px;
+  height: $header-height;
   background-color: #fff;
   position: fixed;
-  z-index: 9999;
+  z-index: $z-index-max;
   top: 0;
 }
 .header-collapse {
@@ -52,6 +52,6 @@ export default {
   width: calc(100% - 201px);
 }
 .header-box-space {
-  height: 60px;
+  height: $header-height;
 }
 </style>

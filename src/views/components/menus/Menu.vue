@@ -70,36 +70,38 @@ export default {
 
 <style scoped lang="scss">
 .menu-header-box {
-  height: 60px;
+  height: $header-height;
   background-color: $color-bg-white;
   &:not(.el-menu--collapse) {
-    height: 60px;
+    height: $header-height;
     background-color: $color-bg-white;
   }
   .header-box {
     background-color: $color-bg-white;
-    height: 60px;
+    height: $header-height;
     padding: 0 !important;
     position: fixed;
-    z-index: 9999;
+    z-index: $z-index-max;
   }
   .logo {
-    height: 60px;
+    height: $header-height;
     background-color: $color-bg-white;
   }
   .logo-collapse {
-    width: 65px !important;
+    width: $header-collapse-width !important;
+    background-color: $color-bg-white;
   }
   .logo-no-collapse {
-    width: 201px !important;
+    width: $header-width !important;
+    background-color: $color-bg-white;
   }
   .img-collapse {
-    width: 200px;
-    height: 50px;
+    width: $menu-width;
+    height: $menu-item-height;
   }
   .img-no-collapse {
-    width: 64px;
-    height: 50px;
+    width: $menu-collapse-width;
+    height: $menu-item-height;
   }
 }
 .scroll-menu {
@@ -108,7 +110,7 @@ export default {
 .menu-box {
   height: calc(100vh - 60px);
   &:not(.el-menu--collapse) {
-    width: 200px;
+    width: $menu-width;
   }
 }
 </style>
