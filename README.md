@@ -1,4 +1,4 @@
-[更新日志 2021-03-10](./Version.md)
+[更新日志 2021-03-10](VERSION.md)
 
 建议使用 yarn install
 
@@ -117,6 +117,15 @@ moment
 
 date-fns
 
+## 富文本编辑器
+tiptap
+
+wangeditor
+
+vue-quill-editor
+
+CKEditor 5
+
 ## 国际化
 vue-i18n
 
@@ -131,13 +140,11 @@ cz-customizable
 
 
 ## 适配移动端
-amfe-flexible // 按照比例缩放展示，基于不同设备（Android、iOS、brow）的px值
+amfe-flexible // 不再推荐 lib-flexible 按照比例缩放展示，基于不同设备（Android、iOS、brow）的px值
 
-postcss // 将px转rem -D
+postcss postcss-loader // 将px转rem -D
 
-postcss-loader
-
-postcss-pxtorem
+postcss-pxtorem 5.1.1请勿升级
 
 postcss-plugin-px2rem
 
@@ -148,8 +155,6 @@ vconsole
 
 # TODO
 封装axios，前端自定义报文返回，error根据业务需求返回结果，含状态码。
-
-echarts 更新5.0之后封装使用。
 
 改变icon，改为动态加载模式。
 

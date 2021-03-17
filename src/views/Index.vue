@@ -1,21 +1,23 @@
 <template>
-  <el-container class="components-layout cc-box-full">
-    <el-header class="header-box cc-width-fill">
-      <Header @isCollapse="toggleCollapse"></Header>
-    </el-header>
-    <el-container class="content-box cc-width-fill">
-      <el-aside  width="auto" class="aside-box">
-        <Menu :is-collapse="isCollapse"></Menu>
-      </el-aside>
-      <el-main class="main-box">
-        <router-view v-slot="{ Component }">
-          <keep-alive v-if="$route.meta.isCache">
-            <component :is="Component"/>
-          </keep-alive>
-          <component :is="Component" v-else/>
-        </router-view>
-      </el-main>
-<!--        <el-footer class="footer-box">Footer</el-footer>-->
+  <el-container class="components-layout">
+    <el-aside width="auto">
+      <Menu :is-collapse="isCollapse"></Menu>
+    </el-aside>
+    <el-container class="content-box">
+      <el-header>
+        <Header @isCollapse="toggleCollapse"></Header>
+      </el-header>
+      <el-scrollbar>
+        <el-main class="main-box">
+          <router-view v-slot="{ Component }">
+            <keep-alive v-if="$route.meta.isCache">
+              <component :is="Component"/>
+            </keep-alive>
+            <component :is="Component" v-else/>
+          </router-view>
+        </el-main>
+      </el-scrollbar>
+      <!--        <el-footer class="footer-box">Footer</el-footer>-->
     </el-container>
   </el-container>
 </template>
@@ -47,22 +49,13 @@ export default {
 
 <style scoped lang="scss">
 .components-layout {
-  .header-box {
-    height: 60px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-  }
-  .content-box {
-    height: calc(100vh - 60px);
-    margin-top: 60px;
-    .aside-box {
-    }
-    .main-box {
-      margin: 10px;
-      background-color: #fff;
-    }
+  overflow: hidden;
+}
+.content-box {
+  .main-box {
+    margin: 10px;
+    background-color: $color-bg-white;
+    height: calc(100vh - 20px - 60px);
   }
 }
 </style>

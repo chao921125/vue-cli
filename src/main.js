@@ -76,8 +76,8 @@ app.use(i18n);
 // 三方插件 start
 import "vuedraggable"; // 拖拽
 // 三方插件：数据图
-// import echarts from "echarts"; // TODO echarts 5.0在vue3中配置
-// app.config.globalProperties.$echarts = echarts;
+import * as echarts from "echarts";
+app.config.globalProperties.$echarts = echarts;
 // 三方插件 end
 
 // 全局变量配置 start

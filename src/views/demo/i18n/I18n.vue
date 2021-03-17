@@ -6,6 +6,7 @@
     @change="changeI18n">
   </el-switch>
   {{ $t("testName") }}
+  {{ $t("hello", { msg: "hello" }) }}
 </template>
 
 <script>
