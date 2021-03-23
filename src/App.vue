@@ -1,5 +1,7 @@
 <template>
-  <router-view v-if="reloadPage"/>
+  <transition name="el-fade-in">
+    <router-view v-if="reload" v-loading.fullscreen.lock="isLoading"/>
+  </transition>
 </template>
 
 <script>
@@ -7,12 +9,23 @@ export default {
   name: "App",
   provide() {
     return {
-      reload: this.reload
+      reload: this.reload,
     }
   },
   data() {
     return {
-      reloadPage: true
+      reloadPage: true,
+      isLoading: false,
+      timeout: null,
+    }
+  },
+  mounted() {
+    if (window.name === "") {
+      this.isLoading = true;
+      this.timeout = setTimeout(() => {
+        this.isLoading = false;
+        clearTimeout(this.timeout);
+      }, 1500);
     }
   },
   methods: {
@@ -20,7 +33,8 @@ export default {
       this.reloadPage = false;
       this.$nextTick(() => {
         this.reloadPage = true;
-        this.$router.go(0);
+        // this.$router.go(0);
+        window.location.reload();
       });
     }
   }
