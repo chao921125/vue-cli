@@ -4,16 +4,10 @@
  * 无需权限访问、或重定向路由定义
  */
 /**
- * 主框架内，包含侧栏、导航
- * @type {*[]}
- */
-const frameInSide = [];
-
-/**
  * 主框架内，包含导航
  * @type {*[]}
  */
-const frameNoSide = [
+const frameIn = [
   {
     path: "/index-blank",
     name: "index-blank",
@@ -102,4 +96,4 @@ const frameOut = [
   },
 ];
 
-export default [...frameInSide, ...frameNoSide, ...frameOut];
+export default [...frameIn, ...frameOut];
