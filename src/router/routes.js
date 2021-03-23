@@ -13,7 +13,7 @@ const frameIn = [
     name: "index-blank",
     component: () => import("@/views/IndexBlank"),
     meta: {
-      auth: true,
+      auth: false,
     },
     children: [
       {
