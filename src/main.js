@@ -50,7 +50,7 @@ app.config.errorHandler = (err, vm, info) => {
 
 import ElementPlus from "element-plus";
 import "@/assets/styles/reset/element.scss";
-app.use(ElementPlus, { size: 'small', zIndex: 3000 });
+app.use(ElementPlus, { size: 'small', zIndex: 9999 });
 // app.use(ElementPlus);
 
 

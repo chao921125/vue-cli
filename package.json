@@ -9,11 +9,11 @@
     "javascript"
   ],
   "scripts": {
-    "start": "npm run dev",
-    "serve": "vue-cli-service serve",
     "dev": "vue-cli-service serve && webpack-dev-server --inline --progress --open",
+    "dev:test": "vue-cli-service serve --mode development --inline --progress --open",
     "dev:prod": "vue-cli-service serve --mode production --inline --progress --open",
     "build": "vue-cli-service build",
+    "build:test": "vue-cli-service development build",
     "build:prod": "vue-cli-service production build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",

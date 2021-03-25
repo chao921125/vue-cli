@@ -3,11 +3,11 @@
  * */
 
 import axios from "@/plugins/axios";
-import baseURL from "./index";
+import requestURL from "./index";
 
 export function getPhoneCode(data) {
   return axios({
-    url: baseURL.getPhoneCode,
+    url: requestURL.getPhoneCode,
     method: "GET",
     data,
   });
@@ -15,7 +15,7 @@ export function getPhoneCode(data) {
 
 export function login(data) {
   return axios({
-    url: baseURL.login,
+    url: requestURL.login,
     method: "post",
     data,
   });
@@ -23,7 +23,7 @@ export function login(data) {
 
 export function logout(data) {
   return axios({
-    url: baseURL.logout,
+    url: requestURL.logout,
     method: "post",
     data,
   });
@@ -31,7 +31,7 @@ export function logout(data) {
 
 export function getUserInfo(data) {
   return axios({
-    url: baseURL.getUserInfo,
+    url: requestURL.getUserInfo,
     method: "post",
     data,
   });

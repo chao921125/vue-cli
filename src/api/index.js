@@ -1,9 +1,9 @@
-const baseURI = "/";
-const userURI = baseURI + "/user";
-const baseURL = {
-  login: baseURI + "/login",
-  logout: baseURI + "/logout",
-  getPhoneCode: baseURI + "/getPhoneCode",
-  getUserInfo: userURI + "/getUserInfo",
+const baseURL = "/";
+const userURL = baseURL + "/user";
+const requestURL = {
+  login: baseURL + "/login",
+  logout: baseURL + "/logout",
+  getPhoneCode: baseURL + "/getPhoneCode",
+  getUserInfo: userURL + "/getUserInfo",
 };
-export default baseURL;
+export default requestURL;

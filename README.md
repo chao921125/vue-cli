@@ -1,4 +1,4 @@
-[更新日志 2021-03-10](VERSION.md)
+[更新日志](VERSION.md)
 
 建议使用 yarn install
 
@@ -129,6 +129,13 @@ CKEditor 5
 ## 国际化
 vue-i18n
 
+## 三方登录集成库
+next-auth
+
+@okta/okta-auth-js
+
+hellojs
+
 ## 代码提交信息校验 -D
 husky
 
@@ -137,7 +144,6 @@ commitizen
 cz-conventional-changelog
 
 cz-customizable
-
 
 ## 适配移动端
 amfe-flexible // 不再推荐 lib-flexible 按照比例缩放展示，基于不同设备（Android、iOS、brow）的px值

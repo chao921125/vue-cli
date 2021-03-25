@@ -1,5 +1,5 @@
 import Mock from "mockjs";
-import baseURL from "@/api/index";
+import requestURL from "@/api/index";
 
 Mock.setup({
   timeout: "200-600",
@@ -9,14 +9,14 @@ export const random = () => {
   return Math.floor(Math.random() * 10000000);
 };
 
-Mock.mock(baseURL.login, "post", () => {
+Mock.mock(requestURL.login, "post", () => {
   return { token: random(), uuid: random() };
 });
 
-Mock.mock(baseURL.logout, "post", () => {
+Mock.mock(requestURL.logout, "post", () => {
   return { token: random(), uuid: random() };
 });
-Mock.mock(baseURL.getUserInfo, "post", () => {
+Mock.mock(requestURL.getUserInfo, "post", () => {
   const menus = [
     {
       id: 1,
