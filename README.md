@@ -129,12 +129,19 @@ CKEditor 5
 ## 国际化
 vue-i18n
 
-## 三方登录集成库
+## 三方授权登录集成库
 next-auth
 
 @okta/okta-auth-js
 
 hellojs
+
+## 分享插件
+@vue/shared
+
+vue-social-sharing
+
+@vue/cli-shared-utils
 
 ## 代码提交信息校验 -D
 husky
@@ -167,3 +174,5 @@ vconsole
 # Question
 sass-loader 10.1.1请勿升级
 less-loader 7.3.0请勿升级
+
+https://baijiahao.baidu.com/s?id=1629138670094636894&wfr=spider&for=pc
