@@ -129,6 +129,9 @@ CKEditor 5
 ## 国际化
 vue-i18n
 
+## 复制粘贴
+clipboard
+
 ## 三方授权登录集成库
 next-auth
 
