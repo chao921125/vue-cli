@@ -140,9 +140,11 @@ next-auth
 hellojs
 
 ## 分享插件
-@vue/shared
-
 vue-social-sharing
+
+vue-socialmedia-share
+
+@vue/shared
 
 @vue/cli-shared-utils
 
