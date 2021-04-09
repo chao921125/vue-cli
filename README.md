@@ -148,6 +148,9 @@ vue-socialmedia-share
 
 @vue/cli-shared-utils
 
+## 地图
+vue-baidu-map
+
 ## 代码提交信息校验 -D
 husky
 
