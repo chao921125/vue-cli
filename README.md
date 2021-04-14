@@ -57,7 +57,7 @@ less less-loader style-resources-loader
 ## UI
 element-plus // PC 官方
 
-ant-design-vue // PC API实现看着不香，转element了
+ant-design-vue // PC
 
 vant@next // 移动
 
@@ -73,6 +73,9 @@ vue-page-transition
 
 ## 拖拽
 vuedraggable
+
+## 全屏
+screenfull
 
 ## 数据表格
 xlsx
@@ -149,7 +152,9 @@ vue-socialmedia-share
 @vue/cli-shared-utils
 
 ## 地图
-vue-baidu-map
+vue-amap // 高德
+
+vue-baidu-map // 百度
 
 ## 代码提交信息校验 -D
 husky

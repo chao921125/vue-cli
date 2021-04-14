@@ -84,8 +84,9 @@ app.config.globalProperties.$echarts = echarts;
 // app.config.globalProperties.$Api = Api;
 // app.use(Api);
 import constants from "@/libs/constants";
-import filters from "@/plugins/filters";
 app.config.globalProperties.$constants = constants;
+
+import filters from "@/plugins/filters";
 app.config.globalProperties.$filters = filters;
 // 全局变量配置 end
 
