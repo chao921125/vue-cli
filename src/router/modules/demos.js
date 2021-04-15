@@ -12,20 +12,20 @@ export default [
     },
   },
   {
-    path: "/test",
-    name: "test",
+    path: "/demo",
+    name: "demo",
     meta: {
       hidden: false,
       icon: "",
       noCache: false,
-      title: "测试",
+      title: "示例",
       auth: true,
     },
     children: [
       {
-        path: "/test/test",
-        name: "test",
-        component: () => import("@/views/test/TestView"),
+        path: "/demo/index",
+        name: "demo",
+        component: () => import("@/views/demo/Index"),
         meta: {
           hidden: false,
           icon: "",
