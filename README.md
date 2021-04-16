@@ -41,6 +41,8 @@
 ## http请求
 [axios](https://www.npmjs.com/package/axios)
 
+[qs](https://www.npmjs.com/package/qs)
+
 # 解析相关
 ## 样式组件 -D // 注意重写组件样式的引用
 [sass](https://www.npmjs.com/package/sass)
@@ -51,8 +53,14 @@
 [less-loader](https://www.npmjs.com/package/less-loader)
 [style-resources-loader](https://www.npmjs.com/package/style-resources-loader)
 
+[svg-sprite-loader](https://www.npmjs.com/package/svg-sprite-loader)
+[text-loader](https://www.npmjs.com/package/text-loader)
+[vue-style-loader](https://www.npmjs.com/package/vue-style-loader)
+[vue-template-compiler](https://www.npmjs.com/package/vue-template-compiler)
+
 ## 语法检查 -D
 [eslint](https://www.npmjs.com/package/eslint)
+[prettier](https://www.npmjs.com/package/prettier)
 
 [eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier)
 
@@ -80,6 +88,9 @@
 [vue-simple-spinner](https://www.npmjs.com/package/vue-simple-spinner)
 
 [vue-loading-overlay](https://www.npmjs.com/package/vue-loading-overlay)
+
+## 树
+[vue-treeselect](https://www.npmjs.com/package/ue-treeselect)
 
 ## 过渡动画
 [vue-page-transition](https://www.npmjs.com/package/vue-page-transition)
@@ -113,6 +124,9 @@
 ## ua签名
 [ua-parser-js](https://www.npmjs.com/package/ua-parser-js)
 
+## 文件保存
+[file-saver](https://www.npmjs.com/package/file-saver)
+
 ## 本地数据存储
 [lodash](https://www.npmjs.com/package/lodash)
 
@@ -129,6 +143,8 @@
 [moment](https://www.npmjs.com/package/moment)
 
 [date-fns](https://www.npmjs.com/package/date-fns)
+
+[dayjs](https://www.npmjs.com/package/dayjs)
 
 ## 富文本编辑器
 [tiptap](https://www.npmjs.com/package/tiptap)
