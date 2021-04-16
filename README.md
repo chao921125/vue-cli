@@ -2,7 +2,7 @@
 
 建议使用 yarn install
 
-# vue3-cli
+# 目录结构
 - ├── package.json 包管理
 - ├── public
 - │   ├── favicon.ico
@@ -24,152 +24,188 @@
 - │   └── views 页面
 - └── vue.config.js 启动配置
 
-# Project Features
-1.国际化：vue-i18n/ant-design
-
-2.路由架构
-
-3.各种demo的使用
-
-# 推荐及使用组件（基于js）
+# 基础核心依赖
 ## 核心库
-core-js
+[vue-cli](https://www.npmjs.com/package/@vue/cli)
 
-vue
+?[vite](https://www.npmjs.com/package/vite)?
 
-vue-router
+[vue](https://www.npmjs.com/package/vue)
 
-vuex
+[vue-router](https://www.npmjs.com/package/vue-router)
 
-## 语法检查
-eslint -D
+[vuex](https://www.npmjs.com/package/vuex)
 
-eslint-plugin-prettier
-
-## 节点和浏览器的BDD / TDD断言库
-chai
-
-## 样式组件 -D // 注意重写组件样式的引用
-sass sass-loader node-sass
-
-less less-loader style-resources-loader
-
-## UI
-element-plus // PC 官方
-
-ant-design-vue // PC API实现看着不香，转element了
-
-vant@next // 移动
-
-## 进度条
-nprogress
-
-vue-simple-spinner
-
-vue-loading-overlay
-
-## 过渡动画
-vue-page-transition
-
-## 拖拽
-vuedraggable
-
-## 数据表格
-xlsx
-
-## html2canvas，页面截图
-html2canvas
+[core-js](https://www.npmjs.com/package/core-js)
 
 ## http请求
-axios
+[axios](https://www.npmjs.com/package/axios)
+
+[qs](https://www.npmjs.com/package/qs)
+
+# 解析相关
+## 样式组件 -D // 注意重写组件样式的引用
+[sass](https://www.npmjs.com/package/sass)
+[sass-loader](https://www.npmjs.com/package/sass-loader)
+[node-sass](https://www.npmjs.com/package/node-sass)
+
+[less](https://www.npmjs.com/package/less)
+[less-loader](https://www.npmjs.com/package/less-loader)
+[style-resources-loader](https://www.npmjs.com/package/style-resources-loader)
+
+[svg-sprite-loader](https://www.npmjs.com/package/svg-sprite-loader)
+[text-loader](https://www.npmjs.com/package/text-loader)
+[vue-style-loader](https://www.npmjs.com/package/vue-style-loader)
+[vue-template-compiler](https://www.npmjs.com/package/vue-template-compiler)
+
+## 语法检查 -D
+[eslint](https://www.npmjs.com/package/eslint)
+[prettier](https://www.npmjs.com/package/prettier)
+
+[eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier)
+
+## 节点和浏览器的BDD / TDD断言库
+[chai](https://www.npmjs.com/package/chai)
+
+# UI相关
+## UI 官方
+[element-plus](https://www.npmjs.com/package/element-plus) // PC
+
+[ant-design-vue](https://www.npmjs.com/package/ant-design-vue) // PC
+
+[bootstrap-vue](https://www.npmjs.com/package/bootstrap-vue)
+
+[vant@next](https://www.npmjs.com/package/vant) // M
+
+### vue 2 UI
+[element-ui](https://www.npmjs.com/package/element-ui) // PC
+
+[vant](https://www.npmjs.com/package/vant) // M
+
+## 进度条
+[nprogress](https://www.npmjs.com/package/nprogress)
+
+[vue-simple-spinner](https://www.npmjs.com/package/vue-simple-spinner)
+
+[vue-loading-overlay](https://www.npmjs.com/package/vue-loading-overlay)
+
+## 树
+[vue-treeselect](https://www.npmjs.com/package/ue-treeselect)
+
+## 过渡动画
+[vue-page-transition](https://www.npmjs.com/package/vue-page-transition)
+
+## 拖拽
+[vuedraggable](https://www.npmjs.com/package/vuedraggable)
+
+## 全屏
+[screenfull](https://www.npmjs.com/package/screenfull)
+
+## 数据表格
+[xlsx](https://www.npmjs.com/package/xlsx)
+
+## html2canvas，页面截图
+[html2canvas](https://www.npmjs.com/package/html2canvas)
 
 ## cookie管理
-js-cookie
+[js-cookie](https://www.npmjs.com/package/js-cookie)
 
 ## 加密解密
-crypto-js
+[crypto-js](https://www.npmjs.com/package/crypto-js)
 
-md5
+[md5](https://www.npmjs.com/package/md5)
 
-bcryptjs
+[bcryptjs](https://www.npmjs.com/package/bcryptjs)
 
-jsencrypt
+[jsencrypt](https://www.npmjs.com/package/jsencrypt)
 
-jsrsasign
+[jsrsasign](https://www.npmjs.com/package/jsrsasign)
 
 ## ua签名
-ua-parser-js
+[ua-parser-js](https://www.npmjs.com/package/ua-parser-js)
+
+## 文件保存
+[file-saver](https://www.npmjs.com/package/file-saver)
 
 ## 本地数据存储
-lodash
+[lodash](https://www.npmjs.com/package/lodash)
 
-lowdb
+[lowdb](https://www.npmjs.com/package/lowdb)
 
 ## 二维码
-qrcode
+[qrcode](https://www.npmjs.com/package/qrcode)
 
-qrcodejs2
+[qrcodejs2](https://www.npmjs.com/package/qrcodejs2)
 
-vue-qr
+[vue-qr](https://www.npmjs.com/package/vue-qr)
 
 ## 日期格式化
-moment
+[moment](https://www.npmjs.com/package/moment)
 
-date-fns
+[date-fns](https://www.npmjs.com/package/date-fns)
+
+[dayjs](https://www.npmjs.com/package/dayjs)
 
 ## 富文本编辑器
-tiptap
+[tiptap](https://www.npmjs.com/package/tiptap)
 
-wangeditor
+[wangeditor](https://www.npmjs.com/package/wangeditor)
 
-vue-quill-editor
+[vue-quill-editor](https://www.npmjs.com/package/vue-quill-editor)
 
-CKEditor 5
+[@ckeditor/ckeditor5-vue](https://www.npmjs.com/package/@ckeditor/ckeditor5-vue)
+[@ckeditor/ckeditor5-vue](https://www.npmjs.com/package/@ckeditor/ckeditor5-vue)
 
 ## 国际化
-vue-i18n
+[vue-i18n](https://www.npmjs.com/package/vue-i18n)
 
 ## 复制粘贴
-clipboard
+[clipboard](https://www.npmjs.com/package/clipboard)
 
 ## 三方授权登录集成库
-next-auth
+[next-auth](https://www.npmjs.com/package/next-auth)
 
-@okta/okta-auth-js
+[@okta/okta-auth-js](https://www.npmjs.com/package/@okta/okta-auth-js)
 
-hellojs
+[hellojs](https://www.npmjs.com/package/hellojs)
 
 ## 分享插件
-vue-social-sharing
+[vue-social-sharing](https://www.npmjs.com/package/vue-social-sharing)
 
-vue-socialmedia-share
+[vue-socialmedia-share](https://www.npmjs.com/package/vue-socialmedia-share)
 
-@vue/shared
+[@vue/shared](https://www.npmjs.com/package/@vue/shared)
 
-@vue/cli-shared-utils
+[@vue/cli-shared-utils](https://www.npmjs.com/package/@vue/cli-shared-utils)
+
+## 地图
+[vue-amap](https://www.npmjs.com/package/vue-amap) // 高德
+
+[vue-baidu-map](https://www.npmjs.com/package/vue-baidu-map) // 百度
 
 ## 代码提交信息校验 -D
-husky
+[husky](https://www.npmjs.com/package/husky)
 
-commitizen
+[commitizen](https://www.npmjs.com/package/commitizen)
 
-cz-conventional-changelog
+[cz-conventional-changelog](https://www.npmjs.com/package/cz-conventional-changelog)
 
-cz-customizable
+[cz-customizable](https://www.npmjs.com/package/cz-customizable)
 
-## 适配移动端
-amfe-flexible // 不再推荐 lib-flexible 按照比例缩放展示，基于不同设备（Android、iOS、brow）的px值
+## 适配移动端 -D
+[amfe-flexible](https://www.npmjs.com/package/vant) // 不再推荐 lib-flexible 按照比例缩放展示，基于不同设备（Android、iOS、brow）的px值
 
-postcss postcss-loader // 将px转rem -D
+[postcss](https://www.npmjs.com/package/postcss)
+[postcss-loader](https://www.npmjs.com/package/postcss-loader) // 将px转rem
 
-postcss-pxtorem 5.1.1请勿升级
+[postcss-pxtorem](https://www.npmjs.com/package/postcss-pxtorem)
 
-postcss-plugin-px2rem
+[postcss-plugin-px2rem](https://www.npmjs.com/package/postcss-plugin-px2rem)
 
-postcss-px2rem
+[postcss-px2rem](https://www.npmjs.com/package/postcss-px2rem)
 
-## 移动端调试
-vconsole
+## 移动端调试 -D
+[vconsole](https://www.npmjs.com/package/vconsole)
 
 # TODO
 封装axios，前端自定义报文返回，error根据业务需求返回结果，含状态码。
@@ -177,6 +213,7 @@ vconsole
 改变icon，改为动态加载模式。
 
 # Question
+postcss-pxtorem 5.1.1请勿升级
 sass-loader 10.1.1请勿升级
 less-loader 7.3.0请勿升级
 
