@@ -67,7 +67,7 @@
 ## 节点和浏览器的BDD / TDD断言库
 [chai](https://www.npmjs.com/package/chai)
 
-# UI相关
+# UI相关 https://madewith.cn/
 ## UI 官方
 [element-plus](https://www.npmjs.com/package/element-plus) // PC
 
@@ -97,6 +97,7 @@
 
 ## 拖拽
 [vuedraggable](https://www.npmjs.com/package/vuedraggable)
+[vue-grid-layout](https://www.npmjs.com/package/vue-grid-layout)
 
 ## 全屏
 [screenfull](https://www.npmjs.com/package/screenfull)
