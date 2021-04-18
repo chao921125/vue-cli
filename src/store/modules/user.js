@@ -84,6 +84,12 @@ export default {
           });
       });
     },
+    /**
+     * 既然封装了动态的路由，那么以后也可以直接修改此处代码实现静态路由。
+     * @param commit
+     * @param state
+     * @returns {Promise<unknown>}
+     */
     getUserInfo({ commit, state }) {
       return new Promise((resolve, reject) => {
         let userParams = {

@@ -25,8 +25,8 @@
 <script>
 // import storageLocal from "@/libs/storageLocal";
 // import storageSession from "@/libs/storageSession";
-import Header from "./components/header/Header";
-import Menu from "./components/menus/Menu";
+import Header from "./layout/header/Header";
+import Menu from "./layout/menus/Menu";
 
 export default {
   name: "IndexBlank",

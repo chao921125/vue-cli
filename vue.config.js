@@ -111,7 +111,7 @@ module.exports = {
     },
     compress: true,
     disableHostCheck: true, //webpack4.0 开启热更新
-    host: "127.0.0.1",
+    // host: "127.0.0.1",
     port: 8333,
     https: false,
     hotOnly: false,
