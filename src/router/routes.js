@@ -25,7 +25,7 @@ const frameIn = [
           icon: "",
           noCache: false,
           title: "error",
-          auth: true,
+          auth: false,
         },
       },
       {
@@ -37,7 +37,7 @@ const frameIn = [
           icon: "",
           noCache: false,
           title: "500",
-          auth: true,
+          auth: false,
         },
       },
       {

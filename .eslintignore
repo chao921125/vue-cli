@@ -1,10 +1,8 @@
 # 忽略目录
 node_modules
 node_modules/
-node_modules/*
 build
 build/
-build/*
 tests
 tests/
 public
