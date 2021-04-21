@@ -91,6 +91,12 @@
 
 [vue-loading-overlay](https://www.npmjs.com/package/vue-loading-overlay)
 
+## 滑动条
+[vue-slider-component](https://www.npmjs.com/package/vue-slider-component)
+
+## 轮播图
+[vue-concise-slider](https://www.npmjs.com/package/vue-concise-slider)
+
 ## 树
 [vue-treeselect](https://www.npmjs.com/package/ue-treeselect)
 
