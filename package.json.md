@@ -1,4 +1,4 @@
-# desc about key important
+# description
 
 
 ## scripts指定了运行脚本命令的npm命令行缩写，比如start指定了运行npm run start时，所要执行的命令。
