@@ -66,7 +66,7 @@ module.exports = {
     // 只有 *.module.[ext] 结尾的文件才会被视作 CSS Modules 模块
     requireModuleExtension: true,
     // 是否使用css分离插件 ExtractTextPlugin
-    extract: true,
+    extract: false,
     // 开启 CSS source maps?
     sourceMap: false,
     // css预设器配置项
