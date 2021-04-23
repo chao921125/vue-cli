@@ -10,10 +10,12 @@
       <el-scrollbar>
         <el-main class="main-box">
           <router-view v-slot="{ Component }">
-            <keep-alive v-if="$route.meta.isCache">
-              <component :is="Component"/>
-            </keep-alive>
-            <component :is="Component" v-else/>
+            <transition name="el-fade-in-linear">
+              <keep-alive v-if="$route.meta.isCache">
+                <component :is="Component"/>
+              </keep-alive>
+              <component :is="Component" v-else/>
+            </transition>
           </router-view>
         </el-main>
       </el-scrollbar>

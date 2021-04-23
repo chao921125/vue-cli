@@ -49,4 +49,7 @@ export default {
     btnStartText: "获取验证码",
     btnEndText: "重新发送",
   },
+  images: {
+    loginLogo: require("@/assets/images/login/login-left.png"),
+  }
 };
