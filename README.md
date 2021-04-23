@@ -47,7 +47,7 @@
 
 # 解析相关
 ## 样式组件 -D // 注意重写组件样式的引用
-[sass](https://www.npmjs.com/package/sass)
+[sass<=>坑逼一个，小心慎用](https://www.npmjs.com/package/sass)
 [sass-loader](https://www.npmjs.com/package/sass-loader)
 [node-sass](https://www.npmjs.com/package/node-sass)
 
@@ -90,6 +90,12 @@
 [vue-simple-spinner](https://www.npmjs.com/package/vue-simple-spinner)
 
 [vue-loading-overlay](https://www.npmjs.com/package/vue-loading-overlay)
+
+## 滑动条
+[vue-slider-component](https://www.npmjs.com/package/vue-slider-component)
+
+## 轮播图
+[vue-concise-slider](https://www.npmjs.com/package/vue-concise-slider)
 
 ## 树
 [vue-treeselect](https://www.npmjs.com/package/ue-treeselect)

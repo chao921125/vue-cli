@@ -20,11 +20,11 @@ export default {
     }
   },
   created() {
-    this.i18n = this.$store.getters["store/i18n/getI18n"] === this.$constants.i18n.ZHCN;
+    this.i18n = this.$store.getters["store/i18n/getI18n"] === this.$constants.i18n.ZH_CN;
   },
   methods: {
     changeI18n() {
-      const language = this.i18n ? this.$constants.i18n.ZHCN : this.$constants.i18n.ENUS;
+      const language = this.i18n ? this.$constants.i18n.ZH_CN : this.$constants.i18n.EN_US;
       Storage.setSessionItem("i18n", language);
       this.$store.dispatch("store/i18n/setI18n", language);
       this.reload();

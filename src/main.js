@@ -23,19 +23,18 @@ app.config.errorHandler = (err, vm, info) => {
     console.log(err);
   }
 };
-// app.config.warnHandler = (msg, vm, trace) => {
-//   // 显示在控制台
-//   if (process.env.NODE_ENV === "development") {
-//     // `trace` 是组件的继承关系追踪
-//     util.log.warning(">>>>>> 警告信息 >>>>>>");
-//     console.log(msg);
-//     util.log.warning(">>>>>> Vue 实例 >>>>>>");
-//     console.log(vm);
-//     util.log.warning(">>>>>> Info >>>>>>");
-//     console.log(trace);
-//   }
-// };
-
+app.config.warnHandler = (msg, vm, trace) => {
+  // 显示在控制台
+  if (process.env.NODE_ENV === "development") {
+    // `trace` 是组件的继承关系追踪
+    util.log.warning(">>>>>> 警告信息 >>>>>>");
+    console.log(msg);
+    util.log.warning(">>>>>> Vue 实例 >>>>>>");
+    console.log(vm);
+    util.log.warning(">>>>>> Info >>>>>>");
+    console.log(trace);
+  }
+};
 
 // UI start
 // 如果想要覆盖掉组件的样式，那么需要自定义一个less（必须），同时不能在此处顺序引入，只能在自定义文件中引入
@@ -52,16 +51,6 @@ import ElementPlus from "element-plus";
 import "@/assets/styles/reset/element.scss";
 app.use(ElementPlus, { size: 'small', zIndex: 9999 });
 // app.use(ElementPlus);
-
-
-// UI 备用 Element
-// import ElementUI from "element-ui";
-// import "element-ui/lib/theme-chalk/index1.css";
-// const options = {
-//   size: "medium",
-//   zIndex: 3000,
-// };
-// app.use(ElementUI, options);
 
 // 全局样式定义
 import "@/assets/styles/global-class.scss";

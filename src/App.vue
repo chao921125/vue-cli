@@ -1,7 +1,5 @@
 <template>
-  <transition name="el-fade-in">
     <router-view v-if="reload" v-loading.fullscreen.lock="isLoading"/>
-  </transition>
 </template>
 
 <script>
