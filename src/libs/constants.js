@@ -7,7 +7,7 @@ export default {
     DE_DE: "zh-CN", // 德语
     EL_GR: "zh-CN", // 希腊语
     EN_GB: "zh-CN", // 英语
-    EN_US: "zh-CN", // 英语（美式）
+    EN_US: "en-US", // 英语（美式）
     ES_ES: "zh-CN", // 西班牙语
     ET_EE: "zh-CN", // 爱沙尼亚语
     FA_IR: "zh-CN", // 波斯语
@@ -34,7 +34,7 @@ export default {
     UK_UA: "zh-CN", // 乌克兰语
     VI_VN: "zh-CN", // 越南语
     ZH_CN: "zh-CN", // 简体中文
-    ZH_TW: "zh-CN" // 繁体中文
+    ZH_TW: "zh-TW" // 繁体中文
   },
   reg: {
     chinaPhone: /^0?(13[0-9]|14[57]|15[0-9]|166|17[0-9]|18[0-9]|19[89])[0-9]{8}$/,
