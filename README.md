@@ -27,21 +27,27 @@
 - └── vue.config.js 启动配置
 
 # 基础核心依赖
-## 核心库
+## 核心库 https://vue3js.cn/
 [vue-cli](https://www.npmjs.com/package/@vue/cli)
 
-?[vite](https://www.npmjs.com/package/vite)?
+?[vite](https://www.npmjs.com/package/vite)
+[官网](https://cn.vitejs.dev/)
+?
 
 [vue](https://www.npmjs.com/package/vue)
+[官网](https://vue3js.cn/docs/)
 
 [vue-router](https://www.npmjs.com/package/vue-router)
+[官网](https://vue3js.cn/)
 
 [vuex](https://www.npmjs.com/package/vuex)
+[官网](https://next.vuex.vuejs.org/)
 
 [core-js](https://www.npmjs.com/package/core-js)
 
 ## http请求
 [axios](https://www.npmjs.com/package/axios)
+[官网](http://axios-js.com/)
 
 [qs](https://www.npmjs.com/package/qs)
 
@@ -72,17 +78,20 @@
 # UI相关 https://madewith.cn/
 ## UI 官方
 [element-plus](https://www.npmjs.com/package/element-plus) // PC
+[官网](https://element-plus.org/#/zh-CN)
 
 [ant-design-vue](https://www.npmjs.com/package/ant-design-vue) // PC
+[官网](https://2x.antdv.com/components/overview/)
 
-[bootstrap-vue](https://www.npmjs.com/package/bootstrap-vue)
+[bootstrap-vue](https://www.npmjs.com/package/bootstrap-vue) // ?
+[官网](https://dev.bootstrap-vue.org/docs)
 
 [vant@next](https://www.npmjs.com/package/vant) // M
+[官网](https://vant-contrib.gitee.io/vant/v3/#/zh-CN)
 
-### vue 2 UI
-[element-ui](https://www.npmjs.com/package/element-ui) // PC
-
-[vant](https://www.npmjs.com/package/vant) // M
+## 其他三方库
+[vxe-table](https://www.npmjs.com/package/vxe-table)
+[官网(包含支持v3)](https://xuliangzhan_admin.gitee.io/vxe-table/#/table/start/install)
 
 ## 进度条
 [nprogress](https://www.npmjs.com/package/nprogress)

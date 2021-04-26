@@ -1,5 +1,6 @@
 import util from "@/plugins/utils";
 import { login, logout, getUserInfo } from "@/api/user";
+import routers from "@/router/config";
 
 export default {
   namespaced: true,
@@ -92,6 +93,8 @@ export default {
      */
     getUserInfo({ commit, state }) {
       return new Promise((resolve, reject) => {
+        // 增加静态配置路由，模拟接口访问，可以替换掉下面的接口。
+        console.log(routers.userInfo);
         let userParams = {
           token: state.token,
           uuid: state.uuid,

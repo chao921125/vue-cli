@@ -4,7 +4,7 @@
     <router-link to="/500" class="cc-mr-20">500</router-link>
     <router-link to="/error">error</router-link>
   </div>
-  <div>过滤器方法测试：<span v-for="item in 10" :key="item">{{ $filters.testFilter(item) }}</span></div>
+  <div>模仿vue2的filter：$filters.method <p v-for="item in 10" :key="item">{{ item + "=" + $filters.testFilter(item) }}</p></div>
 </template>
 
 <script>
