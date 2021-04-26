@@ -225,14 +225,16 @@
 ## 移动端调试 -D
 [vconsole](https://www.npmjs.com/package/vconsole)
 
-# TODO
-封装axios，前端自定义报文返回，error根据业务需求返回结果，含状态码。
+## 支付
+[vue-stripe](https://vuestripe.com/)
 
+# TODO
+封装axios，前端自定义报文返回，error根据业务需求返回结果，含状态码。\
 改变icon，改为动态加载模式。
 
 # Question
-postcss-pxtorem 5.1.1请勿升级
-sass-loader 10.1.1请勿升级
+postcss-pxtorem 5.1.1请勿升级\
+sass-loader 10.1.1请勿升级\
 less-loader 7.3.0请勿升级
 
 https://baijiahao.baidu.com/s?id=1629138670094636894&wfr=spider&for=pc
