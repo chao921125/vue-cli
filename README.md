@@ -228,6 +228,9 @@
 ## 支付
 [vue-stripe](https://vuestripe.com/)
 
+## 游戏
+Eva.js
+
 # TODO
 封装axios，前端自定义报文返回，error根据业务需求返回结果，含状态码。\
 改变icon，改为动态加载模式。
