@@ -1,12 +1,6 @@
 <template>
   <el-container class="components-layout">
-    <el-header class="header-box">
-      <Header @isCollapse="toggleCollapse"></Header>
-    </el-header>
     <el-container class="content-box">
-      <el-aside :class="isCollapse ? 'layout-aside aside-collapse transition-width-1s' : 'layout-aside aside-no-collapse transition-width-1s'">
-        <Menu :is-collapse="isCollapse"></Menu>
-      </el-aside>
       <el-container>
         <el-main class="main-box">
           <router-view v-slot="{ Component }">
