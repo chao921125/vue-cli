@@ -229,7 +229,10 @@
 [vue-stripe](https://vuestripe.com/)
 
 ## 游戏
-Eva.js
+[Eva.js](https://www.npmjs.com/package/@eva/eva.js)
+[Eva-plugin-renderer](https://www.npmjs.com/package/@eva/plugin-renderer)
+[Eva-plugin-renderer-img](https://www.npmjs.com/package/@eva/plugin-renderer-img)
+[官网](https://eva-engine.gitee.io/#/tutorials/intro)
 
 # TODO
 封装axios，前端自定义报文返回，error根据业务需求返回结果，含状态码。\
