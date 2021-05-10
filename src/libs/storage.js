@@ -169,6 +169,10 @@ export default {
       return item;
     }
   },
+  removeItem(key) {
+    sessionStorage.removeItem(key);
+    localStorage.removeItem(key);
+  },
   clear() {
     sessionStorage.clear();
     localStorage.clear();
