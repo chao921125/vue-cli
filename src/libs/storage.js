@@ -17,8 +17,7 @@ export default {
     if (typeof value === "string") {
       localStorage.setItem(key, value);
     } else {
-      let item = JSON.stringify(value);
-      localStorage.setItem(key, item);
+      localStorage.setItem(key, JSON.stringify(value));
     }
   },
   removeLocalItem(key) {
@@ -87,8 +86,7 @@ export default {
     if (typeof value === "string") {
       sessionStorage.setItem(key, value);
     } else {
-      let item = JSON.stringify(value);
-      sessionStorage.setItem(key, item);
+      sessionStorage.setItem(key, JSON.stringify(value));
     }
   },
   removeSessionItem(key) {
@@ -157,7 +155,7 @@ export default {
     } else {
       let item = JSON.stringify(value);
       localStorage.setItem(key, item);
-      sessionStorage.setItem(key, value);
+      sessionStorage.setItem(key, item);
     }
   },
   getItem(key) {
