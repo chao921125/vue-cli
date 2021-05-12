@@ -201,6 +201,10 @@
 
 [vue-baidu-map](https://www.npmjs.com/package/vue-baidu-map) // 百度
 
+## 绘图 3D
+[three.js](https://www.npmjs.com/package/three) // three.js
+
+
 ## 代码提交信息校验 -D
 [husky](https://www.npmjs.com/package/husky)
 
