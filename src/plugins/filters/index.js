@@ -1,21 +1,7 @@
-import Vue from "vue";
-import { formatMoney, formatMoney3, formatNumber, formatMoneyTwo, formatDate, dealStrLength, dealNumFront, dealNumBack, dealNumFrontOne, getGoalNameByKey } from "@/libs/format";
-
 const index = {
-  formatMoney,
-  formatMoney3,
-  formatNumber,
-  formatMoneyTwo,
-  formatDate,
-  dealStrLength,
-  dealNumFront,
-  dealNumBack,
-  dealNumFrontOne,
-  getGoalNameByKey,
+  testFilter: (value) => {
+    if (value % 2 === 0) return "O";
+    return "A";
+  },
 };
-
-Object.keys(index).forEach((key) => {
-  Vue.filter(key, index[key]);
-});
-
 export default index;

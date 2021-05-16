@@ -1,9 +1,16 @@
 # 忽略目录
-build/
-tests/
+node_modules
 node_modules/
+build
+build/
+tests
+tests/
+public
 public/
+dist
+dist/
 src/assets
+src/assets/
 
 # node 覆盖率文件
 coverage/

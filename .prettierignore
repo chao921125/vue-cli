@@ -1,0 +1,14 @@
+.*
+*.conf
+*.conf.js
+*.md
+*.json
+/.vscode
+/.idea
+/.git
+/docs
+node_modules
+/node_modules
+/dist
+/src/libs/
+/assets

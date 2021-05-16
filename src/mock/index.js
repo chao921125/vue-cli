@@ -1,5 +1,5 @@
 import Mock from "mockjs";
-import baseURL from "@/api/index";
+import requestURL from "@/api/index";
 
 Mock.setup({
   timeout: "200-600",
@@ -9,103 +9,97 @@ export const random = () => {
   return Math.floor(Math.random() * 10000000);
 };
 
-Mock.mock(baseURL.login, "post", () => {
+Mock.mock(requestURL.login, "post", () => {
   return { token: random(), uuid: random() };
 });
 
-Mock.mock(baseURL.logout, "post", () => {
+Mock.mock(requestURL.logout, "post", () => {
   return { token: random(), uuid: random() };
 });
-Mock.mock(baseURL.getUserInfo, "post", () => {
-  const menus = [
-    {
+Mock.mock(requestURL.getUserInfo, "post", () => {
+  const menus = [{
       id: 1,
       orderNum: 1,
-      type: 1,
+      type: 0,
       name: "首页",
       title: "首页",
       path: "home",
       component: "Home",
       redirect: "",
-      icon: "el-icon-location",
+      icon: "el-icon-house",
       isLink: 0,
       isCache: 0,
-      isDisable: 1,
+      isDisable: 0,
       isSideMenu: 1,
       status: 1,
       perms: "admin:system:*",
-    },
-    {
+    }, {
       id: 2,
       orderNum: 2,
       type: 0,
-      name: "测试",
-      title: "测试",
-      path: "test",
+      name: "示例",
+      title: "示例",
+      path: "demo",
       component: "",
       redirect: "",
-      icon: "el-icon-location",
+      icon: "el-icon-loading",
       isLink: 0,
       isCache: 0,
-      isDisable: 1,
+      isDisable: 0,
       isSideMenu: 1,
       status: 1,
       perms: "admin:system:*",
-      children: [
-        {
+      children: [{
           id: 21,
           orderNum: 1,
           type: 1,
-          name: "RG图形",
-          title: "RG图形",
-          path: "relation-graph",
-          component: "test/RelationGraph",
+          name: "国际化",
+          title: "国际化",
+          path: "i18n",
+          component: "demo/i18n/I18n",
           redirect: "",
-          icon: "el-icon-location",
+          icon: "el-icon-rank",
           isLink: 0,
           isCache: 0,
-          isDisable: 1,
+          isDisable: 0,
           isSideMenu: 1,
           status: 1,
           perms: "admin:system:*",
-        },
-        {
+        }, {
           id: 22,
-          orderNum: 1,
+          orderNum: 2,
           type: 1,
-          name: "AmCharts4FD",
-          title: "AmCharts4FD",
-          path: "a4-force-directed",
-          component: "test/A4ForceDirected",
+          name: "加密解密",
+          title: "加密解密",
+          path: "encrypt",
+          component: "demo/encrypt/CryptoJs",
           redirect: "",
           icon: "el-icon-location",
           isLink: 0,
           isCache: 0,
-          isDisable: 1,
+          isDisable: 0,
           isSideMenu: 1,
           status: 1,
           perms: "admin:system:*",
         },
-      ],
-    },
-    {
+      ]
+    }, {
       id: 9,
-      orderNum: 3,
+      orderNum: 2,
       type: 0,
       name: "系统管理",
       title: "系统管理",
       path: "system",
       component: "",
       redirect: "",
-      icon: "el-icon-location",
+      icon: "el-icon-setting",
       isLink: 0,
       isCache: 0,
-      isDisable: 1,
+      isDisable: 0,
       isSideMenu: 1,
       status: 1,
       perms: "admin:system:*",
-      children: [
-        {
+      children: [{
           id: 91,
           orderNum: 1,
           type: 1,
@@ -117,12 +111,11 @@ Mock.mock(baseURL.getUserInfo, "post", () => {
           icon: "el-icon-location",
           isLink: 0,
           isCache: 0,
-          isDisable: 1,
+          isDisable: 0,
           isSideMenu: 1,
           status: 1,
           perms: "admin:system:*",
-        },
-        {
+        }, {
           id: 92,
           orderNum: 2,
           type: 1,
@@ -131,15 +124,14 @@ Mock.mock(baseURL.getUserInfo, "post", () => {
           path: "roles",
           component: "system/Roles",
           redirect: "",
-          icon: "el-icon-location",
+          icon: "el-icon-user",
           isLink: 0,
           isCache: 0,
-          isDisable: 1,
+          isDisable: 0,
           isSideMenu: 1,
           status: 1,
           perms: "admin:system:*",
-        },
-        {
+        }, {
           id: 93,
           orderNum: 3,
           type: 1,
@@ -148,15 +140,14 @@ Mock.mock(baseURL.getUserInfo, "post", () => {
           path: "menus",
           component: "system/Menus",
           redirect: "",
-          icon: "el-icon-location",
+          icon: "el-icon-rank",
           isLink: 0,
           isCache: 0,
-          isDisable: 1,
+          isDisable: 0,
           isSideMenu: 1,
           status: 1,
           perms: "admin:system:*",
-        },
-        {
+        }, {
           id: 94,
           orderNum: 4,
           type: 1,
@@ -165,15 +156,14 @@ Mock.mock(baseURL.getUserInfo, "post", () => {
           path: "dictionary",
           component: "system/Dictionary",
           redirect: "",
-          icon: "el-icon-location",
+          icon: "el-icon-document",
           isLink: 0,
           isCache: 0,
-          isDisable: 1,
+          isDisable: 0,
           isSideMenu: 1,
           status: 1,
           perms: "admin:system:*",
-        },
-        {
+        }, {
           id: 95,
           orderNum: 5,
           type: 1,
@@ -182,27 +172,26 @@ Mock.mock(baseURL.getUserInfo, "post", () => {
           path: "company",
           component: "system/Company",
           redirect: "",
-          icon: "el-icon-location",
+          icon: "el-icon-office-building",
           isLink: 0,
           isCache: 0,
-          isDisable: 1,
+          isDisable: 0,
           isSideMenu: 1,
           status: 1,
           perms: "admin:system:*",
-        },
-        {
+        }, {
           id: 96,
           orderNum: 6,
           type: 1,
-          name: "公司管理",
-          title: "公司管理",
+          name: "部门管理",
+          title: "部门管理",
           path: "depts",
           component: "system/Depts",
           redirect: "",
-          icon: "el-icon-location",
+          icon: "el-icon-school",
           isLink: 0,
           isCache: 0,
-          isDisable: 1,
+          isDisable: 0,
           isSideMenu: 1,
           status: 1,
           perms: "admin:system:*",

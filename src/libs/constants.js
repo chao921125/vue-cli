@@ -1,4 +1,41 @@
 export default {
+  i18n: {
+    AR_EG: "zh-CN", // 阿拉伯
+    BG_BG: "zh-CN", // 保加利亚语
+    CA_ES: "zh-CN", // 加泰罗尼亚语
+    CS_CZ: "zh-CN", // 捷克语
+    DE_DE: "zh-CN", // 德语
+    EL_GR: "zh-CN", // 希腊语
+    EN_GB: "zh-CN", // 英语
+    EN_US: "en-US", // 英语（美式）
+    ES_ES: "zh-CN", // 西班牙语
+    ET_EE: "zh-CN", // 爱沙尼亚语
+    FA_IR: "zh-CN", // 波斯语
+    FI_FI: "zh-CN", // 芬兰语
+    FR_BE: "zh-CN", // 法语（比利时）
+    FR_FR: "zh-CN", // 法语
+    IS_IS: "zh-CN", // 冰岛语
+    IT_IT: "zh-CN", // 意大利语
+    JA_JP: "zh-CN", // 日语
+    KO_KR: "zh-CN", // 韩语/朝鲜语
+    NB_NO: "zh-CN", // 挪威
+    NL_BE: "zh-CN", // 荷兰语（比利时）
+    NL_NL: "zh-CN", // 荷兰语
+    PL_PL: "zh-CN", // 波兰语
+    PT_BR: "zh-CN", // 葡萄牙语(巴西)
+    PT_PT: "zh-CN", // 葡萄牙语
+    SK_SK: "zh-CN", // 斯洛伐克语
+    SR_RS: "zh-CN", // 塞尔维亚
+    SL_SI: "zh-CN", // 斯洛文尼亚
+    SV_SE: "zh-CN", // 瑞典语
+    TH_TH: "zh-CN", // 泰语
+    TR_TR: "zh-CN", // 土耳其语
+    RU_RU: "zh-CN", // 俄罗斯语
+    UK_UA: "zh-CN", // 乌克兰语
+    VI_VN: "zh-CN", // 越南语
+    ZH_CN: "zh-CN", // 简体中文
+    ZH_TW: "zh-TW" // 繁体中文
+  },
   reg: {
     chinaPhone: /^0?(13[0-9]|14[57]|15[0-9]|166|17[0-9]|18[0-9]|19[89])[0-9]{8}$/,
     phoneCode: /^[0-9]{6}$/,
@@ -12,61 +49,7 @@ export default {
     btnStartText: "获取验证码",
     btnEndText: "重新发送",
   },
-  cityOptionsOne: [
-    { name: "安徽", id: 1, type: "A" },
-    { name: "北京", id: 19, type: "B" },
-    { name: "重庆", id: 532, type: "C" },
-    { name: "福建", id: 39, type: "F" },
-    { name: "甘肃", id: 52, type: "G" },
-    { name: "广东", id: 68, type: "G" },
-    { name: "广西", id: 92, type: "G" },
-    { name: "贵州", id: 109, type: "G" },
-    { name: "海南", id: 120, type: "H" },
-    { name: "河北", id: 125, type: "H" },
-    { name: "河南", id: 145, type: "H" },
-    { name: "黑龙江", id: 165, type: "H" },
-    { name: "湖北", id: 184, type: "H" },
-    { name: "湖南", id: 212, type: "H" },
-    { name: "吉林", id: 234, type: "J" },
-    { name: "江苏", id: 255, type: "J" },
-    { name: "江西", id: 279, type: "J" },
-    { name: "辽宁", id: 294, type: "L" },
-    { name: "内蒙古", id: 333, type: "N" },
-    { name: "宁夏", id: 351, type: "N" },
-    { name: "青海", id: 357, type: "Q" },
-    { name: "山东", id: 368, type: "S" },
-    { name: "山西", id: 393, type: "S" },
-    { name: "陕西", id: 406, type: "S" },
-    { name: "上海", id: 417, type: "S" },
-    { name: "四川", id: 438, type: "S" },
-    { name: "天津", id: 461, type: "T" },
-    { name: "云南", id: 488, type: "Y" },
-    { name: "浙江", id: 508, type: "Z" },
-  ],
-  cityOptionsTwo: [
-    { name: "西藏", id: 463, type: "X" },
-    { name: "新疆", id: 471, type: "X" },
-    { name: "香港", id: 599, type: "X" },
-    { name: "澳门", id: 576, type: "A" },
-    { name: "台湾", id: 577, type: "T" },
-    { name: "中国其它", id: 531, type: "OR" },
-  ],
-  tradeType: {
-    ALL: {
-      value: "9",
-      description: "全部",
-    },
-    TRIAL: {
-      value: "3",
-      description: "试用",
-    },
-    RECHARGE: {
-      value: "0",
-      description: "充值",
-    },
-    CONSUME: {
-      value: "1",
-      description: "消费",
-    },
-  },
+  images: {
+    loginLogo: require("@/assets/images/login/login-left.png"),
+  }
 };

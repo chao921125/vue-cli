@@ -1,6 +1,6 @@
 import router from "../../router";
 import { cloneDeep } from "lodash";
-import { database as getDatabase, dbGet, dbSet } from "@/plugins/util/util.db";
+import { database as getDatabase, dbGet, dbSet } from "@/plugins/utils/util.db";
 
 export default {
   namespaced: true,

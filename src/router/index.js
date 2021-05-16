@@ -1,39 +1,25 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import store from "@/store";
+import { createRouter, createWebHistory } from "vue-router";
+import routes from "./routes";
+import store from "../store";
+import util from "@/plugins/utils";
 
 // 进度条
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
-// Import component
-// import Loading from "vue-loading-overlay";
-// Import stylesheet
-// import "vue-loading-overlay/dist/vue-loading.css";
 
-// 日志等打印
-import util from "@/plugins/util";
-
-// 路由数据，真是个奇葩的东西，不能命名为router相关的
-import routes from "./routes";
-
-// 解决路由异常，此问题不会导致出错但是控制台会有异常信息
-const routerPush = VueRouter.prototype.push;
-VueRouter.prototype.push = function push(location) {
-  return routerPush.call(this, location).catch((error) => error);
-};
-const routerReplace = VueRouter.prototype.replace;
-VueRouter.prototype.replace = function replace(location) {
-  return routerReplace.call(this, location).catch((error) => error);
-};
-
-Vue.use(VueRouter);
-
-// 导出路由 在 main.js 里使用
-const router = new VueRouter({
-  mode: process.env.NODE_ENV === "production" ? "history" : "history", // hash
-  scrollBehavior: () => ({ y: 0 }),
+const router = createRouter({
+  scrollBehavior(/* to, from, savedPosition */) {
+    return { top: 0 }
+  },
+  history: createWebHistory(process.env.BASE_URL),
   routes,
 });
+
+// 解决路由异常，此问题不会导致出错但是控制台会有异常信息 TODO 预留不确定是否还有此类问题
+// const routerPush = router.prototype.push;
+// router.prototype.push = function push(location) {
+//   return routerPush.call(this, location).catch((error) => error);
+// };
 
 /**
  * 路由拦截
@@ -90,12 +76,11 @@ router.beforeEach((to, from, next) => {
       store
         .dispatch("store/user/getUserInfo")
         .then((resp) => {
-          router.addRoutes(resp);
           resp.forEach((route) => {
+            router.addRoute(route);
             router.options.routes.push(route);
           });
           next({ ...to, replace: true });
-          // next();
           NProgress.done();
         })
         .catch((error) => {
