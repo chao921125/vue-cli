@@ -1,10 +1,10 @@
 <template>
-    <div>角色管理</div>
+  <div>Register</div>
 </template>
 
 <script>
 export default {
-    name: "Roles",
+  name: "Register",
 };
 </script>
 

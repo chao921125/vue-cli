@@ -17,7 +17,8 @@ Mock.mock(requestURL.logout, "post", () => {
   return { token: random(), uuid: random() };
 });
 Mock.mock(requestURL.getUserInfo, "post", () => {
-  const menus = [{
+  const menus = [
+    {
       id: 1,
       orderNum: 1,
       type: 0,
@@ -26,14 +27,15 @@ Mock.mock(requestURL.getUserInfo, "post", () => {
       path: "home",
       component: "Home",
       redirect: "",
-      icon: "el-icon-house",
+      icon: "el-icon-location",
       isLink: 0,
       isCache: 0,
       isDisable: 0,
       isSideMenu: 1,
       status: 1,
       perms: "admin:system:*",
-    }, {
+    },
+    {
       id: 2,
       orderNum: 2,
       type: 0,
@@ -42,14 +44,14 @@ Mock.mock(requestURL.getUserInfo, "post", () => {
       path: "demo",
       component: "",
       redirect: "",
-      icon: "el-icon-loading",
+      icon: "el-icon-location",
       isLink: 0,
       isCache: 0,
       isDisable: 0,
       isSideMenu: 1,
       status: 1,
-      perms: "admin:system:*",
-      children: [{
+      perms: "admin:system:*",children: [
+        {
           id: 21,
           orderNum: 1,
           type: 1,
@@ -58,14 +60,15 @@ Mock.mock(requestURL.getUserInfo, "post", () => {
           path: "i18n",
           component: "demo/i18n/I18n",
           redirect: "",
-          icon: "el-icon-rank",
+          icon: "el-icon-location",
           isLink: 0,
           isCache: 0,
           isDisable: 0,
           isSideMenu: 1,
           status: 1,
           perms: "admin:system:*",
-        }, {
+        },
+        {
           id: 22,
           orderNum: 2,
           type: 1,
@@ -83,7 +86,8 @@ Mock.mock(requestURL.getUserInfo, "post", () => {
           perms: "admin:system:*",
         },
       ]
-    }, {
+    },
+    {
       id: 9,
       orderNum: 2,
       type: 0,
@@ -92,14 +96,15 @@ Mock.mock(requestURL.getUserInfo, "post", () => {
       path: "system",
       component: "",
       redirect: "",
-      icon: "el-icon-setting",
+      icon: "el-icon-location",
       isLink: 0,
       isCache: 0,
       isDisable: 0,
       isSideMenu: 1,
       status: 1,
       perms: "admin:system:*",
-      children: [{
+      children: [
+        {
           id: 91,
           orderNum: 1,
           type: 1,
@@ -115,7 +120,8 @@ Mock.mock(requestURL.getUserInfo, "post", () => {
           isSideMenu: 1,
           status: 1,
           perms: "admin:system:*",
-        }, {
+        },
+        {
           id: 92,
           orderNum: 2,
           type: 1,
@@ -124,14 +130,15 @@ Mock.mock(requestURL.getUserInfo, "post", () => {
           path: "roles",
           component: "system/Roles",
           redirect: "",
-          icon: "el-icon-user",
+          icon: "el-icon-location",
           isLink: 0,
           isCache: 0,
           isDisable: 0,
           isSideMenu: 1,
           status: 1,
           perms: "admin:system:*",
-        }, {
+        },
+        {
           id: 93,
           orderNum: 3,
           type: 1,
@@ -140,14 +147,15 @@ Mock.mock(requestURL.getUserInfo, "post", () => {
           path: "menus",
           component: "system/Menus",
           redirect: "",
-          icon: "el-icon-rank",
+          icon: "el-icon-location",
           isLink: 0,
           isCache: 0,
           isDisable: 0,
           isSideMenu: 1,
           status: 1,
           perms: "admin:system:*",
-        }, {
+        },
+        {
           id: 94,
           orderNum: 4,
           type: 1,
@@ -156,14 +164,15 @@ Mock.mock(requestURL.getUserInfo, "post", () => {
           path: "dictionary",
           component: "system/Dictionary",
           redirect: "",
-          icon: "el-icon-document",
+          icon: "el-icon-location",
           isLink: 0,
           isCache: 0,
           isDisable: 0,
           isSideMenu: 1,
           status: 1,
           perms: "admin:system:*",
-        }, {
+        },
+        {
           id: 95,
           orderNum: 5,
           type: 1,
@@ -172,14 +181,15 @@ Mock.mock(requestURL.getUserInfo, "post", () => {
           path: "company",
           component: "system/Company",
           redirect: "",
-          icon: "el-icon-office-building",
+          icon: "el-icon-location",
           isLink: 0,
           isCache: 0,
           isDisable: 0,
           isSideMenu: 1,
           status: 1,
           perms: "admin:system:*",
-        }, {
+        },
+        {
           id: 96,
           orderNum: 6,
           type: 1,
@@ -188,7 +198,7 @@ Mock.mock(requestURL.getUserInfo, "post", () => {
           path: "depts",
           component: "system/Depts",
           redirect: "",
-          icon: "el-icon-school",
+          icon: "el-icon-location",
           isLink: 0,
           isCache: 0,
           isDisable: 0,

@@ -66,7 +66,7 @@ module.exports = {
     // 只有 *.module.[ext] 结尾的文件才会被视作 CSS Modules 模块
     requireModuleExtension: true,
     // 是否使用css分离插件 ExtractTextPlugin
-    extract: false,
+    extract: true,
     // 开启 CSS source maps?
     sourceMap: false,
     // css预设器配置项
@@ -112,7 +112,7 @@ module.exports = {
     compress: true,
     disableHostCheck: true, //webpack4.0 开启热更新
     // host: "127.0.0.1",
-    port: 8333,
+    port: 3333,
     https: false,
     hotOnly: false,
     proxy: {

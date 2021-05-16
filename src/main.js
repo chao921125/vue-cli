@@ -23,18 +23,19 @@ app.config.errorHandler = (err, vm, info) => {
     console.log(err);
   }
 };
-app.config.warnHandler = (msg, vm, trace) => {
-  // 显示在控制台
-  if (process.env.NODE_ENV === "development") {
-    // `trace` 是组件的继承关系追踪
-    util.log.warning(">>>>>> 警告信息 >>>>>>");
-    console.log(msg);
-    util.log.warning(">>>>>> Vue 实例 >>>>>>");
-    console.log(vm);
-    util.log.warning(">>>>>> Info >>>>>>");
-    console.log(trace);
-  }
-};
+// app.config.warnHandler = (msg, vm, trace) => {
+//   // 显示在控制台
+//   if (process.env.NODE_ENV === "development") {
+//     // `trace` 是组件的继承关系追踪
+//     util.log.warning(">>>>>> 警告信息 >>>>>>");
+//     console.log(msg);
+//     util.log.warning(">>>>>> Vue 实例 >>>>>>");
+//     console.log(vm);
+//     util.log.warning(">>>>>> Info >>>>>>");
+//     console.log(trace);
+//   }
+// };
+
 
 // UI start
 // 如果想要覆盖掉组件的样式，那么需要自定义一个less（必须），同时不能在此处顺序引入，只能在自定义文件中引入
@@ -49,8 +50,12 @@ app.config.warnHandler = (msg, vm, trace) => {
 
 import ElementPlus from "element-plus";
 import "@/assets/styles/reset/element.scss";
-app.use(ElementPlus, { size: 'small', zIndex: 9999 });
+app.use(ElementPlus, { size: 'small', zIndex: 3000 });
 // app.use(ElementPlus);
+
+import Vant from 'vant';
+import '@/assets/styles/reset/vant.less';
+app.use(Vant);
 
 // 全局样式定义
 import "@/assets/styles/global-class.scss";
@@ -65,17 +70,16 @@ app.use(i18n);
 // 三方插件 start
 import "vuedraggable"; // 拖拽
 // 三方插件：数据图
-import * as echarts from "echarts";
-app.config.globalProperties.$echarts = echarts;
+// import echarts from "echarts"; // TODO echarts 5.0在vue3中配置
+// app.config.globalProperties.$echarts = echarts;
 // 三方插件 end
 
 // 全局变量配置 start
 // app.config.globalProperties.$Api = Api;
 // app.use(Api);
 import constants from "@/libs/constants";
-app.config.globalProperties.$constants = constants;
-
 import filters from "@/plugins/filters";
+app.config.globalProperties.$constants = constants;
 app.config.globalProperties.$filters = filters;
 // 全局变量配置 end
 

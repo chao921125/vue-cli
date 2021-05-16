@@ -1,33 +1,15 @@
 <template>
-  <el-container class="components-layout">
-    <el-container class="content-box">
-      <el-container>
-        <el-main class="main-box">
-          <router-view v-slot="{ Component }">
-            <keep-alive v-if="$route.meta.isCache">
-              <component :is="Component"/>
-            </keep-alive>
-            <component :is="Component" v-else/>
-          </router-view>
-        </el-main>
-<!--        <el-footer class="footer-box">Footer</el-footer>-->
-      </el-container>
-    </el-container>
-  </el-container>
+  <router-view v-slot="{ Component }">
+    <keep-alive v-if="$route.meta.isCache">
+      <component :is="Component"/>
+    </keep-alive>
+    <component :is="Component" v-else/>
+  </router-view>
 </template>
 
 <script>
-// import storageLocal from "@/libs/storageLocal";
-// import storageSession from "@/libs/storageSession";
-import Header from "./layout/header/Header";
-import Menu from "./layout/menus/Menu";
-
 export default {
   name: "IndexBlank",
-  components: {
-    Menu,
-    Header,
-  },
   data() {
     return {
       isCollapse: false,

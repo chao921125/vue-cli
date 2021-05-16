@@ -2,12 +2,11 @@
 全局定义class
 */
 
-@import "~@/assets/styles/public.scss";
-@import "~@/assets/styles/common/base.scss";
-// @import "~@/assets/styles/fonts/font.scss";
-@import "~@/assets/styles/icon/glyphicon.scss";
-@import "~@/assets/styles/animate/n-progress.scss";
-@import "~@/assets/styles/animate/vue-transition.scss";
+@import '~@/assets/styles/public.scss';
+@import '~@/assets/styles/reset/base.scss';
+@import '~@/assets/styles/icon/glyphicon.scss';
+@import '~@/assets/styles/animate/n-progress.scss';
+@import '~@/assets/styles/animate/vue-transition.scss';
 
 // 在这里写公用的class
 // 注意 这个文件里只写class
@@ -44,9 +43,6 @@
 }
 
 // 100%
-.#{$prefix}-width-auto {
-  width: auto;
-}
 .#{$prefix}-box-fill {
   @extend %wh-fill;
 }

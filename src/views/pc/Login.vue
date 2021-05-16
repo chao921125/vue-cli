@@ -1,18 +1,15 @@
 <template>
-  <a-row class="cc-box-fill cc-box-full login-bg">
-    <a-col :span="24" class="cc-text-center">
-      <a-col :span="24" class="cc-text-center">
-        desc logo demo
-      </a-col>
+  <el-row class="cc-box-fill cc-box-full login-bg">
+    <el-col :span="24" class="cc-text-center">
       <div class="login-box">
         <p>login</p>
-        <a-button @click="submitForm">login</a-button>
+        <el-button @click="submitForm">login</el-button>
       </div>
-    </a-col>
-    <a-col :span="24" class="fixed-bottom flex-center-row cc-width-fill">
+    </el-col>
+    <el-col :span="24" class="fixed-bottom flex-center-row cc-width-fill">
       desc icp info
-    </a-col>
-  </a-row>
+    </el-col>
+  </el-row>
 </template>
 
 <script>
@@ -28,7 +25,7 @@ export default {
         username: "admin",
         password: "admin123",
       }).then(() => {
-        this.$router.push({ path: "/index" });
+        this.$router.push({ path: "/pc/index" });
       });
     },
   },
@@ -41,8 +38,7 @@ export default {
   background-size:100% 100%;
 }
 .login-box {
-  width: 200px;
-  height: 500px;
+  height: 200px;
   position: relative;
 }
 </style>

@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import routes from "./routes";
-import store from "../store";
 import util from "@/plugins/utils";
 
 // 进度条
@@ -28,9 +27,7 @@ const router = createRouter({
  * 2、判断路由是否需要权限
  * 3、判断路由tooken是否过期
  */
-const ROUTER_LOGIN = "login";
 // 可以随着后期动态添加
-const WHITELIST = ["login", "register", "404", "error"];
 // const ROUTER_REGISTER = "register";
 router.beforeEach((to, from, next) => {
   // await store.dispatch('system/config')
@@ -40,53 +37,38 @@ router.beforeEach((to, from, next) => {
   // 这里暂时将cookie里是否存有token作为验证是否登录的条件
   // 请根据自身业务需要修改 发送请求校验session是否到期
   const token = util.cookies.get("token");
-  // 白名单的无需经过任何判断直接next
-  if (WHITELIST.includes(to.path.replaceAll("/", ""))) {
-    next();
-    NProgress.done();
-  } else if (!token || token === "undefined") {
-    // 如果不存在token，那么此时需要跳转登录页面
+  let routeF = "pc-";
+  if (to.fullPath.includes("pc")) {
+    routeF = "pc-";
+  } else {
+    routeF = "mobile-";
+  }
+  const ROUTER_LOGIN = routeF + "login";
+  if (to.matched.length === 0) {
+    // 匹配路由是否存在
     next({
-      name: ROUTER_LOGIN,
-      query: {
-        redirect: to.fullPath,
-      },
+      name: "404",
     });
     NProgress.done();
-  } else {
-    if (store.getters["store/user/getMenus"].length > 0) {
-      // 动态路由处理
-      if (to.matched.length === 0) {
-        // 匹配路由是否存在
-        next({
-          name: "404",
-        });
-        NProgress.done();
-      } else {
-        next();
-        NProgress.done();
-        // if (to.matched.some((r) => r.meta.auth)) {
-        //   next();
-        //   NProgress.done();
-        // } else {
-        //   // 不需要身份校验 直接通过
-        // }
-      }
+  } else if (to.matched.some((r) => r.meta.auth)) {
+    // 验证是否需要权限
+    // 判断token是否存在
+    if (!token || token === "undefined") {
+      // 如果不存在token，那么此时需要跳转登录页面
+      next({
+        name: ROUTER_LOGIN,
+        query: {
+          redirect: to.fullPath,
+        },
+      });
+      NProgress.done();
     } else {
-      store
-        .dispatch("store/user/getUserInfo")
-        .then((resp) => {
-          resp.forEach((route) => {
-            router.addRoute(route);
-            router.options.routes.push(route);
-          });
-          next({ ...to, replace: true });
-          NProgress.done();
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+      next();
+      NProgress.done();
     }
+  } else {
+    next();
+    NProgress.done();
   }
 });
 

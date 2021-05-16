@@ -1,40 +1,55 @@
 <template>
-    <router-view v-if="reload" v-loading.fullscreen.lock="isLoading"/>
+  <router-view />
 </template>
 
 <script>
 export default {
   name: "App",
-  provide() {
-    return {
-      reload: this.reload,
-    }
-  },
   data() {
     return {
-      reloadPage: true,
-      isLoading: false,
-      timeout: null,
+      screenWidth: "",
+      timer: false,
+    }
+  },
+  watch: {
+    screenWidth (val) {
+      if (!this.timer) {
+        this.screenWidth = val;
+        this.timer = true;
+        const that = this;
+        setTimeout(() => {
+          that.changeRouter();
+          that.timer = false;
+        }, 500);
+      }
     }
   },
   mounted() {
-    if (window.name === "") {
-      this.isLoading = true;
-      this.timeout = setTimeout(() => {
-        this.isLoading = false;
-        clearTimeout(this.timeout);
-      }, 1500);
-    }
+    const that = this;
+    window.onresize = () => {
+      return (() => {
+        window.screenWidth = document.body.clientWidth;
+        that.screenWidth = window.screenWidth;
+        that.changeRouter();
+      })();
+    };
+    this.changeRouter();
   },
   methods: {
-    reload() {
-      this.reloadPage = false;
-      this.$nextTick(() => {
-        this.reloadPage = true;
-        // this.$router.go(0);
-        window.location.reload();
-      });
-    }
-  }
+    changeRouter() {
+      if (this.isMobile()) {
+        // 手机端
+        this.$router.replace({ path: "/mobile/index" });
+      } else {
+        // pc端
+        this.$router.replace({ path: "/pc/index" });
+      }
+    },
+    isMobile() {
+      return navigator.userAgent.match(
+        /(phone|pad|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows phone)/i
+      );
+    },
+  },
 };
 </script>
