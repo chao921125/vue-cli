@@ -17,15 +17,24 @@ export default {
     if (typeof value === "string") {
       localStorage.setItem(key, value);
     } else {
-      localStorage.setItem(key, JSON.stringify(value));
+      let item = JSON.stringify(value);
+      localStorage.setItem(key, item);
     }
   },
   removeLocalItem(key) {
     localStorage.removeItem(key);
   },
+  getAll() {},
   clearLocal() {
     localStorage.clear();
   },
+  // eslint-disable-next-line no-unused-vars
+  key(n) {},
+  // eslint-disable-next-line no-unused-vars
+  forEach(cb) {},
+  // eslint-disable-next-line no-unused-vars
+  has(key) {},
+  deleteAllExpires() {},
   // 获取localstorage最大存储容量
   getLocalMaxSpace() {
     if (!window.localStorage) {
@@ -58,7 +67,6 @@ export default {
   getLocalUsedSpace() {
     if (!window.localStorage) {
       console.log("浏览器不支持localStorage");
-      return false;
     }
     let size = 0;
     for (let item in window.localStorage) {
@@ -68,7 +76,6 @@ export default {
       }
     }
     console.log("当前localStorage使用容量为" + (size / 1024).toFixed(2) + "KB");
-    return true;
   },
   getSessionItem(key) {
     let item = sessionStorage.getItem(key);
@@ -86,7 +93,8 @@ export default {
     if (typeof value === "string") {
       sessionStorage.setItem(key, value);
     } else {
-      sessionStorage.setItem(key, JSON.stringify(value));
+      let item = JSON.stringify(value);
+      sessionStorage.setItem(key, item);
     }
   },
   removeSessionItem(key) {
@@ -127,7 +135,6 @@ export default {
   getSessionUsedSpace() {
     if (!window.sessionStorage) {
       console.log("当前浏览器不支持sessionStorage");
-      return false;
     }
     let size = 0;
     for (let item in window.sessionStorage) {
@@ -137,44 +144,5 @@ export default {
       }
     }
     console.log("当前sessionStorage使用容量为" + (size / 1024).toFixed(2) + "KB");
-    return true;
-  },
-  getAll() {},
-  // eslint-disable-next-line no-unused-vars
-  key(n) {},
-  // eslint-disable-next-line no-unused-vars
-  forEach(cb) {},
-  // eslint-disable-next-line no-unused-vars
-  has(key) {},
-  deleteAllExpires() {},
-  setItem(key, value) {
-    // 这点要判断是字符串还是对象
-    if (typeof value === "string") {
-      localStorage.setItem(key, value);
-      sessionStorage.setItem(key, value);
-    } else {
-      let item = JSON.stringify(value);
-      localStorage.setItem(key, item);
-      sessionStorage.setItem(key, item);
-    }
-  },
-  getItem(key) {
-    let item = sessionStorage.getItem(key) || localStorage.getItem(key);
-    if (!item) return null;
-    // 这点要判断是字符串还是对象
-    let result = /^[{\\[].*[}\]]$/g.test(item);
-    if (result) {
-      return JSON.parse(item);
-    } else {
-      return item;
-    }
-  },
-  removeItem(key) {
-    sessionStorage.removeItem(key);
-    localStorage.removeItem(key);
-  },
-  clear() {
-    sessionStorage.clear();
-    localStorage.clear();
   },
 };

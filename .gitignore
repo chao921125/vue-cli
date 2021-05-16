@@ -1,5 +1,4 @@
 .DS_Store
-node_modules
 node_modules/
 dist/
 /node_modules
@@ -9,7 +8,6 @@ dist/
 /tests/e2e/screenshots/
 
 # local env files
-*.local
 .env.local
 .env.*.local
 

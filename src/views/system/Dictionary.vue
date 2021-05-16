@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: "Dictionary",
+    name: "DIctionary",
 };
 </script>
 
