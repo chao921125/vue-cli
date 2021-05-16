@@ -2,7 +2,7 @@ import axios from "axios";
 // import { Message } from 'element-ui'
 import router from "@/router";
 import store from "@/store";
-import util from "@/plugins/utils";
+import util from "@/plugins/util";
 
 axios.defaults.retry = 3; // 重发次数
 axios.defaults.retryDelay = 1000; // 重发间隔
@@ -37,7 +37,7 @@ function errorLog(err) {
   }) */
 }
 
-// 创建一个 axios 实例
+// 创建一个 axios 实例，如果需要特殊业务处理异常则在调用的地方处理，否则在request和response里面会返回error
 const request = axios.create({
   baseURL: "/api",
   headers: { "Content-Type": "application/json" },

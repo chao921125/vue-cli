@@ -4,55 +4,40 @@
  * 无需权限访问、或重定向路由定义
  */
 /**
+ * 主框架内，包含侧栏、导航
+ * @type {*[]}
+ */
+const frameInSide = [];
+
+/**
  * 主框架内，包含导航
  * @type {*[]}
  */
-const frameIn = [
+const frameNoSide = [
+  // 404
   {
-    path: "/index-blank",
-    name: "index-blank",
-    component: () => import("@/views/IndexBlank"),
+    path: "/error",
+    name: "error",
+    component: () => import("@/views/error/Error"),
     meta: {
+      hidden: true,
+      icon: "",
+      noCache: false,
+      title: "error",
+      auth: true,
+    },
+  },
+  {
+    path: "/404",
+    name: "404",
+    component: () => import("@/views/error/404"),
+    meta: {
+      hidden: true,
+      icon: "",
+      noCache: false,
+      title: "404",
       auth: false,
     },
-    children: [
-      {
-        path: "/error",
-        name: "error",
-        component: () => import("@/views/error/Error"),
-        meta: {
-          hidden: true,
-          icon: "",
-          noCache: false,
-          title: "error",
-          auth: false,
-        },
-      },
-      {
-        path: "/500",
-        name: "500",
-        component: () => import("@/views/error/500"),
-        meta: {
-          hidden: true,
-          icon: "",
-          noCache: false,
-          title: "500",
-          auth: false,
-        },
-      },
-      {
-        path: "/404",
-        name: "404",
-        component: () => import("@/views/error/404"),
-        meta: {
-          hidden: true,
-          icon: "",
-          noCache: false,
-          title: "404",
-          auth: false,
-        },
-      },
-    ],
   },
 ];
 
@@ -96,4 +81,4 @@ const frameOut = [
   },
 ];
 
-export default [...frameIn, ...frameOut];
+export default [...frameInSide, ...frameNoSide, ...frameOut];

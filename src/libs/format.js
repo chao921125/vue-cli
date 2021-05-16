@@ -143,41 +143,62 @@ export function dealNumBack(val) {
   }
   return "";
 }
+// 处理定向名称长度
+export function dealStrLength(str) {
+  if (!str) return "";
+  if (str.length > 30) {
+    return str.substr(0, 30) + "...";
+  } else {
+    return str;
+  }
+}
+export function getGoalNameByKey(key) {
+  if (key === null || key === "") {
+    return "";
+  }
+  let keyStr = key.toString();
+  const goal = [
+    {
+      name: "优化成交量",
+      value: "2",
+      desc: "优化智钻展示创意后带来的店铺成交次数",
+    },
+    {
+      name: "优化关注量",
+      value: "32",
+      desc: "优化智钻展示创意后带来的店铺关注次数",
+    },
+    {
+      name: "优化加购量",
+      value: "4",
+      desc: "优化智钻展示创意后带来的店铺加购次数",
+    },
+    {
+      name: "优化曝光量",
+      value: "64",
+      desc: "优化计划创意在智钻资源位上被买家看到的总次数",
+    },
+    {
+      name: "优化点击量",
+      value: "8",
+      desc: "优化计划创意在智钻资源位上被买家点击的总次数",
+    },
+  ];
+  for (let i = 0; i < goal.length; i++) {
+    if (keyStr === goal[i].value) {
+      return goal[i].name;
+    }
+  }
+}
 
-/**
-  * 参数说明：
-  * number：要格式化的数字
-  * decimals：保留几位小数
-  * thousands_sep：千分位符号
-  * dec_point：小数点符号
-  */
- const numberFormat = (value, decimals, thousands_sep, dec_point) => {
-  if (!value) return 0;
-  if (!decimals) decimals = 2;
-  if (!thousands_sep) thousands_sep = ",";
-  if (!dec_point) dec_point = ".";
-  value = (value + '').replace(/[^0-9+-Ee.]/g, '');
-  let n = !isFinite(+value) ? 0 : +value,
-      prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
-      sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
-      dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
-      s = '',
-      toFixedFix = (n, prec) => {
-        let k = Math.pow(10, prec);
-        return '' + Math.ceil(n * k) / k;
-      };
-  s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
-  let re = /(-?\d+)(\d{3})/;
-  while (re.test(s[0])) {
-    s[0] = s[0].replace(re, "$1" + sep + "$2");
+export function getUrlParam() {
+  let url = window.location.href;
+  let obj = {};
+  let array = url.split("?")[1].split("&");
+  let len = array.length;
+  for (let i = 0; i < len; i++) {
+    let res = array[i].split("=");
+    obj[res[0]] = res[1];
   }
-  if ((s[1] || '').length < prec) {
-    s[1] = s[1] || '';
-    s[1] += new Array(prec - s[1].length + 1).join('0');
-  }
-  return s.join(dec);
-};
-// eslint-disable-next-line no-unused-vars
-const reNumber = (value) => {
-  return parseFloat(value.replace(/[^\d.-]/g, ""));
-};
+  return obj;
+}

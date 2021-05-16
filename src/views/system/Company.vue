@@ -1,10 +1,10 @@
 <template>
-  <div>公司管理</div>
+    <div>Company</div>
 </template>
 
 <script>
 export default {
-  name: "Company"
+    name: "Company",
 };
 </script>
 
