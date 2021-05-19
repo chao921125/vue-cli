@@ -93,12 +93,17 @@
 [vxe-table](https://www.npmjs.com/package/vxe-table)
 [官网(包含支持v3)](https://xuliangzhan_admin.gitee.io/vxe-table/#/table/start/install)
 
-## 进度条
+## 加载：进度条
 [nprogress](https://www.npmjs.com/package/nprogress)
 
 [vue-simple-spinner](https://www.npmjs.com/package/vue-simple-spinner)
 
 [vue-loading-overlay](https://www.npmjs.com/package/vue-loading-overlay)
+
+[vue-progressbar](https://www.npmjs.com/package/vue-progressbar)
+
+## 进度条
+
 
 ## 滑动条
 [vue-slider-component](https://www.npmjs.com/package/vue-slider-component)
@@ -174,6 +179,9 @@
 [@ckeditor/ckeditor5-vue](https://www.npmjs.com/package/@ckeditor/ckeditor5-vue)
 [@ckeditor/ckeditor5-vue](https://www.npmjs.com/package/@ckeditor/ckeditor5-vue)
 
+## 剪切板
+[vue-clipboard2](https://www.npmjs.com/package/vue-clipboard2)
+
 ## 国际化
 [vue-i18n](https://www.npmjs.com/package/vue-i18n)
 
@@ -245,4 +253,6 @@ less-loader 7.3.0请勿升级\
 目前需要手动升级的包：
 vue、vue-i18n、vue-router、vuex
 
-https://baijiahao.baidu.com/s?id=1629138670094636894&wfr=spider&for=pc
+# 其他组件参考
+[组件](https://madewith.cn/)\
+[百度](https://baijiahao.baidu.com/s?id=1629138670094636894&wfr=spider&for=pc)
