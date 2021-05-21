@@ -93,7 +93,7 @@
 [vxe-table](https://www.npmjs.com/package/vxe-table)
 [官网(包含支持v3)](https://xuliangzhan_admin.gitee.io/vxe-table/#/table/start/install)
 
-## 加载：进度条
+## 加载
 [nprogress](https://www.npmjs.com/package/nprogress)
 
 [vue-simple-spinner](https://www.npmjs.com/package/vue-simple-spinner)
@@ -102,11 +102,16 @@
 
 [vue-progressbar](https://www.npmjs.com/package/vue-progressbar)
 
-## 进度条
+[vue-spinner](https://www.npmjs.com/package/vue-spinner)
 
+[vue-blockui](https://www.npmjs.com/package/vue-blockui)
 
-## 滑动条
+## 进度条-滑动条
+[vuejs-progress-bar](https://www.npmjs.com/package/vuejs-progress-bar)
+
 [vue-slider-component](https://www.npmjs.com/package/vue-slider-component)
+
+[vue-radial-progress](https://www.npmjs.com/package/vue-radial-progress)
 
 ## 轮播图
 [vue-concise-slider](https://www.npmjs.com/package/vue-concise-slider)
