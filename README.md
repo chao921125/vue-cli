@@ -267,6 +267,10 @@
 [Eva-plugin-renderer-img](https://www.npmjs.com/package/@eva/plugin-renderer-img)
 [官网](https://eva-engine.gitee.io/#/tutorials/intro)
 
+## 3D
+[threejs](https://www.npmjs.com/package/three)
+[官网](https://threejs.org/)
+
 # TODO
 封装axios，前端自定义报文返回，error根据业务需求返回结果，含状态码。\
 改变icon，改为动态加载模式。
