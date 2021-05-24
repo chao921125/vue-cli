@@ -252,7 +252,14 @@
 [vconsole](https://www.npmjs.com/package/vconsole)
 
 ## 支付
-[vue-stripe](https://vuestripe.com/)
+[stripejs](https://www.npmjs.com/package/stripe)
+[官网](https://stripe.com/docs)
+
+[vue-stripe-elements-plus](https://www.npmjs.com/package/vue-stripe-elements-plus)
+[官网](https://vuestripe.com/)
+
+[vue-stripe](https://www.npmjs.com/package/@vue-stripe/vue-stripe)
+[官网](https://vuestripe.com/)
 
 ## 游戏
 [Eva.js](https://www.npmjs.com/package/@eva/eva.js)
