@@ -77,31 +77,50 @@
 
 # UI相关 https://madewith.cn/
 ## UI 官方
+[elementUI](https://www.npmjs.com/package/element-ui) // V2 PC
+[官网](https://element.eleme.io/)
+
 [element-plus](https://www.npmjs.com/package/element-plus) // PC
-[官网](https://element-plus.org/#/zh-CN)
+[官网](https://element-plus.org/)
 
 [ant-design-vue](https://www.npmjs.com/package/ant-design-vue) // PC
 [官网](https://2x.antdv.com/components/overview/)
 
 [bootstrap-vue](https://www.npmjs.com/package/bootstrap-vue) // ?
-[官网](https://dev.bootstrap-vue.org/docs)
+[官网](https://dev.bootstrap-vue.org/docs/)
 
 [vant@next](https://www.npmjs.com/package/vant) // M
-[官网](https://vant-contrib.gitee.io/vant/v3/#/zh-CN)
+[官网](https://vant-contrib.gitee.io/vant/v3/)
+
+[vuetifyjs](https://www.npmjs.com/package/vuetify) // PC
+[官网](https://vuetifyjs.com/)
+
+[iviewui](https://www.npmjs.com/package/ant-design-vue) // ？PC
+[官网](https://www.iviewui.com/)
 
 ## 其他三方库
 [vxe-table](https://www.npmjs.com/package/vxe-table)
 [官网(包含支持v3)](https://xuliangzhan_admin.gitee.io/vxe-table/#/table/start/install)
 
-## 进度条
+## 加载
 [nprogress](https://www.npmjs.com/package/nprogress)
 
 [vue-simple-spinner](https://www.npmjs.com/package/vue-simple-spinner)
 
 [vue-loading-overlay](https://www.npmjs.com/package/vue-loading-overlay)
 
-## 滑动条
+[vue-progressbar](https://www.npmjs.com/package/vue-progressbar)
+
+[vue-spinner](https://www.npmjs.com/package/vue-spinner)
+
+[vue-blockui](https://www.npmjs.com/package/vue-blockui)
+
+## 进度条-滑动条
+[vuejs-progress-bar](https://www.npmjs.com/package/vuejs-progress-bar)
+
 [vue-slider-component](https://www.npmjs.com/package/vue-slider-component)
+
+[vue-radial-progress](https://www.npmjs.com/package/vue-radial-progress)
 
 ## 轮播图
 [vue-concise-slider](https://www.npmjs.com/package/vue-concise-slider)
@@ -139,6 +158,10 @@
 
 [jsrsasign](https://www.npmjs.com/package/jsrsasign)
 
+[base64-js](https://www.npmjs.com/package/base64-js)
+
+[js-base64](https://www.npmjs.com/package/js-base64)
+
 ## ua签名
 [ua-parser-js](https://www.npmjs.com/package/ua-parser-js)
 
@@ -173,6 +196,9 @@
 
 [@ckeditor/ckeditor5-vue](https://www.npmjs.com/package/@ckeditor/ckeditor5-vue)
 [@ckeditor/ckeditor5-vue](https://www.npmjs.com/package/@ckeditor/ckeditor5-vue)
+
+## 剪切板
+[vue-clipboard2](https://www.npmjs.com/package/vue-clipboard2)
 
 ## 国际化
 [vue-i18n](https://www.npmjs.com/package/vue-i18n)
@@ -249,4 +275,6 @@ less-loader 7.3.0请勿升级\
 目前需要手动升级的包：
 vue、vue-i18n、vue-router、vuex
 
-https://baijiahao.baidu.com/s?id=1629138670094636894&wfr=spider&for=pc
+# 其他组件参考
+[组件](https://madewith.cn/)\
+[百度](https://baijiahao.baidu.com/s?id=1629138670094636894&wfr=spider&for=pc)
