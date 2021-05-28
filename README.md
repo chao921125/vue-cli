@@ -147,31 +147,8 @@
 ## cookie管理
 [js-cookie](https://www.npmjs.com/package/js-cookie)
 
-## 加密解密
-[crypto-js](https://www.npmjs.com/package/crypto-js)
-
-[md5](https://www.npmjs.com/package/md5)
-
-[bcryptjs](https://www.npmjs.com/package/bcryptjs)
-
-[jsencrypt](https://www.npmjs.com/package/jsencrypt)
-
-[jsrsasign](https://www.npmjs.com/package/jsrsasign)
-
-[base64-js](https://www.npmjs.com/package/base64-js)
-
-[js-base64](https://www.npmjs.com/package/js-base64)
-
-## ua签名
-[ua-parser-js](https://www.npmjs.com/package/ua-parser-js)
-
 ## 文件保存
 [file-saver](https://www.npmjs.com/package/file-saver)
-
-## 本地数据存储
-[lodash](https://www.npmjs.com/package/lodash)
-
-[lowdb](https://www.npmjs.com/package/lowdb)
 
 ## 二维码
 [qrcode](https://www.npmjs.com/package/qrcode)
@@ -200,6 +177,30 @@
 ## 剪切板
 [vue-clipboard2](https://www.npmjs.com/package/vue-clipboard2)
 
+# 数据操作
+## 加密解密
+[crypto-js](https://www.npmjs.com/package/crypto-js)
+
+[md5](https://www.npmjs.com/package/md5)
+
+[bcryptjs](https://www.npmjs.com/package/bcryptjs)
+
+[jsencrypt](https://www.npmjs.com/package/jsencrypt)
+
+[jsrsasign](https://www.npmjs.com/package/jsrsasign)
+
+[base64-js](https://www.npmjs.com/package/base64-js)
+
+[js-base64](https://www.npmjs.com/package/js-base64)
+
+## ua签名
+[ua-parser-js](https://www.npmjs.com/package/ua-parser-js)
+
+## 本地数据存储
+[lodash](https://www.npmjs.com/package/lodash)
+
+[lowdb](https://www.npmjs.com/package/lowdb)
+
 ## 国际化
 [vue-i18n](https://www.npmjs.com/package/vue-i18n)
 
@@ -221,6 +222,8 @@
 [@vue/shared](https://www.npmjs.com/package/@vue/shared)
 
 [@vue/cli-shared-utils](https://www.npmjs.com/package/@vue/cli-shared-utils)
+
+[nativeshare](https://www.npmjs.com/package/nativeshare) // 唤起浏览器自身分享组件
 
 ## 地图
 [vue-amap](https://www.npmjs.com/package/vue-amap) // 高德
@@ -256,13 +259,29 @@
 [vconsole](https://www.npmjs.com/package/vconsole)
 
 ## 支付
-[vue-stripe](https://vuestripe.com/)
+[stripejs](https://www.npmjs.com/package/stripe)
+[官网](https://stripe.com/docs)
+
+[vue-stripe-elements-plus](https://www.npmjs.com/package/vue-stripe-elements-plus)
+[官网](https://vuestripe.com/)
+
+[vue-stripe](https://www.npmjs.com/package/@vue-stripe/vue-stripe)
+[官网](https://vuestripe.com/)
+
+## 视频播放
+[vue-video-player](https://www.npmjs.com/package/vue-video-player)
+
+[vue-core-video-player](https://www.npmjs.com/package/vue-core-video-player)
 
 ## 游戏
 [Eva.js](https://www.npmjs.com/package/@eva/eva.js)
 [Eva-plugin-renderer](https://www.npmjs.com/package/@eva/plugin-renderer)
 [Eva-plugin-renderer-img](https://www.npmjs.com/package/@eva/plugin-renderer-img)
 [官网](https://eva-engine.gitee.io/#/tutorials/intro)
+
+## 3D
+[threejs](https://www.npmjs.com/package/three)
+[官网](https://threejs.org/)
 
 # TODO
 封装axios，前端自定义报文返回，error根据业务需求返回结果，含状态码。\
