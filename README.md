@@ -288,7 +288,7 @@ postcss-pxtorem 5.1.1请勿升级\
 sass-loader 10.2.0请勿升级\
 less-loader 7.3.0请勿升级\
 目前需要手动升级的包：
-vue、vue-i18n、vue-router、vuex
+vue、vue-i18n、vue-router、vuex、ant-design-vue、@vue/test-utils
 
 # 其他组件参考
 [组件](https://madewith.cn/)\
