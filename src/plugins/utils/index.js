@@ -1,11 +1,13 @@
 import cookies from "./util.cookies";
-import db from "./util.db";
+// import db from "./util.db";
 import log from "./util.log";
+import storage from "./util.storage";
 
 const util = {
   cookies,
-  db,
+  // db,
   log,
+  storage,
 };
 
 /**
