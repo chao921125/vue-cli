@@ -79,7 +79,7 @@ module.exports = {
       },
       // 设置 scss 公用变量文件
       sass: {
-        additionalData: `@import "~@/assets/style/public.scss";`,
+        // additionalData: `@import "~@/assets/style/public.scss";`,
       },
     },
     // 启用 CSS modules for all css / pre-processor files.
