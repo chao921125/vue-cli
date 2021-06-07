@@ -31,8 +31,7 @@
 [vue-cli](https://www.npmjs.com/package/@vue/cli)
 
 ?[vite](https://www.npmjs.com/package/vite)
-[官网](https://cn.vitejs.dev/)
-?
+[官网](https://cn.vitejs.dev/)?
 
 [vue](https://www.npmjs.com/package/vue)
 [官网](https://vue3js.cn/docs/)
@@ -102,6 +101,8 @@
 [vxe-table](https://www.npmjs.com/package/vxe-table)
 [官网(包含支持v3)](https://xuliangzhan_admin.gitee.io/vxe-table/#/table/start/install)
 
+[vue-grid-layout](https://www.npmjs.com/package/vue-grid-layout)
+
 ## 加载
 [nprogress](https://www.npmjs.com/package/nprogress)
 
@@ -124,6 +125,8 @@
 
 ## 轮播图
 [vue-concise-slider](https://www.npmjs.com/package/vue-concise-slider)
+
+[@splidejs/vue-splide](https://www.npmjs.com/package/@splidejs/vue-splide)
 
 ## 树
 [vue-treeselect](https://www.npmjs.com/package/ue-treeselect)
@@ -163,6 +166,11 @@
 [date-fns](https://www.npmjs.com/package/date-fns)
 
 [dayjs](https://www.npmjs.com/package/dayjs)
+
+## 日历
+[vue-functional-calendar](https://www.npmjs.com/package/vue-functional-calendar)
+
+[vuejs-heatmap](https://www.npmjs.com/package/vuejs-heatmap)
 
 ## 富文本编辑器
 [tiptap](https://www.npmjs.com/package/tiptap)
@@ -283,6 +291,14 @@
 [threejs](https://www.npmjs.com/package/three)
 [官网](https://threejs.org/)
 
+# 特效
+## 文字
+[vue-textra](https://www.npmjs.com/package/vue-textra)
+
+## 展示异常
+[vue-show](https://www.npmjs.com/package/vue-show)
+
+
 # TODO
 封装axios，前端自定义报文返回，error根据业务需求返回结果，含状态码。\
 改变icon，改为动态加载模式。
@@ -295,5 +311,9 @@ less-loader 7.3.0请勿升级\
 vue、vue-i18n、vue-router、vuex、ant-design-vue、@vue/test-utils
 
 # 其他组件参考
-[组件](https://madewith.cn/)\
+[组件](https://madewith.cn/) \
 [百度](https://baijiahao.baidu.com/s?id=1629138670094636894&wfr=spider&for=pc)
+
+# 好玩的？
+[水墨文档](https://github.com/huangwei9527/Ink-wash-docs) \
+[聊天](https://www.npmjs.com/package/vue-beautiful-chat)
