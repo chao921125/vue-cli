@@ -1,10 +1,16 @@
 <template>
-    <div>{{ text }}</div>
+  <el-row>
+    <el-col :span="24"><el-input v-model="enIn"></el-input></el-col>
+    <el-col :span="24"><el-button type="primary" @click="encrypt">encode</el-button></el-col>
+    <el-col :span="24"><el-input v-model="enOut" type="textarea"></el-input></el-col>
+    <el-col :span="24"><el-button type="success" @click="decrypt">decode</el-button></el-col>
+    <el-col :span="24"><el-input v-model="deOut"></el-input></el-col>
+  </el-row>
 </template>
 
 <script>
 import CryptoJS from "crypto-js";
-// import { encryptByBase64DES, decryptByBase64DES } from "@/libs/crypto.js";
+import { encryptByBase64DES, decryptByBase64DES } from "@/libs/crypto.js";
 
 export default {
     name: "CryptoJs",
@@ -13,6 +19,9 @@ export default {
             msg: "",
             key: "ef3980778718b1556c0fd6cb",
             text: "",
+          enIn: "",
+          enOut: "",
+          deOut: "",
         }
     },
     created() {
@@ -30,6 +39,12 @@ export default {
             debugger;
             console.log(decryptedStr.toString());
         },
+      encrypt() {
+        this.enOut = encryptByBase64DES(this.enIn);
+      },
+      decrypt() {
+          this.deOut = decryptByBase64DES(this.enOut);
+      }
     }
 }
 </script>

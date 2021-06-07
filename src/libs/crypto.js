@@ -1,24 +1,24 @@
 import cryptoJs from "crypto-js";
-import Buffer from 'buffer';
+// import Buffer from 'buffer';
 
 const key = "ef3980778718b1556c0fd6cb";
 
-export const deTest = (msg) => {
-  const md5Key = Buffer.from(key);
-  const iv = Buffer.alloc(0);
-  var keyHex = cryptoJs.enc.Utf8.parse(md5Key)
-  var decrypted = cryptoJs.DES.decrypt(
-    {
-      ciphertext: cryptoJs.enc.Hex.parse(message)
-    },
-    keyHex,
-    {
-      mode: cryptoJs.mode.ECB,
-      padding: cryptoJs.pad.Pkcs7
-    }
-  )
-  return decrypted.toString(cryptoJs.enc.Utf8)
-}
+// export const deTest = (msg) => {
+//   const md5Key = Buffer.from(key);
+//   const iv = Buffer.alloc(0);
+//   var keyHex = cryptoJs.enc.Utf8.parse(md5Key)
+//   var decrypted = cryptoJs.DES.decrypt(
+//     {
+//       ciphertext: cryptoJs.enc.Hex.parse(message)
+//     },
+//     keyHex,
+//     {
+//       mode: cryptoJs.mode.ECB,
+//       padding: cryptoJs.pad.Pkcs7
+//     }
+//   )
+//   return decrypted.toString(cryptoJs.enc.Utf8)
+// }
 
 // DES加密
 export const encryptDES = (message) => {
