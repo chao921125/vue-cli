@@ -20,7 +20,8 @@
       <template v-for="item in menuList">
         <el-menu-item v-if="!item.children || item.children.length === 0" :key="item.id" :index="item.path" :disabled="!!item.isDisable">
           <!-- 此处图标可以自定义 -->
-          <i :class="item.icon"></i>
+          <i v-if="item.icon.includes('el-')" :class="item.icon"></i>
+          <i v-else class="iconfont" :class="item.icon"></i>
           <span>{{ item.title }}</span>
         </el-menu-item>
         <SubMenu v-else :key="item.id" :sub-menu-list="item"></SubMenu>
@@ -98,10 +99,12 @@ export default {
   .img-collapse {
     width: $menu-width;
     height: $menu-item-height;
+    background-color: $color-bg-white;
   }
   .img-no-collapse {
     width: $menu-collapse-width;
     height: $menu-item-height;
+    background-color: $color-bg-white;
   }
 }
 .scroll-menu {
