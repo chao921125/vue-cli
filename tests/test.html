@@ -6,9 +6,19 @@
     <title>Document</title>
 </head>
 <body>
+  <video src="https://www.runoob.com/try/demo_source/movie.mp4"></video>
     <script>
-        console.log(window.performance.navigation.type);
-        console.log(window.performance.timing);
+      let video = document.querySelector('video');
+      video.addEventListener('loadedmetadata', function(e) {
+        console.log('提示视频的元数据已加载')
+        console.log(e)
+      })
+      video.addEventListener('canplay', function(e) {
+        console.log('提示该视频已准备好开始播放')
+        console.log(e)
+      })
+        // console.log(window.performance.navigation.type);
+        // console.log(window.performance.timing);
     </script>
 </body>
 </html>
