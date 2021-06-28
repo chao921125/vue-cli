@@ -5,26 +5,28 @@
 建议使用 yarn install
 
 # 目录结构
-- ├── package.json 包管理
-- ├── public
-- │   ├── favicon.ico
-- │   ├── img
-- │   ├── index.html
-- │   └── robots.txt
-- ├── src
-- │   ├── App.vue
-- │   ├── api 接口定义
-- │   ├── assets 静态资源
-- │   ├── components 公共组件
-- │   ├── libs 工具库
-- │   ├── main.js 启动入口
-- │   ├── mock 数据mock
-- │   ├── plugins 组件工具
-- │   ├── registerServiceWorker.js
-- │   ├── router 路由
-- │   ├── store vuex
-- │   └── views 页面
-- └── vue.config.js 启动配置
+```
+┌─package.json 包管理
+├─public
+│  ├─favicon.ico
+│  ├─img
+│  ├─index.html
+│  └─robots.txt 反爬虫
+├─src
+│  ├─App.vue
+│  ├─api 接口定义
+│  ├─assets 静态资源
+│  ├─components 公共组件
+│  ├─libs 工具库
+│  ├─main.js 启动入口
+│  ├─mock 数据mock
+│  ├─plugins 组件工具
+│  ├─registerServiceWorker.js
+│  ├─router 路由
+│  ├─store vuex
+│  └─views 页面
+└─vue.config.js 启动配置
+```
 
 # 基础核心依赖
 ## 核心库 https://vue3js.cn/
@@ -90,6 +92,12 @@
 
 [vant@next](https://www.npmjs.com/package/vant) // M
 [官网](https://vant-contrib.gitee.io/vant/v3/)
+
+[mui](https://www.npmjs.com/package/mui) // M
+[官网](https://dev.dcloud.net.cn/mui/)
+
+[mint-ui](https://www.npmjs.com/package/mint-ui) // M
+[官网](http://mint-ui.github.io/)
 
 [vuetifyjs](https://www.npmjs.com/package/vuetify) // PC
 [官网](https://vuetifyjs.com/)

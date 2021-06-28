@@ -105,6 +105,7 @@ module.exports = {
   // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
   // https://webpack.js.org/configuration/dev-server/
   devServer: {
+    clientLogLevel: 'info',
     publicPath: process.env.NODE_ENV === ENV_PRODUCTION ? "/" : "/",
     open: {
       app: ["Google Chrome", "--incognito", "--other-flag"],
