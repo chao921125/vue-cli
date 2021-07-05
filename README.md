@@ -307,6 +307,10 @@
 ## 展示异常
 [vue-show](https://www.npmjs.com/package/vue-show)
 
+## 移动端日志
+[eruda](https://www.npmjs.com/package/eruda)
+[vconsole](https://www.npmjs.com/package/vconsole)
+
 
 # TODO
 封装axios，前端自定义报文返回，error根据业务需求返回结果，含状态码。\
