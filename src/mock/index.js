@@ -16,6 +16,7 @@ Mock.mock(requestURL.login, "post", () => {
 Mock.mock(requestURL.logout, "post", () => {
   return { token: random(), uuid: random() };
 });
+
 Mock.mock(requestURL.getUserInfo, "post", () => {
   const menus = [{
       id: 1,
@@ -89,6 +90,38 @@ Mock.mock(requestURL.getUserInfo, "post", () => {
           title: "图标",
           path: "icon",
           component: "demo/icon/Icon",
+          redirect: "",
+          icon: "el-icon-star-off",
+          isLink: 0,
+          isCache: 0,
+          isDisable: 0,
+          isSideMenu: 1,
+          status: 1,
+          perms: "admin:system:*",
+        }, {
+          id: 24,
+          orderNum: 4,
+          type: 1,
+          name: "倒计时",
+          title: "倒计时",
+          path: "timer",
+          component: "demo/timer/Timer",
+          redirect: "",
+          icon: "el-icon-star-off",
+          isLink: 0,
+          isCache: 0,
+          isDisable: 0,
+          isSideMenu: 1,
+          status: 1,
+          perms: "admin:system:*",
+        }, {
+          id: 25,
+          orderNum: 5,
+          type: 1,
+          name: "HTML",
+          title: "HTML",
+          path: "html-script",
+          component: "demo/htmlScript/HtmlScript",
           redirect: "",
           icon: "el-icon-star-off",
           isLink: 0,
@@ -287,6 +320,16 @@ Mock.mock(requestURL.getUserInfo, "post", () => {
     permissions: [],
     menus: menus,
   };
+});
+
+Mock.mock(requestURL.payOrder, "post", () => {
+  let htmlForms = "" +
+    "<form name=\"punchout_form\" method=\"post\" action=\"https://openapi.alipay.com/gateway.do?charset=GBK&method=alipay.trade.page.pay&sign=tXR6yxB9Uowu7tfbXVPHBoQXeyOqP2JXvo%2Fzmz%2BIA08aWin63h1%2FF7gHNN7I2K%2FnTV3ZYtvPkILu%2FS8uPmzpsAv1SJev0UNN2AbLDIGvbd%2BWn5neyIUqKcu5ySP1S8Bt4fbnvkMgnlijR25obVi5aFbj99JBZDrpeJ5cB9uq7Ccx7nX54%2F7coNv26PFD%2FPirlIKVVr2avD2w%3D%3D&return_url=http%3A%2F%2Fwww.shanshiwangluo.com%2F%23%2FpayNotify&notify_url=http%3A%2F%2Fwww.shanshiwangluo.com%2Fssmall%2Fportal%2Forder%2Fpay%2FaliCallback&version=1.0&app_id=2018062260383877&sign_type=RSA2&timestamp=2018-12-15+17%3A13%3A32&alipay_sdk=alipay-sdk-java-dynamicVersionNo&format=json\">\n" +
+    "  <input type=\"hidden\" name=\"biz_content\" value=\"{ 'out_trade_no': '1812141933252566', 'product_code': 'FAST_INSTANT_TRADE_PAY', 'total_amount': '0.02', 'subject': '订单：1812141933252566', 'extend_params': {'sys_service_provider_id': '2018062211454921'}}\">\n" +
+    "  <input type=\"submit\" value=\"立即支付\" style=\"display:none\">\n" +
+    "</form>\n" +
+    "<script>document.forms[0].submit();</script>";
+  return { token: random(), uuid: random(), form: htmlForms };
 });
 
 export default Mock;
