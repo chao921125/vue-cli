@@ -5,5 +5,6 @@ const requestURL = {
   logout: baseURL + "/logout",
   getPhoneCode: baseURL + "/getPhoneCode",
   getUserInfo: userURL + "/getUserInfo",
+  payOrder: userURL + "/payOrder",
 };
 export default requestURL;
