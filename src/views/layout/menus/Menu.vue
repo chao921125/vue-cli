@@ -3,7 +3,7 @@
     class="menu-header-box"
     :collapse="isCollapse">
     <el-menu-item key="/" index="/" class="flex-center-row header-box">
-      <div :class="isCollapse ? 'flex-center-row cc-pointer logo logo-collapse' : 'flex-center-row cc-pointer logo logo-no-collapse'">
+      <div class="flex-center-row cc-pointer logo" :class="isCollapse ? 'logo-collapse' : 'logo-no-collapse'">
         <object v-show="!isCollapse" :data="imgSrc[0]" class="img-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
         <object v-show="isCollapse" :data="imgSrc[1]" class="img-no-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
       </div>
