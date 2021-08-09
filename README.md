@@ -75,6 +75,7 @@
 
 ## 节点和浏览器的BDD / TDD断言库
 [chai](https://www.npmjs.com/package/chai)
+[cross-env](https://www.npmjs.com/package/cross-env)
 
 # UI相关 https://madewith.cn/
 ## UI 官方
@@ -260,7 +261,9 @@
 [cz-customizable](https://www.npmjs.com/package/cz-customizable)
 
 ## 适配移动端 -D
-[amfe-flexible](https://www.npmjs.com/package/vant) // 不再推荐 lib-flexible 按照比例缩放展示，基于不同设备（Android、iOS、brow）的px值
+[amfe-flexible](https://www.npmjs.com/package/amfe-flexible) // 不再推荐 lib-flexible 按照比例缩放展示，基于不同设备（Android、iOS、brow）的px值
+
+[autoprefixer](https://www.npmjs.com/package/autoprefixer)
 
 [postcss](https://www.npmjs.com/package/postcss)
 [postcss-loader](https://www.npmjs.com/package/postcss-loader) // 将px转rem
