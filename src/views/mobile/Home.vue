@@ -4,6 +4,8 @@
     <router-link to="/500" class="cc-mr-20">500</router-link>
     <router-link to="/error">error</router-link>
   </div>
+  <header class="header-box"></header>
+  <div class="demo-box"></div>
   <div class="test-demo">过滤器方法测试：<span v-for="item in 10" :key="item">{{ $filters.testFilter(item) }}</span></div>
   <van-button @click="showPopup">click</van-button>
   <van-popup
@@ -34,5 +36,14 @@ export default {
 <style scoped lang="scss">
 .test-demo {
   font-size: 20px;
+}
+.demo-box {
+  height: 380px;
+  background: #fff000;
+}
+.header-box {
+  width: 100%;
+  height: 88px;
+  background: #000000;
 }
 </style>
