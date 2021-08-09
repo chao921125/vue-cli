@@ -1,10 +1,10 @@
 import cookies from "./util.cookies";
-import db from "./util.db";
+// import db from "./util.db";
 import log from "./util.log";
 
 const util = {
   cookies,
-  db,
+  // db,
   log,
 };
 

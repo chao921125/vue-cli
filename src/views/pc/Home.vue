@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>请用手机端浏览器查看</h1>
     <router-link to="/404" class="cc-mr-20">404</router-link>
     <router-link to="/500" class="cc-mr-20">500</router-link>
     <router-link to="/error">error</router-link>
