@@ -1,5 +1,8 @@
-# vue-basic
-[vue2](./vue2/README.md)、
-[vue3](./vue3/README.md)、
-[vue3-h5](./vue3-h5/README.md)
-入门的简单demo，最简单的入门admin框架搭建
+# 该项目不再更新，已经在[vue3项目](<https://github.com/chao921125/vue3-cli>)开始学习搞起了。欢迎大家往里面添砖加瓦。
+
+# 使用
+```
+yarn install
+
+npm run dev
+```
