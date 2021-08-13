@@ -1,0 +1,6 @@
+{
+  "testName": "测试",
+  "hello": "你好: '{msg} 世界'",
+  "helloDom": "你好: '%{msg} 世界'",
+  "linked": "@testName"
+}

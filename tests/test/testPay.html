@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head></head>
+    <body>
+        <label>Card
+            <div id="card-element"></div>
+        </label>
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://js.stripe.com/v3/"></script>
+        <script>
+            var stripe = Stripe('pk_test_51IZ9zWKadrBSvoRmVrtC0IjvTkPShrzXAPWVQ9nCC1x0MeNSU4lh1O61x2fMi0yEqkF7orWCFvK5JV6nobPmKP5G00vYWGtS1I');
+            var elements = stripe.elements();
+            var cardElement = elements.create('card');
+            // var cardElement = elements.getElement('card');
+            cardElement.mount('#card-element');
+
+            cardElement.on('change', function(event) {
+                if (event.complete) {
+                    console.log('success', event);
+                    stripe.createToken(cardElement).then(function(result) {
+                        console.log(result);
+                        JSON.stringify(result);
+                        // Handle result.error or result.token
+                    });
+                    // enable payment button
+                } else if (event.error) {
+                    console.log('error',event);
+                    // show validation to customer
+                }
+            });
+        </script>
+    </body>
+</html>
