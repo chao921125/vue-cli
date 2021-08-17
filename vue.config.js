@@ -122,8 +122,8 @@ module.exports = {
     // 解决 cli3 热更新失效 https://github.com/vuejs/vue-cli/issues/1559
     config.resolve.symlinks(true);
     // 重新设置 alias .set('@', resolve('src'))
-    // config.resolve.alias.set("@", resolve("src"));
-    config.resolve.alias.set("@api", resolve("src/api"));
+    config.resolve.alias.set("@", resolve("src"));
+    // config.resolve.alias.set("@api", resolve("src/api"));
     // node
     config.node.set("__dirname", true).set("__filename", true);
     // set svg-sprite-loader
