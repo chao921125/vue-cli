@@ -96,7 +96,9 @@ module.exports = {
   },
   // PWA 插件相关配置
   // see https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa
-  // pwa: {},
+  pwa: {
+    name: "v3-app"
+  },
   // use thread-loader for babel & TS in production build
   // enabled by default if the machine has more than 1 cores
   // 构建时开启多进程处理babel编译 仅作用于生产构建
