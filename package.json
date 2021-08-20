@@ -26,7 +26,7 @@
     "ant-design-vue": "^2.2.2",
     "axios": "^0.21.1",
     "clipboard": "^2.0.8",
-    "core-js": "^3.16.1",
+    "core-js": "^3.16.2",
     "crypto-js": "^4.1.1",
     "dayjs": "^1.10.6",
     "element-plus": "^1.0.2-beta.70",
@@ -76,7 +76,9 @@
     "svg-sprite-loader": "^6.0.9",
     "text-loader": "^0.0.1",
     "vue-style-loader": "^4.1.3",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.6.14",
+    "wdio-chromedriver-service": "^6.0.3",
+    "wdio-geckodriver-service": "^1.1.0"
   },
   "repository": {
     "type": "git",
