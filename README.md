@@ -185,11 +185,11 @@
 [tiptap](https://www.npmjs.com/package/tiptap)
 
 [wangeditor](https://www.npmjs.com/package/wangeditor)
+[官网](https://www.wangeditor.com/)
 
 [vue-quill-editor](https://www.npmjs.com/package/vue-quill-editor)
 
-[@ckeditor/ckeditor5-vue](https://www.npmjs.com/package/@ckeditor/ckeditor5-vue)
-[@ckeditor/ckeditor5-vue](https://www.npmjs.com/package/@ckeditor/ckeditor5-vue)
+[ckeditor5-vue](https://www.npmjs.com/package/@ckeditor/ckeditor5-vue)
 
 ## 剪切板
 [vue-clipboard2](https://www.npmjs.com/package/vue-clipboard2)
