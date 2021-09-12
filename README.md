@@ -185,11 +185,11 @@
 [tiptap](https://www.npmjs.com/package/tiptap)
 
 [wangeditor](https://www.npmjs.com/package/wangeditor)
+[官网](https://www.wangeditor.com/)
 
 [vue-quill-editor](https://www.npmjs.com/package/vue-quill-editor)
 
-[@ckeditor/ckeditor5-vue](https://www.npmjs.com/package/@ckeditor/ckeditor5-vue)
-[@ckeditor/ckeditor5-vue](https://www.npmjs.com/package/@ckeditor/ckeditor5-vue)
+[ckeditor5-vue](https://www.npmjs.com/package/@ckeditor/ckeditor5-vue)
 
 ## 剪切板
 [vue-clipboard2](https://www.npmjs.com/package/vue-clipboard2)
@@ -333,3 +333,17 @@ vue、vue-i18n、vue-router、vuex、ant-design-vue、@vue/test-utils
 # 好玩的？
 [水墨文档](https://github.com/huangwei9527/Ink-wash-docs) \
 [聊天](https://www.npmjs.com/package/vue-beautiful-chat)
+
+# 转战游戏？来和我一起开荒啊！
+## HTML？前端走一波
+
+[createjs](https://www.createjs.com/) \
+
+[Phaser 还有人用吗？](https://www.phaser-china.com/) \
+
+## 专业开发200年
+[Unity 3D(C/JS) 想要做多元化平台？这个没跑了！](https://www.unrealengine.com/zh-CN/) \
+
+[Cocos(C/TS) 想要做多元化平台？这个没跑了！](https://www.unrealengine.com/zh-CN/) \
+
+[Unreal(C++) 这是一个追求画质的游戏引擎](https://www.unrealengine.com/zh-CN/) \
