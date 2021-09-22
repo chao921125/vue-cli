@@ -99,11 +99,11 @@ export default {
     background-color: $color-bg-white;
   }
   .logo-collapse {
-    width: $header-collapse-width !important;
+    width: $menu-collapse-width !important;
     background-color: $color-bg-white;
   }
   .logo-no-collapse {
-    width: $header-width !important;
+    width: $menu-width !important;
     background-color: $color-bg-white;
   }
   .img-collapse {
@@ -118,12 +118,12 @@ export default {
   }
 }
 .scroll-menu {
-  //height: calc(100% - 60px);
-  height: 100vh;
+  height: calc(100% - 60px);
+  //height: 100vh;
 }
 .menu-box {
   //height: calc(100vh - 60px);
-  min-height: 100vh;
+  height: 100vh;
   &:not(.el-menu--collapse) {
     width: $menu-width;
   }
