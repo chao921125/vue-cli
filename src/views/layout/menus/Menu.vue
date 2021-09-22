@@ -1,7 +1,9 @@
 <template>
   <el-menu
     class="menu-header-box"
-    :collapse="isCollapse">
+    :collapse="isCollapse"
+    :unique-opened="true"
+    popper-append-to-body>
     <el-menu-item key="/" index="/" class="flex-center-row header-box">
       <div class="flex-center-row cc-pointer logo" :class="isCollapse ? 'logo-collapse' : 'logo-no-collapse'">
         <object v-show="!isCollapse" :data="imgSrc[0]" class="img-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />

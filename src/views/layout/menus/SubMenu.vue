@@ -1,5 +1,5 @@
 <template>
-  <el-submenu :index="subMenuList.path" v-bind="$attrs">
+  <el-sub-menu :index="subMenuList.path" v-bind="$attrs">
     <template #title>
       <i v-if="subMenuList.icon.includes('el-')" :class="subMenuList.icon"></i>
       <i v-else class="iconfont" :class="subMenuList.icon"></i>
@@ -14,7 +14,7 @@
       </el-menu-item>
       <SubMenu v-else :key="item.id" :sub-menu-list="item"></SubMenu>
     </template>
-  </el-submenu>
+  </el-sub-menu>
 </template>
 
 <script>
