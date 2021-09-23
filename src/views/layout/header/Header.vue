@@ -5,7 +5,15 @@
         <i :class="isCollapse ? 'el-icon-s-unfold' : 'el-icon-s-fold'" @click="toggleCollapse"></i>
       </div>
       <div class="flex-center-row cc-mr-20" :class="isCollapse ? 'cc-text-right info-collapse' : 'cc-text-right info'">
-        <el-button type="primary" @click="logout"> logout </el-button>
+        <el-link class="header-user-name" type="primary" :underline="false">Hello</el-link>
+        <el-dropdown>
+          <el-image class="header-user-img" :src="imgSrc[0]"></el-image>
+          <template #dropdown>
+            <el-dropdown-menu>
+              <el-dropdown-item @click="logout">logout</el-dropdown-item>
+            </el-dropdown-menu>
+          </template>
+        </el-dropdown>
       </div>
     </div>
   </div>
@@ -53,5 +61,14 @@ export default {
 }
 .header-box-space {
   height: $header-height;
+}
+.header-user-name {
+  margin-right: 10px;
+}
+.header-user-img {
+  width: 50px;
+  height: 50px;
+  background-color: $color-bg-white;
+  border-radius: 50%;
 }
 </style>

@@ -1,16 +1,15 @@
 <template>
-<!--  <el-menu-->
-<!--    class="menu-header-box"-->
-<!--    :collapse="isCollapse"-->
-<!--    :unique-opened="true"-->
-<!--    popper-append-to-body>-->
-<!--    <el-menu-item key="/" index="/" class="flex-center-row header-box">-->
-<!--      <div class="flex-center-row cc-pointer logo" :class="isCollapse ? 'logo-collapse' : 'logo-no-collapse'">-->
-<!--        <object v-show="!isCollapse" :data="imgSrc[0]" class="img-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />-->
-<!--        <object v-show="isCollapse" :data="imgSrc[1]" class="img-no-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />-->
-<!--      </div>-->
-<!--    </el-menu-item>-->
-<!--  </el-menu>-->
+  <el-menu
+    class="menu-header-box"
+    :collapse="isCollapse">
+    <el-menu-item key="/" index="/" class="flex-center-row header-box">
+      <div class="flex-center-row cc-pointer logo" :class="isCollapse ? 'logo-collapse' : 'logo-no-collapse'">
+        <object v-show="!isCollapse" :data="imgSrc[0]" class="img-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
+        <object v-show="isCollapse" :data="imgSrc[1]" class="img-no-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
+      </div>
+    </el-menu-item>
+  </el-menu>
+  <el-scrollbar class="scroll-menu">
     <el-menu
       class="menu-box"
       :default-active="selectedKeys"
@@ -18,26 +17,17 @@
       :unique-opened="true"
       popper-append-to-body
       @select="selectMenu">
-      <div class="menu-header-box">
-        <el-menu-item key="/" index="/" class="flex-center-row header-box">
-          <div class="flex-center-row cc-pointer logo" :class="isCollapse ? 'logo-collapse' : 'logo-no-collapse'">
-            <object v-show="!isCollapse" :data="imgSrc[0]" class="img-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
-            <object v-show="isCollapse" :data="imgSrc[1]" class="img-no-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
-          </div>
-        </el-menu-item>
-      </div>
-      <el-scrollbar class="scroll-menu">
       <template v-for="item in menuList">
         <el-menu-item v-if="!item.children || item.children.length === 0" :key="item.id" :index="item.path" :disabled="!!item.isDisable">
           <!-- 此处图标可以自定义 -->
           <i v-if="item.icon.includes('el-')" :class="item.icon"></i>
           <i v-else class="iconfont" :class="item.icon"></i>
-          <span>{{ item.title }}</span>
+          <template #title>{{ item.title }}</template>
         </el-menu-item>
         <SubMenu v-else :key="item.id" :sub-menu-list="item"></SubMenu>
       </template>
-      </el-scrollbar>
     </el-menu>
+  </el-scrollbar>
 </template>
 
 <script>
@@ -118,12 +108,10 @@ export default {
   }
 }
 .scroll-menu {
-  height: calc(100% - 60px);
-  //height: 100vh;
+  height: $menu-height;
 }
 .menu-box {
-  //height: calc(100vh - 60px);
-  height: 100vh;
+  min-height: $menu-height;
   &:not(.el-menu--collapse) {
     width: $menu-width;
   }
