@@ -1,20 +1,22 @@
 <template>
-  <el-sub-menu :index="subMenuList.path" v-bind="$attrs">
-    <template #title>
-      <i v-if="subMenuList.icon.includes('el-')" :class="subMenuList.icon"></i>
-      <i v-else class="iconfont" :class="subMenuList.icon"></i>
-      <span>{{ subMenuList.title }}</span>
-    </template>
-    <template v-for="item in subMenuList.children">
-      <el-menu-item v-if="!item.children || item.children.length === 0" :key="item.id" :index="resolvePath(item.path)">
+  <template v-for="item in subMenuList">
+    <template v-if="!item.isHidden && (Number(item.type) === 0 || Number(item.type) === 1)">
+      <el-sub-menu v-if="!item.isHideSubMenu && item.children && item.children.length > 0" :key="item.id" :index="item.path" v-bind="$attrs">
+        <template #title>
+          <i v-if="item.icon.includes('el-')" :class="item.icon"></i>
+          <i v-else class="iconfont" :class="item.icon"></i>
+          <span>{{ item.title }}</span>
+        </template>
+        <SubMenu :sub-menu-list="item.children" :base-path="item.path + '/'"></SubMenu>
+      </el-sub-menu>
+      <el-menu-item v-else :key="item.id" :index="resolvePath(item.path)">
         <!-- 此处图标可以自定义 -->
-          <i v-if="item.icon.includes('el-')" :class="item.icon || subMenuList.icon"></i>
-          <i v-else class="iconfont" :class="item.icon || subMenuList.icon"></i>
-          <template #title>{{ item.title }}</template>
+        <i v-if="item.icon.includes('el-')" :class="item.icon || subMenuList.icon"></i>
+        <i v-else class="iconfont" :class="item.icon || subMenuList.icon"></i>
+        <template #title>{{ item.title }}</template>
       </el-menu-item>
-      <SubMenu v-else :key="item.id" :sub-menu-list="item"></SubMenu>
     </template>
-  </el-sub-menu>
+  </template>
 </template>
 
 <script>
@@ -30,10 +32,14 @@ export default {
       type: Object,
       default: () => ({}),
     },
+    basePath: {
+      type: String,
+      default: ""
+    }
   },
   methods: {
     resolvePath(path) {
-      return this.subMenuList.path + "/" + path;
+      return this.basePath + path;
     },
   },
 };
