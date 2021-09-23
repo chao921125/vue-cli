@@ -7,7 +7,8 @@
       <div class="flex-center-row cc-mr-20" :class="isCollapse ? 'cc-text-right info-collapse' : 'cc-text-right info'">
         <el-link class="header-user-name" type="primary" :underline="false">Hello</el-link>
         <el-dropdown>
-          <el-image class="header-user-img" :src="imgSrc[0]"></el-image>
+          <el-avatar v-if="true" size="30" :src="imgSrc[0]"></el-avatar>
+          <el-avatar v-else size="30" icon="el-icon-user-solid"></el-avatar>
           <template #dropdown>
             <el-dropdown-menu>
               <el-dropdown-item @click="logout">logout</el-dropdown-item>

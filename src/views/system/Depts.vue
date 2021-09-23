@@ -1,5 +1,5 @@
 <template>
-    <div>部门管理</div>
+    <div>哎嗨，啥都没有。哈哈哈</div>
 </template>
 
 <script>
