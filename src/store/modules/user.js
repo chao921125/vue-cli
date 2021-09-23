@@ -101,10 +101,12 @@ export default {
         };
         getUserInfo(userParams)
           .then(async (resp) => {
-            commit("setUserInfo", resp);
+            // 菜单和路由
             commit("setMenus", resp.menus);
             let routers = setRouter(resp.menus);
             commit("setRouters", routers);
+            // 删除掉菜单，反正你也用不到
+            commit("setUserInfo", delete resp.menus);
             resolve(routers);
           })
           .catch((error) => {

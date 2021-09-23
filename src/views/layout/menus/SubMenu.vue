@@ -8,9 +8,9 @@
     <template v-for="item in subMenuList.children">
       <el-menu-item v-if="!item.children || item.children.length === 0" :key="item.id" :index="resolvePath(item.path)">
         <!-- 此处图标可以自定义 -->
-        <i v-if="item.icon.includes('el-')" :class="item.icon || subMenuList.icon"></i>
-        <i v-else class="iconfont" :class="item.icon || subMenuList.icon"></i>
-        <span>{{ item.title }}</span>
+          <i v-if="item.icon.includes('el-')" :class="item.icon || subMenuList.icon"></i>
+          <i v-else class="iconfont" :class="item.icon || subMenuList.icon"></i>
+          <template #title>{{ item.title }}</template>
       </el-menu-item>
       <SubMenu v-else :key="item.id" :sub-menu-list="item"></SubMenu>
     </template>
