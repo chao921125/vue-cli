@@ -25,7 +25,7 @@ export default {
       minute: '',
       second: '',
       promiseTimer: '',
-      remainTimes: 0
+      remainTimes: 10000
     };
   },
   computed: {
