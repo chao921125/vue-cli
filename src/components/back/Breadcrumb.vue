@@ -1,10 +1,13 @@
 <template>
-  <div>测试</div>
+
 </template>
 
 <script>
+/**
+ * 面包屑导航
+ */
 export default {
-  name: "Index"
+  name: "Breadcrumb"
 };
 </script>
 

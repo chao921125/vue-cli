@@ -1,10 +1,15 @@
 <template>
-  <div>新增用户</div>
+  <page-header></page-header>
 </template>
 
 <script>
+import PageHeader from "@/components/back/PageHeader";
+
 export default {
-  name: "UsersCreate"
+  name: "UsersCreate",
+  components: {
+    PageHeader
+  },
 };
 </script>
 

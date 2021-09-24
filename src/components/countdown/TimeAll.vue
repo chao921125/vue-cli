@@ -1,7 +1,7 @@
 <template>
   <text>
-    <text v-if="day > 0">{{ dayString + 'd ' + hourString + 'h' }}</text>
-    <text v-else-if="hour > 0">{{ hourString + 'h ' + minuteString + 'm' }}</text>
+    <text v-if="day > 0">{{ dayString + 'd ' + hourString + 'h ' + minuteString + 'm ' + secondString + 's' }}</text>
+    <text v-else-if="hour > 0">{{ hourString + 'h ' + minuteString + 'm ' + secondString + 's' }}</text>
     <text v-else-if="minute > 0">{{ minuteString + 'm ' + secondString + 's' }}</text>
     <text v-else>{{ secondString + 's' }}</text>
   </text>

@@ -34,6 +34,10 @@
 </template>
 
 <script>
+/**
+ * 需要变更的地方，这里需要修改一个层级数
+ * selectedKeys
+ */
 import SubMenu from "./SubMenu";
 
 export default {
@@ -58,7 +62,17 @@ export default {
       return this.$store.getters["store/user/getMenus"];
     },
     selectedKeys() {
-      return this.$route.path.replace("/", "");
+      let menuHierarchy = 2;
+      let path = this.$route.path.replace("/", "");
+      let pathArray = path.split("/");
+      if (pathArray.length > menuHierarchy) {
+        let returnPath = "";
+        for (let i = 0; i < menuHierarchy; i++) {
+          returnPath += `/${pathArray[i]}`;
+        }
+        return returnPath.replace("/", "");
+      }
+      return path;
     },
   },
   methods: {
