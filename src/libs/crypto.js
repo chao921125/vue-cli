@@ -1,5 +1,5 @@
 import cryptoJs from "crypto-js";
-// import Buffer from 'buffer';
+// import Buffer from "buffer";
 
 const key = "ef3980778718b1556c0fd6cb";
 

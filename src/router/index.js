@@ -33,7 +33,7 @@ const ROUTER_LOGIN = "login";
 const WHITELIST = ["login", "register", "404", "error"];
 // const ROUTER_REGISTER = "register";
 router.beforeEach((to, from, next) => {
-  // await store.dispatch('system/config')
+  // await store.dispatch("system/config")
   // 进度条
   NProgress.start();
   // 验证当前路由所有的匹配中是否需要有登录验证的

@@ -53,7 +53,7 @@ export default {
   // 应用层级的状态应该集中到单个 store 对象中。
   // 提交 mutation 是更改状态的唯一方法，并且这个过程是同步的。
   // 异步逻辑都应该封装到 action 里面。
-  // import { mapState, mapGetter, mapMutation, mapAction } from 'vuex'
+  // import { mapState, mapGetter, mapMutation, mapAction } from "vuex"
   // computed: {
   //   ...mapState({
   //     counter: (state) => state.count /*映射不同名字的对象：count--->counter */
@@ -63,10 +63,10 @@ export default {
   // methods：{
   //   /*将actions，mutations里面的方法映射到对应的methods,以便在组件里面可以直接应用*/
   // ...mapMutations({
-  //   add: 'increment' // 将 `this.add()` 映射为 `this.$store.dispatch('increment')`
+  //   add: "increment" // 将 `this.add()` 映射为 `this.$store.dispatch("increment")`
   // })
   // ...mapActions({
-  //   add: 'increment' // 将 `this.add()` 映射为 `this.$store.dispatch('increment')`
+  //   add: "increment" // 将 `this.add()` 映射为 `this.$store.dispatch("increment")`
   // })
   // }
 };

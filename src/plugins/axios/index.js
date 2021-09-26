@@ -1,5 +1,5 @@
 import axios from "axios";
-// import { Message } from 'element-ui'
+// import { Message } from "element-ui"
 import router from "@/router";
 import store from "@/store";
 import util from "@/plugins/utils";
@@ -32,7 +32,7 @@ function errorLog(err) {
   // 显示提示
   /* Message({
     message: err.message,
-    type: 'error',
+    type: "error",
     duration: 5 * 1000
   }) */
 }
@@ -46,13 +46,13 @@ const request = axios.create({
 // 请求拦截器
 request.interceptors.request.use(
   (config) => {
-    // config.headers['Content-Type'] = 'application/json'
+    // config.headers["Content-Type"] = "application/json"
     if (!/^https:\/\/|http:\/\//.test(config.url)) {
       // 在请求发送之前做一些处理
       const token = util.cookies.get("token");
       if (token && token !== "undefined") {
-        // 让每个请求携带token-- ['X-Token']为自定义key 请根据实际情况自行修改
-        // config.headers['X-Token'] = token
+        // 让每个请求携带token-- ["X-Token"]为自定义key 请根据实际情况自行修改
+        // config.headers["X-Token"] = token
       }
     }
     return config;
