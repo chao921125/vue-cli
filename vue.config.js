@@ -146,6 +146,10 @@ module.exports = {
     externals: {
       // "v-charts": "VeIndex"
     },
+    // 忽略因为三方包依赖出现的错误
+    module: {
+      unknownContextCritical: false
+    }
   },
   chainWebpack: (config) => {
     config.plugins.delete("prefetch").delete("preload");
