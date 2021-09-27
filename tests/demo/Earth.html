@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    html, body, * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="demoChart" style="width: 100vw; height: 100vh;"></div>
+
+  <script src="./echarts.js"></script>
+  <script src="./echarts-gl.js"></script>
+  <script>
+    const ROOT_PATH = 'https://cdn.jsdelivr.net/gh/apache/echarts-website@asf-site/examples';
+    // const texture = ROOT_PATH + '/data-gl/asset/world.topo.bathy.200401.jpg';
+    const texture = './demo7.jpg';
+    const bg = ROOT_PATH + '/data-gl/asset/starfield.jpg';
+    let demoChart = echarts.init(document.getElementById("demoChart"));
+    let option = {
+      backgroundColor: '#000',
+      globe: {
+        baseTexture: texture,
+        heightTexture: texture,
+        displacementScale: 0.04,
+        shading: 'realistic',
+        environment: bg,
+        realisticMaterial: {
+          roughness: 0.9
+        },
+        postEffect: {
+          enable: true
+        },
+        light: {
+          main: {
+            intensity: 3,
+            shadow: true
+          },
+          ambientCubemap: {
+            texture: ROOT_PATH + '/data-gl/asset/pisa.hdr',
+            diffuseIntensity: 0.2
+          }
+        }
+      }
+    };
+    demoChart.setOption(option);
+    window.addEventListener("resize", () => {
+      demoChart.resize();
+    });
+  </script>
+</body>
+</html>
