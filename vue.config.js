@@ -14,33 +14,33 @@ module.exports = {
   // 输出文件目录
   outputDir: "dist", // Default
   // 静态资源目录 (js, css, img, fonts)(相对于 outputDir)
-  // assetsDir: 'static',
+  // assetsDir: "static",
   // 指定生成的 index.html 的输出路径 (相对于 outputDir)。也可以是一个绝对路径
-  // indexPath: 'index.html',
+  // indexPath: "index.html",
   // 哈希
   // filenameHashing: true,
   // pages: {
   //   index: {
   //      page 的入口
-  //      entry: 'src/index/main.js',
+  //      entry: "src/index/main.js",
   //      模板来源
-  //      template: 'public/index.html',
+  //      template: "public/index.html",
   //      在 dist/index.html 的输出
-  //      filename: 'index.html',
+  //      filename: "index.html",
   //      当使用 title 选项时，
   //      template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
-  //      title: 'Index Page',
+  //      title: "Index Page",
   //      在这个页面中包含的块，默认情况下会包含
   //      提取出来的通用 chunk 和 vendor chunk。
-  //      chunks: ['chunk-vendors', 'chunk-common', 'index']
+  //      chunks: ["chunk-vendors", "chunk-common", "index"]
   //    },
   //    当使用只有入口的字符串格式时，
   //    模板会被推导为 `public/subpage.html`
   //    并且如果找不到的话，就回退到 `public/index.html`。
   //    输出文件名会被推导为 `subpage.html`。
-  //    subpage: 'src/subpage/main.js'
+  //    subpage: "src/subpage/main.js"
   // },
-  // 在保存的时候检查 process.env.NODE_ENV !== 'production' Type: boolean | 'warning' | 'default' | 'error'
+  // 在保存的时候检查 process.env.NODE_ENV !== "production" Type: boolean | "warning" | "default" | "error"
   lintOnSave: process.env.NODE_ENV !== ENV_PRODUCTION, // Default
   // 使用带有浏览器内编译器的完整构建版本
   // 查阅 https://cn.vuejs.org/v2/guide/installation.html#运行时-编译器-vs-只包含运行时
@@ -78,7 +78,7 @@ module.exports = {
           modifyVars: {
             // 直接覆盖变量
             // "text-color": "#f5222d",
-            // 'border-color': '#eee',
+            // "border-color": "#eee",
           },
         },
         // additionalData: `@import "~@/assets/styles/fixed/ant.less";`,
@@ -107,7 +107,7 @@ module.exports = {
   // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
   // https://webpack.js.org/configuration/dev-server/
   devServer: {
-    clientLogLevel: 'info',
+    clientLogLevel: "info",
     publicPath: process.env.NODE_ENV === ENV_PRODUCTION ? "/" : "/",
     open: {
       app: ["Google Chrome", "--incognito", "--other-flag"],
@@ -129,8 +129,8 @@ module.exports = {
         changeOrigin: true, // 接口跨域
         secure: false, // 是否验证ssl
       },
-      // '/other': {
-      //   target: '<other_url>'
+      // "/other": {
+      //   target: "<other_url>"
       // }
     }, // 设置代理
     overlay: {
@@ -144,14 +144,18 @@ module.exports = {
     },
     // 忽略打包文件
     externals: {
-      // 'v-charts': 'VeIndex'
+      // "v-charts": "VeIndex"
     },
+    // 忽略因为三方包依赖出现的错误
+    module: {
+      unknownContextCritical: false
+    }
   },
   chainWebpack: (config) => {
     config.plugins.delete("prefetch").delete("preload");
     // 解决 cli3 热更新失效 https://github.com/vuejs/vue-cli/issues/1559
     config.resolve.symlinks(true);
-    // 重新设置 alias .set('@', resolve('src'))
+    // 重新设置 alias .set("@", resolve("src"))
     config.resolve.alias
       .set("@", resolve("src"))
       // .set("@api", resolve("src/api"))
@@ -179,18 +183,18 @@ module.exports = {
         symbolId: "icon-[name]"
       })
       .end()
-    config.optimization.minimizer('terser').tap((args) => {
+    config.optimization.minimizer("terser").tap((args) => {
       args[0].terserOptions.compress.drop_console = true
       return args
     })
     // 发行或运行时启用了压缩时会生效
-    config.optimization.minimizer('terser').tap((args) => {
+    config.optimization.minimizer("terser").tap((args) => {
       const compress = args[0].terserOptions.compress
       // 非 App 平台移除 console 代码(包含所有 console 方法，如 log,debug,info...)
       compress.drop_console = true
       compress.pure_funcs = [
-          '__f__', // App 平台 vue 移除日志代码
-          // 'console.debug' // 可移除指定的 console 方法
+          "__f__", // App 平台 vue 移除日志代码
+          // "console.debug" // 可移除指定的 console 方法
       ]
       return args
     })
