@@ -89,6 +89,7 @@ scripts: {
 ```
 
 ### git 提交信息校验配置
+```
 "husky": {
     "hooks": {
       "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
@@ -102,3 +103,47 @@ scripts: {
       "path": "./node_modules/cz-customizable"
     }
   }
+```
+
+## 完全配置以及解释
+```json 
+{
+  "name": "puppeteer",
+  "version": "1.0.0",
+  "description": "demo",
+  "main": "index.js",
+  "private": false, # 是否是私有模块，非公开设置为true
+  "scripts": { # 执行脚本
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": { # 运行时依赖
+    "mysql": "^2.18.1",
+    "node-rsa": "^1.1.1",
+    "puppeteer": "^10.4.0",
+    "puppeteer-core": "^10.4.0"
+  },
+  "devDependencies": { # 开发时依赖
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chao921125/"
+  },
+  "keywords": [
+    "github",
+    "puppeteer",
+    "npm"
+  ],
+  "author": "cc",
+  "license": "ISC",
+  "engines": { # 指定运行或开发环境最低需求
+    "node": ">= 8.16.0",
+    "npm": ">= 6.9.0"
+  },
+  "os" : [ "darwin", "linux", "!win32" ], # 支持的平台和黑名单
+  "cpu" : [ "x64", "ia32", "!arm", "!mips" ], # 支持的cpu和黑名单
+  "bugs": { # 问题追踪
+    "url" : "https://github.com/owner/project/issues" ,  
+    "email" ："project@hostname.com"
+  },
+}
+```
