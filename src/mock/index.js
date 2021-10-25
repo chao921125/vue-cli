@@ -2,7 +2,7 @@ import Mock from "mockjs";
 import requestURL from "@/api/index";
 
 Mock.setup({
-  timeout: "200-600",
+  timeout: "100-900",
 });
 
 export const random = () => {
@@ -128,6 +128,40 @@ Mock.mock(requestURL.getUserInfo, "post", () => {
           title: "HTML",
           path: "html-script",
           component: "demo/htmlScript/HtmlScript",
+          redirect: "",
+          icon: "el-icon-star-off",
+          isLink: 0,
+          isCache: 0,
+          isDisable: 0,
+          isHidden: false,
+          isHideSubMenu: false,
+          status: 1,
+          perms: "admin:system:*",
+        }, {
+          id: 26,
+          orderNum: 6,
+          type: 1,
+          name: "Filter",
+          title: "Filter",
+          path: "filter",
+          component: "demo/filter/Filter",
+          redirect: "",
+          icon: "el-icon-star-off",
+          isLink: 0,
+          isCache: 0,
+          isDisable: 0,
+          isHidden: false,
+          isHideSubMenu: false,
+          status: 1,
+          perms: "admin:system:*",
+        }, {
+          id: 27,
+          orderNum: 7,
+          type: 1,
+          name: "Echarts",
+          title: "Echarts",
+          path: "echarts",
+          component: "demo/echarts/Echarts",
           redirect: "",
           icon: "el-icon-star-off",
           isLink: 0,
