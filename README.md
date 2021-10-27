@@ -329,6 +329,21 @@
 [eruda](https://www.npmjs.com/package/eruda)
 [vconsole](https://www.npmjs.com/package/vconsole)
 
+## 跨端框架推荐：包含小程序啥的
+[uni-app](https://uniapp.dcloud.net.cn/) // 全平台跨端含APP等等
+
+[wepyjs](https://wepyjs.github.io/wepy-docs/) // 腾讯团队 需要学习wepy
+
+[taro](https://taro.jd.com/) // 3.x已支持vue 京东团队
+
+[mpvue](https://mpvue.com/) // 美团团队
+
+## APP开发
+[cordova](http://cordova.axuer.com/)
+
+[Native Script](https://nativescript.org/)
+
+[React Native](https://reactnative.cn/)
 
 # TODO
 封装axios，前端自定义报文返回，error根据业务需求返回结果，含状态码。\
