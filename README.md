@@ -32,7 +32,7 @@
 ## 核心库 https://vue3js.cn/
 [vue-cli](https://www.npmjs.com/package/@vue/cli)
 
-?[vite](https://www.npmjs.com/package/vite)
+[vite](https://www.npmjs.com/package/vite)
 [官网](https://cn.vitejs.dev/)?
 
 [vue](https://www.npmjs.com/package/vue)
