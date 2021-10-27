@@ -106,6 +106,21 @@
 [iviewui](https://www.npmjs.com/package/ant-design-vue) // ？PC
 [官网](https://www.iviewui.com/)
 
+## 静态UI PC H5
+[H5 zeptojs](https://www.zeptojs.com.cn/)
+
+[PC javascript](https://www.javascript.com/)
+
+[Framework7](https://framework7.io/)
+
+[Foundation](https://get.foundation/index.html)
+
+[Onsen UI](https://onsen.io/)
+
+[Ionic](https://ionicframework.com/)
+
+[Bootstrap](https://getbootstrap.com/)
+
 ## 其他三方库
 [vxe-table](https://www.npmjs.com/package/vxe-table)
 [官网(包含支持v3)](https://xuliangzhan_admin.gitee.io/vxe-table/#/table/start/install)
