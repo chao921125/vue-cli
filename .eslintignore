@@ -1,16 +1,16 @@
 # 忽略目录
 node_modules
-node_modules/
+node_modules/*
 build
-build/
+build/*
 tests
-tests/
+tests/*
 public
-public/
+public/*
 dist
-dist/
+dist/*
 src/assets
-src/assets/
+src/assets/*
 
 # node 覆盖率文件
 coverage/
