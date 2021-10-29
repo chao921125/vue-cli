@@ -275,19 +275,19 @@
 
 [cz-customizable](https://www.npmjs.com/package/cz-customizable)
 
-## 适配移动端 -D
-[amfe-flexible](https://www.npmjs.com/package/amfe-flexible) // 不再推荐 lib-flexible 按照比例缩放展示，基于不同设备（Android、iOS、brow）的px值
+## 适配移动端 -D rem方案过时啦，用vw方案解决吧
+[~~amfe-flexible~~](https://www.npmjs.com/package/amfe-flexible) // 不再推荐 lib-flexible 按照比例缩放展示，基于不同设备（Android、iOS、brow）的px值
 
-[autoprefixer](https://www.npmjs.com/package/autoprefixer)
+[~~autoprefixer~~](https://www.npmjs.com/package/autoprefixer)
 
 [postcss](https://www.npmjs.com/package/postcss)
 [postcss-loader](https://www.npmjs.com/package/postcss-loader) // 将px转rem
 
-[postcss-pxtorem](https://www.npmjs.com/package/postcss-pxtorem)
+[~~postcss-pxtorem~~](https://www.npmjs.com/package/postcss-pxtorem)
 
-[postcss-plugin-px2rem](https://www.npmjs.com/package/postcss-plugin-px2rem)
+[~~postcss-plugin-px2rem~~](https://www.npmjs.com/package/postcss-plugin-px2rem)
 
-[postcss-px2rem](https://www.npmjs.com/package/postcss-px2rem)
+[~~postcss-px2rem~~](https://www.npmjs.com/package/postcss-px2rem)
 
 ## 移动端调试 -D
 [vconsole](https://www.npmjs.com/package/vconsole)
