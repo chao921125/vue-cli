@@ -355,6 +355,7 @@ postcss-pxtorem 5.1.1\
 sass-loader 10.2.0\
 less-loader 7.3.0\
 eslint 7.32.0\
+screenfull 5.2.0\
 目前需要手动升级的包：\
 vue\
 vue-i18n\
