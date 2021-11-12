@@ -1,3 +1,29 @@
+# V2.0.1
+## Feat
+1.升级包兼容
+
+## Fixed
+1.element-plus icon使用修复
+
+# V2.0.0
+## Feat
+1.升级包兼容
+
+2.增加vw适配
+
+## Fixed
+1.升级包兼容
+
+# V1.0.1
+## Feat
+1.升级包兼容
+
+## Fixed
+1.升级包兼容
+
+## TODO
+增加静态路由配置示例
+
 # V1.0.0
 ## Feat
 1.基本框架搭建采用 vue3+vue-router4+vuex4
