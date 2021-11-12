@@ -50,6 +50,13 @@ app.config.warnHandler = (msg, vm, trace) => {
 import ElementPlus from "element-plus";
 import "@/assets/styles/reset/element.scss";
 app.use(ElementPlus, { size: "small", zIndex: 9999 });
+// 定义图标
+import * as ElementPlusIcons from "@element-plus/icons";
+for (const iconName in ElementPlusIcons) {
+  if (Reflect.has(ElementPlusIcons, iconName)) {
+    app.component(iconName, ElementPlusIcons[iconName]);
+  }
+}
 // app.use(ElementPlus);
 
 // 全局样式定义
