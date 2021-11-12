@@ -3,16 +3,14 @@
     <template v-if="!item.isHidden && (Number(item.type) === 0 || Number(item.type) === 1)">
       <el-sub-menu v-if="!item.isHideSubMenu && item.children && item.children.length > 0" :key="item.id" :index="item.path" v-bind="$attrs">
         <template #title>
-          <i v-if="item.icon.includes('icon-')" class="iconfont" :class="item.icon"></i>
-          <el-icon v-else v-html="item.icon"></el-icon>
+          <i class="iconfont" :class="item.icon"></i>
           <span>{{ item.title }}</span>
         </template>
         <SubMenu :sub-menu-list="item.children" :base-path="item.path + '/'"></SubMenu>
       </el-sub-menu>
       <el-menu-item v-else :key="item.id" :index="resolvePath(item.path)">
         <!-- 此处图标可以自定义 -->
-        <i v-if="item.icon.includes('icon-')" class="iconfont" :class="item.icon || subMenuList.icon"></i>
-        <el-icon v-else v-html="item.icon || subMenuList.icon"></el-icon>
+        <i class="iconfont" :class="item.icon || subMenuList.icon"></i>
         <template #title>{{ item.title }}</template>
       </el-menu-item>
     </template>
