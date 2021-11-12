@@ -308,6 +308,7 @@ vue-i18n \
 vue-router \
 vuex \
 ant-design-vue \
+vant \
 @vue/test-utils
 
 # 其他组件参考
