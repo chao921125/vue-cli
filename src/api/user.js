@@ -5,6 +5,14 @@
 import axios from "@/plugins/axios";
 import requestURL from "./index";
 
+export function demoMethods(data) {
+  return axios({
+    url: requestURL.demoMethods,
+    method: "GET",
+    data,
+  });
+}
+
 export function getPhoneCode(data) {
   return axios({
     url: requestURL.getPhoneCode,
