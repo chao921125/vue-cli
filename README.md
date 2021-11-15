@@ -9,13 +9,13 @@
 **_佛系更新_**
 
 # 项目注意事项
+node-sass 4.14.1(node 14.x) 需要和node对应 \
 定版更新请勿升级 \
 postcss-pxtorem 5.1.1 \
 sass-loader 10.2.0 \
 less-loader 7.3.0 \
 eslint 7.32.0 \
 screenfull 5.2.0 \
-node-sass 4.14.1(node 14.x) \
 目前需要手动升级的包：[最新版本查看](https://www.npmjs.com/) \
 vue \
 vue-i18n \
