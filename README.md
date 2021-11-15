@@ -141,7 +141,7 @@ vant \
 [vue-radial-progress](https://www.npmjs.com/package/vue-radial-progress)
 
 ## 轮播图
-[swiper 支持PC、H5](https://www.swiper.com.cn/) 结合 \
+[swiper 支持PC、H5](https://www.swiper.com.cn/) 结合 
 [vue-awesome-swiper](https://www.swiper.com.cn/) 使用 \
 [vue-concise-slider](https://www.npmjs.com/package/vue-concise-slider) \
 [@splidejs/vue-splide](https://www.npmjs.com/package/@splidejs/vue-splide)
