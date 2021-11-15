@@ -1,7 +1,11 @@
 const path = require("path");
 
-// 移动端设计稿还是按照750设计，但是实际开发的时候需要将750修改为1920
 module.exports = ({ webpack }) => {
+  // 因为实际开发的时候很多时候移动端和PC端呈现的内容有区别会做两套，此时只需要一个域名前端区分就行
+  // 当然如果设计的时候会考虑多端的问题需要大家自行适配了
+  // 记得如果要是有其他移动端组件非设计尺寸，也就是750，那么请在375处改掉
+  // 双端：PC按照1920设计，Mobile按照750设计，但是实际开发需要将Mobile改为1920
+  // 单端：PC为1920，Mobile为750
   const designWidth = webpack.resourcePath.includes(path.join("node_modules", "vant")) ? 375 : 1920;
   return {
     plugins: {
