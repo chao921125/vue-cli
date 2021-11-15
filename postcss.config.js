@@ -1,5 +1,6 @@
 const path = require("path");
 
+// 移动端设计稿还是按照750设计，但是实际开发的时候需要将750修改为1920
 module.exports = ({ webpack }) => {
   const designWidth = webpack.resourcePath.includes(path.join("node_modules", "vant")) ? 375 : 1920;
   return {
