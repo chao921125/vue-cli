@@ -23,7 +23,6 @@ export default defineComponent({
   name: "Home",
   setup() {
     const activeName = ref("1");
-
     return {
       activeName,
     }
@@ -31,4 +30,8 @@ export default defineComponent({
 });
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+h1 {
+  font-size: 26px;
+}
+</style>

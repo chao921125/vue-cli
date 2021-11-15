@@ -1,17 +1,55 @@
-// import demo from "./modules/demo";
+import demo from "./modules/demos";
 
-/**
- * 无需权限访问、或重定向路由定义
- */
 /**
  * 主框架内，包含导航
  * @type {*[]}
  */
 const frameIn = [
   {
-    path: "/m/index",
-    name: "m-index",
-    component: () => import("@/views/mobile/Index")
+    path: "",
+    redirect: { name: "/" },
+  },
+  {
+    path: "/",
+    name: "/",
+    redirect: { name: "index" },
+    children: [
+      // 首页 必须 name:index
+      // 刷新页面 必须保留
+      {
+        path: "refresh",
+        name: "refresh",
+        hidden: true,
+        component: {
+          beforeRouteEnter(to, from, next) {
+            next((vm) => vm.$router.replace(from.fullPath));
+          },
+          render: (h) => h(),
+        },
+      },
+      // 页面重定向 必须保留
+      {
+        path: "redirect/:route*",
+        name: "redirect",
+        hidden: true,
+        component: {
+          beforeRouteEnter(to, from, next) {
+            next((vm) => vm.$router.replace(JSON.parse(from.params.route)));
+          },
+          render: (h) => h(),
+        },
+      },
+    ],
+  },
+  {
+    path: "/index",
+    name: "index",
+    redirect: { name: "home" },
+    component: () => import("@/views/Index"),
+    meta: {
+      auth: true,
+    },
+    children: [...demo],
   },
   {
     path: "/index-blank",
@@ -59,6 +97,19 @@ const frameIn = [
       },
     ],
   },
+  // 移动端
+  {
+    path: "/m/index",
+    name: "m-index",
+    component: () => import("@/views/mobile/Index"),
+    meta: {
+      hidden: true,
+      icon: "",
+      noCache: false,
+      title: "index",
+      auth: false,
+    },
+  },
 ];
 
 /**
@@ -101,4 +152,15 @@ const frameOut = [
   },
 ];
 
-export default [...frameIn, ...frameOut];
+const frameCom = [
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: { name: "login" },
+  },
+  {
+    path: "/:pathMatch(.*)",
+    redirect: { name: "login" },
+  }
+];
+
+export default [...frameIn, ...frameOut, ...frameCom];

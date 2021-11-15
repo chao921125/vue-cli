@@ -27,10 +27,10 @@ export default {
     window.onresize = () => {
       return (() => {
         window.screenWidth = document.body.clientWidth;
-        // _this.changeView();
+        _this.changeView();
       })();
     };
-    // _this.changeView();
+    _this.changeView();
   },
   mounted() {
     if (window.name === "") {
@@ -43,8 +43,10 @@ export default {
   },
   methods: {
     changeView() {
-      const currentRouter = this.$route.path;
+      // 最好别用router判断否则获取的路由会有问题（和router配置有关）
+      const currentRouter = window.location.pathname;
       const currentOrigin = window.location.origin;
+      console.log(currentOrigin, currentRouter);
       if (isMobile()) {
         if (currentRouter.indexOf("/m") > -1) return false;
         // this.$router.push({ path: '/m' + routeNow });

@@ -57,6 +57,10 @@ for (const iconName in ElementPlusIcons) {
     app.component(iconName, ElementPlusIcons[iconName]);
   }
 }
+
+import Vant from 'vant';
+import 'vant/lib/index.css';
+app.use(Vant);
 // app.use(ElementPlus);
 
 // 全局样式定义
@@ -120,9 +124,5 @@ app.directive("anchor", {
 //
 // createMyApp(Foo).mount("#foo")
 // createMyApp(Bar).mount("#bar")
-
-if (process.env.VUE_APP_MOCK) {
-  require("@/mock");
-}
 
 app.use(router).use(store).mount("#app");
