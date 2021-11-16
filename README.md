@@ -1,7 +1,7 @@
 # vue3 admin基础框架
 [体验地址](https://www.ixunta.online/) \
-[更新日志，写了个寂寞](read/VERSION.md) \
-[移动PC切换路由实现跳转不同页面及适配](read/Mobile.md)
+[更新日志，写了个寂寞](./read/VERSION.md) \
+[移动PC切换路由实现跳转不同页面及适配](./read/Mobile.md)
 以及各种小demo集合 \
 建议使用 yarn install \
 部分解释性.md文件已经迁移到了read目录中去
