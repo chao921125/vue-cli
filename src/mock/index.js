@@ -171,6 +171,23 @@ Mock.mock(requestURL.getUserInfo, "post", () => {
           isHideSubMenu: false,
           status: 1,
           perms: "admin:system:*",
+        }, {
+          id: 28,
+          orderNum: 8,
+          type: 1,
+          name: "全屏",
+          title: "全屏",
+          path: "screenfull",
+          component: "demo/screenfull/Screenfull",
+          redirect: "",
+          icon: "icon-linechart",
+          isLink: 0,
+          isCache: 0,
+          isDisable: 0,
+          isHidden: false,
+          isHideSubMenu: false,
+          status: 1,
+          perms: "admin:system:*",
         },
       ]
     }, {
