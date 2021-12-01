@@ -92,24 +92,16 @@ vant \
 
 # UI相关 https://madewith.cn/
 ## UI 官方
-[elementUI](https://www.npmjs.com/package/element-ui) // V2 PC
-[官网](https://element.eleme.io/) \
-[element-plus](https://www.npmjs.com/package/element-plus) // PC
-[官网](https://element-plus.org/) \
-[ant-design-vue](https://www.npmjs.com/package/ant-design-vue) // PC
-[官网](https://2x.antdv.com/components/overview/) \
-[bootstrap-vue](https://www.npmjs.com/package/bootstrap-vue) // ?
-[官网](https://dev.bootstrap-vue.org/docs/) \
-[vant@next](https://www.npmjs.com/package/vant) // M
-[官网](https://vant-contrib.gitee.io/vant/v3/) \
-[mui](https://www.npmjs.com/package/mui) // M
-[官网](https://dev.dcloud.net.cn/mui/) \
-[mint-ui](https://www.npmjs.com/package/mint-ui) // M
-[官网](http://mint-ui.github.io/) \
-[vuetifyjs](https://www.npmjs.com/package/vuetify) // PC
-[官网](https://vuetifyjs.com/) \
-[iviewui](https://www.npmjs.com/package/ant-design-vue) // ？PC
-[官网](https://www.iviewui.com/)
+[elementUI](https://www.npmjs.com/package/element-ui) // V2 PC [官网](https://element.eleme.io/) \
+[element-plus](https://www.npmjs.com/package/element-plus) // PC [官网](https://element-plus.org/) \
+[ant-design-vue](https://www.npmjs.com/package/ant-design-vue) // PC [官网](https://2x.antdv.com/components/overview/) \
+[bootstrap-vue](https://www.npmjs.com/package/bootstrap-vue) // ? [官网](https://dev.bootstrap-vue.org/docs/) \
+[vant@next](https://www.npmjs.com/package/vant) // M [官网](https://vant-contrib.gitee.io/vant/v3/) \
+[mui](https://www.npmjs.com/package/mui) // M [官网](https://dev.dcloud.net.cn/mui/) \
+[mint-ui](https://www.npmjs.com/package/mint-ui) // M [官网](http://mint-ui.github.io/) \
+[nutui @nutui/nutui@next](https://www.npmjs.com/package/@nutui/nutui) // M [官网](https://nutui.jd.com/) \
+[vuetifyjs](https://www.npmjs.com/package/vuetify) // PC [官网](https://vuetifyjs.com/) \
+[iviewui 付费](https://www.npmjs.com/package/ant-design-vue) // ？PC [官网](https://www.iviewui.com/)
 
 ## 静态UI PC H5
 [H5 zeptojs](https://www.zeptojs.com.cn/) \
@@ -185,8 +177,7 @@ vant \
 
 ## 富文本编辑器
 [tiptap](https://www.npmjs.com/package/tiptap) \
-[wangeditor](https://www.npmjs.com/package/wangeditor)
-[官网](https://www.wangeditor.com/) \
+[wangeditor](https://www.npmjs.com/package/wangeditor) [官网](https://www.wangeditor.com/) \
 [vue-quill-editor](https://www.npmjs.com/package/vue-quill-editor) \
 [ckeditor5-vue](https://www.npmjs.com/package/@ckeditor/ckeditor5-vue)
 
@@ -267,12 +258,9 @@ vant \
 [vconsole](https://www.npmjs.com/package/vconsole)
 
 ## 支付
-[stripejs](https://www.npmjs.com/package/stripe)
-[官网](https://stripe.com/docs) \
-[vue-stripe-elements-plus](https://www.npmjs.com/package/vue-stripe-elements-plus)
-[官网](https://vuestripe.com/) \
-[vue-stripe](https://www.npmjs.com/package/@vue-stripe/vue-stripe)
-[官网](https://vuestripe.com/)
+[stripejs](https://www.npmjs.com/package/stripe) [官网](https://stripe.com/docs) \
+[vue-stripe-elements-plus](https://www.npmjs.com/package/vue-stripe-elements-plus) [官网](https://vuestripe.com/) \
+[vue-stripe](https://www.npmjs.com/package/@vue-stripe/vue-stripe) [官网](https://vuestripe.com/)
 
 ## 视频播放
 [vue-video-player](https://www.npmjs.com/package/vue-video-player) \
@@ -281,13 +269,11 @@ vant \
 ## 游戏
 [Eva.js](https://www.npmjs.com/package/@eva/eva.js)
 [Eva-plugin-renderer](https://www.npmjs.com/package/@eva/plugin-renderer)
-[Eva-plugin-renderer-img](https://www.npmjs.com/package/@eva/plugin-renderer-img)
-[官网](https://eva-engine.gitee.io/#/tutorials/intro)
+[Eva-plugin-renderer-img](https://www.npmjs.com/package/@eva/plugin-renderer-img) [官网](https://eva-engine.gitee.io/#/tutorials/intro)
 
 ## 3D
 [WebGL](https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API) \
-[threejs](https://www.npmjs.com/package/three)
-[官网](https://threejs.org/)
+[threejs](https://www.npmjs.com/package/three) [官网](https://threejs.org/)
 
 # 特效
 ## 文字
