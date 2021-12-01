@@ -50,14 +50,10 @@ vant \
 # 基础核心依赖
 ## 核心库 https://vue3js.cn/
 [vue-cli](https://www.npmjs.com/package/@vue/cli) \
-[vite](https://www.npmjs.com/package/vite)
-[官网](https://cn.vitejs.dev/) \
-[vue3](https://www.npmjs.com/package/vue)
-[官网](https://v3.cn.vuejs.org/) \
-[vue-router](https://www.npmjs.com/package/vue-router)
-[官网](https://vue3js.cn/) \
-[vuex](https://www.npmjs.com/package/vuex)
-[官网](https://next.vuex.vuejs.org/) \
+[vite](https://www.npmjs.com/package/vite) [官网](https://cn.vitejs.dev/) \
+[vue3](https://www.npmjs.com/package/vue) [官网](https://v3.cn.vuejs.org/) \
+[vue-router](https://www.npmjs.com/package/vue-router) [官网](https://vue3js.cn/) \
+[vuex](https://www.npmjs.com/package/vuex) [官网](https://next.vuex.vuejs.org/) \
 [core-js](https://www.npmjs.com/package/core-js)
 
 ## http请求
@@ -97,7 +93,8 @@ vant \
 [ant-design-vue](https://www.npmjs.com/package/ant-design-vue) // PC [官网](https://2x.antdv.com/components/overview/) \
 [bootstrap-vue](https://www.npmjs.com/package/bootstrap-vue) // ? [官网](https://dev.bootstrap-vue.org/docs/) \
 [vant@next](https://www.npmjs.com/package/vant) // M [官网](https://vant-contrib.gitee.io/vant/v3/) \
-[mui](https://www.npmjs.com/package/mui) // M [官网](https://dev.dcloud.net.cn/mui/) \
+[mui uni-app](https://www.npmjs.com/package/mui) // M [官网](https://dev.dcloud.net.cn/mui/) \
+[mui](https://www.npmjs.com/package/mui) // M [官网](https://mui.com/) \
 [mint-ui](https://www.npmjs.com/package/mint-ui) // M [官网](http://mint-ui.github.io/) \
 [nutui @nutui/nutui@next](https://www.npmjs.com/package/@nutui/nutui) // M [官网](https://nutui.jd.com/) \
 [vuetifyjs](https://www.npmjs.com/package/vuetify) // PC [官网](https://vuetifyjs.com/) \
