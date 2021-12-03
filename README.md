@@ -138,7 +138,7 @@ vant [点击查看](https://www.npmjs.com/package/vant) \
 [vue-treeselect](https://www.npmjs.com/package/ue-treeselect)
 
 ## 动画
-[animate css库](https://www.npmjs.com/package/animate.css) [](https://animate.style/) \
+[animate css库](https://www.npmjs.com/package/animate .css) [](https://animate.style/) \
 [vue-page-transition 过渡](https://www.npmjs.com/package/vue-page-transition)
 
 ## 拖拽
