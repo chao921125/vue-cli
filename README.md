@@ -137,8 +137,9 @@ vant [点击查看](https://www.npmjs.com/package/vant) \
 ## 树
 [vue-treeselect](https://www.npmjs.com/package/ue-treeselect)
 
-## 过渡动画
-[vue-page-transition](https://www.npmjs.com/package/vue-page-transition)
+## 动画
+[animate css库](https://www.npmjs.com/package/animate.css) [](https://animate.style/) \
+[vue-page-transition 过渡](https://www.npmjs.com/package/vue-page-transition)
 
 ## 拖拽
 [vuedraggable](https://www.npmjs.com/package/vuedraggable) \
