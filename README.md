@@ -16,13 +16,13 @@ less-loader 7.3.0 \
 webpack 4.46.0 \
 screenfull 5.2.0 (6.0.0有问题请勿升级) \
 目前需要手动升级的包：[最新版本查看](https://www.npmjs.com/) \
-vue \
-vue-i18n \
-vue-router \
-vuex \
-ant-design-vue \
-vant \
-@vue/test-utils
+vue [点击查看](https://www.npmjs.com/package/vue) \
+vue-i18n [点击查看](https://www.npmjs.com/package/vue-i18n) \
+vue-router [点击查看](https://www.npmjs.com/package/vue-router) \
+vuex [点击查看](https://www.npmjs.com/package/vuex) \
+ant-design-vue [点击查看](https://www.npmjs.com/package/ant-design-vue) \
+vant [点击查看](https://www.npmjs.com/package/vant) \
+@vue/test-utils [点击查看](https://www.npmjs.com/package/@vue/test-utils)
 
 # 目录结构
 ```
