@@ -142,6 +142,7 @@ vant [点击查看](https://www.npmjs.com/package/vant) \
 [vivify](http://vivify.mkcreative.cz/) \
 [angrytools](https://angrytools.com/) \
 [animista](https://animista.net/) \
+[minimamente](https://www.minimamente.com/project/magic/) \
 [vue-page-transition 过渡](https://www.npmjs.com/package/vue-page-transition)
 [three-dots 等待效果](https://nzbin.github.io/three-dots/) \
 [elrumordelaluz 鼠标放上效果](https://elrumordelaluz.github.io/reshake/) \
