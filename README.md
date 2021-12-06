@@ -143,8 +143,9 @@ vant [点击查看](https://www.npmjs.com/package/vant) \
 [angrytools](https://angrytools.com/) \
 [animista](https://animista.net/) \
 [vue-page-transition 过渡](https://www.npmjs.com/package/vue-page-transition)
-[等待效果](https://nzbin.github.io/three-dots/) \
-[鼠标放上效果](https://elrumordelaluz.github.io/reshake/) \
+[three-dots 等待效果](https://nzbin.github.io/three-dots/) \
+[elrumordelaluz 鼠标放上效果](https://elrumordelaluz.github.io/reshake/) \
+[ianlunn 鼠标放上效果](http://ianlunn.github.io/Hover/)
 
 ## 拖拽
 [vuedraggable](https://www.npmjs.com/package/vuedraggable) \
