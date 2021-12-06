@@ -139,7 +139,12 @@ vant [点击查看](https://www.npmjs.com/package/vant) \
 
 ## 动画
 [animate css库](https://www.npmjs.com/package/animate .css) [](https://animate.style/) \
+[vivify](http://vivify.mkcreative.cz/) \
+[angrytools](https://angrytools.com/) \
+[animista](https://animista.net/) \
 [vue-page-transition 过渡](https://www.npmjs.com/package/vue-page-transition)
+[等待效果](https://nzbin.github.io/three-dots/) \
+[鼠标放上效果](https://elrumordelaluz.github.io/reshake/) \
 
 ## 拖拽
 [vuedraggable](https://www.npmjs.com/package/vuedraggable) \
