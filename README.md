@@ -146,7 +146,10 @@ vant [点击查看](https://www.npmjs.com/package/vant) \
 [vue-page-transition 过渡](https://www.npmjs.com/package/vue-page-transition)
 [three-dots 等待效果](https://nzbin.github.io/three-dots/) \
 [elrumordelaluz 鼠标放上效果](https://elrumordelaluz.github.io/reshake/) \
-[ianlunn 鼠标放上效果](http://ianlunn.github.io/Hover/)
+[ianlunn 鼠标放上效果](http://ianlunn.github.io/Hover/) \
+
+[案例 特效 1](https://codepen.io/) \
+[案例 css技巧 1](https://csscoco.com/inspiration/#/) \
 
 ## 拖拽
 [vuedraggable](https://www.npmjs.com/package/vuedraggable) \
