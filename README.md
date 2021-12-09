@@ -115,7 +115,7 @@ vant [点击查看](https://www.npmjs.com/package/vant) \
 [官网(包含支持v3)](https://xuliangzhan_admin.gitee.io/vxe-table/#/table/start/install) \
 [vue-grid-layout](https://www.npmjs.com/package/vue-grid-layout)
 
-## 加载
+## 加载 loading
 [nprogress](https://www.npmjs.com/package/nprogress) \
 [vue-simple-spinner](https://www.npmjs.com/package/vue-simple-spinner) \
 [vue-loading-overlay](https://www.npmjs.com/package/vue-loading-overlay) \
@@ -136,20 +136,6 @@ vant [点击查看](https://www.npmjs.com/package/vant) \
 
 ## 树
 [vue-treeselect](https://www.npmjs.com/package/ue-treeselect)
-
-## 动画
-[animate css库](https://www.npmjs.com/package/animate.css/) [官网](https://animate.style/) \
-[vivify](http://vivify.mkcreative.cz/) \
-[angrytools](https://angrytools.com/) \
-[animista](https://animista.net/) \
-[minimamente](https://www.minimamente.com/project/magic/) \
-[vue-page-transition 过渡](https://www.npmjs.com/package/vue-page-transition)
-[three-dots 等待效果](https://nzbin.github.io/three-dots/) \
-[elrumordelaluz 鼠标放上效果](https://elrumordelaluz.github.io/reshake/) \
-[ianlunn 鼠标放上效果](http://ianlunn.github.io/Hover/) \
-
-[案例 特效 1](https://codepen.io/) \
-[案例 css技巧 1](https://csscoco.com/inspiration/#/) \
 
 ## 拖拽
 [vuedraggable](https://www.npmjs.com/package/vuedraggable) \
@@ -192,6 +178,22 @@ vant [点击查看](https://www.npmjs.com/package/vant) \
 
 ## 剪切板
 [vue-clipboard2](https://www.npmjs.com/package/vue-clipboard2)
+
+## 动画
+[animate css库](https://www.npmjs.com/package/animate.css/) [官网](https://animate.style/) \
+[vivify](http://vivify.mkcreative.cz/) \
+[angrytools](https://angrytools.com/) \
+[animista](https://animista.net/) \
+[minimamente](https://www.minimamente.com/project/magic/) \
+[vue-page-transition 过渡](https://www.npmjs.com/package/vue-page-transition)
+[three-dots 等待效果](https://nzbin.github.io/three-dots/) \
+[elrumordelaluz 鼠标放上效果](https://elrumordelaluz.github.io/reshake/) \
+[ianlunn 鼠标放上效果](http://ianlunn.github.io/Hover/) \
+
+[基本形状](https://csslayout.io/) \
+[案例 特效 1](https://codepen.io/) \
+[案例 css技巧 1](https://csscoco.com/inspiration/#/) \
+[案例 css技巧 2](https://chokcoco.github.io/CSS-Inspiration/#/) \
 
 # 数据操作
 ## 加密解密
