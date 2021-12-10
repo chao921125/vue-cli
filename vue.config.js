@@ -148,6 +148,9 @@ module.exports = {
     },
     // 忽略因为三方包依赖出现的错误
     module: {
+      rules: [
+        { test: /\.mov$/, use: 'file-loader' },
+      ],
       unknownContextCritical: false
     }
   },
