@@ -6,7 +6,14 @@ module.exports = {
     es6: true,
     es2021: true
   },
-  extends: ["plugin:vue/vue3-essential", "plugin:vue/vue3-strongly-recommended", "plugin:vue/vue3-recommended", "plugin:prettier/recommended", "eslint:recommended", "@vue/prettier"],
+  extends: [
+    "plugin:vue/vue3-essential",
+    "plugin:vue/vue3-strongly-recommended",
+    "plugin:vue/vue3-recommended",
+    "plugin:prettier/recommended",
+    "eslint:recommended",
+    "@vue/prettier"
+  ],
   plugins: ['vue', 'prettier'],
   rules: {
     'prettier/prettier': 'error',
@@ -20,11 +27,14 @@ module.exports = {
   parserOptions: {
     parser: "babel-eslint",
     sourceType: 'module',
-    ecmaVersion: 6
+    ecmaVersion: 2021
   },
   overrides: [
     {
-      files: ["**/__tests__/*.{j,t}s?(x)"],
+      files: [
+        "**/__tests__/*.{j,t}s?(x)",
+        "**/tests/unit/**/*.spec.{j,t}s?(x)",
+      ],
       env: {
         mocha: true
       }

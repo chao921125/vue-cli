@@ -9,6 +9,38 @@ process.env.VUE_APP_VERSION = require("./package.json").version;
 
 const ENV_PRODUCTION = "production";
 
+// 1、在configureWebpack中忽略打包文件；2、在chainWebpack中配置cdn；3、在index.html中配置cdn；
+/*
+externals: {
+  // "v-charts": "VeIndex"
+},
+    
+config.plugin('html').tap((args) => {
+  args[0].cdn = cdn;
+  return args;
+});
+
+<% for (var i in htmlWebpackPlugin.options.cdn &&
+    htmlWebpackPlugin.options.cdn.js) { %>
+    <link
+      href="<%= htmlWebpackPlugin.options.cdn.js[i] %>"
+      rel="external nofollow"
+      as="script"
+    />
+<% } %>
+
+<% for (var i in htmlWebpackPlugin.options.cdn &&
+    htmlWebpackPlugin.options.cdn.js) { %>
+    <script src="<%= htmlWebpackPlugin.options.cdn.js[i] %>"></script>
+<% } %>
+*/
+const cdnFile = {
+  css: [],
+  js: [
+    "https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"
+  ]
+};
+
 module.exports = {
   publicPath: process.env.NODE_ENV === ENV_PRODUCTION ? "/" : "/",
   // 输出文件目录
@@ -121,7 +153,7 @@ module.exports = {
     proxy: {
       // 可以根据不同的URL通过不同的URL代理请求
       "/api": {
-        target: "http://0.0.0.0:9001",
+        target: "http://192.168.1.8:9997",
         pathRewrite: {
           "^/api": "", // remove base path
         },
@@ -148,6 +180,9 @@ module.exports = {
     },
     // 忽略因为三方包依赖出现的错误
     module: {
+      rules: [
+        { test: /\.mov$/, use: 'file-loader' },
+      ],
       unknownContextCritical: false
     }
   },

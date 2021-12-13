@@ -39,7 +39,7 @@ function errorLog(err) {
 
 // 创建一个 axios 实例
 const request = axios.create({
-  baseURL: "/api",
+  baseURL: "/",
   headers: { "Content-Type": "application/json" },
 });
 
