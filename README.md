@@ -10,18 +10,19 @@
 
 # 项目注意事项
 定版更新请勿升级 \
-postcss-pxtorem 5.1.1（已经废弃的移动端兼容方案，如果你要用请自行解决某些BUG） \
+~~postcss-pxtorem 5.1.1~~（已经废弃的移动端兼容方案） \
+node-sass 6.0.1 \
 sass-loader 10.2.0 \
 less-loader 7.3.0 \
 webpack 4.46.0 \
 screenfull 5.2.0 (6.0.0有问题请勿升级) \
-目前需要手动升级的包：[最新版本查看](https://www.npmjs.com/) \
+目前需要手动升级的包： \
 vue [点击查看](https://www.npmjs.com/package/vue) \
 vue-i18n [点击查看](https://www.npmjs.com/package/vue-i18n) \
 vue-router [点击查看](https://www.npmjs.com/package/vue-router) \
 vuex [点击查看](https://www.npmjs.com/package/vuex) \
-ant-design-vue [点击查看](https://www.npmjs.com/package/ant-design-vue) \
 vant [点击查看](https://www.npmjs.com/package/vant) \
+_ant-design-vue (不推荐使用)_ [点击查看](https://www.npmjs.com/package/ant-design-vue) \
 @vue/test-utils [点击查看](https://www.npmjs.com/package/@vue/test-utils)
 
 # 目录结构
