@@ -9,12 +9,14 @@ process.env.VUE_APP_VERSION = require("./package.json").version;
 
 const ENV_PRODUCTION = "production";
 
+const IS_PROD = process.env.NODE_ENV === ENV_PRODUCTION;
+
 // 1、在configureWebpack中忽略打包文件；2、在chainWebpack中配置cdn；3、在index.html中配置cdn；
 /*
 externals: {
   // "v-charts": "VeIndex"
 },
-    
+
 config.plugin('html').tap((args) => {
   args[0].cdn = cdn;
   return args;
