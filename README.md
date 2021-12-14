@@ -4,7 +4,8 @@
 [移动PC切换路由实现跳转不同页面及适配](./read/Mobile.md)
 以及各种小demo集合 \
 建议使用 yarn install \
-部分解释性.md文件已经迁移到了read目录中去
+部分解释性.md文件已经迁移到了read目录中去 \
+若果更新失败可以永久设置镜像仓库或者临时使用淘宝镜像仓库：--registry https://registry.npm.taobao.org \
 
 **_佛系更新_**
 
