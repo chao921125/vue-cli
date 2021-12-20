@@ -101,6 +101,14 @@ _ant-design-vue (不推荐使用)_ [点击查看](https://www.npmjs.com/package/
 [mint-ui](https://www.npmjs.com/package/mint-ui) // M [官网](http://mint-ui.github.io/) \
 [nutui @nutui/nutui@next](https://www.npmjs.com/package/@nutui/nutui) // M [官网](https://nutui.jd.com/) \
 [vuetifyjs](https://www.npmjs.com/package/vuetify) // PC [官网](https://vuetifyjs.com/) \
+
+[quasar](https://www.npmjs.com/package/quasar) // [官网](https://quasar.dev/) \
+[material](https://www.npmjs.com/package/next-material) // [官网](https://next-material.balmjs.com/#/) \
+[ionicframework](https://www.npmjs.com/package/ionicframework) // [官网](https://ionicframework.com/docs/) \
+[antoniandre](https://www.npmjs.com/package/antoniandre) // [官网](https://antoniandre.github.io/wave-ui/) \
+[naiveui](https://www.npmjs.com/package/naiveui) // [官网](https://www.naiveui.com/zh-CN/os-theme) \
+[primefaces](https://www.npmjs.com/package/primefaces) // [官网](https://primefaces.org/primevue/showcase/#/setup) \
+
 [iviewui 付费](https://www.npmjs.com/package/ant-design-vue) // ？PC [官网](https://www.iviewui.com/)
 
 ## 静态UI PC H5
