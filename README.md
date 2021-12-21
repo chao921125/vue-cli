@@ -4,7 +4,8 @@
 [移动PC切换路由实现跳转不同页面及适配](./read/Mobile.md)
 以及各种小demo集合 \
 建议使用 yarn install \
-部分解释性.md文件已经迁移到了read目录中去
+部分解释性.md文件已经迁移到了read目录中去 \
+若果更新失败可以永久设置镜像仓库或者临时使用淘宝镜像仓库：--registry https://registry.npm.taobao.org \
 
 **_佛系更新_**
 
@@ -94,12 +95,28 @@ _ant-design-vue (不推荐使用)_ [点击查看](https://www.npmjs.com/package/
 [element-plus](https://www.npmjs.com/package/element-plus) // PC [官网](https://element-plus.org/) \
 [ant-design-vue](https://www.npmjs.com/package/ant-design-vue) // PC [官网](https://2x.antdv.com/components/overview/) \
 [bootstrap-vue](https://www.npmjs.com/package/bootstrap-vue) // ? [官网](https://dev.bootstrap-vue.org/docs/) \
+[vuetifyjs](https://www.npmjs.com/package/vuetify) // PC [官网](https://vuetifyjs.com/) \
+[arco 字节](https://www.npmjs.com/package/vuetify) // PC [官网](https://arco.design/) \
+
 [vant@next](https://www.npmjs.com/package/vant) // M [官网](https://vant-contrib.gitee.io/vant/v3/) \
 [mui uni-app](https://www.npmjs.com/package/mui) // M [官网](https://dev.dcloud.net.cn/mui/) \
 [mui](https://www.npmjs.com/package/mui) // M [官网](https://mui.com/) \
 [mint-ui](https://www.npmjs.com/package/mint-ui) // M [官网](http://mint-ui.github.io/) \
 [nutui @nutui/nutui@next](https://www.npmjs.com/package/@nutui/nutui) // M [官网](https://nutui.jd.com/) \
-[vuetifyjs](https://www.npmjs.com/package/vuetify) // PC [官网](https://vuetifyjs.com/) \
+https://varlet.gitee.io/varlet-ui/#/zh-CN/home \
+https://antoniandre.github.io/wave-ui/ \
+[ionicframework](https://www.npmjs.com/package/ionicframework) // [官网](https://ionicframework.com/docs/) \
+https://next.vuetifyjs.com/en/ \
+
+[quasar](https://www.npmjs.com/package/quasar) // [官网](https://quasar.dev/) \
+[balmjs](https://www.npmjs.com/package/balmjs) // [官网](https://next-material.balmjs.com/#/) \
+[antoniandre](https://www.npmjs.com/package/antoniandre) // [官网](https://antoniandre.github.io/wave-ui/) \
+[naiveui](https://www.npmjs.com/package/naiveui) // [官网](https://www.naiveui.com/zh-CN/os-theme) \
+[primefaces](https://www.npmjs.com/package/primefaces) // [官网](https://primefaces.org/primevue/showcase/#/setup) \
+https://vuestic.dev/ \
+https://idux.site/ \
+https://bsie.gitee.io/relaxplus/#/ \
+
 [iviewui 付费](https://www.npmjs.com/package/ant-design-vue) // ？PC [官网](https://www.iviewui.com/)
 
 ## 静态UI PC H5
@@ -110,6 +127,9 @@ _ant-design-vue (不推荐使用)_ [点击查看](https://www.npmjs.com/package/
 [Onsen UI](https://onsen.io/) \
 [Ionic](https://ionicframework.com/) \
 [Bootstrap](https://getbootstrap.com/)
+
+## 图标
+[iconpark](https://iconpark.oceanengine.com/home)
 
 ## 其他三方库
 [vxe-table](https://www.npmjs.com/package/vxe-table)
