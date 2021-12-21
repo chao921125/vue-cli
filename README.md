@@ -60,8 +60,7 @@ _ant-design-vue (不推荐使用)_ [点击查看](https://www.npmjs.com/package/
 [core-js](https://www.npmjs.com/package/core-js)
 
 ## http请求
-[axios](https://www.npmjs.com/package/axios)
-[官网](http://axios-js.com/) \
+[axios](https://www.npmjs.com/package/axios) [官网](http://axios-js.com/) \
 [qs](https://www.npmjs.com/package/qs)
 
 # 解析相关
@@ -88,6 +87,9 @@ _ant-design-vue (不推荐使用)_ [点击查看](https://www.npmjs.com/package/
 ## 节点和浏览器的BDD / TDD断言库
 [chai](https://www.npmjs.com/package/chai) \
 [cross-env](https://www.npmjs.com/package/cross-env)
+
+## 环境配置获取
+[dotenv](https://www.npmjs.com/package/dotenv)
 
 # UI相关 https://madewith.cn/
 ## UI 官方
