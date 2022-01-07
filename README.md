@@ -6,6 +6,7 @@
 建议使用 yarn install \
 部分解释性.md文件已经迁移到了read目录中去 \
 若果更新失败可以永久设置镜像仓库或者临时使用淘宝镜像仓库：--registry https://registry.npm.taobao.org \
+为了加快网站渲染速度，请尽可能使用cdn加速，不要把包都打进去
 
 **_佛系更新_**
 
