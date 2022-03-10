@@ -28,6 +28,7 @@
 <script>
 import Footer from "./layout/footer/Footer";
 import { mapActions } from "vuex";
+import { demoMethods } from "@/api/user.js";
 
 export default {
   name: "Login",
@@ -44,6 +45,9 @@ export default {
       }
     }
   },
+  created() {
+    this.testMethod();
+  },
   methods: {
     ...mapActions("store/user", ["login"]),
     async submitForm() {
@@ -57,6 +61,11 @@ export default {
         this.$router.push({ path: "/index" });
       });
     },
+    testMethod() {
+      demoMethods({id: 2}).then(res => {
+        console.log(res);
+      });
+    }
   },
 };
 </script>

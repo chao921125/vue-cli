@@ -1,5 +1,5 @@
-// import { nextTick } from 'vue'
-import { createI18n } from 'vue-i18n'
+// import { nextTick } from "vue"
+import { createI18n } from "vue-i18n"
 import store from "@/store";
 import util from "@/plugins/utils";
 

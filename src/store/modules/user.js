@@ -101,10 +101,12 @@ export default {
         };
         getUserInfo(userParams)
           .then(async (resp) => {
-            commit("setUserInfo", resp);
+            // 菜单和路由
             commit("setMenus", resp.menus);
             let routers = setRouter(resp.menus);
             commit("setRouters", routers);
+            // 删除掉菜单，反正你也用不到
+            commit("setUserInfo", delete resp.menus);
             resolve(routers);
           })
           .catch((error) => {
@@ -133,7 +135,8 @@ export default {
 //   status: 1, // 菜单状态 默认1，0停用（后端标记使用） -----后端筛选
 //   perms: "*", // 权限标识 admin:system:*
 //   isCache: 0, // 是否缓存 默认0，1 keep-alive 缓存数据——路由使用
-//   isSideMenu: 1, // 是否展示侧边栏 默认1，0不展示——路由使用
+//   isHidden: true, // 是否展示侧边栏 默认true，false不展示——路由使用
+//   isHideSubMenu: true, // 子菜单是否展示侧边栏 默认false，true不展示——路由使用
 // };
 
 // 组装动态路由
@@ -235,7 +238,10 @@ const setItemRouter = (routerList, dataList, baseUrl) => {
       children: [],
     };
     if (data.children && data.children.length > 0) {
-      route.redirect = { name: data.children[0].path };
+      // 当访问的路由是含有子节点的路由，并且子节点非菜单，那么重定向
+      if (!data.isHideSubMenu) {
+        route.redirect = { name: data.children[0].path };
+      }
       routerList.push(route);
       setItemRouter(routerList, data.children, path);
     } else {

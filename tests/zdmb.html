@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .parent {
+      width: 280px;
+    }
+    .la {
+      display: inline-block;
+      width: 100%;
+      background-color: #f2f2f2;
+      cursor: pointer;
+      height: 30px;
+      line-height: 30px;
+      border-bottom: 1px solid #ccc;
+    }
+ 
+    .t1 {
+      display: none;
+    }
+ 
+    .content {
+      height: 0px;
+      overflow: hidden;
+      transition: all .38s;
+    }
+ 
+    .t1:checked+.content {
+      height: 100px;
+    }
+  </style>
+</head>
+ 
+<body>
+  <div class="parent">
+    <div>
+      <label for="t1" class="la">check</label>
+      <input type="checkbox" name="t" id="t1" class="t1">
+      <div class="content">
+        <p>Hello</p>
+        <p>go go go</p>
+      </div>
+    </div>
+    <div>
+      <label for="t2" class="la">check</label>
+      <input type="checkbox" name="t" id="t2" class="t1">
+      <div class="content">
+        <p>Hello</p>
+        <p>go go go</p>
+      </div>
+    </div>
+    <div>
+      <label for="t3" class="la">check</label>
+      <input type="checkbox" name="t" id="t3" class="t1">
+      <div class="content">
+        <p>Hello</p>
+        <p>go go go</p>
+      </div>
+    </div>
+  </div>
+</body>
+ 
+</html>

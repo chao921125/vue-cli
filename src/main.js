@@ -49,7 +49,14 @@ app.config.warnHandler = (msg, vm, trace) => {
 
 import ElementPlus from "element-plus";
 import "@/assets/styles/reset/element.scss";
-app.use(ElementPlus, { size: 'small', zIndex: 9999 });
+app.use(ElementPlus, { size: "small", zIndex: 9999 });
+// 定义图标
+import * as ElementPlusIcons from "@element-plus/icons";
+for (const iconName in ElementPlusIcons) {
+  if (Reflect.has(ElementPlusIcons, iconName)) {
+    app.component(iconName, ElementPlusIcons[iconName]);
+  }
+}
 // app.use(ElementPlus);
 
 // 全局样式定义
@@ -92,7 +99,7 @@ app.config.isCustomElement = (tag) => tag.startsWith("ion-");
 //   data: () => ({
 //     count: 0,
 //   }),
-//   template: '<button @click="count++">Clicked {{ count }} times.</button>',
+//   template: "<button @click="count++">Clicked {{ count }} times.</button>",
 // });
 
 // 锚点
@@ -107,12 +114,12 @@ app.directive("anchor", {
 // 在应用之间共享配置 (如组件或指令) 的一种方法是创建工厂功能
 // const createMyApp = options => {
 //   const app = createApp(options)
-//   app.directive('focus' /* ... */)
+//   app.directive("focus" /* ... */)
 //   return app
 // }
 //
-// createMyApp(Foo).mount('#foo')
-// createMyApp(Bar).mount('#bar')
+// createMyApp(Foo).mount("#foo")
+// createMyApp(Bar).mount("#bar")
 
 if (process.env.VUE_APP_MOCK) {
   require("@/mock");

@@ -1,12 +1,7 @@
 <template>
-  <el-switch
-    v-model="i18n"
-    active-text="中文"
-    inactive-text="EN"
-    @change="changeI18n">
-  </el-switch>
-  {{ $t("testName") }}
-  {{ $t("hello", { msg: "hello" }) }}
+  <el-switch v-model="i18n" active-text="中文" inactive-text="EN" @change="changeI18n"></el-switch>
+  <div>普通写法：{{ $t("testName") }}</div>
+  <div>占位符写法：{{ $t("hello", { msg: "hello" }) }}</div>
 </template>
 
 <script>
