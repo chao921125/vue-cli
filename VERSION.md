@@ -1,2 +1,3 @@
 # V1.0.0
-1.基本框架搭建采用 vue3+vue-router4+vuex4
+1.基本框架搭建采用 vue3+vue-router4+vuex4 \
+2.实现从px转rem，实在没有精力去维护了，这个当做正式版，且放弃维护，统一转到main分支。
