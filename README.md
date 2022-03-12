@@ -1,3 +1,9 @@
+# vite
+```
+npm create vite@latest
+
+```
+
 # vue3 admin基础框架
 [体验地址](https://www.ixunta.online/) \
 [更新日志，写了个寂寞](./read/VERSION.md) \
