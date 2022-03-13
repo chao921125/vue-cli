@@ -5,12 +5,12 @@
         <el-main class="main-box">
           <router-view v-slot="{ Component }">
             <keep-alive v-if="$route.meta.isCache">
-              <component :is="Component"/>
+              <component :is="Component" />
             </keep-alive>
-            <component :is="Component" v-else/>
+            <component :is="Component" v-else />
           </router-view>
         </el-main>
-<!--        <el-footer class="footer-box">Footer</el-footer>-->
+        <!--        <el-footer class="footer-box">Footer</el-footer>-->
       </el-container>
     </el-container>
   </el-container>
@@ -71,7 +71,7 @@ export default {
   }
   .footer-box {
     height: 30px !important;
-    line-height: 30px !important;;
+    line-height: 30px !important;
     background-color: #d9d9d9;
   }
 }

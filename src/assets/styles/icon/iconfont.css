@@ -1,11 +1,11 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2596500 */
-  src: url('iconfont.eot?t=1623050091229'); /* IE9 */
-  src: url('iconfont.eot?t=1623050091229#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('iconfont.woff2?t=1623050091229') format('woff2'),
-       url('iconfont.woff?t=1623050091229') format('woff'),
-       url('iconfont.ttf?t=1623050091229') format('truetype'),
-       url('iconfont.svg?t=1623050091229#iconfont') format('svg');
+  src: url("iconfont.eot?t=1623050091229"); /* IE9 */
+  src: url("iconfont.eot?t=1623050091229#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("iconfont.woff2?t=1623050091229") format("woff2"),
+    url("iconfont.woff?t=1623050091229") format("woff"),
+    url("iconfont.ttf?t=1623050091229") format("truetype"),
+    url("iconfont.svg?t=1623050091229#iconfont") format("svg");
 }
 
 .iconfont {
@@ -661,4 +661,3 @@
 .icon-codelibrary:before {
   content: "\e7a0";
 }
-

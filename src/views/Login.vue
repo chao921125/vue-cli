@@ -16,7 +16,14 @@
             <el-input v-model="loginForm.userPassword" type="password"></el-input>
           </el-form-item>
           <el-form-item label="" prop="">
-            <el-button class="cc-width-fill" type="primary" :disabled="isSubmit" :loading="isSubmit" @click="submitForm">login</el-button>
+            <el-button
+              class="cc-width-fill"
+              type="primary"
+              :disabled="isSubmit"
+              :loading="isSubmit"
+              @click="submitForm"
+              >login</el-button
+            >
           </el-form-item>
         </el-form>
       </el-col>
@@ -33,7 +40,7 @@ import { demoMethods } from "@/api/user.js";
 export default {
   name: "Login",
   components: {
-    Footer
+    Footer,
   },
   data() {
     return {
@@ -41,9 +48,9 @@ export default {
       isSubmit: false,
       loginForm: {
         userName: "admin",
-        userPassword: "admin123"
-      }
-    }
+        userPassword: "admin123",
+      },
+    };
   },
   created() {
     this.testMethod();
@@ -62,10 +69,10 @@ export default {
       });
     },
     testMethod() {
-      demoMethods({id: 2}).then(res => {
+      demoMethods({ id: 2 }).then((res) => {
         console.log(res);
       });
-    }
+    },
   },
 };
 </script>
@@ -86,7 +93,7 @@ export default {
     .login-form {
       width: 300px;
       padding: 10px 30px;
-      background-color: #FFF;
+      background-color: #fff;
       border-radius: 10px;
     }
   }

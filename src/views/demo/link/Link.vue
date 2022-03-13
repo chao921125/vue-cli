@@ -12,18 +12,16 @@ export default {
   methods: {
     scrollTo(index) {
       // 获取需要滚动的距离
-      let total = document.querySelectorAll('.item')[index].offsetTop - 45;
+      let total = document.querySelectorAll(".item")[index].offsetTop - 45;
       // Chrome
       document.body.scrollTop = total;
       // Firefox
       document.documentElement.scrollTop = total;
       // Safari
       window.pageYOffset = total;
-    }
-  }
+    },
+  },
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

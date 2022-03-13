@@ -51,10 +51,15 @@ export function formatMoneyTwo(money) {
     return money;
   }
   money = money.toString().replace(/\\,/g, "");
-  if (isNaN(money) || money == null || money === "null" || money === "0" || money === 0) return "0.00";
+  if (isNaN(money) || money == null || money === "null" || money === "0" || money === 0)
+    return "0.00";
   money = Math.round(money * 100) / 100;
   if (money < 0) {
-    return "-" + formatMoneyInteger(Math.floor(Math.abs(money)) + "") + formatMoneyDecimal(Math.abs(money));
+    return (
+      "-" +
+      formatMoneyInteger(Math.floor(Math.abs(money)) + "") +
+      formatMoneyDecimal(Math.abs(money))
+    );
   } else {
     return formatMoneyInteger(Math.floor(money) + "") + formatMoneyDecimal(money);
   }
@@ -145,28 +150,28 @@ export function dealNumBack(val) {
 }
 
 /**
-  * 参数说明：
-  * number：要格式化的数字
-  * decimals：保留几位小数
-  * thousands_sep：千分位符号
-  * dec_point：小数点符号
-  */
- // eslint-ignore
- const numberFormat = (value, decimals, thousands_sep, dec_point) => {
+ * 参数说明：
+ * number：要格式化的数字
+ * decimals：保留几位小数
+ * thousands_sep：千分位符号
+ * dec_point：小数点符号
+ */
+// eslint-ignore
+const numberFormat = (value, decimals, thousands_sep, dec_point) => {
   if (!value) return 0;
   if (!decimals) decimals = 2;
   if (!thousands_sep) thousands_sep = ",";
   if (!dec_point) dec_point = ".";
   value = (value + "").replace(/[^0-9+-Ee.]/g, "");
   let n = !isFinite(+value) ? 0 : +value,
-      prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
-      sep = (typeof thousands_sep === "undefined") ? "," : thousands_sep,
-      dec = (typeof dec_point === "undefined") ? "." : dec_point,
-      s = "",
-      toFixedFix = (n, prec) => {
-        let k = Math.pow(10, prec);
-        return "" + Math.ceil(n * k) / k;
-      };
+    prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+    sep = typeof thousands_sep === "undefined" ? "," : thousands_sep,
+    dec = typeof dec_point === "undefined" ? "." : dec_point,
+    s = "",
+    toFixedFix = (n, prec) => {
+      let k = Math.pow(10, prec);
+      return "" + Math.ceil(n * k) / k;
+    };
   s = (prec ? toFixedFix(n, prec) : "" + Math.round(n)).split(".");
   let re = /(-?\d+)(\d{3})/;
   while (re.test(s[0])) {

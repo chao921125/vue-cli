@@ -1,31 +1,31 @@
 <template>
-  <view>{{ hourString+':'+minuteString+':'+secondString }}</view>
+  <view>{{ hourString + ":" + minuteString + ":" + secondString }}</view>
 </template>
 
 <script>
 export default {
-  name: 'Timer',
+  name: "Timer",
   props: {
     remainTime: {
       type: Number,
-      default: 0
+      default: 0,
     },
     startDate: {
       type: [Date, String],
-      default: undefined
+      default: undefined,
     },
     endDate: {
       type: [Date, String],
-      default: undefined
-    }
+      default: undefined,
+    },
   },
   data() {
     return {
-      hour: '',
-      minute: '',
-      second: '',
-      promiseTimer: '',
-      remainTimes: 10000
+      hour: "",
+      minute: "",
+      second: "",
+      promiseTimer: "",
+      remainTimes: 10000,
     };
   },
   computed: {
@@ -37,23 +37,29 @@ export default {
     },
     secondString() {
       return this.formatNum(this.second);
-    }
+    },
   },
   created() {
     if (this.remainTime) {
       this.remainTimes = this.remainTime;
     } else {
       if (this.startDate && this.endDate) {
-        this.remainTimes = Math.round((new Date(this.endDate.replace(/-/g, '/')).getTime() - new Date(this.startDate.replace(/-/g, '/')).getTime()) / 1000);
+        this.remainTimes = Math.round(
+          (new Date(this.endDate.replace(/-/g, "/")).getTime() -
+            new Date(this.startDate.replace(/-/g, "/")).getTime()) /
+            1000
+        );
       }
       if (!this.startDate && this.endDate) {
-        this.remainTimes = Math.round((new Date(this.endDate.replace(/-/g, '/')).getTime() - new Date().getTime()) / 1000);
+        this.remainTimes = Math.round(
+          (new Date(this.endDate.replace(/-/g, "/")).getTime() - new Date().getTime()) / 1000
+        );
       }
     }
   },
   mounted() {
     if (this.remainTimes > 0) {
-      this.hour = Math.floor((this.remainTimes / 3600));
+      this.hour = Math.floor(this.remainTimes / 3600);
       this.minute = Math.floor((this.remainTimes / 60) % 60);
       this.second = Math.floor(this.remainTimes % 60);
       this.countDowm();
@@ -72,14 +78,14 @@ export default {
     countDowm() {
       let self = this;
       clearInterval(this.promiseTimer);
-      this.promiseTimer = setInterval(function() {
+      this.promiseTimer = setInterval(function () {
         if (self.hour === 0) {
           if (self.minute !== 0 && self.second === 0) {
             self.second = 59;
             self.minute -= 1;
           } else if (self.minute === 0 && self.second === 0) {
             self.second = 0;
-            self.$emit('countDowmEnd', true);
+            self.$emit("countDowmEnd", true);
             clearInterval(self.promiseTimer);
           } else {
             self.second -= 1;
@@ -99,12 +105,10 @@ export default {
       }, 1000);
     },
     formatNum(num) {
-      return num < 10 ? '0' + num : '' + num;
-    }
-  }
+      return num < 10 ? "0" + num : "" + num;
+    },
+  },
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

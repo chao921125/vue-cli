@@ -12,27 +12,25 @@ export default {
   props: {
     title: {
       type: String,
-      default: ""
+      default: "",
     },
     content: {
       type: String,
-      default: ""
-    }
+      default: "",
+    },
   },
   data() {
     return {
       defTitle: "返回",
-      defContent: "详情"
-    }
+      defContent: "详情",
+    };
   },
   methods: {
     goBack() {
       this.$router.go(-1);
-    }
-  }
+    },
+  },
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

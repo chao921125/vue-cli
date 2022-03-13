@@ -1,7 +1,12 @@
 <template>
   <template v-for="item in subMenuList">
     <template v-if="!item.isHidden && (Number(item.type) === 0 || Number(item.type) === 1)">
-      <el-sub-menu v-if="!item.isHideSubMenu && item.children && item.children.length > 0" :key="item.id" :index="item.path" v-bind="$attrs">
+      <el-sub-menu
+        v-if="!item.isHideSubMenu && item.children && item.children.length > 0"
+        :key="item.id"
+        :index="item.path"
+        v-bind="$attrs"
+      >
         <template #title>
           <i class="iconfont" :class="item.icon"></i>
           <span>{{ item.title }}</span>
@@ -32,8 +37,8 @@ export default {
     },
     basePath: {
       type: String,
-      default: ""
-    }
+      default: "",
+    },
   },
   methods: {
     resolvePath(path) {

@@ -10,7 +10,7 @@ export function copyText(ref, text) {
     // eslint-disable-next-line no-unused-vars
     text: (trigger) => {
       return text || "";
-    }
+    },
   });
   // eslint-disable-next-line no-unused-vars
   clipboard.on("success", (e) => {
@@ -39,15 +39,15 @@ export function param2Obj(url) {
     return {};
   }
   const obj = {};
-  const searchArr = search.split("&")
-  searchArr.forEach(v => {
+  const searchArr = search.split("&");
+  searchArr.forEach((v) => {
     const index = v.indexOf("=");
     if (index !== -1) {
       const name = v.substring(0, index);
       const val = v.substring(index + 1, v.length);
       obj[name] = val;
     }
-  })
+  });
   return obj;
 }
 
@@ -61,13 +61,13 @@ export function deepClone(source) {
     throw new Error("error arguments deepClone");
   }
   const targetObj = source.constructor === Array ? [] : {};
-  Object.keys(source).forEach(keys => {
+  Object.keys(source).forEach((keys) => {
     if (source[keys] && typeof source[keys] === "object") {
       targetObj[keys] = deepClone(source[keys]);
     } else {
       targetObj[keys] = source[keys];
     }
-  })
+  });
   return targetObj;
 }
 

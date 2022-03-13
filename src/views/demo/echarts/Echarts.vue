@@ -9,16 +9,11 @@
       <p>1、npm i element-resize-detector</p>
       <p>2、import elementResizeDetectorMaker from 'element-resize-detector';</p>
       <p>3、const erdm = elementResizeDetectorMaker();</p>
-      <p>4、erdm.listenTo(document.getElementById(''), (element) => {
-        const width = element.offsetWidth;
-        const height = element.offsetHeight;
-        that.$nextTick(() => {
-          // 使echarts尺寸重置
-          echarts.resize({
-            width, height
-          });
-        });
-      });</p>
+      <p>
+        4、erdm.listenTo(document.getElementById(''), (element) => { const width =
+        element.offsetWidth; const height = element.offsetHeight; that.$nextTick(() => { //
+        使echarts尺寸重置 echarts.resize({ width, height }); }); });
+      </p>
     </el-col>
   </el-row>
 </template>
@@ -29,8 +24,8 @@ export default {
   name: "Echarts",
   data() {
     return {
-      i18n: true
-    }
+      i18n: true,
+    };
   },
   mounted() {
     this.init();
@@ -43,13 +38,13 @@ export default {
       echarts.demo("chartDemo");
       // echarts.line("chartDemo", "", ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'], null, [120, 132, 101, 134, 90, 230, 210]);
     },
-  }
+  },
 };
 </script>
 
 <style scoped lang="scss">
-  .chart-box {
-    width: 100%;
-    height: 600px;
-  }
+.chart-box {
+  width: 100%;
+  height: 600px;
+}
 </style>

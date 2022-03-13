@@ -1,28 +1,32 @@
 <template>
   <text>
-    <text v-if="day > 0">{{ dayString + 'd ' + hourString + 'h ' + minuteString + 'm ' + secondString + 's' }}</text>
-    <text v-else-if="hour > 0">{{ hourString + 'h ' + minuteString + 'm ' + secondString + 's' }}</text>
-    <text v-else-if="minute > 0">{{ minuteString + 'm ' + secondString + 's' }}</text>
-    <text v-else>{{ secondString + 's' }}</text>
+    <text v-if="day > 0">{{
+      dayString + "d " + hourString + "h " + minuteString + "m " + secondString + "s"
+    }}</text>
+    <text v-else-if="hour > 0">{{
+      hourString + "h " + minuteString + "m " + secondString + "s"
+    }}</text>
+    <text v-else-if="minute > 0">{{ minuteString + "m " + secondString + "s" }}</text>
+    <text v-else>{{ secondString + "s" }}</text>
   </text>
 </template>
 
 <script>
 export default {
-  name: 'TimeDHMS',
+  name: "TimeDHMS",
   props: {
     remainTime: {
       type: Number,
-      default: 0
+      default: 0,
     },
     startDate: {
       type: [Date, String],
-      default: undefined
+      default: undefined,
     },
     endDate: {
       type: [Date, String],
-      default: undefined
-    }
+      default: undefined,
+    },
   },
   data() {
     return {
@@ -30,8 +34,8 @@ export default {
       hour: 0,
       minute: 0,
       second: 0,
-      promiseTimer: '',
-      remainTimes: 0
+      promiseTimer: "",
+      remainTimes: 0,
     };
   },
   computed: {
@@ -46,17 +50,23 @@ export default {
     },
     secondString() {
       return this.formatNum(this.second);
-    }
+    },
   },
   created() {
     if (this.remainTime) {
       this.remainTimes = this.remainTime;
     } else {
       if (this.startDate && this.endDate) {
-        this.remainTimes = Math.round((new Date(this.endDate.replace(/-/g, '/')).getTime() - new Date(this.startDate.replace(/-/g, '/')).getTime()) / 1000);
+        this.remainTimes = Math.round(
+          (new Date(this.endDate.replace(/-/g, "/")).getTime() -
+            new Date(this.startDate.replace(/-/g, "/")).getTime()) /
+            1000
+        );
       }
       if (!this.startDate && this.endDate) {
-        this.remainTimes = Math.round((new Date(this.endDate.replace(/-/g, '/')).getTime() - new Date().getTime()) / 1000);
+        this.remainTimes = Math.round(
+          (new Date(this.endDate.replace(/-/g, "/")).getTime() - new Date().getTime()) / 1000
+        );
       }
     }
   },
@@ -73,14 +83,14 @@ export default {
     countTime() {
       let self = this;
       clearInterval(this.promiseTimer);
-      this.promiseTimer = setInterval(function() {
+      this.promiseTimer = setInterval(function () {
         if (self.hour === 0) {
           if (self.minute !== 0 && self.second === 0) {
             self.second = 59;
             self.minute -= 1;
           } else if (self.minute === 0 && self.second === 0) {
             self.second = 0;
-            self.$emit('countTime', true);
+            self.$emit("countTime", true);
             clearInterval(self.promiseTimer);
           } else {
             self.second -= 1;
@@ -102,8 +112,8 @@ export default {
     formatNum(num) {
       return num;
       // return num < 10 && num > 0 ? '0' + num : '' + num;
-    }
-  }
+    },
+  },
 };
 </script>
 

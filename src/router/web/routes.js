@@ -160,7 +160,7 @@ const frameCom = [
   {
     path: "/:pathMatch(.*)",
     redirect: { name: "login" },
-  }
+  },
 ];
 
 export default [...frameIn, ...frameOut, ...frameCom];

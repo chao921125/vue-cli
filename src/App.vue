@@ -1,9 +1,9 @@
 <template>
-<!--  <ConfigProvider :locale="getAntdLocale">-->
-<!--    <AppProvider>-->
-      <RouterView />
-<!--    </AppProvider>-->
-<!--  </ConfigProvider>-->
+  <!--  <ConfigProvider :locale="getAntdLocale">-->
+  <!--    <AppProvider>-->
+  <RouterView />
+  <!--    </AppProvider>-->
+  <!--  </ConfigProvider>-->
 </template>
 
 <script lang="ts" setup>
