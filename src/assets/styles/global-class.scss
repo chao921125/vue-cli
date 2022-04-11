@@ -83,6 +83,7 @@
   cursor: pointer;
 }
 
+
 // 浮动相关
 .#{$prefix}-fl {
   float: left;
@@ -96,43 +97,23 @@
   content: "";
 }
 .#{$prefix}-clearfix:after {
-  clear: both;
+  clear: both
 }
 
 // 边距相关
 $i: 50;
 @while $i > 0 {
-  .#{$prefix}-m-#{$i} {
-    margin: #{$i}px;
-  }
-  .#{$prefix}-mt-#{$i} {
-    margin-top: #{$i}px;
-  }
-  .#{$prefix}-mr-#{$i} {
-    margin-right: #{$i}px;
-  }
-  .#{$prefix}-mb-#{$i} {
-    margin-bottom: #{$i}px;
-  }
-  .#{$prefix}-ml-#{$i} {
-    margin-left: #{$i}px;
-  }
+  .#{$prefix}-m-#{$i} { margin: #{$i}px; }
+  .#{$prefix}-mt-#{$i} { margin-top: #{$i}px; }
+  .#{$prefix}-mr-#{$i} { margin-right: #{$i}px; }
+  .#{$prefix}-mb-#{$i} { margin-bottom: #{$i}px; }
+  .#{$prefix}-ml-#{$i} { margin-left: #{$i}px; }
 
-  .#{$prefix}-p-#{$i} {
-    padding: #{$i}px;
-  }
-  .#{$prefix}-pt-#{$i} {
-    padding-top: #{$i}px;
-  }
-  .#{$prefix}-pr-#{$i} {
-    padding-right: #{$i}px;
-  }
-  .#{$prefix}-pb-#{$i} {
-    padding-bottom: #{$i}px;
-  }
-  .#{$prefix}-pl-#{$i} {
-    padding-left: #{$i}px;
-  }
+  .#{$prefix}-p-#{$i} { padding: #{$i}px; }
+  .#{$prefix}-pt-#{$i} { padding-top: #{$i}px; }
+  .#{$prefix}-pr-#{$i} { padding-right: #{$i}px; }
+  .#{$prefix}-pb-#{$i} { padding-bottom: #{$i}px; }
+  .#{$prefix}-pl-#{$i} { padding-left: #{$i}px; }
   $i: $i - 5;
 }
 
@@ -164,7 +145,7 @@ $i: 50;
 
 .transition-width-1s {
   transition: width 1s;
-  -moz-transition: width 1s; /* Firefox 4 */
-  -webkit-transition: width 1s; /* Safari 和 Chrome */
-  -o-transition: width 1s; /* Opera */
+  -moz-transition: width 1s;	/* Firefox 4 */
+  -webkit-transition: width 1s;	/* Safari 和 Chrome */
+  -o-transition: width 1s;	/* Opera */
 }

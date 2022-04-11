@@ -1,5 +1,5 @@
 // import { nextTick } from "vue"
-import { createI18n } from "vue-i18n";
+import { createI18n } from "vue-i18n"
 import store from "@/store";
 import util from "@/plugins/utils";
 
@@ -39,6 +39,6 @@ const i18n = createI18n({
     util.log.danger(">>>>>> Vue 实例 >>>>>>");
     console.log(vm);
   },
-});
+})
 
 export default i18n;

@@ -26,10 +26,7 @@ export default {
   mutations: {
     setUserInfo: (state, userInfo) => {
       state.name = userInfo.name || "";
-      state.avatar =
-        userInfo.avatar === ""
-          ? require("@/assets/logo.png")
-          : process.env.VUE_APP_BASE_API + userInfo.avatar;
+      state.avatar = userInfo.avatar === "" ? require("@/assets/logo.png") : process.env.VUE_APP_BASE_API + userInfo.avatar;
       state.roles = userInfo.roles || [];
       state.permissions = userInfo.permissions || [];
     },
@@ -218,7 +215,7 @@ const setRouter = (dataList) => {
         isDisable: true,
         isCache: false,
       },
-    },
+    }
   ];
   setItemRouter(addRouters.children, dataList, "");
   return [...rootRouter, addRouters, ...lastRouter];

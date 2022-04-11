@@ -34,7 +34,7 @@ export default {
     UK_UA: "zh-CN", // 乌克兰语
     VI_VN: "zh-CN", // 越南语
     ZH_CN: "zh-CN", // 简体中文
-    ZH_TW: "zh-TW", // 繁体中文
+    ZH_TW: "zh-TW" // 繁体中文
   },
   reg: {
     chinaPhone: /^0?(13[0-9]|14[57]|15[0-9]|166|17[0-9]|18[0-9]|19[89])[0-9]{8}$/,
@@ -51,5 +51,5 @@ export default {
   },
   images: {
     loginLogo: require("@/assets/images/login/login-left.png"),
-  },
+  }
 };

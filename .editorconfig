@@ -4,16 +4,13 @@ root = true
 # 匹配全部文件
 [*]
 # 结尾换行符，可选"lf"、"cr"、"crlf"
-end_of_line = lf
+# end_of_line = lf
 # 在文件结尾插入新行
 insert_final_newline = true
 # 删除一行中的前后空格
 trim_trailing_whitespace = true
 # 设置字符集
 charset = utf-8
-indent_style = space
-indent_size = 2
-max_line_length = 100
 
 # 匹配结尾的文件
 [*.{js,jsx,ts,tsx}]
@@ -31,9 +28,6 @@ indent_size = 2
 insert_final_newline = false
 trim_trailing_whitespace = false
 
-[*.{yml,yaml,json}]
-indent_style = space
-indent_size = 2
 
 # 以下匹配，类同
 # [Makefile]

@@ -8,9 +8,11 @@ import PageHeader from "@/components/back/PageHeader";
 export default {
   name: "UsersCreate",
   components: {
-    PageHeader,
+    PageHeader
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>

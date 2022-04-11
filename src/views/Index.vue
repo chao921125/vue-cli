@@ -12,9 +12,9 @@
           <router-view v-slot="{ Component }">
             <transition name="el-fade-in-linear">
               <keep-alive v-if="$route.meta.isCache">
-                <component :is="Component" />
+                <component :is="Component"/>
               </keep-alive>
-              <component :is="Component" v-else />
+              <component :is="Component" v-else/>
             </transition>
           </router-view>
         </el-main>

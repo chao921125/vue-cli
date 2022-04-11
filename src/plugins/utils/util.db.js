@@ -22,13 +22,7 @@ export default db;
  * @param {Object} payload defaultValue {*} 初始化默认值
  * @returns {String} 可以直接使用的路径
  */
-export function pathInit({
-  dbName = "database",
-  path = "",
-  user = true,
-  validator = () => true,
-  defaultValue = "",
-}) {
+export function pathInit({ dbName = "database", path = "", user = true, validator = () => true, defaultValue = "" }) {
   const uuid = util.cookies.get("uuid") || "ghost-uuid";
   const currentPath = `${dbName}.${user ? `user.${uuid}` : "public"}${path ? `.${path}` : ""}`;
   const value = db.get(currentPath).value();
@@ -85,13 +79,7 @@ export function dbGet({ dbName = "database", path = "", defaultValue = "", user 
  * @description 获取存储数据库对象
  * @param {Object} payload user {Boolean} 是否区分用户
  */
-export function database({
-  dbName = "database",
-  path = "",
-  user = false,
-  validator = () => true,
-  defaultValue = "",
-} = {}) {
+export function database({ dbName = "database", path = "", user = false, validator = () => true, defaultValue = "" } = {}) {
   return db.get(
     pathInit({
       dbName,

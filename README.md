@@ -1,9 +1,3 @@
-# vite
-```
-npm create vite@latest
-
-```
-
 # vue3 admin基础框架
 [体验地址](https://www.ixunta.online/) \
 [更新日志，写了个寂寞](./read/VERSION.md) \
@@ -63,8 +57,7 @@ _ant-design-vue (不推荐使用)_ [点击查看](https://www.npmjs.com/package/
 [vite](https://www.npmjs.com/package/vite) [官网](https://cn.vitejs.dev/) \
 [vue3](https://www.npmjs.com/package/vue) [官网](https://v3.cn.vuejs.org/) \
 [vue-router](https://www.npmjs.com/package/vue-router) [官网](https://vue3js.cn/) \
-[~~~vuex 状态管理 弃用~~~](https://www.npmjs.com/package/vuex) [官网](https://next.vuex.vuejs.org/) \
-[pinia 状态管理](https://www.npmjs.com/package/pinia) [官网](https://next.vuex.vuejs.org/) \
+[vuex](https://www.npmjs.com/package/vuex) [官网](https://next.vuex.vuejs.org/) \
 [core-js](https://www.npmjs.com/package/core-js)
 
 ## http请求
@@ -85,9 +78,7 @@ _ant-design-vue (不推荐使用)_ [点击查看](https://www.npmjs.com/package/
 [svg-sprite-loader](https://www.npmjs.com/package/svg-sprite-loader) \
 [text-loader](https://www.npmjs.com/package/text-loader) \
 [vue-style-loader](https://www.npmjs.com/package/vue-style-loader) \
-[vue-template-compiler](https://www.npmjs.com/package/vue-template-compiler) \
-tailwindcss \
-windicss
+[vue-template-compiler](https://www.npmjs.com/package/vue-template-compiler)
 
 ## 语法检查 -D
 [eslint](https://www.npmjs.com/package/eslint)
@@ -140,9 +131,6 @@ https://bsie.gitee.io/relaxplus/#/ \
 [Ionic](https://ionicframework.com/) \
 [Bootstrap](https://getbootstrap.com/)
 
-## SEO
-vue-meta
-
 ## 图标
 [iconpark](https://iconpark.oceanengine.com/home)
 
@@ -175,8 +163,7 @@ vue-meta
 
 ## 拖拽
 [vuedraggable](https://www.npmjs.com/package/vuedraggable) \
-[vue-grid-layout](https://www.npmjs.com/package/vue-grid-layout) \
-SortableJS
+[vue-grid-layout](https://www.npmjs.com/package/vue-grid-layout)
 
 ## 全屏
 [screenfull](https://www.npmjs.com/package/screenfull)

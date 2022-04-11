@@ -11,7 +11,7 @@ const frameIn = [
   {
     path: "/m/index",
     name: "m-index",
-    component: () => import("@/views/mobile/Index"),
+    component: () => import("@/views/mobile/Index")
   },
   {
     path: "/index-blank",

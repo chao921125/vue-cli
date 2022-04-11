@@ -8,11 +8,11 @@
 import util from "@/plugins/utils";
 export default {
   name: "I18n",
-  inject: ["reload"],
+  inject: ['reload'],
   data() {
     return {
-      i18n: true,
-    };
+      i18n: true
+    }
   },
   created() {
     this.i18n = this.$store.getters["store/i18n/getI18n"] === this.$constants.i18n.ZH_CN;
@@ -23,9 +23,11 @@ export default {
       util.storage.setSessionItem("i18n", language);
       this.$store.dispatch("store/i18n/setI18n", language);
       this.reload();
-    },
-  },
+    }
+  }
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>

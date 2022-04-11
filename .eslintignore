@@ -1,14 +1,20 @@
-*.sh
+# 忽略目录
 node_modules
-*.md
-*.woff
-*.ttf
-.vscode
-.idea
+node_modules/*
+build
+build/*
+tests
+tests/*
+public
+public/*
 dist
-/public
-/docs
-.husky
-.local
-/bin
-Dockerfile
+dist/*
+src/assets
+src/assets/*
+
+# node 覆盖率文件
+coverage/
+
+# 忽略文件
+**/*-min.js
+**/*.min.js

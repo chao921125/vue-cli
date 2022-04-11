@@ -2,9 +2,7 @@
   <el-row>
     <el-col :span="24" class="flex-space-between">
       <el-form ref="form" :model="formSearch" label-width="0">
-        <el-form-item
-          ><el-input v-model="formSearch.name" placeholder="Please input"></el-input
-        ></el-form-item>
+        <el-form-item><el-input v-model="formSearch.name" placeholder="Please input"></el-input></el-form-item>
       </el-form>
       <div>
         <el-button type="primary" @click="toCreateUser">新增</el-button>
@@ -31,40 +29,40 @@ export default {
   data() {
     return {
       formSearch: {
-        name: "",
+        name: ""
       },
       tableData: [],
-    };
+    }
   },
   created() {
     this.tableData = [
       {
-        date: "2016-05-03",
-        name: "Tom",
-        address: "No. 189, Grove St, Los Angeles",
+        date: '2016-05-03',
+        name: 'Tom',
+        address: 'No. 189, Grove St, Los Angeles',
       },
       {
-        date: "2016-05-02",
-        name: "Tom",
-        address: "No. 189, Grove St, Los Angeles",
+        date: '2016-05-02',
+        name: 'Tom',
+        address: 'No. 189, Grove St, Los Angeles',
       },
       {
-        date: "2016-05-04",
-        name: "Tom",
-        address: "No. 189, Grove St, Los Angeles",
+        date: '2016-05-04',
+        name: 'Tom',
+        address: 'No. 189, Grove St, Los Angeles',
       },
       {
-        date: "2016-05-01",
-        name: "Tom",
-        address: "No. 189, Grove St, Los Angeles",
+        date: '2016-05-01',
+        name: 'Tom',
+        address: 'No. 189, Grove St, Los Angeles',
       },
     ];
   },
   methods: {
     toCreateUser() {
       this.$router.push({ path: "/system/users/create" });
-    },
-  },
+    }
+  }
 };
 </script>
 

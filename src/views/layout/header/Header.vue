@@ -1,19 +1,10 @@
 <template>
-  <div
-    :class="
-      isCollapse
-        ? 'header-box flex-base header-collapse'
-        : 'header-box flex-base header-no-collapse'
-    "
-  >
+  <div :class="isCollapse ? 'header-box flex-base header-collapse' : 'header-box flex-base header-no-collapse'">
     <div class="flex-space-between cc-width-fill">
       <div class="cc-pointer flex-center-row cc-ml-5">
         <i :class="isCollapse ? 'el-icon-s-unfold' : 'el-icon-s-fold'" @click="toggleCollapse"></i>
       </div>
-      <div
-        class="flex-center-row cc-mr-20"
-        :class="isCollapse ? 'cc-text-right info-collapse' : 'cc-text-right info'"
-      >
+      <div class="flex-center-row cc-mr-20" :class="isCollapse ? 'cc-text-right info-collapse' : 'cc-text-right info'">
         <el-link class="header-user-name" type="primary" :underline="false">Hello</el-link>
         <el-dropdown>
           <el-avatar v-if="true" size="30" :src="imgSrc[0]"></el-avatar>
@@ -35,13 +26,10 @@ import util from "@/plugins/utils";
 
 export default {
   name: "Header",
-  emits: ["isCollapse"],
+  emits: ['isCollapse'],
   data() {
     return {
-      imgSrc: [
-        require("@/assets/images/header/kehu.svg"),
-        require("@/assets/images/header/shebao.svg"),
-      ],
+      imgSrc: [require("@/assets/images/header/kehu.svg"), require("@/assets/images/header/shebao.svg")],
       isCollapse: false,
     };
   },

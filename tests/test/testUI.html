@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .bg_arc{
+      width: 100%;
+      height: 400px;
+      position: relative;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .bg_arc::after{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 400px;
+      position: absolute;  /* 不同点1 */
+      left: 0;
+      top: 0;
+      border-radius: 0 0 50% 50%;  /* 不同点2 */
+      background: #fcc;
+    }
+  </style>
+</head>
+<body>
+<div class="bg_arc"></div>
+</body>
+</html>

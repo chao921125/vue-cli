@@ -8,7 +8,7 @@ import "nprogress/nprogress.css";
 
 const router = createRouter({
   scrollBehavior(/* to, from, savedPosition */) {
-    return { top: 0 };
+    return { top: 0 }
   },
   history: createWebHistory(process.env.BASE_URL),
   routes,

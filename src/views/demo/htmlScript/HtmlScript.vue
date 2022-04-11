@@ -10,17 +10,19 @@ import { payOrder } from "@/api/order";
 export default {
   name: "HtmlScript",
   data() {
-    return {};
+    return {}
   },
   methods: {
     payTest() {
-      payOrder({}).then((res) => {
+      payOrder({}).then(res => {
         document.querySelector("#payHtml").innerHTML = res.form;
         document.forms[0].submit();
       });
-    },
-  },
+    }
+  }
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+
+</style>

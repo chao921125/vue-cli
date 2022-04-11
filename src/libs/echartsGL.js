@@ -14,15 +14,15 @@ export default {
     let chart = Echarts.init(chartBox);
     let option = {
       xAxis: {
-        type: "category",
-        boundaryGap: false,
+        type: 'category',
+        boundaryGap: false
       },
       yAxis: {
-        type: "value",
-        boundaryGap: [0, "30%"],
+        type: 'value',
+        boundaryGap: [0, '30%']
       },
       visualMap: {
-        type: "piecewise",
+        type: 'piecewise',
         show: false,
         dimension: 0,
         seriesIndex: 0,
@@ -30,43 +30,43 @@ export default {
           {
             gt: 1,
             lt: 3,
-            color: "rgba(0, 0, 180, 0.4)",
+            color: 'rgba(0, 0, 180, 0.4)'
           },
           {
             gt: 5,
             lt: 7,
-            color: "rgba(0, 0, 180, 0.4)",
-          },
-        ],
+            color: 'rgba(0, 0, 180, 0.4)'
+          }
+        ]
       },
       series: [
         {
-          type: "line",
+          type: 'line',
           smooth: 0.6,
-          symbol: "none",
+          symbol: 'none',
           lineStyle: {
-            color: "#5470C6",
-            width: 5,
+            color: '#5470C6',
+            width: 5
           },
           markLine: {
-            symbol: ["none", "none"],
+            symbol: ['none', 'none'],
             label: { show: false },
-            data: [{ xAxis: 1 }, { xAxis: 3 }, { xAxis: 5 }, { xAxis: 7 }],
+            data: [{ xAxis: 1 }, { xAxis: 3 }, { xAxis: 5 }, { xAxis: 7 }]
           },
           areaStyle: {},
           data: [
-            ["2019-10-10", 200],
-            ["2019-10-11", 560],
-            ["2019-10-12", 750],
-            ["2019-10-13", 580],
-            ["2019-10-14", 250],
-            ["2019-10-15", 300],
-            ["2019-10-16", 450],
-            ["2019-10-17", 300],
-            ["2019-10-18", 100],
-          ],
-        },
-      ],
+            ['2019-10-10', 200],
+            ['2019-10-11', 560],
+            ['2019-10-12', 750],
+            ['2019-10-13', 580],
+            ['2019-10-14', 250],
+            ['2019-10-15', 300],
+            ['2019-10-16', 450],
+            ['2019-10-17', 300],
+            ['2019-10-18', 100]
+          ]
+        }
+      ]
     };
     chart.setOption(option);
     window.onresize = () => {
@@ -85,18 +85,18 @@ export default {
         text: title,
       },
       tooltip: {
-        trigger: "axis",
+        trigger: 'axis',
         axisPointer: {
-          type: "cross",
+          type: 'cross',
           label: {
-            backgroundColor: "#6a7985",
-          },
-        },
+            backgroundColor: '#6a7985'
+          }
+        }
       },
       toolbox: {
         feature: {
-          saveAsImage: {},
-        },
+          saveAsImage: {}
+        }
       },
       legend: {
         left: "center",
@@ -106,28 +106,28 @@ export default {
       },
       xAxis: [
         {
-          type: "category",
+          type: 'category',
           boundaryGap: false,
-          data: xAxisData,
-        },
+          data: xAxisData
+        }
       ],
       yAxis: [
         {
-          type: "value",
-        },
+          type: 'value'
+        }
       ],
       series: [
         {
-          name: "Email",
-          type: "line",
-          stack: "Total",
+          name: 'Email',
+          type: 'line',
+          stack: 'Total',
           areaStyle: {},
           emphasis: {
-            focus: "series",
+            focus: 'series'
           },
-          data: seriesData,
+          data: seriesData
         },
-      ],
+      ]
     };
     chart.setOption(option);
     window.onresize = () => {

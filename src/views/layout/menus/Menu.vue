@@ -1,24 +1,11 @@
 <template>
-  <el-menu class="menu-header-box" :collapse="isCollapse">
+  <el-menu
+    class="menu-header-box"
+    :collapse="isCollapse">
     <el-menu-item key="/" index="/" class="flex-center-row header-box">
-      <div
-        class="flex-center-row cc-pointer logo"
-        :class="isCollapse ? 'logo-collapse' : 'logo-no-collapse'"
-      >
-        <object
-          v-show="!isCollapse"
-          :data="imgSrc[0]"
-          class="img-collapse"
-          type="image/svg+xml"
-          codebase="http://www.adobe.com/svg/viewer/install/"
-        />
-        <object
-          v-show="isCollapse"
-          :data="imgSrc[1]"
-          class="img-no-collapse"
-          type="image/svg+xml"
-          codebase="http://www.adobe.com/svg/viewer/install/"
-        />
+      <div class="flex-center-row cc-pointer logo" :class="isCollapse ? 'logo-collapse' : 'logo-no-collapse'">
+        <object v-show="!isCollapse" :data="imgSrc[0]" class="img-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
+        <object v-show="isCollapse" :data="imgSrc[1]" class="img-no-collapse" type="image/svg+xml" codebase="http://www.adobe.com/svg/viewer/install/" />
       </div>
     </el-menu-item>
   </el-menu>
@@ -29,19 +16,18 @@
       :collapse="isCollapse"
       :unique-opened="true"
       popper-append-to-body
-      @select="selectMenu"
-    >
-      <!--      <template v-for="item in menuList">-->
-      <!--        <template v-if="item.isSideMenu">-->
-      <!--          <SubMenu v-if="item.children && item.children.length > 0" :key="item.id" :sub-menu-list="item"></SubMenu>-->
-      <!--          <el-menu-item v-else :key="item.id" :index="item.path" :disabled="!!item.isDisable">-->
-      <!--            &lt;!&ndash; 此处图标可以自定义 &ndash;&gt;-->
-      <!--            <i v-if="item.icon.includes('el-')" :class="item.icon"></i>-->
-      <!--            <i v-else class="iconfont" :class="item.icon"></i>-->
-      <!--            <template #title>{{ item.title }}</template>-->
-      <!--          </el-menu-item>-->
-      <!--        </template>-->
-      <!--      </template>-->
+      @select="selectMenu">
+<!--      <template v-for="item in menuList">-->
+<!--        <template v-if="item.isSideMenu">-->
+<!--          <SubMenu v-if="item.children && item.children.length > 0" :key="item.id" :sub-menu-list="item"></SubMenu>-->
+<!--          <el-menu-item v-else :key="item.id" :index="item.path" :disabled="!!item.isDisable">-->
+<!--            &lt;!&ndash; 此处图标可以自定义 &ndash;&gt;-->
+<!--            <i v-if="item.icon.includes('el-')" :class="item.icon"></i>-->
+<!--            <i v-else class="iconfont" :class="item.icon"></i>-->
+<!--            <template #title>{{ item.title }}</template>-->
+<!--          </el-menu-item>-->
+<!--        </template>-->
+<!--      </template>-->
       <SubMenu v-if="menuList && menuList.length > 0" :sub-menu-list="menuList"></SubMenu>
     </el-menu>
   </el-scrollbar>
@@ -67,10 +53,7 @@ export default {
   },
   data() {
     return {
-      imgSrc: [
-        require("@/assets/images/header/kehu.svg"),
-        require("@/assets/images/header/shebao.svg"),
-      ],
+      imgSrc: [require("@/assets/images/header/kehu.svg"), require("@/assets/images/header/shebao.svg")],
     };
   },
   // 通过store获取菜单信息，且事实监控

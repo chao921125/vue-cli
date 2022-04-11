@@ -1,12 +1,16 @@
-<template></template>
+<template>
+
+</template>
 
 <script>
 /**
  * 面包屑导航
  */
 export default {
-  name: "Breadcrumb",
+  name: "Breadcrumb"
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>
