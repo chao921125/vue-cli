@@ -5,10 +5,6 @@ import store from "@/store";
 // 进度条
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
-// Import component
-// import Loading from "vue-loading-overlay";
-// Import stylesheet
-// import "vue-loading-overlay/dist/vue-loading.css";
 
 // 日志等打印
 import util from "@/plugins/util";
@@ -57,7 +53,6 @@ router.beforeEach((to, from, next) => {
 	// 白名单的无需经过任何判断直接next
 	if (WHITELIST.includes(to.path.replaceAll("/", ""))) {
 		next();
-		NProgress.done();
 	} else if (!token || token === "undefined") {
 		// 如果不存在token，那么此时需要跳转登录页面
 		next({
@@ -66,7 +61,6 @@ router.beforeEach((to, from, next) => {
 				redirect: to.fullPath,
 			},
 		});
-		NProgress.done();
 	} else {
 		if (store.getters["store/user/getMenus"].length > 0) {
 			// 动态路由处理
@@ -75,13 +69,10 @@ router.beforeEach((to, from, next) => {
 				next({
 					name: "404",
 				});
-				NProgress.done();
 			} else {
 				next();
-				NProgress.done();
 				// if (to.matched.some((r) => r.meta.auth)) {
 				//   next();
-				//   NProgress.done();
 				// } else {
 				//   // 不需要身份校验 直接通过
 				// }
@@ -96,7 +87,6 @@ router.beforeEach((to, from, next) => {
 					});
 					next({ ...to, replace: true });
 					// next();
-					NProgress.done();
 				})
 				.catch((error) => {
 					console.log(error);
