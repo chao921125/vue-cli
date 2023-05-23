@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background: #fafafa;}
+
+.mycontainer{ width: 1200px; margin: 0 auto; position: relative; }
+
+header{ background: #00707e; overflow: hidden;}
+header p{ color: #fff; font-size: 16px; line-height: 96px; font-family: "微软雅黑", "宋体", Arial, Helvetica, sans-serif; padding-left: 48px; background-image: url("../img/pic1.png"); background-position: left; background-repeat: no-repeat; float: right;}
+header p span{ font-size: 34px; font-family: "时尚中黑简体";}
+.mycontainer #logo{ width: 200px; height: 150px; background: #fff; position: absolute; top: -100px; left: 0; z-index: 1;}
+.mycontainer #logo img{ margin: 0 auto; margin-top: 26px;}
+
+nav{margin-top: 50px; width: 200px; float: left}
+nav ul{ background: rgba(0,112,126,.8); width: 200px; padding: 39px 0;}
+nav ul li a{ font-size: 14px; color: #fff; line-height: 59px; text-align: center;-webkit-transition-property: background; transition-property: background;-webkit-transition-duration: .2s; transition-duration: .2s; -webkit-transition-timing-function: ease-in; transition-timing-function: ease-in; -webkit-transition-delay: 0s;transition-delay: 0s;}
+nav ul li a:hover, nav ul li .current{ background: #00707e;}
+.topnav{ position: fixed; top: 0; z-index: 1;}
+
+footer .top{ margin-top: 30px; background: #00707e; padding: 50px 0;}
+footer .first{ float: left;}
+footer .first p{ color: #fff; line-height: 2;}
+footer .mycontainer > img{ float: left; margin-left: 268px; display: block; width: 108px; height: 108px;}
+footer .third{ float: right; margin-top: 17px;}
+footer .third p{ font-size: 14px; color: #fff; border-bottom: #007d8d 1px solid; padding-bottom: 10px;}
+footer .third ul{ margin-top: 10px;}
+footer .third ul li{ float: left; margin: 0 6px;}
+footer .third ul li:first-child{ margin-left: 0;}
+footer .third ul li:last-child{ margin-right: 0;}
+footer .bottom{ background: #007585; padding: 10px 0;}
+footer .bottom ul, footer .bottom p{ text-align: center;}
+footer .bottom ul li{ display: inline-block; margin: 0 1px; font-size: 12px; color: #b2f6ff;}
+footer .bottom ul li a, footer .bottom p{ font-size: 12px; color: #b2f6ff; line-height: 2;}
+footer .bottom ul li a:hover{ color: #fff;}

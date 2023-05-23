@@ -1,0 +1,2575 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Chondo hotel 
+    Template URI: http://hastech.company/
+    Description: This is html5 template
+    Author: Hastech
+    Author URI: http://hastech.company/
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+    
+    CSS INDEX
+    ===================
+	
+    1. Theme Default CSS
+    2. Preloader CSS
+	3.  Header Css
+	4. Searchbar Css 
+	5. Navigation Css
+    6. Home about section css
+    7. our Room css
+	8. Our serivces Css
+	9. Staff css 
+	10. Testimonail Css
+	11. Our gallery Css 
+	12. Our news Css
+	13. Fun Factor Css
+    14. Team Brand And Newsletter Css
+    15. Deafault Footer Css
+	16. Home Two Css
+		16.1 Home two Header Css
+	17. Home 2 services Css
+	18. Clinet say Testimonial
+	19. Home 2 gallery Css 
+	20.  Getting Offer today
+	21. Footer 2 Css
+	22.1 Home3 Css here
+	22.2 Home4 Css here
+	23. Abuout us Css
+	24. Gallery Css
+    25. Our news Css
+	26. Room booking Css
+	27. Room booking information
+	28. Contact us Css
+	29. Sticky Css here
+	30. Top scrollup Css
+	31. Mobile menu Css
+	32. 404 page Css
+
+-----------------------------------------------------------------------------------*/
+
+/*-----------------
+	1. Theme Default CSS
+--------------------*/
+
+/*---------
+    Google fonts here
+--------*/
+
+@import url('css.css');
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../font/Montserrat-Light.eot');
+	src: url('../font/Montserrat-Light.eot') format('embedded-opentype'),
+		url('../font/Montserrat-Light.woff') format('woff'),
+		url('../font/Montserrat-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../font/Montserrat-SemiBold.eot');
+	src: url('../font/Montserrat-SemiBold.eot') format('embedded-opentype'),
+		url('../font/Montserrat-SemiBold.woff') format('woff'),
+		url('../font/Montserrat-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+
+   
+   img{max-width: 100%}
+  
+/*************************************
+         Custom-content all   
+ **************************************/
+.boxed-layout .wrapper {
+    box-shadow: -3px 0 50px -2px rgba(0, 0, 0, 0.14);
+    margin: auto;
+    position: relative;
+    width: 1500px;
+}
+.boxed-layout .sticky,.boxed-layout .top-header.sticky-header.sticky,.boxed-layout .header-bottom.sticky-header.sticky{
+    left: auto;
+    margin: auto;
+    width: 1500px;
+}
+
+
+
+/*-------------------
+	2. Preloader CSS
+----------------------*/
+.preloader{
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  margin-top: 0px;
+  top: 0px;
+  z-index: 99999999;
+}
+.loading-center{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.loading-center-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 150px;
+  width: 150px;
+  margin-top: -75px;
+  margin-left: -75px;
+}
+.object{
+  width: 20px;
+  height: 20px;
+  background-color: #3ac4fa;
+  float: left;
+  margin-right: 20px;
+  margin-top: 65px;
+  border-radius: 50% 50% 50% 50%;
+}
+.object_one {	
+  -webkit-animation: object_one 1.5s infinite;
+  animation: object_one 1.5s infinite;
+}
+.object_two {
+  -webkit-animation: object_two 1.5s infinite;
+  animation: object_two 1.5s infinite;
+  -webkit-animation-delay: 0.25s; 
+  animation-delay: 0.25s;
+}
+.object_three {
+  -webkit-animation: object_three 1.5s infinite;
+  animation: object_three 1.5s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+@-webkit-keyframes object_one {
+75% { -webkit-transform: scale(0); }
+}
+@keyframes object_one {
+  75% { 
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+}
+@-webkit-keyframes object_two {
+  75% { -webkit-transform: scale(0); }
+}
+@keyframes object_two {
+  75% { 
+    transform: scale(0);
+    -webkit-transform:  scale(0);
+  }
+}
+@-webkit-keyframes object_three {
+  75% { -webkit-transform: scale(0); }
+}
+@keyframes object_three {
+  75% { 
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+}
+
+/*----------------------------------------*/
+/*  3.  Header Css
+/*----------------------------------------*/
+.header-section{
+  background: url(../image/b-1.jpg)no-repeat scroll center center;
+  background-size: cover;
+}
+.header-section.height-vh{
+  height: 100vh;
+}
+.header-section,.menu .search-bar,.b-date,.select-book{
+  position: relative
+}
+.bg-opacity {
+  background: #000 none repeat scroll 0 0;
+  height: 100%;
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+  pointer-events: none
+}
+.adresses .phone, .adresses .email, .adresses, .social-links,.menu-list, .search-bar {
+    display: inline-block;
+}
+.adresses .phone > p, .adresses .email > p {
+  font-family: "Montserrat",sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+.adresses .phone > p, .adresses .email > p,.search-bar input,.search-bar button,.booking-title h3,.booking-title > p,.b-date i,.b-date input,.select-book select,.select-book::before,.select-book select option,.submit-form button:hover,.social-links > a,.explore > a,p.welcome-desc,.welcome-text h1,.welcome-text h2 {
+    color: #fff;
+} 
+.adresses .email > p {
+    margin-left: 34px;
+}
+.header-top .social-links,.menu .search-bar-icon  {
+    float: right;
+}
+.menu-list {
+    float: left;
+}
+.menu .search-bar {
+  margin-top: -8px;
+}
+.header-top {
+  border-bottom: 1px solid #fff;
+}
+.welcome-section {
+  padding-top: 235px;
+}
+.menu nav ul li {
+    display: inline-block;
+    margin-left: 35px;
+    position: relative;
+    padding-bottom: 20px
+}
+.menu nav ul li:first-child {
+    margin-left: 0;
+}
+.menu nav ul li a {
+    color: #fff;
+    text-transform: uppercase;
+}
+.menu nav ul li a i {
+  margin-left: 5px;
+}
+.menu nav ul li a:hover {
+    color: #3ac4fa;
+}
+
+.menu .search-bar:hover input {
+  display: block;
+  width: 100%;
+}
+.menu .search-bar:hover button{
+  right: 5px
+}
+.booking-box {
+  background: rgba(58, 196, 250, 0.5) none repeat scroll 0 0;
+  padding: 50px 35px 35px;
+  margin-right: 38px;
+}
+.booking-title h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.booking-title > p {
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 40px;
+}
+.b-date i {
+  font-size: 18px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+.b-date input {
+    background: rgba(83, 152, 178, 0.5) none repeat scroll 0 0;
+    border-color: transparent;
+}
+.select-book button.btn {
+  color: #fff !important;
+  height: 40px;
+}
+.btn-group.open .dropdown-toggle {
+  box-shadow: none;
+}
+.dropdown-menu {
+  border: medium none;
+  border-radius: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  margin: 0;
+  text-transform: capitalize;
+  z-index: 2147483647;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  background-color: inherit;
+}
+.bootstrap-select.btn-group .dropdown-menu li {
+  padding: 5px 0;
+  position: relative;
+}
+.b-date input::-webkit-input-placeholder,.search-bar input::-webkit-input-placeholder { color:#fff; }
+.b-date input::-webkit-input-placeholder { color:#fff; }
+.b-date input::-moz-placeholder,.search-bar input::-moz-placeholder { color:#fff; } /* firefox 19+ */
+.b-date input:-ms-input-placeholder,.search-bar input:-ms-input-placeholder { color:#fff; } /* ie */
+
+.select-book select,.select-book button.btn {
+  -moz-appearance: none;
+  background: rgba(83, 152, 178, 0.5) none repeat scroll 0 0;
+  border-color: transparent;
+  position: relative;
+  text-transform: capitalize;
+}
+.bootstrap-select.btn-group .dropdown-menu li a:hover{
+  color: #3ac4fa;
+}
+.btn-info:active:hover, .btn-info.active:hover, .open > .dropdown-toggle.btn-info:hover, .btn-info:active:focus, .btn-info.active:focus, .open > .dropdown-toggle.btn-info:focus, .btn-info.focus:active, .btn-info.active.focus, .open > .dropdown-toggle.btn-info.focus,.btn-info:active, .btn-info.active, .open > .dropdown-toggle.btn-info {
+    background: rgba(83, 152, 178, 0.5) none repeat scroll 0 0;
+    border: none;
+}
+.select-book::before {
+    content: "";
+    font-family: FontAwesome;
+    font-size: 18px;
+    pointer-events: none;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    z-index: 1
+}
+.select-book select option {
+    background: rgba(83, 152, 178, 0.5) none repeat scroll 0 0;
+}
+.submit-form > button {
+  background: #fff none repeat scroll 0 0;
+  border: medium none;
+  color: #2e2e2e;
+  padding: 14px 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+.submit-form button:hover {
+    background: #3ac4fa none repeat scroll 0 0;
+}
+.welcome-desc {
+  margin-bottom: 32px;
+  margin-top: 19px;
+}
+.welcome-text h2 {
+    font-size: 32px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.welcome-text h2 span.coloring,.welcome-text h1 span.coloring{
+    color: #3ac4fa;
+}
+.welcome-text h1 {
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+p.welcome-desc {
+  font-weight: 300;
+}
+.explore > a {
+    background: #3ac4fa none repeat scroll 0 0;
+    border: 1px solid transparent;
+    display: inline-block;
+    font-weight: 500;
+    padding: 10px 30px;
+}
+.explore > a:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 1px solid #3ac4fa;
+}
+.social-links > a:hover {
+    color: #4fc1f0;
+}
+.social-links > a {
+    font-size: 16px;
+    margin-right: 13px;
+}
+.social-links > a:last-child {
+    margin-right: 0;
+}
+
+/*--------------
+  4. Searchbar Css 
+-------------*/
+.search-bar {
+  display: none;
+}
+.search-bar.animated.slideInDown,.search-bar.slideoutup {
+  display: block;
+}
+
+.search-bar {
+  background: rgba(58, 196, 250, 0.9) none repeat scroll 0 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 9999999;
+}
+.table, .table-cell {
+  display: table;
+  height: 100%;
+}
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+.search-bar-icon  a {
+  color: #fff;
+  font-size: 18px;
+}
+.search-form-wrap .close-search {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    color: #fff;
+    font-size: 30px;
+}
+.search-form-wrap > form {
+    margin-top: 100px;
+    position: relative
+}
+.search-form-wrap .search-button {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    font-size: 20px;
+    position: absolute;
+    right: 12px;
+    top: 14px;
+}
+.search-form-wrap input {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 2px solid #fff;
+  height: 55px;
+  font-size: 20px;
+}
+/*================
+   5. Navigation Css here
+=======================*/
+.menu nav ul li ul.dropdown_menu {
+  background: #fff none repeat scroll 0 0;
+  border-bottom: 5px solid #3ac4fa;
+  padding: 0 0 15px;
+  position: absolute;
+  top: 100%;
+  transform: scaleY(0);
+  transform-origin: 0 0 0;
+  transition: all 0.3s ease 0s;
+  width: 250px;
+  z-index: 99999;
+  opacity: 1;
+  box-shadow: 0 0 3px #222;
+}
+.menu nav ul li:hover ul.dropdown_menu {
+   transform: scale(1);
+   opacity: 1
+}
+.menu nav ul li ul.dropdown_menu li a {
+    color: #555;
+    display: block;
+    font-size: 13px;
+    padding: 15px 15px;
+}
+.menu nav ul li ul.dropdown_menu li {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.menu nav ul li ul.dropdown_menu li:first-child {
+    border-top: 1px solid #ddd;
+}
+.menu nav ul li ul.dropdown_menu li:last-child {
+    border-bottom: medium none;
+}
+.menu nav ul li ul.dropdown_menu li:last-child a {
+  padding-bottom: 0;
+}
+.menu nav ul li ul.mega_menu {
+  background: #fff none repeat scroll 0 0;
+  border-bottom: 5px solid #3ac4fa;
+  box-shadow: 0 0 3px #222;
+  left: 0;
+  opacity: 0;
+  padding: 20px 20px 5px;
+  position: absolute;
+  top: 100%;
+  transform: scaleY(0);
+  transform-origin: 0 0 0;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+  z-index: 9999;
+}
+.menu nav ul li:hover ul.mega_menu{
+  transform: scale(1);
+  opacity: 1
+}
+.menu nav ul li ul.mega_menu li a {
+    color: #555;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+.menu nav ul li ul.mega_menu li {
+  float: left;
+  margin: 0;
+  padding: 0px 0px 0px 15px;
+  width: 25%;
+}
+.menu nav ul li ul.mega_menu li:first-child {
+  padding-left: 0;
+}
+
+.menu nav ul li ul.mega_menu li ul.mega-sub-menu li {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.menu nav ul li ul.mega_menu li ul.mega-sub-menu li:last-child {
+    border-bottom: medium none;
+}
+.menu nav ul li ul.mega_menu li ul.mega-sub-menu li a {
+    display: block;
+    padding: 15px 0;
+}
+.menu nav ul li ul.mega_menu li:first-child {
+    padding-left: 0;
+}
+
+.menu nav ul li ul.mega_menu li a.element-title {
+  text-transform: uppercase;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.top-header .menu ul li.mega_parent {
+    position: static;
+}
+.top-header.sticky .menu li ul li {
+  padding-bottom: 0;
+}
+.top-header.sticky .menu li ul li ul.mega-sub-menu li:last-child {
+  padding-bottom: 0;
+}
+.menu nav ul li ul.dropdown_menu li a:hover,.menu nav ul li ul.mega_menu li ul.mega-sub-menu li:hover a,.menu nav ul li:hover a {
+  color: #3ac4fa;
+}
+.top-header .container .row [class*="col-"],.header-bottom .container .row [class*="col-"] {
+  position: static;
+}
+.top-header-inner,.mgea-full-width {
+  position: relative;
+}
+/*---------------
+	6. Home about section css
+---------------------------*/
+
+.section-title > h2,.video-tour .section_title > h2,.discount_offer_title h2 {
+  color: #4a4a4a;
+  font-size: 32px;
+  font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
+  display: inline-block;
+  line-height: 30px;
+  padding-bottom: 20px;
+  margin: 0
+}
+.about-section .section-title.mb-80 {
+  margin-bottom: 30px;
+}
+.section-title > h2 {
+  border-bottom: 1px solid #4a4a4a;
+}
+.section-title > h2 span,.video-tour .section_title > h2 span,.discount_offer_title h2 span{
+    color: #3ac4fa;
+}
+.section-title > h2::after {
+  background: rgba(0, 0, 0, 0) url("../image/title.jpg") no-repeat scroll 0 0;
+  bottom: -12px;
+  content: "";
+  font-size: 14px;
+  height: 20px;
+  left: 39%;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+.about-chondo > p {
+  color: #4a4a4a;
+  line-height: 26px;
+  margin: 0 0 32px;
+}
+.about-member > img {
+    border: 2px solid #3ac4fa;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+.about-member > h3 {
+  color: #787878;
+  font-size: 24px;
+  margin: 10px 0 3px;
+  text-transform: capitalize;
+}
+.about-member h5 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #787878
+}
+/*---------------
+	7. our Room css
+------------------*/
+.our-room .section-title > h2::after {
+  background: #f1f1f1 url("../image/title.png") no-repeat scroll 0 0;
+  left: 0;
+  width: 45px;
+}
+.section-title > p {
+  color: #4a4a4a;
+  line-height: 18px;
+  margin-top: 35px;
+}
+.our-room-show .single-room {
+  background: #fff none repeat scroll 0 0;
+  border-bottom: 2px solid #b8b8b8;
+  margin: 5px 0;
+  transition: all 0.3s ease 0s;
+}
+.single-room .room-desc {
+  padding: 34px 20px 25px;
+  text-align: left;
+}
+.room-desc .room-book {
+  display: inline-block;
+  float: right;
+  margin-top: -52px;
+}
+.single-room.mb-70 {
+  margin-bottom: 70px;
+}
+.room-desc .room-book a,.static2 .services-desc-inner .room-book > a:hover {
+    background: #4a4a4a none repeat scroll 0 0;
+    color: #fff;
+}
+.room-desc .room-book a, .static2 .services-desc-inner .room-book > a {
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+.room-desc .room-book a {
+  font-family: "Montserrat",sans-serif;
+  font-weight: 400;
+}
+.room-desc .room-book a:hover,.static2 .services-desc-inner .room-book > a {
+    background: #3ac4fa none repeat scroll 0 0;
+    color: #fff
+}
+.room-section .single-room .room-desc {
+  background: #f1f1f1 none repeat scroll 0 0;
+}
+.room-desc .room-name h3 {
+  color: #4a4a4a;
+  font-family: "Poppins",sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 7px;
+  text-transform: capitalize;
+}
+.room-rent > h5 {
+    color: #6d6d6d;
+    text-transform: capitalize;
+}
+.room-rent > h5 span {
+  font-family: "Poppins",sans-serif;
+  font-size: 12px;
+}
+.our-room-show .single-room:hover,.single_news-post:hover {
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.35);
+}
+.carousel-list .col-md-4 {
+  width: 100%;
+}
+.carousel-list.owl-theme .owl-controls .owl-page span,.our-room-list.owl-theme .owl-controls .owl-page span,.our-news-list.owl-theme .owl-controls .owl-page span,.team_brand.style2.owl-theme .owl-controls .owl-page span {
+    background: #cbcbcb none repeat scroll 0 0;
+    height: 8px;
+    opacity: 1;
+    transition: all 0.3s ease 0s;
+    width: 26px;
+}
+.carousel-list.owl-theme .owl-controls .owl-page.active span,.our-room-list.owl-theme .owl-controls .owl-page.active span,.our-news-list.owl-theme .owl-controls .owl-page.active span,.team_brand.style2.owl-theme .owl-controls .owl-page.active span {
+    background: #3ac4fa none repeat scroll 0 0;
+    width: 40px;
+}
+.our-room .our-room-list.owl-theme .owl-controls,.our-room .our-news-list.owl-theme .owl-controls,.team_brand.style2.owl-theme .owl-controls {
+  margin-top: 30px;
+  text-align: center;
+}
+.our-room .carousel-list.owl-theme .owl-controls{
+  margin-top: 40px;
+}
+.owl-pagination.owl-theme .owl-controls {
+  margin-top: 40px;
+}
+.our-room-list .single-room.mb-80 {
+  margin-bottom: 75px;
+}
+/*---------------
+	8. Our serivces Css here
+--------------------*/
+.single-services .services-img {
+    position: relative;
+}
+.services-img > img {
+  width: 100%;
+}
+.services-title {
+  bottom: 13px;
+  left: 13px;
+  position: absolute;
+  right: 13px;
+  transition: all 0.5s ease 0s;
+}
+.services-hover-desc {
+  bottom: 0;
+  left: 0;
+  padding: 13px;
+  position: absolute;
+  top: 0;
+}
+.services-title > h2 {
+  background: rgba(255, 255, 255, 0.85) none repeat scroll 0 0;
+  color: #4a4a4a;
+  display: inline-block;
+  font-size: 24px;
+  line-height: 18px;
+  margin-bottom: 0;
+  padding: 25px 0;
+  text-transform: capitalize;
+  width: 100%;
+}
+.single-services {
+    overflow: hidden;
+}
+.services-hover-inner {
+  background: rgba(255, 255, 255, 0.85) none repeat scroll 0 0;
+  display: inline-block;
+  height: 100%;
+  opacity: 0;
+  padding: 10px;
+  transform: scale(0.5);
+  transition: all 0.5s ease 0s;
+  width: 100%;
+}
+.services-hover-table-cell > h2 {
+  color: #4a4a4a;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.services-hover-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+.services-hover-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.services-hover-table-cell > p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 0;
+}
+.single-services:hover .services-hover-inner,.single-services.active .services-hover-inner{
+  opacity: 1;
+  transform: scale(1)
+}
+.single-services:hover .services-title{
+  opacity: 0;
+  transform: scale(0)
+}
+.boxed-layout .services-hover-table-cell > p {
+  font-size: 13px;
+  line-height: 20px;
+}
+/*-----------------
+	9. Staff css here
+--------------------*/
+.sraff-inner {
+  border: 1px solid #3ac4fa;
+  overflow: hidden;
+  position: relative;
+}
+.staff-title {
+  background: rgba(58, 196, 250, 0.9) none repeat scroll 0 0;
+  bottom: 0;
+  padding: 10px 0;
+  transition: all 0.5s ease 0s;
+  width: 100%;
+}
+.staff-title,.staff-title::after,.staff-title::before,.staff-hover-desc,.staff-hover-desc::after,.staff-list span.plus:before,.staff-hover-desc::after,.staff-hover-desc::before{
+  position: absolute;
+}
+.single-staff {
+  padding: 0 45px 45px;
+}
+.staff-title::after,.staff-title::before {
+    content: "";
+    width: 0;
+    height: 0;
+    top: -90px;
+    
+}
+.staff-title::after {
+    border-bottom: 90px solid rgba(58, 196, 250, 0.9);
+    border-left: 135px solid transparent;
+    right: 0;
+}
+.staff-title::before {
+    border-bottom: 90px solid rgba(58, 196, 250, 0.9);
+    border-right: 135px solid transparent;
+    left: 0px;
+}
+.staff-title > h2,.staff-hover-desc > h2{
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+    text-transform: capitalize;
+}
+.staff-title > h5, .staff-hover-desc > h5 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 3px;
+  text-transform: capitalize;
+}
+.staff-hover-desc {
+  background: rgba(58, 196, 250, 0.9) none repeat scroll 0 0;
+  bottom: 0;
+  margin-bottom: 200px;
+  opacity: 0;
+  padding: 0 20px 20px;
+  transition: all 0.5s ease 0s;
+}
+.staff-hover-desc > p {
+    color: #fff;
+    font-size: 13px;
+    margin-top: 22px;
+}
+.staff-hover-desc .scoial_icons > a {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    height: 25px;
+    line-height: 23px;
+    margin-left: 5px;
+    width: 25px;
+}
+.staff-hover-desc .scoial_icons > a:first-child {
+    margin: 0;
+}
+.staff-hover-desc .scoial_icons > a:hover {
+    background: #fff none repeat scroll 0 0;
+    border-color: #fff;
+    color: #3ac4fa;
+}
+.staff-hover-desc::before {
+  border-bottom: 80px solid rgba(58, 196, 250, 0.9);
+  border-left: 134px solid transparent;
+  border-right: 134px solid transparent;
+  content: "";
+  height: 0;
+  left: 0;
+  top: -80px;
+  width: 0;
+}
+.staff-hover-desc::after {
+  content: "";
+   top: -86px;
+}
+.staff-hover-desc::after,.staff-list span.plus:before {
+  background: #3ac4fa none repeat scroll 0 0;
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: FontAwesome;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  font-size: 12px;
+  margin-left: -8px;
+  line-height: 16px
+}
+.staff-list span.plus::before {
+  content: "";
+  top: -15px;
+  z-index: 999;
+}
+.single-staff:hover .staff-hover-desc,.single-staff.active .staff-hover-desc  {
+  margin-bottom: 0;
+  opacity: 1;
+}
+
+.single-staff:hover .staff-title,.single-staff.active .staff-title  {
+    bottom: -100%;
+}
+.our-staff .owl-carousel.owl-theme .owl-controls {
+  margin-top: 0;
+}
+/*--------------------
+	10. Testimonail Css here
+-------------------*/
+.single-testimonial > h2 {
+    color: #fff;
+    font-size: 30px;
+    text-transform: capitalize;
+    position: relative;
+    display: inline-block
+}
+.single-testimonial > p {
+  color: #fff;
+  margin-top: 51px;
+}
+.staff-tesimonial {
+  background: rgba(0, 0, 0, 0) url("../image/testimonial.jpg") no-repeat fixed center center / cover ;
+  padding: 128px 0 138px;
+  position: relative;
+}
+.testimonail-bg-opacity {
+  background: rgba(58, 196, 250, 0.9) none repeat scroll 0 0;
+}
+.testimonail-bg-opacity,.community-bg-opacity,.footer-bg-opacity {
+   height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.single-testimonial > h2::before {
+  background: #fff none repeat scroll 0 0;
+  bottom: -55px;
+  content: "";
+  height: 40px;
+  left: 50%;
+  margin-left: -1px;
+  position: absolute;
+  width: 2px;
+}
+.testimonial-list.owl-theme .owl-controls .owl-page span {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 2px solid #fff;
+  border-radius: 0;
+  height: 9px;
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+  width: 26px;
+}
+.testimonial-list.owl-theme .owl-controls .owl-page.active span {
+    background: #fff none repeat scroll 0 0;
+}
+
+/*-------------------
+	11. Our gallery Css here
+---------------------*/
+.our-gallery .single-gallery::before {
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.our-gallery .single-gallery {
+  width: 20%;
+  float: left;
+  position: relative
+}
+.single-gallery:hover img,.single-gallery.active img {
+    transform: scale(1.09);
+    z-index: 99;
+}
+.our-gallery {
+    overflow: hidden;
+}
+.single-gallery > img {
+  transition: all 0.3s ease 0s;
+}
+
+/*-----------------
+	12. Our news Css here
+------------------------*/
+.news-inner .news-img {
+  position: relative;
+  width: 35%;
+}
+.single_news-post {
+  margin-top: 5px;
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+}
+.news-inner .news-img,.news-inner .news-desc,.read-more,.news-post .n-date {
+    float: left;
+}
+.news-post {
+    background: rgba(58, 196, 250, 0.5) none repeat scroll 0 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+.news-inner .news-desc {
+  background: #f1f1f1 none repeat scroll 0 0;
+  border-radius: 0 3px 4px 0;
+  margin-top: 41px;
+  padding: 44px 68px 44px 50px;
+  text-align: left;
+  transition: all 0.3s ease 0s;
+  width: 65%;
+}
+.news-inner:hover .news-desc {
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+.news-img > img,.news-inner{
+    width: 100%;
+}
+h3.news-title {
+  color: #555;
+  font-size: 22px;
+  line-height: 30px;
+  margin: 0 107px 20px 0;
+  text-transform: capitalize;
+}
+.news-desc p.news_desc {
+    font-weight: 300;
+}
+.read-more,.news-post .n-date,.news-views{
+    display: inline-block;
+}
+.news-action {
+  overflow: hidden;
+  position: relative;
+}
+.news-action .news-share {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+.news-img .comment,.news-views {
+    float: right;
+}
+.news-desc .read-more > a {
+  background: #3ac4fa none repeat scroll 0 0;
+  color: #fff;
+  display: inline-block;
+  font-family: "Montserrat",sans-serif;
+  font-weight: 400;
+  padding: 10px 24px;
+  text-transform: capitalize;
+}
+.news-desc .read-more > a:hover,.single_news-post .news-desc .read-more > a {
+    background: #4a4a4a none repeat scroll 0 0;
+}
+.single_news-post .news-desc .read-more > a:hover{background: #3ac4fa}
+.news-share > p {
+  color: #6d6d6d;
+  display: inline-block;
+  font-family: "Montserrat",sans-serif;
+  font-weight: 400;
+  margin-right: 10px;
+}
+.news-share > a {
+    color: #4a4a4a;
+    margin-right: 20px;
+}
+.news-share > a:hover{color: #3ac4fa}
+.news-share > a:last-child {
+    margin: 0;
+}
+.news-post {
+  background: rgba(58, 196, 250, 0.5) none repeat scroll 0 0;
+  bottom: 0;
+  padding: 15px 12px;
+  position: absolute;
+  width: 100%;
+}
+.news-post .n-date {
+  font-family: "Montserrat",sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.news-views {
+  margin-right: 15px;
+}
+.news-img .comment,.news-views > a,.single-commmunites > h1,.single-commmunites h2,.news-post .n-date  {
+  color: #fff;
+}
+.news-list .col-md-12 {
+  overflow: hidden;
+}
+.news-desc p.news_desc {
+  margin-bottom: 20px;
+}
+/*----------------
+	13. Fun Factor Css here
+------------------------*/
+.single-commmunites h2 {
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.single-commmunites:last-child {
+    border-right: medium none;
+}
+.single-commmunites {
+  border-right: 2px solid #fff;
+  float: left;
+  width: 25%;
+}
+.hotel-cmmunities {
+  background: rgba(0, 0, 0, 0) url("../image/communities.jpg") no-repeat scroll center center / cover ;
+  position: relative;
+}
+.hotel-cmmunities.style2{
+  background: url(../image/1.jpg)no-repeat fixed center center;
+  background-size: cover
+}
+.hotel-cmmunities.style3{
+  background: #3ac4fa;
+}
+.community-bg-opacity {
+  background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+  pointer-events: none;
+}
+.communities-list {
+  overflow: hidden;
+  position: relative;
+  z-index: 9999;
+}
+/*---------------
+	14. Team Brand And Newsletter Css here
+-------------------------*/
+.newsletter-title > h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 46px;
+  margin: 0;
+}
+.team-brand {
+  overflow: hidden;
+}
+.single-team {
+  padding: 0 10px;
+}
+.single-team > a {
+    border: 1px solid transparent;
+    border-radius: 2px;
+    display: block;
+}
+.single-team > a:hover {
+    border: 1px solid #ddd;
+}
+.newsletter {
+  background: #3ac4fa none repeat scroll 0 0;
+  padding: 40px;
+}
+.newsletter-form input {
+    background: rgba(255, 255, 255, 0.3) none repeat scroll 0 0;
+    border: 1px solid transparent;
+}
+.newsletter-form input::-webkit-input-placeholder{ color:#fff; }
+.newsletter-form input::-webkit-input-placeholder { color:#fff; }
+.newsletter-form input::-moz-placeholder{ color:#fff; } /* firefox 19+ */
+.newsletter-form input:-ms-input-placeholder color:#fff; } /* ie */
+.newsletter-form input:-moz-placeholder{ color:#fff; }
+.newsletter-form button {
+  background: #fff none repeat scroll 0 0;
+  border: medium none;
+  color: #3ac4fa;
+  font-family: "Raleway",sans-serif;
+  font-weight: bold;
+  height: 45px;
+  padding: 0 35px;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  top: 0;
+  transition: all 0.5s ease 0s;
+}
+.newsletter-form button:hover {
+  background: #4a4a4a none repeat scroll 0 0;
+  color: #fff;
+}
+/*---------------------
+	15. Deafault Footer Css here
+--------------------------*/
+.footer{
+  background: url(../image/footer.jpg)no-repeat scroll center center;
+  background-size: cover;
+}
+.footer-bg-opacity {
+  background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+}
+.f-adress > p, .hotel-contact > p {
+  font-family: "Montserrat",sans-serif;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.f-adress > p span, .hotel-contact > p span{
+  font-weight: 400;
+}
+.f-adress > p, .hotel-contact > p,.quick-item li a,.single-footer > h3,.get-touch > p,.get-conatct input,.get-conatct button,.newsletter-title > h2,.newsletter-form input  {
+    color: #fff;
+}
+.get-touch > p {
+  font-weight: 300;
+}
+.f-adress {
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+.quick-item li a {
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.quick-item li a,.quick-item li,.single-post > a {
+    display: block;
+}
+.quick-item li {
+    margin-bottom: 20px;
+}
+.quick-item li a:hover {
+    color: #3ac4fa;
+}
+.single-footer > h3 {
+    font-size: 26px;
+    margin-bottom: 35px;
+    text-transform: capitalize;
+}
+.get-conatct input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+}
+.get-conatct button {
+    background: #4fc1f0 none repeat scroll 0 0;
+    border: medium none;
+     padding: 10px 35px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+.get-conatct button:hover{
+    background: #fff none repeat scroll 0 0;
+    color: #4fc1f0;
+}
+.single-post > a,.footer,.newsletter-form{
+    position: relative;
+}
+.single-post > a::before {
+    background: rgba(58, 196, 250, 0.9) none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    transform: scale(0.6);
+    transition: all 0.3s ease 0s;
+    width: 100%;
+}
+.single-post > a:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+.footer-menu li {
+    display: inline-block;
+    margin-left: 15px;
+}
+.footer-menu li a {
+    color: #3d3d3d;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+.footer-menu li a:hover{color: #4fc1f0}
+.copyright p {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.copyright p a {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.copyright p a:hover {
+    text-decoration: underline;
+}
+.footer-menu {
+  text-align: right;
+}
+.instagram-post .single-post {
+    float: left;
+    padding: 8px;
+    width: 33.33%;
+}
+.instagram-post .single-post img {
+    width: 100%;
+}
+
+/* -------------------------- 
+  16. Home Two Css here
+----------------------------*/
+
+/* -------------------------- 
+   16.1 Home two Header Css here
+----------------------------*/
+.header-section.static2{
+  background: url(../image/h2-bg.jpg)no-repeat scroll center center;
+  background-size: cover;
+}
+.menu nav ul li.logo {
+  margin: 0 0 0 85px;
+  padding-bottom: 0 !important;
+}
+.about-section.home-2 .single-room .room-desc {
+  background: #f4f4f4;
+}
+.room-img img {
+  width: 100%;
+}
+.static2 .welcome-section {
+  padding-top: 0;
+}    
+.static2 .menu-list {
+  float: none;
+}
+.services-tab-menu.mtb-70 {
+  margin: 55px 0 60px;
+}
+.static2 .menu {
+  overflow: hidden;
+}
+.static2 .select-book button.btn {
+ height: 45px;
+}
+.static2 .menu nav ul li {
+  margin-left: 48px;
+  padding-bottom: 38px;
+  position: static;
+}
+.static2 .welcome-text {
+  padding: 205px 0 320px;
+}
+.static2 .booking-form .b-date, .static2 .booking-form .select-book, .static2 .booking-box .submit-form {
+  display: inline-block;
+  margin: 10px;
+}
+.static2 .booking-form .select-book, .static2 .booking-box .submit-form {
+    width: 200px;
+}
+.static2 .booking-box .submit-form button {
+    height: 43px;
+}
+.header-section.static2 .booking-box {
+  bottom: 0;
+  padding: 20px 0;
+  position: absolute;
+  width: 100%;
+}
+.header-section.static2 .booking-box .b-date input,.header-section.static2 .booking-box .select-book select{
+  background: none;
+  border: 1px solid #fff;
+}
+.social-links.float-right {
+  float: right;
+  margin-top: 30px;
+}
+.layout-header {
+  padding: 15px 0;
+}
+.layout-header .social-links > a {
+  margin-left: 15px;
+}
+/* -------------------------- 
+   17. Home 2 services Css here
+----------------------------*/
+.services-tab-menu ul li {
+    display: inline-block;
+    margin-left: 5px
+}
+.services-tab-menu ul li a {
+  background: #f1f1f1 none repeat scroll 0 0;
+  color: #6c6c6c;
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 20px 58px;
+  position: relative;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
+  transition: inherit;
+}
+.our-sevices.elements .single-services {
+  margin-bottom: 30px;
+}
+.services-tab-menu ul li.active a {
+    background: #3ac4fa none repeat scroll 0 0;
+    color: #fff;
+}
+.services-tab-menu ul li.active a::before {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 30px solid #3ac4fa;
+    bottom: -25px;
+    content: "";
+    height: 0;
+    left: 50%;
+    margin-left: -18px;
+    position: absolute;
+    width: 0;
+    transition: all 0.3s ease-out 0s
+}
+.static2 .service-tab-desc .single-services {
+  overflow: inherit;
+}
+.static2 .single-services .services-img {
+  position: relative;
+  border-right: 2px solid #3ac4fa;
+}
+.services-tab-menu ul li:first-child {
+  margin-left: 0;
+}
+.static2 .services-img > img {
+    width: 100%;
+}
+.static2 .services-desc-inner > h2 {
+    color: #5d5d5d;
+    font-size: 32px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: 'Raleway', sans-serif;
+}
+.static2 .services-desc-inner p.text1 {
+  font-size: 13px;
+}
+.static2 .services-desc {
+  margin-top: 40px;
+}
+.video-tour{
+  background: url(../image/video-bg.jpg)no-repeat scroll center center;
+  background-size: cover;
+  position: relative
+}
+
+.video-tour .section_title > h2::after {
+  background: rgba(0, 0, 0, 0) url("../image/tittle2.png") no-repeat scroll 0 0;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  bottom: -40px;
+  left: 0;
+}
+.video-tour .section_title > h2 {
+    color: #fff;
+}
+.section_title p {
+  color: #fff;
+  margin-left: 158px;
+  margin-right: 158px;
+}
+
+.video-play > a {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border: 4px solid ;
+  display: inline-block;
+  line-height: 31px;
+  border-radius: 100%;
+  font-size: 22px;
+}
+.mfp-bg {
+  z-index: 999999999;
+}
+.mfp-wrap {
+  z-index: 2147483647;
+}
+
+/*-------------------
+  18. Clinet say Testimonial
+---------------------*/
+.staff-tesimonial.client-say .testimonail-bg-opacity {
+  background: rgba(89, 89, 89, 0.9) none repeat scroll 0 0;
+}
+.staff-tesimonial.styel2 {
+  background: #3ac4fa none repeat scroll 0 0;
+}
+.testimonial-img {
+    float: left;
+    width: 25%;
+}
+.testimonial-desc {
+  float: left;
+  padding-left: 30px;
+  width: 75%;
+}
+.testimonial-desc > h2 {
+  font-size: 30px;
+  margin-bottom: 3px;
+  text-transform: capitalize;
+}
+.testimonial-desc > h3 {
+  font-family: "Raleway",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 17px;
+}
+.testimonial-desc > p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-right: 20px;
+}
+.testimonial-desc > p,.testimonial-desc > h3,.testimonial-desc > h2,.client-say-title > h3,.client-say-title > h2,.client-say-desc > p  {
+    color: #fff;
+}
+.staff-tesimonial.client-say {
+  padding: 135px 0;
+}
+.client-say .testimonial-list.owl-theme .owl-controls .owl-page {
+  display: block;
+}
+.client-say .testimonial-list.owl-theme .owl-controls {
+  position: absolute;
+  right: -15px;
+  top: 15px;
+}
+.client-say-title > h3 {
+  font-size: 22px;
+  margin-bottom: 2px;
+  text-transform: uppercase; 
+  font-weight: 600;
+}
+.client-say-title > h2 {
+  font-size: 32px;
+  padding-bottom: 43px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.client-say-title > h2::after {
+  background: rgba(0, 0, 0, 0) url("../image/tittle3.png") no-repeat scroll 0 0;
+  bottom: -48px;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.client-say-desc > p {
+  margin-bottom: 0;
+  margin-right: 55px;
+  position: relative;
+  z-index: 999999;
+}
+.testimonial-list {
+  margin-top: 22px;
+}
+.client-say-desc {
+    border-right: 1px solid #fff;
+    margin-right: 40px;
+    position: relative;
+}
+.client-say .testimonial-list.owl-theme .owl-controls .owl-page span {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+}
+.client-say-desc::before {
+    right: 8px;
+}
+.client-say-desc::after {
+    right: -10px;
+}
+.client-say-desc::after,.client-say-desc::before {
+    background: #fff none repeat scroll 0 0;
+    content: "";
+    height: 100px;
+    position: absolute;
+    top: 40px;
+    width: 1px;
+}
+/*--------------------------
+   19. Home 2 gallery Css here
+-------------------------*/
+.gallery-menu-filter > li {
+  color: #4a4a4a;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 30px;
+  text-transform: capitalize;
+  transition: all 0.3s ease 0s;
+}
+.gallery-menu-filter > li:first-child{margin-left: 0}
+.gallery-menu-filter > li.active,.gallery-menu-filter > li:hover{color: #3ac4fa}
+.single_gallery.w-one {
+    width: 35%;
+}
+.single_gallery.w-two {
+    width: 30%;
+}
+.single_gallery.w-3 {
+    width: 17.5%;
+}
+
+.our-gallery-show .single_gallery {
+    float: left;
+}
+.single-gallery-inner {
+    position: relative;
+}
+.single-gallery-inner a {
+  display: block;
+}
+.single-gallery-hover, .single_gallery-hover {
+  background: rgba(58, 196, 250, 0.9) none repeat scroll 0 0;
+  bottom: 12px;
+  left: 12px;
+  opacity: 0;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  transition: all 0.5s ease 0s;
+}
+.single_gallery:hover .single-gallery-hover,.single_gallery.active .single-gallery-hover,.single_gallery .single_gallery_inner:hover .single_gallery-hover {
+  opacity: 1
+}
+.single-gallery-inner img {
+  width: 100%;
+}
+.gallery-desc > h3 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+.gallery-desc > span {
+    background: #4c636c none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+}
+.gallery-desc {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.mfp-close {
+  cursor: pointer !important;
+}
+
+/*---------------------------
+   20.  Getting Offer today
+-------------------------*/
+.discount_offer_title h2::before {
+  background: rgba(0, 0, 0, 0) url("../image/tittle4.png") no-repeat scroll 0 0;
+  bottom: -40px;
+  content: "";
+  height: 100%;
+  left: 22%;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  pointer-events: none
+}
+.discount_offer_title > h2 {
+  color: #fff;
+}
+.discount_offer > p {
+  color: #fff;
+  margin-top: 28px;
+}
+.discount_offer .view_more > a {
+    background: #3ac4fa none repeat scroll 0 0;
+    color: #fff;
+    display: inline-block;
+    margin-top: 13px;
+    padding: 13px 35px;
+    text-transform: uppercase;
+}
+.discount_offer .view_more > a:hover{
+   background: #fff;
+   color: #3ac4fa
+}
+/*--------------------
+    21. Footer 2 Css here
+---------------------*/
+.footer2 {
+  background: #404040 none repeat scroll 0 0;
+}
+.copyright.static2 {
+    background: #2e2e2e none repeat scroll 0 0;
+}
+.copyright.static2 p,.footer_top_inner > p {
+    color: #fff;
+}
+.copyright.static2 p span {
+  color: #3ac4fa;
+  font-family: "Montserrat",sans-serif;
+  font-weight: 300;
+}
+.footer-top {
+    border-bottom: 1px solid #6f6f6f;
+    overflow: hidden;
+}
+.feature_item_dsc > p {
+  color: #fff;
+  font-family: "Montserrat",sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 0;
+  text-transform: lowercase;
+}
+.footer_social_item > a {
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 25px;
+    width: 20px;
+}
+.footer_social_item > a:hover{color: #3ac4fa}
+.footer_social_item > a:last-child {
+    margin-right: 0;
+}
+.s_footer_feature_item > a {
+    background: #3ac4fa none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    width: 30px;
+}
+.s_footer_feature_item > a:hover{background: #fff;color: #3ac4fa}
+/*---------------------
+    22.1 Home3 Css here
+---------------------*/
+.header-section.static-3 {
+  background: url(../image/h2-bg.jpg)no-repeat scroll center center;  
+}
+.static-3 .welcome-section,.static4 .welcome-section {
+  padding: 150px 0;
+}
+/*---------------------
+   22.2 Home4 Css here
+---------------------*/
+.header-section.static4 {
+ background: url(../image/h2-bg.jpg)no-repeat fixed center center; 
+}
+/*-----------------------
+    23. Abuout us Css here
+-------------------------*/
+.welcome-section .breadcrubs {
+  background: rgba(175, 175, 175, 0.4) none repeat scroll 0 0;
+  display: inline-block;
+  padding: 45px 155px;
+  position: relative;
+  z-index: 999;
+}
+.welcome-section.ptb-110 {
+  padding: 110px 0;
+}
+.breadcrubs-menu li {
+    color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.breadcrubs-menu li a {
+    color: #fff;
+}
+.breadcrubs-menu li a:hover{color: #3ac4fa}
+.breadcrubs > h2 {
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.about-us .top-header {
+  padding-bottom: 0;
+}
+.breadcrubs-menu li a i {
+    margin: 0 15px;
+}
+.breadcurbs-inner {
+    border: 8px solid rgba(175, 175, 175, 0.4);
+    display: inline-block;
+    padding: 6px;
+    position: relative;
+}
+.hotel-exclusive {
+  background: #393d50 none repeat scroll 0 0;
+}
+.single-exclusive > p {
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+.single-exclusive > h3 {
+  color: #fff;
+  font-size: 26px;
+  text-transform: capitalize;
+}
+.feature-desc .section-title p {
+  line-height: 25px;
+  margin: 18px 0 0;
+}
+.feature-item ul li {
+  font-family: "Poppins",sans-serif;
+  font-weight: 400;
+  margin: 15px 0;
+}
+.feature-item ul li:last-child {
+  margin: 0;
+}
+.feature-item ul li span {
+  font-weight: 500;
+  margin-right: 10px;
+}
+.feature-tab-item ul li a {
+  display: block;
+  overflow: hidden;
+  padding: 0;
+}
+.feature-tab-item ul li {
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+}
+.feature-tab-inner {
+    padding: 10px;
+}
+.feature-tab-desc {
+    float: left;
+    width: 70%;
+}
+.feature-tab-item {
+    float: left;
+    width: 30%;
+}
+.feature-tab-item ul li a img {
+  width: 166px;
+}
+.feature-tab-inner > img {
+  width: 100%;
+}
+.feature-tab-item ul li a::before {
+  background: rgba(58, 196, 250, 0.9) none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.feature-tab-item ul li.active a::before {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+/*-------------------
+   24. Gallery Css here
+---------------------*/
+.separate-gallery-item {
+    float: left;
+    width: 35%;
+}
+.separate-gallery-item.middle {
+    width: 30%;
+}
+.single-gallery-subitem {
+  float: left;
+  width: 50%;
+}
+.single_gallery .single_gallery_inner {
+    position: relative;
+}
+.gallery-bottom .single_gallery {
+    width: 50%;
+}
+.gallery-top,.room-gallery {
+  overflow: hidden;
+}
+.separate-gallery-item.middle {
+    padding-left: 4px;
+    padding-right: 2px;
+}
+
+.our-gallery-show {
+  display: inline-block;
+}
+.single_gallery_inner img {
+  width: 100%;
+}
+/*------------------
+   25. Our news Css here
+----------------------*/
+.single_news-post .news-img, .single_news-post .news-desc {
+    width: 100%;
+}
+.single_news-post .news-desc {
+  margin-top: 0;
+  padding: 30px 15px 35px 20px;
+}
+.single_news-post h3.news-title {
+  color: #8a8a8a;
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0;
+  text-transform: capitalize;
+}
+.item-2 .single_news-post h3.news-title {
+  font-weight: 600;
+  line-height: 15px;
+  margin: 0 0 14px;
+}
+.single_news-post .news-desc .read-more > a {
+  line-height: 12px;
+  padding: 10px 15px;
+}
+.single_news-post .news-share > a {
+  font-size: 12px;
+  margin-right: 5px;
+}
+.news-views > a span, .news-post .comment span {
+  margin-right: 5px;
+}
+.single_news-post .news-inner:hover .news-desc {
+  box-shadow: none;
+}
+.item-2 .news-action .news-share {
+  top: 0;
+}
+/*------------------------
+    26. Room booking Css here
+----------------------*/
+.booking_form {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  padding: 65px 40px;
+}
+.form-title > h2,.select-room-title > h3,h3.s_room_title{
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.booking_form .form-title > h2,.select-room-title > h3{
+    font-weight: bold;
+}
+.form-title > h2,.select-room-title > h3,.form-title > p,.select-room-title > p,.room-social-share > p,.room-social-share > h3,.need-help > h3,.room-sub-desc h3 span,.room-sub-desc > h4, .room-sub-desc > h3,.room-rent-desc .roome-rent-title,.need-help > h4,.room-social-share .social-links > a,h3.s_room_title{
+    color: #6a6a6a;
+}
+.form-title > p,.room-social-share > p,.select-room-title > p {
+  font-weight: 300;
+}
+.form-title > p {
+  margin-bottom: 35px;
+}
+.room-social-share p {
+  margin-bottom: 15px;
+}
+.select-room-title > p{
+  margin-bottom: 20px;
+}
+.booking-box1 .booking-filed,.booking-box2 .b_date,.booking-box3 .select_book,.booking-box3 .select_book{
+    float: left;
+    padding-left: 30px;
+    width: 50%;
+}
+.booking-box1 .booking-filed:first-child,.booking-box2 .b_date:first-child,.booking-box3 .select_book:first-child,.booking-box3 .select_book:first-child{
+    padding-left: 0;
+}
+.booking-box1 .booking-filed input, .booking-box2 .b_date input, .booking-box3 .select_book select, .room-booking-box .select-book select, .single-form-part .name input, .single-form-part .select-option select, .single-form-part .mail input, .request-box textarea, .payment-form-list .single_form input, .single_form .select-date > select {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  color: #b3b3b3;
+  height: 40px;
+  text-transform: capitalize;
+}
+.booking-box2 .b_date {
+  position: relative;
+}
+.booking-box2 .b_date i {
+    color: #bbb;
+    position: absolute;
+    right: 12px;
+    top: 16px;
+}
+.room-booking-box .booking-comment textarea {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  color: #bababa;
+  height: 150px;
+  resize: none;
+  text-transform: capitalize;
+}
+.room-booking-box .submit-form > button {
+  background: #3ac4fa none repeat scroll 0 0;
+  color: #fff;
+  transition: all 0.3s ease 0s;
+}
+.room-booking-box .submit-form > button:hover {
+  background: #4a4a4a none repeat scroll 0 0;
+}
+.select_book > select,.select-date > select {
+  -moz-appearance: none;
+}
+.booking-box3 .select_book,.booking-form-list .single-form-part .select-option,.single_form  .select-date {
+    position: relative;
+}
+.booking-box3 .select_book::before,.room-booking-box .select-book.room:before,.booking-form-list .single-form-part .select-option:before,.single_form  .select-date:before{
+    color: #bababa;
+    content: "";
+    font-family: FontAwesome;
+    font-size: 22px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.selcted-room {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  padding: 65px 45px 168px 40px;
+}
+.room-rent .room-rent-img {
+    float: left;
+    padding-right: 4px;
+    width: 40%;
+}
+.room-rent-desc .roome-rent-title {
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.room-sub-desc > h4, .room-sub-desc > h3 {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+  text-transform: capitalize;
+}
+.room-sub-desc h3 span {
+    font-size: 14px;
+}
+.room-rent-desc {
+    float: left;
+    padding-left: 16px;
+    width: 60%;
+}
+.room-sub-desc > h3 {
+    color: #3ac4fa;
+}
+.room-rent-img > img {
+    border: 1px solid #3ac4fa;
+}
+.need-help > h3 {
+  margin-bottom: 15px;
+}
+.room-social-share > h3,.need-help > h3 {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.room-social-share .social-links > a {
+    border: 1px solid;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 12px;
+    height: 22px;
+    line-height: 20px;
+    text-align: center;
+    width: 22px;
+}
+.room-social-share .social-links > a:hover{color: #fff;background: #3ac4fa;border-color: #3ac4fa}
+.need-help > h4 {
+    font-weight: bold;
+}
+.need-help > h4 span {
+    font-weight: 300;
+}
+
+/*----------------
+   27. Room booking information
+--------------------*/
+.booking-rooms-tab ul li {
+  display: inline-block;
+  margin-left: 24px;
+  position: relative;
+}
+.booking-rooms-tab ul li.active a,.booking-rooms-tab ul li a:hover {
+  background: #3ac4fa none repeat scroll 0 0;
+}
+.booking-rooms-tab ul li.active a,.booking-rooms-tab ul li a:hover {
+  color: #fff
+}
+.booking-rooms-tab ul {
+  border-bottom: 8px solid #f1f1f1;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+.booking-rooms-tab ul li.active::before {
+    background: #3ac4fa none repeat scroll 0 0;
+    bottom: -23px;
+    content: "";
+    height: 8px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.booking-rooms-tab ul li:first-child{margin-left: 0}
+.booking-rooms-tab ul li a {
+  background: #f1f1f1 none repeat scroll 0 0;
+  color: #6a6a6a;
+  font-family: "Poppins",sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 27px 40px 30px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.booking-rooms-tab ul li a span.tab-border {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 50%;
+  color: #6a6a6a;
+  display: inline-block;
+  font-size: 20px;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 17px;
+  text-align: center;
+  width: 30px;
+}
+.booking-rooms-tab ul li a span {
+    display: block;
+}
+.single-room-details .room-img {
+    float: left;
+    width: 15%;
+}
+.single-room-details .single-room-details {
+    float: left;
+    width: 85%;
+}
+.room_price h4,.room_price h5{
+  font-size: 18px;
+  margin: 0;
+  color: #6a6a6a
+}
+.room_price h5 span {
+  font-size: 14px;
+  font-weight: 300;
+}
+.single-room-details .room_price > p {
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-top: 13px;
+}
+.single-room-booking-form {
+    background: #3ac4fa none repeat scroll 0 0;
+    padding: 45px 158px;
+}
+.booking_form_inner .single-form-part {
+  display: inline-block;
+  padding-left: 18px;
+  width: 33%;
+}
+.booking_form_inner .single-form-part:first-child {
+    padding-left: 0;
+}
+.single-form-part .date-to input,.single-form-part .select-option select {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.single-form-part .select-option select option {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+.single-form-part .select-option select {
+  -moz-appearance: none;
+}
+.booking_form_inner .submit-form > button:hover {
+  background: #fff none repeat scroll 0 0;
+  color: #555;
+}
+.single-form-part .date-to,.single-form-part .select-option{position: relative}
+.single-form-part .date-to i {
+  color: #fff;
+  position: absolute;
+  right: 15px;
+  top: 16px;
+}
+.single-form-part .date-to i {
+    color: #fff;
+    position: absolute;
+    right: 15px;
+    top: 16px;
+}
+.single-form-part .select-option::before {
+    color: #fff;
+    content: "";
+    font-family: FontAwesome;
+    font-size: 22px;
+    position: absolute;
+    right: 16px;
+    top: 12px;
+}
+.booking-form-list .single-form-part .select-option select {
+  border-color: #ddd;
+  color: #b3b3b3;
+}
+.single-form-part .select-option select option {
+  color: #6a6a6a;
+}
+.single-form-part .mail {
+    position: relative;
+}
+.single-form-part .mail i {
+    color: #6a6a6a;
+    position: absolute;
+    right: 12px;
+    top: 16px;
+}
+.request-box textarea {
+  height: 150px;
+  padding: 15px;
+  resize: none;
+}
+.prve-next-box .back-link {
+    display: inline-block;
+}
+.prve-next-box .back-link a,.prve-next-box button,.pay-order > button {
+    background: #4a4a4a none repeat scroll 0 0;
+    color: #fff;
+    display: inline-block;
+    padding: 12px 30px;
+    text-transform: uppercase;
+}
+.prve-next-box button:hover,.pay-order > button:hover {
+    background: #4a4a4a none repeat scroll 0 0;
+}
+.prve-next-box .back-link a:hover{background: #3ac4fa }
+.prve-next-box button,.pay-order > button {
+  background: #3ac4fa none repeat scroll 0 0;
+  border: medium none;
+  display: inline-block;
+  margin-left: 25px;
+  transition: all 0.3s ease 0s;
+}
+.booking-form-list .single-form-part {
+    display: inline-block;
+    padding-left: 30px;
+    width: 33.1%;
+}
+.booking-form-list .single-form-part:first-child {
+    padding-left: 0;
+}
+.payment-form-list .single_form {
+  display: inline-block;
+  width: 24.7%;
+}
+.payment-form-list .single_form {
+    padding-left: 15px;
+}
+.payment-form-list .single_form:first-child {
+    padding-left: 0;
+}
+.pay-order {
+    float: right;
+}
+.pay-money-form .payment-card,.pay-order{
+    display: inline-block;
+}
+.booking-done-table {
+    float: left;
+    padding-right: 30px;
+    width: 50%;
+}
+.booking-done-description {
+    float: left;
+    padding-left: 30px;
+    width: 50%;
+}
+.booking-done-table table {
+    border: 1px solid #ddd;
+}
+.booking-done-table table tr:first-child td {
+  border-right: 1px solid #ddd;
+}
+.booking-done-description > p {
+  color: #ababab;
+  font-weight: 500;
+  margin-right: 147px;
+}
+.succesfully strong {
+  color: #3ac4fa;
+  font-family: "Montserrat",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+.booking-done-table .table p {
+  color: #686868;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 20px 0 10px;
+  text-transform: capitalize;
+}
+.booking-done-table .table p span {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+}
+/*----------------------
+    28. Contact us Css here
+----------------------*/
+.google-map-area {
+    position: relative;
+}
+.google-map-area .hotel-team {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+.contact-form-title h2, .contact-info-title > h3, h3.social-medai-title {
+  color: #4c4c4c;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.form-field-top .form-field-name input,.form-field-bottom .textarea textarea {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #ddd;
+}
+.form-field-top .form-field-name {
+    float: left;
+    padding-left: 20px;
+    width: 50%;
+}
+.form-field-top .form-field-name:first-child {
+    padding-left: 0;
+}
+.form-field-top {
+  overflow: hidden;
+}
+.form-field-bottom .textarea textarea {
+  height: 180px;
+  resize: none;
+}
+.contact-form .submit button {
+  background: #3ac4fa none repeat scroll 0 0;
+  border: medium none;
+  color: #fff;
+  font-weight: 400;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+.contact-form .submit button:hover{background: #4a4a4a}
+.contact-adresses p {
+  color: #4c4c4c;
+  margin-bottom: 0;
+  text-transform: capitalize;
+  font-family: "Montserrat",sans-serif;
+  font-weight: 300;
+}
+.contact-adresses p span.desc {
+    display: inline-block;
+}
+.contact-adresses p span.desc {
+    margin-left: 15px;
+}
+.contact-adresses p span i {
+    display: block;
+}
+.contact-adresses p span i {
+    font-size: 18px;
+    text-align: left;
+}
+.contact-adresses p span {
+  display: inline-block;
+}
+.social-media > a {
+    color: #4c4c4c;
+    font-size: 20px;
+    margin-left: 30px;
+}
+.social-media > a:first-child {
+    margin-left: 0;
+}
+.social-media-list > a {
+    color: #4c4c4c;
+    font-size: 20px;
+    margin-left: 30px;
+}
+.social-media-list > a:first-child {
+    margin-left: 0;
+}
+.social-media-list > a:hover{color: #3ac4fa}
+.contact-info {
+  padding-left: 100px;
+}
+.form-messege.success {
+  color: green;
+  text-transform: uppercase;
+  font-style: italic;
+}
+.form-messege.error {
+  color: red;
+  text-transform: capitalize;
+  font-style: italic;
+}
+/*------------
+   29. Sticky Css here
+----------------*/
+.header-bottom.sticky-header.sticky,.top-header.sticky-header.sticky{
+  width: 100%
+}
+.top-header.sticky .menu li {
+  margin-top: 12px;
+  padding-bottom: 37px;
+}
+.top-header.sticky .search-bar-icon {
+  margin-top: 9px;
+}
+.static2 .sticky .menu {
+  margin-left: 0;
+  margin-top: 10px;
+}
+.header-bottom-inner{position: relative}
+.layout-header.sticky {
+  width: 100%;
+}
+.sticky .logo img {
+  width: 90px;
+}
+.top-header.sticky .menu li ul li {
+  margin-top: 0;
+}
+/*------------
+   30. Top scrollup Css here
+----------------*/
+#scrollUp {
+  bottom: 45px;
+  color: #ffffff;
+  cursor: pointer;
+  display: none;
+  font-size: 28px;
+  height: 40px;
+  line-height: 37px;
+  position: fixed;
+  right: 30px;
+  text-align: center;
+  width: 40px;
+  z-index: 9999;
+  background: #3ac4fa;
+  transform: rotate(45deg);
+  transition: all 0.3s ease 0s;
+}
+#scrollUp:hover{background: #4a4a4a;}
+#scrollUp i {
+  transform: rotate(-45deg);
+}
+/*------------
+   31. Mobile menu Css here
+----------------*/
+.mobile-menu-area {
+  background: none;
+  margin-top: 16px;
+  position: absolute;
+  width: 100%;
+}
+.static2 .mobile-menu-area {
+  margin-top: 10px
+}
+.mean-container .mean-nav ul li a.mean-expand {
+  height: 14px;
+  padding: 10px !important;
+}
+.mean-container .mean-nav ul li a:hover {
+  color: #3ac4fa;
+}
+.mean-container .mean-bar::after {
+  display: none;
+}
+.top-header .mean-container a.meanmenu-reveal {
+  float: left;
+  left: 16% !important;
+  position: absolute;
+  top: -55px;
+}
+.top-header.sticky .mobile-menu-area {
+  margin-top: 6px;
+}
+.top-header.sticky .mean-container a.meanmenu-reveal {
+  left: 50% !important;
+  top: -60px;
+}
+.layout-header .mean-container a.meanmenu-reveal {
+  left: 44% !important;
+  position: absolute;
+  top: -78px;
+}
+/*----------------
+    32. 404 page Css here
+------------------------*/
+
+.error-content h2 {
+  color: #3ac4fa;
+  font-size: 180px;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+.error-content h3, .error-content h4, .error-content p {
+  color: #fff;
+}
+.error-content h3 {
+  font-family: "montserrat";
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+.error-content p {
+  font-size: 14px;
+  line-height: 25px;
+}
+.error-area a.go-home {
+  border: 1px solid #3ac4fa;
+  background: #3ac4fa;
+  color: #fff;
+  display: inline-block;
+  font-weight: 600;
+  height: 45px;
+  line-height: 45px;
+  margin-top: 50px;
+  padding: 0 30px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+.error-area a.go-home:hover {
+  border: 1px solid #fff;
+  background: #fff;
+  color: #3ac4fa;
+}
+
+
+

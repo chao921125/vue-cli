@@ -1,0 +1,65 @@
+/*dede58.com 做最好的织梦整站模板下载网站*/
+
+#solid{
+	width:100%;
+	height:600px;
+	clear:both;
+	position:relative;
+	overflow: hidden;
+}
+#solid .solid0,#solid .solid1,#solid .solid2{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:600px;
+	display:none;
+}
+#solid .solid0{
+	background:#fff;
+}
+#solid .solid1{
+	background:#fff;
+}
+#solid .solid2{
+	background:#fff;
+}
+#solid ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+#solid ul li{
+	position:absolute;
+	left:50%;
+	top:0px;
+	width:1920px;
+	height:600px;
+	margin-left:-960px;
+	display:none;
+	cursor:pointer;
+}
+#solid #btt{
+	width:1920px;
+	height:55px;
+	top:530px;
+	left:50%;
+	position:relative;
+	margin-left:-960px;
+}
+#solid #btt span{
+	position:absolute;
+	top:15px;
+	left:45%;
+	display:block;
+	width:30px;
+	height:8px;
+	margin:0 15px;	
+	text-align:center;
+	background:#3d3d3d;
+	z-index:1000;
+	cursor:pointer;
+	filter:alpha(opacity=70); /*IE滤镜，透明度50%*/
+	-moz-opacity:0.7; /*Firefox私有，透明度50%*/
+	opacity:0.7;/*其他，透明度50%*
+}

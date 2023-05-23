@@ -1,0 +1,15 @@
+/* -----------------------------------
+Template:  Chondo hote;
+
+NOTE: This is Alert style file
+
+--------------------------------------*/
+
+.properties-video h5 {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.audio audio {
+  width: 100%;
+}

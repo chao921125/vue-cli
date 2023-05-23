@@ -1,0 +1,37 @@
+/* -----------------------------------
+Template:  Chondo hote;
+
+NOTE: This is Alert style file
+
+--------------------------------------*/
+
+.font-alt {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.alert {
+    border-radius: 2px;
+}
+.well-lg {
+    border-radius: 2px;
+}
+.well {
+    border-radius: 2px;
+    box-shadow: none;
+}
+.well-sm {
+    border-radius: 2px;
+}
+.alert,.well-sm  {
+  line-height: 30px;
+}
+.alert i {
+  margin-right: 10px;
+}
+.alert button.close {
+  color: #4a4a4a;
+  opacity: 1;
+}
+.alert button.close:hover {
+  color: #000;
+}

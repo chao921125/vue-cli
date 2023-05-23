@@ -1,0 +1,546 @@
+/*
+
+Template:  The Chondo Hotel - Responsive Multi-purpose HTML5 Template
+Author: potenzaglobalsolutions.com
+Version: 1
+Design and Developed by: potenzaglobalsolutions.com
+
+NOTE: This is Style customizer stylesheet of template.
+
+*/
+
+div.style-customizer {
+    background-color: #fff;
+    color: #262626;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    z-index: 9999999999;
+    left: -300px;
+    box-shadow: -3px 0 50px -2px rgba(0, 0, 0, 0.14);
+    height: 100%;
+    bottom: 0;
+}
+
+.style-customizer a.button:hover {
+    color: #fff !important;
+}
+
+.style-customizer.closed {
+    box-shadow: none;
+}
+
+.style-customizer a.button:hover:after {
+    z-index: -1;
+}
+
+.style-customizer a.button {
+    z-index: 9;
+}
+.style-customizer .buy-now a.button.button-border,.style-customizer a.button.button-border {
+  background: #3ac4fa none repeat scroll 0 0;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  width: inherit
+}
+
+.style-customizer .buy-now a.button.button-border:hover {
+  background: #4a4a4a none repeat scroll 0 0;
+}
+
+div.style-customizer .buy-button {
+    text-align: center;
+    display: inline-block;
+    z-index: 2;
+    background: #fff;
+    width: 100%;
+    position: absolute
+}
+
+div.style-customizer .content-chooser {
+    padding: 182px 22px 30px 30px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    position: absolute;
+    background-color: #ffffff;
+    border-top: none;
+}
+
+div.style-customizer.opened .content-chooser {
+    opacity: 1;
+}
+
+.content-chooser p {
+    margin-bottom: 10px;
+}
+
+div.style-customizer h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+div.style-customizer h3 {
+    font-size: 16px;
+    margin-top: 30px;
+    line-height: 15px;
+}
+
+div.style-customizer hr {
+    margin: 15px 0;
+}
+
+div.style-customizer hr + h3 {
+    margin-top: 0;
+}
+
+div.style-customizer a.opener {
+    display: block;
+    height: 45px;
+    position: absolute;
+    left: 300px;
+    top: 200px;
+    background: #fff;
+    width: 45px;
+    font-size: 20px;
+    line-height: 45px;
+    color: #777777;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.14), -1px 0 3px 0 rgba(0, 0, 0, 0.14);
+}
+
+div.style-customizer.opened a.opener {
+    right: -45px;
+    border-color: transparent;
+}
+
+div.style-customizer ul {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0 0 0;
+    font-size: 0;
+}
+
+div.style-customizer ul li {
+    float: left;
+    width: 23%;
+    height: 25px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 3px 3px 0;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+}
+
+div.style-customizer ul.layoutstyle li {
+    width: 45%;
+    height: 30px;
+    margin-right: 5px;
+    color: #fff;
+    background-color: #3ac4fa;
+    border: 1px solid #f3f3f3;
+    font-size: 13px;
+    text-align: center;
+    padding-top: 5px;
+    line-height: 18px
+}
+
+div.style-customizer ul.layoutstyle li i {
+    color: #cccccc;
+    font-size: 11px;
+}
+
+div.style-customizer ul.layoutstyle li.selected {
+    border: 1px solid #aaaaaa;
+}
+
+div.style-customizer ul.layoutstyle li.selected i {
+    color: #666666;
+}
+
+div.style-customizer ul.footerChange li {
+    width: 45%;
+    height: 30px;
+    margin-right: 5px;
+    font-size: 13px;
+    padding: 6px 14px 0;
+}
+
+div.style-customizer ul.footerChange li.dark {
+    color: #f1f1f1;
+    background-color: #262626;
+}
+
+div.style-customizer ul.footerChange li.light {
+    color: #333333;
+    background-color: #f7f7f7;
+}
+
+div.style-customizer ul.footerChange li i {
+    width: 20px;
+}
+
+div.style-customizer ul.patternChange li {
+    border: 1px solid #f3f3f3;
+}
+
+div.style-customizer ul.patternChange li.pattern-0.selected:after,
+div.style-customizer ul.patternChange li.pattern-1.selected:after,
+div.style-customizer ul.patternChange li.pattern-2.selected:after,
+div.style-customizer ul.patternChange li.pattern-3.selected:after,
+div.style-customizer ul.patternChange li.pattern-4.selected:after {
+    color: #333333;
+}
+
+div.style-customizer ul.patternChange li.selected:after {
+    color: #ffffff;
+}
+
+div.style-customizer ul li.selected {
+    border: 3px solid #000;
+}
+
+div.style-customizer ul.resetAll li {
+  margin-bottom: 50px;
+  margin-top: 30px;
+  min-width: 0;
+  padding: 6px 0;
+  text-align: center;
+  width: 100%;
+}
+div.style-customizer .btn a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+div.style-customizer select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #b2bfca;
+}
+
+div.style-customizer .skin-default {
+    background: #299be8;
+}
+div.style-customizer .color-1 {
+    background: #e9457a;
+}
+div.style-customizer .color-2 {
+    background: #44b272 ;
+}
+div.style-customizer .color-3 {
+    background: #228B22;
+}
+div.style-customizer .color-4 {
+    background: #556B2F;
+}
+div.style-customizer .color-5 {
+    background: #008080;
+}
+div.style-customizer .color-6 {
+    background: #f44336;
+}
+div.style-customizer .color-7 {
+    background: #e91e63;
+}
+div.style-customizer .color-8 {
+    background: #9c27b0;
+}
+div.style-customizer .color-9 {
+    background: #673ab7;
+}
+div.style-customizer .color-10 {
+    background: #3f51b5;
+}
+div.style-customizer .color-11 {
+    background: #800000;
+}
+div.style-customizer .color-12 {
+    background: #8bc34a;
+}
+div.style-customizer .color-13 {
+    background: #cddc39;
+}
+div.style-customizer .color-14 {
+    background: #ff5d75;
+}
+div.style-customizer .color-15 {
+    background: #ff9800;
+}
+
+
+/*Background Patterns*/
+
+.pattern-1 {
+    background-image: url("../image/11.jpg");
+}
+.pattern-2 {
+    background-image: url("../image/2.jpg");
+}
+.pattern-3 {
+    background-image: url("../image/3.jpg");
+}
+.pattern-4 {
+    background-image: url("../image/4.jpg");
+}
+.pattern-5 {
+    background-image: url("../image/5.jpg");
+}
+.pattern-6 {
+    background-image: url("../image/6.png");
+}
+.pattern-7 {
+    background-image: url("../image/7.png");
+}
+
+/*Background Images*/
+
+.main-bg-change li {
+    overflow: hidden;
+}
+
+.main-bg-change li img {
+    height: 100%;
+    width: 100%;
+}
+
+.main-bg-1,.main-bg-2,.main-bg-3,.main-bg-4,.main-bg-5,.main-bg-6,.main-bg-7,.main-bg-8,.main-bg-9,.main-bg-10,.main-bg-11,.main-bg-12,.main-bg-13,.main-bg-14,.main-bg-15,.main-bg-16{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+.main-bg-1 {
+    background-image: url("../image/bg-1.jpg");
+}
+.main-bg-2 {
+    background-image: url("../image/bg-2.jpg");
+}
+.main-bg-3 {
+    background-image: url("../image/bg-3.jpg");
+}
+.main-bg-4 {
+    background-image: url("../image/bg-4.jpg");
+}
+.main-bg-5 {
+    background-image: url("../image/bg-5.jpg");
+}
+.main-bg-6 {
+    background-image: url("../image/bg-6.jpg");
+}
+.main-bg-7 {
+    background-image: url("../image/bg-7.jpg");
+}
+.main-bg-8 {
+    background-image: url("../image/bg-8.jpg");
+}
+.main-bg-9 {
+    background-image: url("../image/bg-9.jpg");
+}
+.main-bg-10 {
+    background-image: url("../image/bg-10.jpg");
+}
+.main-bg-11 {
+    background-image: url("../image/bg-11.jpg");
+}
+.main-bg-12 {
+    background-image: url("../image/bg-12.jpg");
+}
+.main-bg-13 {
+    background-image: url("../image/bg-13.jpg");
+}
+.main-bg-14 {
+    background-image: url("../image/bg-14.jpg");
+}
+.main-bg-15 {
+    background-image: url("../image/bg-15.jpg");
+}
+.main-bg-16 {
+    background-image: url("../image/bg-16.jpg");
+}
+
+
+
+/*extra*/
+
+
+/*home-2*/
+
+.boxed-layout .move-carousel {
+    top: 9%;
+    padding: 0px 0px 0px 35px;
+}
+
+.boxed-layout .awesome-features .awesome-features-device img {
+    left: -440px;
+}
+
+.boxed-layout #video-background {
+    height: 350px;
+}
+
+.boxed-layout #video-background .page-section-pt {
+    padding: 60px 0px;
+}
+
+.boxed-layout #video-background .our-skills.bg-opacity-black-50.page-section-pt {
+    padding: 75px 0;
+}
+
+.boxed-layout.home-2 .portfolio-info {
+    display: none;
+}
+
+.boxed-layout.home-2 .owl-carousel-8 .owl-nav .owl-prev {
+    left: 50%;
+}
+
+.boxed-layout.home-2 .owl-carousel-8 .owl-nav .owl-next {
+    right: 50%;
+}
+
+.boxed-layout.home-2 .owl-carousel-8 .owl-controls {
+    top: 20px;
+}
+
+.boxed-layout.home-2 .owl-carousel-8 .owl-nav i {
+    color: #323232;
+}
+
+.boxed-layout.home-2 .owl-carousel-8 .owl-nav i:hover {
+    background: transparent;
+}
+
+
+/*home-3*/
+
+.boxed-layout.home-3 .portfolio .portfolio-item .portfolio-overlay a {
+    font-size: 12px;
+    line-height: 25px;
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+}
+
+.boxed-layout.home-3 .portfolio .full-screen .portfolio-item .portfolio-overlay {
+    top: -20px;
+}
+
+.boxed-layout.home-3 .portfolio .portfolio-item .portfolio-overlay span a {
+    width: inherit;
+    height: inherit;
+    line-height: inherit;
+    font-size: 14px;
+}
+
+.boxed-layout.home-3 .full-screen .portfolio-item .portfolio-overlay a i {
+    font-size: 12px;
+}
+
+.boxed-layout.home-3 .portfolio-item .portfolio-overlay i {
+    padding-left: 0px;
+}
+
+.boxed-layout.home-3 .feature-9 {
+    height: 300px;
+}
+
+.boxed-layout.home-3 .feature-9:hover .feature-9-icon {
+    right: 26%;
+}
+
+.boxed-layout.home-3 .custom-content li {
+    line-height: 26px;
+}
+
+
+/*home-4*/
+
+.boxed-layout .slider-fade-carousel .slider-contents {
+    padding-left: 86px;
+}
+
+.boxed-layout .slider-fade-carousel .slider-contents h1 {
+    font-size: 56px;
+}
+
+.boxed-layout.home-4 .mega-menu .menu-links > li:last-child {
+    padding-right: 40px;
+}
+
+.boxed-layout.home-4 .our-blog .blog-box-info {
+    padding: 20px 40px;
+    max-height: 231px;
+}
+
+.boxed-layout.home-4 .our-blog .blog-box-info span.text-white {
+    display: none;
+}
+
+.boxed-layout.home-4 .our-blog .blog-box-info p.pt-30.pb-20 {
+    padding-bottom: 0px !important;
+    padding-top: 10px !important;
+}
+
+.boxed-layout.home-4 .our-blog .blog-box-image {
+    max-height: 231px;
+}
+
+.boxed-layout.home-4 .mega-menu .drop-down-multilevel.right-menu {
+    right: 76px;
+}
+
+.boxed-layout .contact-3-info .contact-add p {
+    font-size: 12px;
+}
+
+
+/*Box Layout Responsive*/
+
+@media (min-width: 768px) {
+    
+}
+
+@media (min-width: 992px) {
+   
+}
+
+@media (min-width: 1500px) {
+    
+}
+
+.boxed-layout .fullscreen-bg {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+
+
+.patternChange .main-bg-change li.main-bg-1 {
+    background-image: url("https://try.htmldemo.net/chondo-hotel/chondo-hotel-light/images/main-bg-0.jpg");
+}
+
+@media( max-width:992px) {
+    
+    .boxed-layout .page-wrapper {
+        width: inherit;
+    }
+    .boxed-layout.page-wrapper {
+        width: inherit;
+    }
+}
+
+.customizer-logo {
+  background: #4a4a4a none repeat scroll 0 0;
+  display: block;
+  margin-bottom: 20px;
+  padding: 20px 0;
+}

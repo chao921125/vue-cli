@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ background-image: url("../img/pic29.png"); background-position: center 100px; background-repeat: no-repeat;}
+
+.main{ width: 970px; padding: 20px 0 0 30px; float: left;}
+.main .maps{ font-size: 14px; color: #00707e; padding: 0 0 0 25px; background-image: url("../img/pic30.png"); background-position: left; background-repeat: no-repeat; border-bottom: solid 1px #e1e1e1; line-height: 2.5; margin-bottom: 30px;}
+.main .maps a{ display: inline-block; color: #00707e;}
+
+#tabs1{ text-align:left; width: 100%;}
+.menu1box{ position:relative; overflow:hidden; float:left; height:40px; width: 100%; margin-bottom: 20px;}
+#menu1{ position:absolute; top:0; left:0; z-index:1;}
+#menu1 li{ float:left; display:block; cursor:pointer;text-align:center; line-height:30px;  padding:0 20px; border-radius: 15px; font-size: 14px; margin-right: 10px; border: solid 1px #00707e;-webkit-transition-property: background; transition-property: background;-webkit-transition-duration: .2s; transition-duration: .2s; -webkit-transition-timing-function: ease-in; transition-timing-function: ease-in; -webkit-transition-delay: 0s;transition-delay: 0s;}
+#menu1 li a{ color: #00707e;}
+#menu1 li.hover{ background-color: #00707e; color:#fff;}
+#menu1 li.hover a{color:#fff;}
+.main1box{ clear:both; width: 100%;}
+#main1 > .main1-child{ display: none; min-height: 794px;}
+#main1 > div.block{ display: block;}
+#main1 > .main1-child > ul > li{ padding: 15px 0; border-bottom: 1px solid #e1e1e1;}
+#main1 > .main1-child ul li a ul{ position: relative;}
+#main1 > .main1-child ul li a ul li:first-child{ float: left; width: 22%;}
+#main1 > .main1-child ul li a ul li img{ width: 100%; height: 160px;}
+#main1 > .main1-child ul li a ul li:last-child{ float: left; width: 75.5%; padding-left: 1.5%; height: 160px;}
+#main1 > .main1-child ul li a ul li:last-child h3{ font-size: 16px; font-weight: normal; color: #323232;}
+#main1 > .main1-child ul li a ul li:last-child p{ font-size: 14px; color: #646464; line-height: 1.5; margin-top: 5px;}
+#main1 > .main1-child ul li a ul li:last-child span{ font-size: 14px; color: #909090;margin-top: 5px; display: block;}
+#main1 > .main1-child ul li a ul li:last-child > i{ font-size: 14px; color: #909090; border: 1px solid #909090; font-style: normal; padding: 2px 10px; display: inline-block; position: absolute; bottom: 0;}
+#main1 > .main1-child ul li a > h3{ font-size: 16px; font-weight: normal; color: #323232;}
+#main1 > .main1-child ul li a > h3 span{ font-size: 14px; color: #909090; float: right;}
+#main1 > .main1-child ul li a > p{ font-size: 14px; color: #646464; line-height: 1.5; margin-top: 5px;}
+#main1 > .main1-child ul li a > i{ font-size: 14px; color: #909090; border: 1px solid #909090; font-style: normal; padding: 2px 10px; display: inline-block; margin-top: 10px;}
+#main1 > .main1-child ul li a:hover h3, #main1 > .main1-child ul li a:hover p, #main1 > .main1-child ul li a:hover ul li:last-child h3, #main1 > .main1-child ul li a:hover ul li:last-child p{ color: #00707e;}
+#main1 > .main1-child ul li a > i, #main1 > .main1-child ul li a ul li:last-child > i{-webkit-transition-property: border,background,color,margin-left; transition-property:  border,background,color,margin-left;-webkit-transition-duration: .2s; transition-duration: .2s; -webkit-transition-timing-function: ease-in; transition-timing-function: ease-in; -webkit-transition-delay: 0s;transition-delay: 0s;}
+#main1 > .main1-child ul li a:hover > i, #main1 > .main1-child ul li a:hover ul li:last-child > i{  border: 1px solid #00707e; background: #00707e; color: #fff; margin-left: 4px;}
+
+.main h3{ font-size: 16px; color: #323232; margin-bottom: 10px; font-weight: normal;}
+.main span{ font-size: 14px; color: #909090; margin-bottom: 20px; display: inline-block;}
+.main > p{ font-size: 14px; color: #646464; margin-bottom: 20px; line-height: 2;}
+.main > img{ width: 100%; margin-bottom: 20px;}
+.main .tail p{ font-size: 14px; color: #646464; line-height: 2;}
+.main .tail p:last-child{ line-height: 3;}
+.main .tail p a{ display: inline-block;}
+.main .tail p:last-child a{ margin-bottom: -10px;}
+
+
