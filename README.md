@@ -1,6 +1,7 @@
-# 本项目不在更新，请转移到[VUE3+VITE版本](https://github.com/chao921125/vue-vite)
+# 本项目不在更新，请转移到[VUE3+VITE 版本](https://github.com/chao921125/vue-vite)
 
 # 目录结构
+
 ```
 ┌─package.json 包管理
 ├─public

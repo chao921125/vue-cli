@@ -3,7 +3,7 @@
 		<el-button @click="$router.push({ path: '/404' })">to 404</el-button>
 		<el-button @click="$router.push({ path: '/error' })">to error</el-button>
 
-		<el-button @click="show = !show">click me</el-button>
+		<el-button @click="show = !show">click me me</el-button>
 		<transition name="el-zoom-in-center">
 			<div v-show="show" class="transition-box">.el-zoom-in-center</div>
 		</transition>
@@ -60,7 +60,8 @@
 		},
 		mounted() {
 			setTimeout(() => {
-				this.temp = "https://app-tradefinance-1259661131.cos.ap-hongkong.myqcloud.com/file/b3f36a7fa4fd40c286348f0f7f446240_6-4.png";
+				this.temp =
+					"https://app-tradefinance-1259661131.cos.ap-hongkong.myqcloud.com/file/b3f36a7fa4fd40c286348f0f7f446240_6-4.png";
 			}, 3000);
 		},
 		methods: {
