@@ -1,11 +1,9 @@
-const baseURL = "/api";
-const userURL = baseURL + "/user";
-const requestURL = {
-  demoMethods: baseURL + "/usr/get",
-  login: baseURL + "/login",
-  logout: baseURL + "/logout",
-  getPhoneCode: baseURL + "/getPhoneCode",
-  getUserInfo: userURL + "/getUserInfo",
-  payOrder: userURL + "/payOrder",
+const baseURI = "/";
+const userURI = baseURI + "/user";
+const baseURL = {
+	login: baseURI + "/login",
+	logout: baseURI + "/logout",
+	getPhoneCode: baseURI + "/getPhoneCode",
+	getUserInfo: userURI + "/getUserInfo",
 };
-export default requestURL;
+export default baseURL;

@@ -1,11 +1,11 @@
 <template>
-    <div>哎嗨，啥都没有。哈哈哈</div>
+	<div>岗位管理</div>
 </template>
 
 <script>
-export default {
-    name: "Posts",
-};
+	export default {
+		name: "Posts",
+	};
 </script>
 
 <style scoped></style>
