@@ -21,13 +21,12 @@ indent_size = 2
 
 [*.{html,vue}]
 indent_style = space
-indent_size = 2
+indent_size = 4
 
 # 匹配md结尾的文件
 [*.md]
 insert_final_newline = false
 trim_trailing_whitespace = false
-
 
 # 以下匹配，类同
 # [Makefile]

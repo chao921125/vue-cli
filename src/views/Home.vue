@@ -1,34 +1,96 @@
 <template>
-  <h1>都有啥？咋实现的？</h1>
-  <el-collapse v-model="activeName" accordion>
-    <el-collapse-item title="动态菜单" name="1">
-      <div>只做到了菜单级别，如果想要做按钮级别，最好使用自定义指令</div>
-      <ol>
-        <li>明确自身业务需求，根据实际业务来设计和实现</li>
-        <li>在router中首先配置一些静态的页面路由，比如登录、注册</li>
-        <li>在store里面请求获取权限菜单，然后处理成router（根据需要自己修改数据格式、字段啥的）</li>
-        <li>我在这里也将静态菜单搞进去了，思路呢还是仿着动态的来，只不过模拟了返回数据，这样一个数据既可以实现了菜单，又能够完成路由，减少后期改动量。</li>
-      </ol>
-    </el-collapse-item>
-    <el-collapse-item title="Axios封装" name="2">
-      <div>我感觉这个没啥好说的，巴拉巴拉巴拉巴拉，看着官方的文档就出来了，看你自己的实际需求吧。不过一定要处理好request和response，格式一定约定好，别特么一会返回一个{data: {}}，一会返回一个{result: {}}}，这样的后端杀了祭天吧。</div>
-    </el-collapse-item>
-  </el-collapse>
+	<div class="home">
+		<el-button @click="$router.push({ path: '/404' })">to 404</el-button>
+		<el-button @click="$router.push({ path: '/error' })">to error</el-button>
+
+		<el-button @click="show = !show">click me me</el-button>
+		<transition name="el-zoom-in-center">
+			<div v-show="show" class="transition-box">.el-zoom-in-center</div>
+		</transition>
+
+		<transition name="el-zoom-in-top">
+			<div v-show="show" class="transition-box">.el-zoom-in-top</div>
+		</transition>
+
+		<transition name="el-zoom-in-bottom">
+			<div v-show="show" class="transition-box">.el-zoom-in-bottom</div>
+		</transition>
+		<transition name="el-zoom-in-left">
+			<div v-show="show" class="transition-box">.el-zoom-in-left</div>
+		</transition>
+		<transition name="el-zoom-in-right">
+			<div v-show="show" class="transition-box">.el-zoom-in-right</div>
+		</transition>
+		<el-collapse-transition>
+			<div v-show="show">
+				<div class="transition-box">el-collapse-transition</div>
+				<div class="transition-box">el-collapse-transition</div>
+			</div>
+		</el-collapse-transition>
+
+		<el-image class="temp-img" v-loading="loading" placeholder="loading" :src="temp">
+			<div slot="placeholder">
+				<i class="el-icon-loading"></i>
+			</div>
+			<div slot="error">
+				<i class="el-icon-loading"></i>
+			</div>
+		</el-image>
+		<div class="flex-base">
+			<div class="slider-box">
+				<div class="slider" :style="{ width: sliderWidth + '%' }"></div>
+			</div>
+			<div>123</div>
+		</div>
+	</div>
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
-
-export default defineComponent({
-  name: "Home",
-  setup() {
-    const activeName = ref("1");
-
-    return {
-      activeName,
-    }
-  },
-});
+	export default {
+		name: "Home",
+		data() {
+			return {
+				loading: false,
+				imgSrc: [require("@/assets/logo.png"), require("@/assets/logo.png")],
+				isCollapse: false,
+				show: false,
+				temp: "",
+				sliderWidth: 10,
+			};
+		},
+		mounted() {
+			setTimeout(() => {
+				this.temp =
+					"https://app-tradefinance-1259661131.cos.ap-hongkong.myqcloud.com/file/b3f36a7fa4fd40c286348f0f7f446240_6-4.png";
+			}, 3000);
+		},
+		methods: {
+			toggleCollapse() {
+				this.isCollapse = !this.isCollapse;
+			},
+		},
+	};
 </script>
 
-<style scoped lang="scss"></style>
+<style lang="scss" scoped>
+	.transition-box {
+		margin-right: 20px;
+		margin-bottom: 20px;
+		width: 200px;
+		height: 100px;
+		background-color: aqua;
+	}
+	.temp-img {
+		width: 100px;
+		height: 100px;
+	}
+	.slider-box {
+		width: calc(100% - 100px);
+		height: 20px;
+		background-color: aqua;
+		.slider {
+			height: 20px;
+			background-color: aquamarine;
+		}
+	}
+</style>

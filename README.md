@@ -1,14 +1,16 @@
-# 本项目不在更新，请转移到[VUE3+VITE版本](https://github.com/chao921125/vue-vite)
-# vue2 admin基础框架
-[移动PC切换路由实现跳转不同页面及适配](./read/Mobile.md)
-以及各种小demo集合 \
-建议使用 yarn install (不建议大家使用淘宝的镜像源，有丢包问题) \
-部分解释性.md文件已经迁移到了read目录中去 \
-若果更新失败可以永久设置镜像仓库或者临时使用淘宝镜像仓库：--registry https://registry.npm.taobao.org \
-为了加快网站渲染速度，请尽可能使用cdn加速，不要把包都打进去
+# 本项目停止更新，请使用[VUE3+VITE 版本](https://github.com/chao921125/vue-vite)
 
+# 对应分支说明
+
+```
+main = admin : 简易的admin管理端搭建
+vw : 即将px转为vw
+web : 仅仅布局做了调整
+h5 : 适配手机端
+```
 
 # 目录结构
+
 ```
 ┌─package.json 包管理
 ├─public

@@ -1,7 +1,7 @@
 # description
 
+## scripts 指定了运行脚本命令的 npm 命令行缩写，比如 start 指定了运行 npm run start 时，所要执行的命令。
 
-## scripts指定了运行脚本命令的npm命令行缩写，比如start指定了运行npm run start时，所要执行的命令。
 ```
 "scripts": {
     "preinstall": "echo here it comes!",
@@ -11,7 +11,7 @@
 }
 ```
 
-## dependencies字段指定了项目运行所依赖的模块，devDependencies指定项目开发所需要的模块。
+## dependencies 字段指定了项目运行所依赖的模块，devDependencies 指定项目开发所需要的模块。
 
 ```
 "devDependencies": {
@@ -25,7 +25,7 @@
 latest：安装最新版本。
 ```
 
-## peerDependencies字段，就是用来供插件指定其所需要的主工具的版本。
+## peerDependencies 字段，就是用来供插件指定其所需要的主工具的版本。
 
 ```
 "peerDependencies": {
@@ -33,7 +33,7 @@ latest：安装最新版本。
 }
 ```
 
-## bin项用来指定各个内部命令对应的可执行文件的位置。
+## bin 项用来指定各个内部命令对应的可执行文件的位置。
 
 ```
 "bin": {
@@ -51,11 +51,11 @@ scripts: {
 }
 ```
 
-## main字段指定了加载的入口文件，require('moduleName')就会加载这个文件。这个字段的默认值是模块根目录下面的index.js。
+## main 字段指定了加载的入口文件，require('moduleName')就会加载这个文件。这个字段的默认值是模块根目录下面的 index.js。
 
-## config字段用于添加命令行的环境变量。
+## config 字段用于添加命令行的环境变量。
 
-## browser指定该模板供浏览器使用的版本。Browserify这样的浏览器打包工具，通过它就知道该打包那个文件。
+## browser 指定该模板供浏览器使用的版本。Browserify 这样的浏览器打包工具，通过它就知道该打包那个文件。
 
 ```
 "browser": {
@@ -63,7 +63,7 @@ scripts: {
 }
 ```
 
-## engines字段指明了该模块运行的平台，比如 Node 的某个版本或者浏览器。
+## engines 字段指明了该模块运行的平台，比如 Node 的某个版本或者浏览器。
 
 ```
 { "engines" : { "node" : ">=0.10.3 <0.12" } }
@@ -71,16 +71,16 @@ scripts: {
 { "engines" : { "npm" : "~1.0.20" } }
 
 ```
-## man用来指定当前模块的man文档的位置。
+
+## man 用来指定当前模块的 man 文档的位置。
 
 ```
 "man" :[ "./doc/calc.1" ]
 ```
 
-## preferGlobal的值是布尔值，表示当用户不将该模块安装为全局模块时（即不用–global参数），要不要显示警告，表示该模块的本意就是安装为全局模块。
+## preferGlobal 的值是布尔值，表示当用户不将该模块安装为全局模块时（即不用–global 参数），要不要显示警告，表示该模块的本意就是安装为全局模块。
 
-
-## style指定供浏览器使用时，样式文件所在的位置。样式文件打包工具parcelify，通过它知道样式文件的打包位置。
+## style 指定供浏览器使用时，样式文件所在的位置。样式文件打包工具 parcelify，通过它知道样式文件的打包位置。
 
 ```
 "style": [
@@ -89,6 +89,7 @@ scripts: {
 ```
 
 ### git 提交信息校验配置
+
 ```
 "husky": {
     "hooks": {
@@ -106,7 +107,8 @@ scripts: {
 ```
 
 ## 完全配置以及解释
-```json 
+
+```json
 {
   "name": "puppeteer",
   "version": "1.0.0",
@@ -142,7 +144,7 @@ scripts: {
   "os" : [ "darwin", "linux", "!win32" ], # 支持的平台和黑名单
   "cpu" : [ "x64", "ia32", "!arm", "!mips" ], # 支持的cpu和黑名单
   "bugs": { # 问题追踪
-    "url" : "https://github.com/owner/project/issues" ,  
+    "url" : "https://github.com/owner/project/issues" ,
     "email" ："project@hostname.com"
   },
 }
