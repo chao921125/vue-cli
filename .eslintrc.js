@@ -5,7 +5,7 @@ module.exports = {
 		browser: true,
 		es2022: true,
 	},
-	extends: ["plugin:vue/essential", "eslint:recommended", "plugin:prettier/recommended", "@vue/prettier"],
+	extends: ["plugin:vue/essential", "plugin:prettier/recommended", "eslint:recommended", "@vue/eslint-config-prettier"],
 	plugins: ["vue", "prettier"],
 	rules: {
 		"prettier/prettier": "error",

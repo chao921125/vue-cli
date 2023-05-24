@@ -49,7 +49,7 @@ module.exports = defineConfig({
 	// 需要注意的是该选项仅影响由 html-webpack-plugin 在构建时注入的标签 - 直接写在模版 (public/index.html) 中的标签不受影响
 	// crossorigin: "",
 	// 如果你构建后的文件是部署在 CDN 上的，启用该选项可以提供额外的安全性
-	integrity: true,
+	integrity: process.env.NODE_ENV === "production",
 	configureWebpack: (config) => {
 		// // 忽略打包文件
 		config.externals = {
@@ -60,8 +60,6 @@ module.exports = defineConfig({
 	// see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
 	chainWebpack: (config) => {
 		config.plugins.delete("prefetch").delete("preload");
-		// 解决 cli3 热更新失效 https://github.com/vuejs/vue-cli/issues/1559
-		config.resolve.symlinks(true);
 		// 重新设置 alias .set('@', resolve('src'))
 		config.resolve.alias.set("@", resolve("src"));
 		// config.resolve.alias.set("@api", resolve("src/api"));
@@ -115,7 +113,6 @@ module.exports = defineConfig({
 		compress: true,
 		https: false,
 		host: "127.0.0.1",
-		hot: false,
 		open: process.platform === "darwin",
 		port: 2222,
 		proxy: {
@@ -133,7 +130,6 @@ module.exports = defineConfig({
 			// }
 		},
 		server: "http",
-		watchFiles: ["vue.config.js", "src/**/*"],
 	},
 	// use thread-loader for babel & TS in production build
 	// enabled by default if the machine has more than 1 cores

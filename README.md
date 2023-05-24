@@ -1,35 +1,34 @@
-# 本项目停止更新，请使用[VUE3+VITE 版本](https://github.com/chao921125/vue-vite)
+# vue-basic
 
-# 对应分支说明
-
+## Project setup
 ```
-main = admin : 简易的admin管理端搭建
-vw : 即将px转为vw
-web : 仅仅布局做了调整
-h5 : 适配手机端
+yarn install
 ```
 
-# 目录结构
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
 
+### Compiles and minifies for production
 ```
-┌─package.json 包管理
-├─public
-│  ├─favicon.ico
-│  ├─img
-│  ├─index.html
-│  └─robots.txt 反爬虫
-├─src
-│  ├─App.vue
-│  ├─api 接口定义
-│  ├─assets 静态资源
-│  ├─components 公共组件
-│  ├─libs 工具库
-│  ├─main.js 启动入口
-│  ├─mock 数据mock
-│  ├─plugins 组件工具
-│  ├─registerServiceWorker.js
-│  ├─router 路由
-│  ├─store vuex
-│  └─views 页面
-└─vue.config.js 启动配置
+yarn build
 ```
+
+### Run your unit tests
+```
+yarn test:unit
+```
+
+### Run your end-to-end tests
+```
+yarn test:e2e
+```
+
+### Lints and fixes files
+```
+yarn lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
