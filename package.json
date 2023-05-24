@@ -27,12 +27,8 @@
 		"screenfull": "^6.0.2",
 		"ua-parser-js": "^1.0.35",
 		"vue": "2.7.14",
-		"vue-class-component": "^7.2.6",
 		"vue-i18n": "8.28.2",
-		"vue-loading-overlay": "^6.0.3",
 		"vue-router": "3.6.5",
-		"vue-simple-spinner": "^1.2.10",
-		"vue-treeselect": "^1.0.7",
 		"vuedraggable": "^2.24.3",
 		"vuex": "3.6.2",
 		"xlsx": "^0.18.5"
