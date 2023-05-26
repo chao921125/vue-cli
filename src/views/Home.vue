@@ -60,8 +60,7 @@
 		},
 		mounted() {
 			setTimeout(() => {
-				this.temp =
-					"https://app-tradefinance-1259661131.cos.ap-hongkong.myqcloud.com/file/b3f36a7fa4fd40c286348f0f7f446240_6-4.png";
+				this.temp = "https://app-tradefinance-1259661131.cos.ap-hongkong.myqcloud.com/file/b3f36a7fa4fd40c286348f0f7f446240_6-4.png";
 			}, 3000);
 		},
 		methods: {

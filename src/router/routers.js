@@ -30,7 +30,7 @@ const frameNoSide = [
 	{
 		path: "/404",
 		name: "404",
-		component: () => import("@/views/error/404"),
+		component: () => import("@/views/error/NotFound.vue"),
 		meta: {
 			hidden: true,
 			icon: "",
@@ -46,6 +46,40 @@ const frameNoSide = [
  * @type {*[]}
  */
 const frameOut = [
+	{
+		path: "",
+		name: "",
+		redirect: { name: "/" },
+	},
+	{
+		path: "/",
+		name: "/",
+		redirect: { name: "index" },
+		children: [
+			// 刷新页面 必须保留
+			{
+				path: "refresh",
+				name: "refresh",
+				component: {
+					beforeRouteEnter(to, from, next) {
+						next((vm) => vm.$router.replace(from.fullPath));
+					},
+					render: (h) => h(),
+				},
+			},
+			// 页面重定向 必须保留
+			{
+				path: "redirect/:route*",
+				name: "redirect",
+				component: {
+					beforeRouteEnter(to, from, next) {
+						next((vm) => vm.$router.replace(JSON.parse(from.params.route)));
+					},
+					render: (h) => h(),
+				},
+			},
+		],
+	},
 	// 登录
 	{
 		path: "/login",
@@ -77,6 +111,31 @@ const frameOut = [
 		redirect: { name: "login" },
 		meta: {
 			auth: true,
+		},
+	},
+	{
+		path: "/index",
+		name: "index",
+		redirect: { name: "flights" },
+		component: () => import(/* webpackChunkName: "about" */ "@/views/layout/Index.vue"),
+		children: [
+			{
+				path: "/flights",
+				name: "flights",
+				component: () => import(/* webpackChunkName: "about" */ "@/views/flights/Index.vue"),
+			},
+		],
+	},
+	{
+		path: "*",
+		name: "*",
+		component: () => import(/* webpackChunkName: "about" */ "@/views/error/NotFound.vue"),
+		meta: {
+			icon: "",
+			title: "404",
+			auth: false,
+			isDisable: true,
+			isCache: false,
 		},
 	},
 ];

@@ -1,16 +1,5 @@
 import Vue from "vue";
-import {
-	formatMoney,
-	formatMoney3,
-	formatNumber,
-	formatMoneyTwo,
-	formatDate,
-	dealStrLength,
-	dealNumFront,
-	dealNumBack,
-	dealNumFrontOne,
-	getGoalNameByKey,
-} from "@/libs/format";
+import { formatMoney, formatMoney3, formatNumber, formatMoneyTwo, formatDate, dealStrLength, dealNumFront, dealNumBack, dealNumFrontOne, getGoalNameByKey } from "@/libs/format";
 
 const index = {
 	formatMoney,

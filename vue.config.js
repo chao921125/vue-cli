@@ -98,7 +98,7 @@ module.exports = defineConfig({
 			},
 			// 设置 scss 公用变量文件
 			sass: {
-				// additionalData: `@import "~@/assets/style/public.scss";`,
+				additionalData: `@import "~@/assets/style/public.scss";`,
 			},
 		},
 		// 启用 CSS modules for all css / pre-processor files.
@@ -106,7 +106,7 @@ module.exports = defineConfig({
 	},
 	devServer: {
 		client: {
-			overlay: true,
+			overlay: false,
 			progress: true,
 			reconnect: 60,
 		},

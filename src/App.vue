@@ -1,5 +1,7 @@
 <template>
-	<router-view />
+	<div id="app">
+		<router-view />
+	</div>
 </template>
 
 <script>
@@ -8,6 +10,4 @@
 	};
 </script>
 
-<style lang="scss">
-	@import "~@/assets/style/global-class.scss";
-</style>
+<style lang="scss"></style>

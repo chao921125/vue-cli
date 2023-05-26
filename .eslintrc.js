@@ -5,8 +5,17 @@ module.exports = {
 		browser: true,
 		es2022: true,
 	},
-	extends: ["plugin:vue/essential", "eslint:recommended", "plugin:prettier/recommended", "@vue/prettier"],
-	plugins: ["vue", "prettier"],
+	parser: "vue-eslint-parser",
+	parserOptions: {
+		parser: "@babel/eslint-parser",
+		ecmaVersion: "latest",
+		sourceType: "module",
+		jsxPragma: "React",
+		ecmaFeatures: {
+			jsx: false,
+		},
+	},
+	extends: ["eslint:recommended", "plugin:vue/essential", "plugin:prettier/recommended", "prettier"],
 	rules: {
 		"prettier/prettier": "error",
 		"generator-star-spacing": "off",
@@ -14,10 +23,6 @@ module.exports = {
 		"no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
 		"vue/multi-word-component-names": "off",
 		"vue/no-reserved-component-names": "off",
-	},
-	parserOptions: {
-		parser: "@babel/eslint-parser",
-		sourceType: "module",
 	},
 	overrides: [
 		{
