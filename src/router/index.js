@@ -10,7 +10,7 @@ import "nprogress/nprogress.css";
 import util from "@/plugins/util";
 
 // 路由数据，真是个奇葩的东西，不能命名为router相关的
-import routes from "./routes";
+import routers from "./routers";
 
 // 解决路由异常，此问题不会导致出错但是控制台会有异常信息
 const routerPush = VueRouter.prototype.push;
@@ -28,7 +28,7 @@ Vue.use(VueRouter);
 const router = new VueRouter({
 	mode: process.env.NODE_ENV === "production" ? "history" : "history", // hash
 	scrollBehavior: () => ({ y: 0 }),
-	routes,
+	routers,
 });
 
 /**
