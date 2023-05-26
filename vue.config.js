@@ -14,7 +14,7 @@ module.exports = defineConfig({
 	// 指定生成的 index.html 的输出路径 (相对于 outputDir)。也可以是一个绝对路径
 	// indexPath: 'index.html',
 	// 哈希
-	// filenameHashing: true,
+	filenameHashing: true,
 	// pages: {
 	//   index: {
 	//     // page 的入口
@@ -39,7 +39,7 @@ module.exports = defineConfig({
 	// 在保存的时候检查 process.env.NODE_ENV !== 'production'
 	lintOnSave: process.env.NODE_ENV !== "production", // Default
 	// 运行时版本是否需要编译
-	// runtimeCompiler: false,
+	runtimeCompiler: false,
 	// 使用带有浏览器内编译器的完整构建版本
 	// 默认babel-loader忽略mode_modules，这里可增加例外的依赖包名 可以是字符串或正则表达式
 	transpileDependencies: true,

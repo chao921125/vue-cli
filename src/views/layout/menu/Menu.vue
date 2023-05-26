@@ -15,7 +15,7 @@
 
 <script>
 	// @ is an alias to /src
-	import SubMenu from "./SubMenu";
+	import SubMenu from "./SubMenu.vue";
 
 	export default {
 		name: "Menu",

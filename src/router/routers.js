@@ -84,7 +84,7 @@ const frameOut = [
 	{
 		path: "/login",
 		name: "login",
-		component: () => import("@/views/Login"),
+		component: () => import("@/views/user/Login.vue"),
 		meta: {
 			hidden: true,
 			icon: "",
@@ -96,7 +96,7 @@ const frameOut = [
 	{
 		path: "/register",
 		name: "register",
-		component: () => import("@/views/Register"),
+		component: () => import("@/views/user/Register.vue"),
 		meta: {
 			hidden: true,
 			icon: "",
