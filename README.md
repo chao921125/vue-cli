@@ -1,9 +1,9 @@
-# 本项目停止更新，请使用[VUE3+VITE 版本](https://github.com/chao921125/vue-vite)
+# 项目停止更新，请移步[VUE3+VITE 版本](https://github.com/chao921125/vue-vite)
 
 # 对应分支说明
 
 ```
-main = admin : 简易的admin管理端搭建
+main = admin : 简易的admin管理端搭建，以学习为主
 vw : 即将px转为vw
 web : 仅仅布局做了调整
 h5 : 适配手机端

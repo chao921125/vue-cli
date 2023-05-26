@@ -2,10 +2,10 @@
 全局定义变量
 */
 
-@import "~@/assets/style/common/color.scss";
+@import "~@/assets/style/common/color";
 
 // 工具类名统一前缀
-$prefix: cc;
+$prefix: re;
 
 // 禁止用户选中 鼠标变为手形
 %unable-select {

@@ -1,6 +1,6 @@
 <template>
 	<el-submenu :index="subMenuList.path">
-		<template slot="title">
+		<template v-slot="">
 			<i :class="subMenuList.icon"></i>
 			<span slot="title">{{ subMenuList.title }}</span>
 		</template>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-	import SubMenu from "./SubMenu";
+	import SubMenu from "./SubMenu.vue";
 
 	export default {
 		name: "SubMenu",

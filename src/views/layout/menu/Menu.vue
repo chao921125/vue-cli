@@ -1,12 +1,6 @@
 <template>
 	<el-scrollbar>
-		<el-menu
-			class="menus"
-			:default-active="defaultActive"
-			:collapse="collapse"
-			@select="selectMenu"
-			popper-append-to-body
-		>
+		<el-menu class="menus" :default-active="defaultActive" :collapse="collapse" @select="selectMenu" popper-append-to-body>
 			<template v-for="item in menuList">
 				<el-menu-item v-if="!item.children || item.children.length === 0" :index="item.path" :key="item.id">
 					<!-- 此处图标可以自定义 -->
@@ -21,7 +15,7 @@
 
 <script>
 	// @ is an alias to /src
-	import SubMenu from "./SubMenu";
+	import SubMenu from "./SubMenu.vue";
 
 	export default {
 		name: "Menu",

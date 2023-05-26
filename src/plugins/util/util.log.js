@@ -47,10 +47,7 @@ log.capsule = function (title, info, type = "primary") {
  * @description 打印彩色文字
  */
 log.colorful = function (textArr) {
-	console.log(
-		`%c${textArr.map((t) => t.text || "").join("%c")}`,
-		...textArr.map((t) => `color: ${typeColor(t.type)};`),
-	);
+	console.log(`%c${textArr.map((t) => t.text || "").join("%c")}`, ...textArr.map((t) => `color: ${typeColor(t.type)};`));
 };
 
 /**
